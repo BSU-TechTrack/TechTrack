@@ -1,1382 +1,1030 @@
-<!DOCTYPE html>
-
-<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>TechTrack PH | GEd 104 Academic Research Portal - Discussion</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<style>
-@layer base {
-  html, body { margin:0; padding:0; scroll-behavior: smooth; }
-  body { overscroll-behavior: none; }
-  main > :first-child { margin-top:0!important; }
-  main > :last-child { margin-bottom:0!important; }
-}
-::-webkit-scrollbar { width: 6px; height: 6px; }
-::-webkit-scrollbar-track { background: transparent; }
-::-webkit-scrollbar-thumb { background: rgba(56, 189, 248, 0.25); border-radius: 9999px; }
-::-webkit-scrollbar-thumb:hover { background: rgba(56, 189, 248, 0.5); }
-.no-scrollbar::-webkit-scrollbar { display: none; }
-
-@keyframes float-blob-1 {
-  0%, 100% { transform: translate3d(0px, 0px, 0) scale(1); }
-  50% { transform: translate3d(45px, -35px, 0) scale(1.12); }
-}
-@keyframes float-blob-2 {
-  0%, 100% { transform: translate3d(0px, 0px, 0) scale(1); }
-  50% { transform: translate3d(-50px, 40px, 0) scale(0.92); }
-}
-@keyframes float-blob-3 {
-  0%, 100% { transform: translate3d(0px, 0px, 0) scale(1); }
-  50% { transform: translate3d(35px, 45px, 0) scale(1.08); }
-}
-@keyframes pulse-slow {
-  0%, 100% { opacity: 0.35; transform: scale(1); }
-  50% { opacity: 0.7; transform: scale(1.02); }
-}
-.ambient-blob-1 { animation: float-blob-1 20s ease-in-out infinite alternate; will-change: transform; }
-.ambient-blob-2 { animation: float-blob-2 25s ease-in-out infinite alternate; will-change: transform; }
-.ambient-blob-3 { animation: float-blob-3 28s ease-in-out infinite alternate; will-change: transform; }
-.glow-pulse { animation: pulse-slow 4s ease-in-out infinite; }
-
-.card-glow {
-  position: relative;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-}
-.card-glow::before {
-  content: '';
-  position: absolute;
-  inset: -1px;
-  border-radius: inherit;
-  padding: 1px;
-  background: linear-gradient(135deg, rgba(56, 189, 248, 0.3), transparent 60%);
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  pointer-events: none;
-  opacity: 0.6;
-  transition: opacity 0.3s ease;
-}
-.card-glow:hover::before {
-  opacity: 1;
-  background: linear-gradient(135deg, rgba(78, 230, 170, 0.6), rgba(56, 189, 248, 0.7), transparent 75%);
-}
-.card-glow-rose:hover::before {
-  opacity: 1;
-  background: linear-gradient(135deg, rgba(244, 63, 94, 0.7), rgba(251, 146, 60, 0.5), transparent 75%);
-}
-</style>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script id="tailwind-config">
-tailwind.config = {
-  darkMode: "class",
-  theme: {
-    extend: {
-      colors: {
-        "on-primary-container": "#004965",
-        "primary-container": "#38bdf8",
-        "primary": "#8ed5ff",
-        "error-container": "#93000a",
-        "tertiary": "#4ee6aa",
-        "outline": "#87929a",
-        "on-surface-variant": "#bdc8d1",
-        "secondary-fixed": "#e0e0ff",
-        "surface-container": "#112036",
-        "on-tertiary": "#003825",
-        "surface": "#041329",
-        "on-error-container": "#ffdad6",
-        "on-primary-fixed-variant": "#004c69",
-        "on-secondary-container": "#a8afff",
-        "surface-tint": "#7bd0ff",
-        "on-background": "#d6e3ff",
-        "inverse-on-surface": "#233148",
-        "primary-fixed": "#c4e7ff",
-        "surface-container-lowest": "#010e24",
-        "secondary": "#bdc2ff",
-        "on-tertiary-fixed-variant": "#005137",
-        "on-surface": "#d6e3ff",
-        "surface-variant": "#27354c",
-        "on-error": "#690005",
-        "surface-dim": "#041329",
-        "on-secondary-fixed-variant": "#2f3aa3",
-        "inverse-primary": "#00668a",
-        "on-secondary-fixed": "#000767",
-        "tertiary-container": "#22c990",
-        "on-tertiary-container": "#004e35",
-        "inverse-surface": "#d6e3ff",
-        "tertiary-fixed-dim": "#45dfa4",
-        "surface-container-highest": "#27354c",
-        "secondary-fixed-dim": "#bdc2ff",
-        "on-primary-fixed": "#001e2c",
-        "surface-bright": "#2c3951",
-        "outline-variant": "#3e484f",
-        "surface-container-low": "#0d1c32",
-        "error": "#ffb4ab",
-        "secondary-container": "#2f3aa3",
-        "primary-fixed-dim": "#7bd0ff",
-        "tertiary-fixed": "#68fcbf",
-        "on-primary": "#00354a",
-        "on-secondary": "#131e8c",
-        "on-tertiary-fixed": "#002114",
-        "surface-container-high": "#1c2a41",
-        "background": "#041329"
+<!DOCTYPE html><html class="dark" lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><title>TechTrack PH | GEd 104 BSCpE Research Portal</title><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}@keyframes blob-float{0%,100%{transform:translate(0px,0px) scale(1);}33%{transform:translate(30px,-50px) scale(1.08);}66%{transform:translate(-20px,20px) scale(0.95);}}@keyframes blob-float-reverse{0%,100%{transform:translate(0px,0px) scale(1);}33%{transform:translate(-35px,40px) scale(1.05);}66%{transform:translate(25px,-30px) scale(0.92);}}.animate-blob-1{animation:blob-float 18s ease-in-out infinite;}.animate-blob-2{animation:blob-float-reverse 22s ease-in-out infinite;}.animate-blob-3{animation:blob-float 26s ease-in-out infinite;}.bg-grid-cyber{background-size:36px 36px;background-image:linear-gradient(to right,rgba(255,255,255,0.03) 1px,transparent 1px),linear-gradient(to bottom,rgba(255,255,255,0.03) 1px,transparent 1px);}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "on-error": "#690005",
+          "inverse-primary": "#00668a",
+          "outline": "#87929a",
+          "tertiary-container": "#22c990",
+          "tertiary": "#4ee6aa",
+          "surface-container-highest": "#27354c",
+          "inverse-on-surface": "#233148",
+          "on-tertiary-container": "#004e35",
+          "primary-fixed": "#c4e7ff",
+          "on-secondary-fixed-variant": "#2f3aa3",
+          "tertiary-fixed-dim": "#45dfa4",
+          "outline-variant": "#3e484f",
+          "on-tertiary": "#003825",
+          "surface-container-low": "#0d1c32",
+          "on-secondary-fixed": "#000767",
+          "error": "#ffb4ab",
+          "surface-bright": "#2c3951",
+          "on-primary-fixed-variant": "#004c69",
+          "surface-dim": "#041329",
+          "on-error-container": "#ffdad6",
+          "on-surface-variant": "#bdc8d1",
+          "on-surface": "#d6e3ff",
+          "error-container": "#93000a",
+          "surface-tint": "#7bd0ff",
+          "on-secondary-container": "#a8afff",
+          "surface-container-lowest": "#010e24",
+          "background": "#041329",
+          "inverse-surface": "#d6e3ff",
+          "surface-container": "#112036",
+          "on-primary-fixed": "#001e2c",
+          "on-tertiary-fixed-variant": "#005137",
+          "on-tertiary-fixed": "#002114",
+          "secondary-fixed-dim": "#bdc2ff",
+          "secondary-fixed": "#e0e0ff",
+          "on-primary": "#00354a",
+          "primary-container": "#38bdf8",
+          "secondary": "#bdc2ff",
+          "surface-variant": "#27354c",
+          "primary-fixed-dim": "#7bd0ff",
+          "on-background": "#d6e3ff",
+          "on-primary-container": "#004965",
+          "primary": "#8ed5ff",
+          "on-secondary": "#131e8c",
+          "secondary-container": "#2f3aa3",
+          "surface": "#041329",
+          "tertiary-fixed": "#68fcbf",
+          "surface-container-high": "#1c2a41"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "gutter-mobile": "1rem",
+          "space-xs": "0.25rem",
+          "space-lg": "1.5rem",
+          "gutter": "1.5rem",
+          "margin": "2rem",
+          "space-md": "1rem",
+          "space-xl": "2.5rem",
+          "space-sm": "0.5rem",
+          "margin-mobile": "1rem"
+        },
+        "fontFamily": {
+          "headline-sm": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-md": [
+            "Plus Jakarta Sans"
+          ],
+          "body-sm": [
+            "Inter"
+          ],
+          "headline-lg": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-lg-mobile": [
+            "Plus Jakarta Sans"
+          ],
+          "label-md": [
+            "Inter"
+          ],
+          "body-md": [
+            "Inter"
+          ],
+          "title-md": [
+            "Inter"
+          ],
+          "headline-xl": [
+            "Plus Jakarta Sans"
+          ],
+          "label-sm": [
+            "Inter"
+          ],
+          "title-sm": [
+            "Inter"
+          ],
+          "headline-xl-mobile": [
+            "Plus Jakarta Sans"
+          ],
+          "body-lg": [
+            "Inter"
+          ]
+        },
+        "fontSize": {
+          "headline-sm": [
+            "20px",
+            {
+              "lineHeight": "28px",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-md": [
+            "24px",
+            {
+              "lineHeight": "32px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-sm": [
+            "12px",
+            {
+              "lineHeight": "18px",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-lg": [
+            "32px",
+            {
+              "lineHeight": "40px",
+              "letterSpacing": "-0.015em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-lg-mobile": [
+            "24px",
+            {
+              "lineHeight": "32px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "label-md": [
+            "12px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0.02em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-md": [
+            "14px",
+            {
+              "lineHeight": "22px",
+              "fontWeight": "400"
+            }
+          ],
+          "title-md": [
+            "16px",
+            {
+              "lineHeight": "24px",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-xl": [
+            "40px",
+            {
+              "lineHeight": "48px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "700"
+            }
+          ],
+          "label-sm": [
+            "11px",
+            {
+              "lineHeight": "14px",
+              "letterSpacing": "0.03em",
+              "fontWeight": "600"
+            }
+          ],
+          "title-sm": [
+            "14px",
+            {
+              "lineHeight": "20px",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-xl-mobile": [
+            "30px",
+            {
+              "lineHeight": "38px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "700"
+            }
+          ],
+          "body-lg": [
+            "16px",
+            {
+              "lineHeight": "26px",
+              "fontWeight": "400"
+            }
+          ]
+        }
       },
-      borderRadius: {
-        "DEFAULT": "0.25rem",
-        "lg": "0.5rem",
-        "xl": "0.75rem",
-        "2xl": "1rem",
-        "full": "9999px"
-      },
-      spacing: {
-        "margin-mobile": "1rem",
-        "space-xs": "0.25rem",
-        "space-xl": "2.5rem",
-        "space-md": "1rem",
-        "margin": "2rem",
-        "gutter-mobile": "1rem",
-        "space-sm": "0.5rem",
-        "gutter": "1.5rem",
-        "space-lg": "1.5rem"
-      },
-      fontFamily: {
-        "headline-md": ["Plus Jakarta Sans", "sans-serif"],
-        "body-lg": ["Inter", "sans-serif"],
-        "headline-xl-mobile": ["Plus Jakarta Sans", "sans-serif"],
-        "headline-xl": ["Plus Jakarta Sans", "sans-serif"],
-        "title-md": ["Inter", "sans-serif"],
-        "label-sm": ["Inter", "sans-serif"],
-        "headline-lg-mobile": ["Plus Jakarta Sans", "sans-serif"],
-        "headline-sm": ["Plus Jakarta Sans", "sans-serif"],
-        "headline-lg": ["Plus Jakarta Sans", "sans-serif"],
-        "title-sm": ["Inter", "sans-serif"],
-        "body-sm": ["Inter", "sans-serif"],
-        "label-md": ["Inter", "sans-serif"],
-        "body-md": ["Inter", "sans-serif"]
-      }
-    }
-  }
-};
-</script>
-<script>
-function initTheme(){
-  const stored=localStorage.getItem('techtrack_theme');
-  const sysDark=window.matchMedia('(prefers-color-scheme: dark)').matches;
-  if(stored==='dark'||(!stored&&sysDark)){
-    document.documentElement.classList.add('dark');
-    localStorage.setItem('techtrack_theme','dark');
-  }else{
-    document.documentElement.classList.remove('dark');
-    localStorage.setItem('techtrack_theme','light');
-  }
-}
-initTheme();
-function toggleTheme(){
-  const isDark=document.documentElement.classList.toggle('dark');
-  localStorage.setItem('techtrack_theme',isDark?'dark':'light');
-  const icon=document.getElementById('theme-toggle-icon');
-  if(icon){icon.textContent=isDark?'light_mode':'dark_mode';}
-}
-window.addEventListener('DOMContentLoaded',()=>{
-  const isDark=document.documentElement.classList.contains('dark');
-  const icon=document.getElementById('theme-toggle-icon');
-  if(icon){icon.textContent=isDark?'light_mode':'dark_mode';}
-});
-</script></head>
-<body class="bg-surface font-body-md text-on-surface antialiased min-h-screen relative selection:bg-primary-container selection:text-on-primary-container">
-<!-- Floating Ambient Gradient Blobs (GPU keyframed) -->
-<div aria-hidden="true" class="ambient-blob-bg fixed inset-0 pointer-events-none overflow-hidden z-0"><div class="ambient-blob-1 absolute -top-32 -left-32 w-[580px] h-[580px] rounded-full bg-gradient-to-br from-primary/30 via-primary-container/20 to-transparent blur-[85px] opacity-20 dark:opacity-25 pointer-events-none"></div>
-<div class="ambient-blob-2 absolute top-1/3 -right-32 w-[620px] h-[620px] rounded-full bg-gradient-to-bl from-secondary-container/25 via-tertiary-container/15 to-transparent blur-[95px] opacity-20 dark:opacity-30 pointer-events-none"></div>
-<div class="ambient-blob-3 absolute -bottom-40 left-1/4 w-[680px] h-[680px] rounded-full bg-gradient-to-tr from-cyan-400/20 via-primary/15 to-transparent blur-[100px] opacity-15 dark:opacity-25 pointer-events-none"></div></div>
-<!-- Main Global Header -->
-<header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-md border-b border-outline-variant/30 shadow-[0_4px_24px_rgba(0,0,0,0.3)]">
-<div class="h-20 max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between gap-4">
-<div class="flex items-center gap-3">
-<img alt="Batangas State University CpE Logo" class="w-10 h-10 object-contain drop-shadow transition-transform duration-300 hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8I4Y4qA3HiYpx-eP2bNItynO3o-zxGMmZ10pnuXHJ4DyJ-FZH94xZvHh4ldZ5plNjawoUYgPG6F-1pMEGESBuGniDYeJ8it-fohcYd8ZYVxgoB6K7Z-XTzEcNANwzDZKQsXLOmN2V3W0w-hTf9wcfWo2tPWH9jYv4I-PVg9A9KeNv7L7FbM64AfZcT9inY_JTpl8ANjJOgohr27qhYzOS5e45SoVLX2lXr5oBX5ARuIJPC2R_o02S"/>
-<div class="flex flex-col">
-<div class="flex items-center gap-2">
-<span class="font-headline-sm text-headline-sm tracking-tight text-on-surface font-bold">TechTrack PH</span>
-<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold border border-secondary/30">GEd 104</span>
+    },
+  };</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased relative min-h-screen selection:bg-primary selection:text-on-primary"><div class="fixed inset-0 pointer-events-none z-0 overflow-hidden"><div class="absolute -top-32 left-1/4 w-[500px] h-[500px] rounded-full bg-sky-600/15 blur-[120px] animate-blob-1"></div><div class="absolute top-1/3 -right-24 w-[450px] h-[450px] rounded-full bg-teal-600/15 blur-[130px] animate-blob-2"></div><div class="absolute -bottom-40 left-1/3 w-[550px] h-[550px] rounded-full bg-primary-container/10 blur-[140px] animate-blob-3"></div><div class="absolute inset-0 bg-grid-cyber opacity-75"></div></div><header class="fixed top-0 left-0 right-0 w-full z-50 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.12)]"><div class="h-20 w-full max-w-7xl mx-auto px-gutter flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md"><div class="relative flex items-center justify-center p-space-xs rounded-lg bg-surface-container/60 shadow-[0_0_16px_rgba(56,189,248,0.15)]"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/ALJJyrD70Mqaz-Z-5Wk9K6vnxSldkJtxg8ZVMvaGR7_QMK0sRd4tYIWdEPvvqgCRdMsHlx6OK2N-1-3_l2-ULfSW3iuz2mF2U4OQg4kh1Gl8ndZkU5XmEAMXOQyL8-Zx6PVj5BL8AkT6l1AidcjGD1N0Wgt3e0FuribDcZgUQ00IP_u-tla9EMQvAAyDS5_eHuxUhfjBUS9oNScPddH_a_-DapyhC3AhBGsdGlL82u5yHDdtIc5Ih1kVUydiJQ"></div><div class="flex flex-col"><div class="flex items-center gap-space-sm"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">TechTrack PH</span><span class="px-space-sm py-0.5 rounded-full bg-primary-container/20 text-primary font-label-sm text-label-sm uppercase tracking-wider">GEd 104</span></div><span class="font-label-sm text-label-sm text-on-surface-variant">TNEU Alangilan • BSCpE Research</span></div></div><nav class="hidden xl:flex items-center gap-space-xs p-1 rounded-xl bg-surface-container-low/70 backdrop-blur-md" data-active-classes="bg-surface-container-highest text-primary font-title-sm"><a class="px-space-md py-space-xs rounded-lg font-title-sm text-title-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="overview" href="index.html">Overview</a><a class="px-space-md py-space-xs rounded-lg font-title-sm text-title-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="introduction" href="introduction.html">Introduction</a><a aria-current="page" class="px-space-md py-space-xs rounded-lg transition-colors bg-surface-container-highest text-primary font-title-sm" data-path="discussion" href="discussion.html">Discussion</a><a class="px-space-md py-space-xs rounded-lg font-title-sm text-title-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="significance" href="significance.html">Significance</a><a class="px-space-md py-space-xs rounded-lg font-title-sm text-title-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="research-team" href="team.html">Research Team</a><a class="px-space-md py-space-xs rounded-lg font-title-sm text-title-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="references" href="references.html">References</a></nav><div class="flex items-center gap-space-md"><div class="hidden sm:flex items-center gap-space-xs px-space-md py-1 rounded-full bg-tertiary-container/15 text-tertiary font-label-sm text-label-sm tracking-wider uppercase"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-tertiary"></span></span><span>NODE // 11</span></div><button aria-label="Toggle color mode" class="p-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors flex items-center justify-center" id="theme-toggle-btn" type="button"><span class="material-symbols-outlined text-title-md" id="theme-toggle-icon">light_mode</span></button></div></div></header><main class="relative z-10 w-full pt-20 bg-transparent min-h-[calc(100vh-20rem)]"><div class="flex flex-col w-full">
+<!-- Content Canvas Container -->
+<div class="max-w-7xl mx-auto px-gutter py-space-xl w-full flex flex-col gap-space-xl">
+<!-- Header Diagnostic Terminal -->
+<header class="relative rounded-xl p-space-lg bg-surface-container/80 backdrop-blur-xl shadow-xl overflow-hidden">
+<div class="absolute -right-20 -top-20 w-80 h-80 rounded-full bg-primary/10 blur-3xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-space-lg">
+<div class="flex flex-col gap-space-xs">
+<div class="flex flex-wrap items-center gap-space-sm">
+<span class="px-space-sm py-0.5 rounded-full bg-primary-container/20 text-primary font-label-sm text-label-sm uppercase tracking-wider">
+              MODULE REF // 03
+            </span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">•</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm tracking-widest uppercase">
+              DOCUMENT 104 • SYNTHESIS ENGINE
+            </span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">•</span>
+<span class="px-space-sm py-0.5 rounded-full bg-tertiary-container/15 text-tertiary font-label-sm text-label-sm">
+              NODE ACTIVE
+            </span>
 </div>
-<span class="font-label-sm text-label-sm text-on-surface-variant">TNEU Alangilan • BSCpE Research</span>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight mt-1">
+            Discussion
+          </h1>
+<p class="font-title-md text-title-md text-primary tracking-wide uppercase">
+            DISCUSSION OF THE ASSIGNED TOPIC
+          </p>
+<div class="flex flex-wrap items-center gap-x-3 gap-y-1 mt-2 text-on-surface-variant font-body-sm text-body-sm">
+<span class="inline-flex items-center gap-1.5 text-on-surface font-title-sm text-title-sm">
+<span class="material-symbols-outlined text-primary text-title-sm">dataset</span>
+              Empirical Corpus:
+            </span>
+<span>Cohort / 470 Corrin et al.</span>
+<span>•</span>
+<span>N=384 Gizay</span>
+<span>•</span>
+<span>PSA FLEMMS 2024–2026 Registry</span>
 </div>
 </div>
-<!-- Consistent Route Navigation -->
-<nav class="hidden xl:flex items-center gap-1.5 p-1 rounded-xl bg-surface-container-low border border-outline-variant/40" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg shadow-sm">
-<a class="px-3.5 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all font-title-sm text-title-sm" data-path="overview" href="index.html">Overview</a>
-<a class="px-3.5 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all font-title-sm text-title-sm" data-path="introduction" href="introduction.html">Introduction</a>
-<a aria-current="page" class="px-3.5 py-1.5 transition-all bg-primary-container text-on-primary-container font-semibold rounded-lg shadow-sm shadow-primary-container/30" data-path="discussion" href="discussion.html">Discussion</a>
-<a class="px-3.5 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all font-title-sm text-title-sm" data-path="significance" href="significance.html">Significance</a>
-<a class="px-3.5 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all font-title-sm text-title-sm" data-path="research-team" href="team.html">Research Team</a>
-<a class="px-3.5 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all font-title-sm text-title-sm" data-path="references" href="references.html">References</a>
-</nav>
-<div class="flex items-center gap-2.5">
-<button aria-label="Toggle color theme" class="w-9 h-9 rounded-lg flex items-center justify-center bg-surface-container hover:bg-surface-container-high border border-outline-variant/40 transition-colors text-on-surface-variant hover:text-on-surface" onclick="toggleTheme()" type="button">
-<span class="material-symbols-outlined text-[20px]" id="theme-toggle-icon">dark_mode</span>
+<div class="flex flex-wrap sm:flex-nowrap items-center gap-space-md self-start lg:self-center">
+<button class="group flex items-center gap-space-sm px-space-md py-space-sm rounded-lg bg-primary hover:bg-primary-container text-on-primary transition-all duration-300 shadow-md" id="copy-citation-btn" type="button">
+<span class="material-symbols-outlined text-title-md transition-transform group-hover:rotate-12">content_copy</span>
+<span class="font-title-sm text-title-sm">Copy Citation Node</span>
 </button>
-<a aria-label="External Research Repository" class="w-9 h-9 rounded-lg flex items-center justify-center bg-surface-container hover:bg-surface-container-high border border-outline-variant/40 transition-colors text-on-surface-variant hover:text-on-surface" href="https://github.com" rel="noopener noreferrer" target="_blank">
-<span class="material-symbols-outlined text-[20px]">deployed_code</span>
-</a>
-<div class="w-8 h-8 rounded-full bg-primary/20 ring-1 ring-primary/40 flex items-center justify-center text-primary font-bold text-xs">
-        CpE
-      </div>
+<div class="hidden px-space-md py-space-sm rounded-lg bg-tertiary-container text-on-tertiary-container font-label-sm text-label-sm animate-pulse" id="citation-toast">
+            DOI Linked // Ref Copied
+          </div>
 </div>
 </div>
 </header>
-<main class="relative z-10 w-full pt-20 bg-transparent min-h-[calc(100vh-20rem)]">
-<div class="flex flex-col w-full">
-<!-- Interactive Sticky Floating Sub-Nav for Instant Chapter Jumps -->
-<div class="sticky top-20 z-40 w-full bg-surface-container-lowest/90 backdrop-blur-md px-6 py-2.5 border-b border-outline-variant/40 shadow-lg">
-<div class="max-w-7xl mx-auto flex items-center justify-between gap-4 overflow-x-auto no-scrollbar">
-<div class="flex items-center gap-2 text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider shrink-0">
-<span class="material-symbols-outlined text-[18px] text-primary-container">explore</span>
-<span class="font-semibold text-on-surface">Jump to Section:</span>
-</div>
-<div class="flex items-center gap-1.5 shrink-0 py-0.5">
-<a class="group px-3 py-1 rounded-full bg-surface-container hover:bg-primary-container hover:text-on-primary-container text-on-surface transition-all font-label-sm text-label-sm flex items-center gap-1.5 border border-outline-variant/40 hover:border-transparent" href="#sec-01">
-<span class="text-primary group-hover:text-inherit font-bold">01</span> Patterns
-          </a>
-<a class="group px-3 py-1 rounded-full bg-surface-container hover:bg-tertiary-container hover:text-on-tertiary-container text-on-surface transition-all font-label-sm text-label-sm flex items-center gap-1.5 border border-outline-variant/40 hover:border-transparent" href="#sec-02">
-<span class="text-tertiary group-hover:text-inherit font-bold">02</span> Positive Effects
-          </a>
-<a class="group px-3 py-1 rounded-full bg-surface-container hover:bg-rose-500 hover:text-white text-on-surface transition-all font-label-sm text-label-sm flex items-center gap-1.5 border border-outline-variant/40 hover:border-transparent" href="#sec-03">
-<span class="text-rose-400 group-hover:text-inherit font-bold">03</span> Negative Effects
-          </a>
-<a class="group px-3 py-1 rounded-full bg-surface-container hover:bg-primary-container hover:text-on-primary-container text-on-surface transition-all font-label-sm text-label-sm flex items-center gap-1.5 border border-outline-variant/40 hover:border-transparent" href="#sec-04">
-<span class="text-primary-container group-hover:text-inherit font-bold">04</span> Academic Influence
-          </a>
-<a class="group px-3 py-1 rounded-full bg-surface-container hover:bg-secondary-container hover:text-white text-on-surface transition-all font-label-sm text-label-sm flex items-center gap-1.5 border border-outline-variant/40 hover:border-transparent" href="#sec-05">
-<span class="text-secondary group-hover:text-inherit font-bold">05</span> CpE Challenges
-          </a>
-<a class="group px-3 py-1 rounded-full bg-surface-container hover:bg-primary-container hover:text-on-primary-container text-on-surface transition-all font-label-sm text-label-sm flex items-center gap-1.5 border border-outline-variant/40 hover:border-transparent" href="#sec-06">
-<span class="text-primary-container group-hover:text-inherit font-bold">06</span> PH Higher Ed
-          </a>
-<a class="group px-3 py-1 rounded-full bg-surface-container hover:bg-tertiary-container hover:text-on-tertiary-container text-on-surface transition-all font-label-sm text-label-sm flex items-center gap-1.5 border border-outline-variant/40 hover:border-transparent" href="#sec-07">
-<span class="text-tertiary group-hover:text-inherit font-bold">07</span> Responsible Use
-          </a>
-<a class="group px-3 py-1 rounded-full bg-surface-container hover:bg-secondary hover:text-on-secondary-fixed text-on-surface transition-all font-label-sm text-label-sm flex items-center gap-1.5 border border-outline-variant/40 hover:border-transparent" href="#sec-08">
-<span class="text-secondary group-hover:text-inherit font-bold">08</span> Evidence
-          </a>
-</div>
-</div>
-</div>
-<div class="max-w-7xl mx-auto px-6 lg:px-12 py-10 w-full space-y-16">
-<!-- Header Hero Meta Block -->
-<div class="relative overflow-hidden rounded-2xl bg-gradient-to-r from-surface-container-low via-surface-container to-surface-container-low p-8 lg:p-12 border border-outline-variant/40 shadow-2xl">
-<div class="absolute -right-20 -top-20 w-96 h-96 rounded-full bg-primary/10 blur-[90px] pointer-events-none"></div>
-<div class="relative z-10 flex flex-col gap-4 max-w-4xl">
-<div class="flex flex-wrap items-center gap-2.5">
-<span class="px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm uppercase tracking-wider font-semibold border border-secondary/30">
-              GED 104 • SCIENCE, TECHNOLOGY, AND SOCIETY
-            </span>
-<span class="px-3 py-1 rounded-full bg-surface-container-highest text-primary font-label-sm text-label-sm uppercase tracking-wider font-semibold border border-primary/20">
-              DOCUMENT_51 COMPREHENSIVE TEXT
-            </span>
-<span class="px-3 py-1 rounded-full bg-tertiary-container/20 text-tertiary font-label-sm text-label-sm uppercase tracking-wider font-semibold border border-tertiary/30 flex items-center gap-1">
-<span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span> Peer-Reviewed Synthesis
-            </span>
-</div>
-<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight font-extrabold">
-            Discussion
-          </h1>
-<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
-            DISCUSSION OF THE ASSIGNED TOPIC: An in-depth empirical and analytical exploration of technology usage, academic drivers, cognitive hazards, Philippine higher education infrastructure, and ethical frameworks.
-          </p>
-</div>
-</div>
-<!-- Pure CSS/SVG Visual Diagnostic Slot 1 (Replacing AI Image) -->
-<div class="rounded-2xl bg-surface-container-low border border-outline-variant/40 p-6 lg:p-8 shadow-xl space-y-6">
-<div class="flex flex-col sm:flex-row sm:items-center justify-between pb-4 border-b border-outline-variant/30 gap-2">
-<div class="flex items-center gap-2.5">
-<span class="material-symbols-outlined text-primary-container text-[24px]">account_tree</span>
+<!-- Section 01: Patterns & Purposes -->
+<section class="flex flex-col gap-space-lg">
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="flex items-center justify-center w-8 h-8 rounded-lg bg-surface-container-high text-primary font-headline-sm text-headline-sm">01</span>
 <div>
-<span class="font-title-md text-title-md text-on-surface font-semibold block">Empirical Technology Utilization &amp; Academic Performance Synthesis Map</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant">Live SVG telemetry flow mapping student input bandwidth to grade yields</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Patterns and Purposes of Technology Use Among College Students</h2>
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Empirical Dataset: Corrin et al., 2010 • Telemetry Stream</p>
 </div>
 </div>
-<!-- Clean GitHub dashed repository slot indicator -->
-<div class="flex items-center gap-2 px-3 py-1.5 rounded-lg border border-dashed border-primary/40 bg-surface-container-lowest text-primary font-mono text-xs">
-<span class="material-symbols-outlined text-[16px]">folder_zip</span>
-<span>assets/images/discussion-overview-diagram.jpg</span>
+<span class="hidden md:inline-flex px-space-sm py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">SYNTHESIS: N=470</span>
 </div>
-</div>
-<!-- Interactive Vector Graphic Canvas -->
-<div class="relative w-full rounded-xl bg-surface-container-lowest p-6 border border-outline-variant/30 overflow-hidden">
-<div class="grid grid-cols-1 md:grid-cols-4 gap-4 relative z-10">
-<!-- Node 1 -->
-<div class="p-4 rounded-xl bg-surface-container/90 border border-primary/30 flex flex-col justify-between hover:border-primary transition-all shadow-md">
-<div class="flex items-center justify-between">
-<span class="px-2 py-0.5 rounded bg-primary/10 text-primary font-mono text-xs font-bold">STAGE 01</span>
-<span class="material-symbols-outlined text-primary text-[20px]">devices</span>
-</div>
-<div class="my-3">
-<span class="font-title-sm text-title-sm font-semibold text-on-surface block">Hardware Saturation</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant">Multi-device round-the-clock connectivity</span>
-</div>
-<div class="text-xs font-mono text-primary flex items-center justify-between pt-2 border-t border-outline-variant/20">
-<span>Access Rate</span>
-<span class="font-bold">96.4%</span>
-</div>
-</div>
-<!-- Node 2 -->
-<div class="p-4 rounded-xl bg-surface-container/90 border border-secondary/30 flex flex-col justify-between hover:border-secondary transition-all shadow-md">
-<div class="flex items-center justify-between">
-<span class="px-2 py-0.5 rounded bg-secondary/15 text-secondary font-mono text-xs font-bold">STAGE 02</span>
-<span class="material-symbols-outlined text-secondary text-[20px]">call_split</span>
-</div>
-<div class="my-3">
-<span class="font-title-sm text-title-sm font-semibold text-on-surface block">Bandwidth Partitioning</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant">Academic research vs Social dopamine loops</span>
-</div>
-<div class="text-xs font-mono text-secondary flex items-center justify-between pt-2 border-t border-outline-variant/20">
-<span>Distraction Ratio</span>
-<span class="font-bold">39.0%</span>
-</div>
-</div>
-<!-- Node 3 -->
-<div class="p-4 rounded-xl bg-surface-container/90 border border-tertiary/30 flex flex-col justify-between hover:border-tertiary transition-all shadow-md">
-<div class="flex items-center justify-between">
-<span class="px-2 py-0.5 rounded bg-tertiary/15 text-tertiary font-mono text-xs font-bold">STAGE 03</span>
-<span class="material-symbols-outlined text-tertiary text-[20px]">psychology</span>
-</div>
-<div class="my-3">
-<span class="font-title-sm text-title-sm font-semibold text-on-surface block">Cognitive Bandwidth</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant">Prefrontal executive reserves &amp; focus stability</span>
-</div>
-<div class="text-xs font-mono text-tertiary flex items-center justify-between pt-2 border-t border-outline-variant/20">
-<span>Retention Index</span>
-<span class="font-bold">Variable</span>
-</div>
-</div>
-<!-- Node 4 -->
-<div class="p-4 rounded-xl bg-surface-container/90 border border-primary-container/30 flex flex-col justify-between hover:border-primary-container transition-all shadow-md">
-<div class="flex items-center justify-between">
-<span class="px-2 py-0.5 rounded bg-primary-container/15 text-primary-container font-mono text-xs font-bold">STAGE 04</span>
-<span class="material-symbols-outlined text-primary-container text-[20px]">verified</span>
-</div>
-<div class="my-3">
-<span class="font-title-sm text-title-sm font-semibold text-on-surface block">Undergraduate GPA</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant">Measured programming and science retention</span>
-</div>
-<div class="text-xs font-mono text-primary-container flex items-center justify-between pt-2 border-t border-outline-variant/20">
-<span>Score Variance</span>
-<span class="font-bold">±11 Pts</span>
-</div>
-</div>
-</div>
-<div class="mt-4 pt-3 flex items-center justify-between text-xs text-on-surface-variant border-t border-outline-variant/20">
-<span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span> Live Repository Diagram Architecture • Pure CSS &amp; Scalable Vector Layout</span>
-<span class="font-mono">TNEU-GED104-SYS-01</span>
-</div>
-</div>
-</div>
-<!-- Section 1: Patterns and Purposes of Technology Use Among College Students -->
-<section class="space-y-8 scroll-mt-36" id="sec-01">
-<div class="flex flex-col gap-2">
-<div class="flex items-center gap-2">
-<span class="px-2.5 py-0.5 rounded bg-primary-container text-on-primary-container font-label-sm text-label-sm font-bold shadow-sm">01</span>
-<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-semibold">Behavioral Demographics</span>
-</div>
-<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight">Patterns and Purposes of Technology Use Among College Students</h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant">
-            In everyday college life, technology serves as an indispensable infrastructure for convenience, empirical research, collaborative synthesis, and personal communication.
-          </p>
-</div>
-<!-- Typical Devices Used Bento Grid with Interactive Glow -->
-<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-<div class="card-glow rounded-2xl bg-surface-container p-6 flex flex-col justify-between shadow-lg hover:-translate-y-1 transition-all">
-<div class="space-y-3">
-<div class="w-12 h-12 rounded-xl bg-primary/10 border border-primary/30 flex items-center justify-center text-primary shadow-inner">
-<span class="material-symbols-outlined text-[28px]">laptop_mac</span>
-</div>
-<h3 class="font-title-md text-title-md text-on-surface font-bold">Laptops and Desktop Computers</h3>
-<p class="font-body-md text-body-md text-on-surface-variant">
-                Generally used for intensive research, technical report composition, algorithmic programming, simulation execution, and preparing structured academic presentations.
-              </p>
-</div>
-<div class="mt-6 pt-3 flex items-center justify-between border-t border-outline-variant/30 text-on-surface-variant">
-<span class="font-label-sm text-label-sm">Primary Academic Driver</span>
-<span class="font-label-sm text-label-sm text-primary font-semibold px-2 py-0.5 rounded bg-primary/10">High Compute</span>
-</div>
-</div>
-<div class="card-glow rounded-2xl bg-surface-container p-6 flex flex-col justify-between shadow-lg hover:-translate-y-1 transition-all">
-<div class="space-y-3">
-<div class="w-12 h-12 rounded-xl bg-tertiary/10 border border-tertiary/30 flex items-center justify-center text-tertiary shadow-inner">
-<span class="material-symbols-outlined text-[28px]">smartphone</span>
-</div>
-<h3 class="font-title-md text-title-md text-on-surface font-bold">Smartphones</h3>
-<p class="font-body-md text-body-md text-on-surface-variant">
-                Essentially used for synchronous peer communication, accessing virtual learning management portals on-the-go, spontaneous browsing, and social networking interactions.
-              </p>
-</div>
-<div class="mt-6 pt-3 flex items-center justify-between border-t border-outline-variant/30 text-on-surface-variant">
-<span class="font-label-sm text-label-sm">Primary Channel</span>
-<span class="font-label-sm text-label-sm text-tertiary font-semibold px-2 py-0.5 rounded bg-tertiary/10">Real-time Comms</span>
-</div>
-</div>
-<div class="card-glow rounded-2xl bg-surface-container p-6 flex flex-col justify-between shadow-lg hover:-translate-y-1 transition-all">
-<div class="space-y-3">
-<div class="w-12 h-12 rounded-xl bg-secondary/15 border border-secondary/30 flex items-center justify-center text-secondary shadow-inner">
-<span class="material-symbols-outlined text-[28px]">tablet_mac</span>
-</div>
-<h3 class="font-title-md text-title-md text-on-surface font-bold">Tablets</h3>
-<p class="font-body-md text-body-md text-on-surface-variant">
-                Usually used for reading e-books, annotating digital course handouts, reviewing schematic lectures, and streamlined stylus-based note-taking during classes.
-              </p>
-</div>
-<div class="mt-6 pt-3 flex items-center justify-between border-t border-outline-variant/30 text-on-surface-variant">
-<span class="font-label-sm text-label-sm">Satish (2026)</span>
-<span class="font-label-sm text-label-sm text-secondary font-semibold px-2 py-0.5 rounded bg-secondary/15">Portable Hybrid</span>
-</div>
-</div>
-</div>
-<!-- Usage Analytics Split Grid with Interactive Pure SVG / CSS Charts -->
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
-<div class="lg:col-span-5 rounded-2xl bg-surface-container-low p-6 lg:p-8 flex flex-col justify-between shadow-xl border border-outline-variant/30">
-<div class="space-y-4">
-<div class="flex items-center justify-between">
-<span class="font-title-sm text-title-sm text-on-surface font-bold">Usage Frequency &amp; Scale</span>
-<span class="px-2.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold border border-secondary/30">Corrin et al. (2010)</span>
-</div>
-<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
-                In a seminal inquiry involving <strong>470 first-year university students</strong>, Corrin, Lockyer, and Bennett revealed an acute disconnect between technology frequency and deliberate academic purpose. Students exhibit round-the-clock connectivity, yet operational mastery is skewed heavily towards communication rather than advanced scholarship.
-              </p>
-<!-- Dynamic SVG Ring Progress Chart -->
-<div class="p-5 rounded-xl bg-surface-container border border-outline-variant/30 flex items-center gap-6">
-<div class="relative w-24 h-24 shrink-0 flex items-center justify-center">
-<svg class="w-full h-full -rotate-90" viewbox="0 0 36 36">
-<path class="text-surface-container-highest stroke-current" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke-width="3.8"></path>
-<path class="text-primary-container stroke-current" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke-dasharray="96.4, 100" stroke-linecap="round" stroke-width="3.8"></path>
-</svg>
-<div class="absolute inset-0 flex flex-col items-center justify-center">
-<span class="font-headline-sm text-headline-sm font-bold text-on-surface leading-none">96.4<span class="text-xs text-primary">%</span></span>
-</div>
-</div>
-<div class="space-y-1">
-<span class="font-title-sm text-title-sm font-bold text-on-surface block">Continuous Daily Connectivity</span>
-<p class="font-body-sm text-body-sm text-on-surface-variant">Persistent multi-device engagement observed among 470 engineering &amp; STEM freshmen.</p>
-</div>
-</div>
-</div>
-<p class="font-body-sm text-body-sm text-on-surface-variant mt-4 pt-3 border-t border-outline-variant/20">
-              Source: Corrin, Lockyer, and Bennett (2010) First-Year University Technology Behavioral Cohort Study.
-            </p>
-</div>
-<div class="lg:col-span-7 rounded-2xl bg-surface-container p-6 lg:p-8 space-y-6 shadow-xl border border-outline-variant/30">
-<div class="flex items-center justify-between">
-<div>
-<h3 class="font-title-md text-title-md text-on-surface font-bold">How Much Time Do Students Spend on Technology?</h3>
-<p class="font-body-sm text-body-sm text-on-surface-variant">Categorical partitioning between structured educational tasks and entertainment vectors.</p>
-</div>
-<span class="material-symbols-outlined text-primary text-[32px] p-2 rounded-xl bg-primary/10">query_stats</span>
-</div>
-<!-- Dynamic Partition Bar -->
-<div class="p-4 rounded-xl bg-surface-container-high border border-outline-variant/30 space-y-2">
-<div class="flex items-center justify-between text-xs font-mono">
-<span class="text-tertiary font-bold flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded bg-tertiary"></span> Academic Screen Time (61%)</span>
-<span class="text-secondary font-bold flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded bg-secondary"></span> Non-Academic / Social (39%)</span>
-</div>
-<div class="w-full h-3 rounded-full bg-surface-container-lowest flex overflow-hidden p-0.5">
-<div class="bg-gradient-to-r from-tertiary to-tertiary-container h-full rounded-l-full" style="width: 61%"></div>
-<div class="bg-gradient-to-r from-secondary to-secondary-container h-full rounded-r-full" style="width: 39%"></div>
-</div>
-</div>
-<!-- Academic vs Non Academic Screen Time Breakdown -->
-<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-<div class="p-5 rounded-xl bg-surface-container-high border border-tertiary/20 space-y-3">
-<div class="flex items-center gap-2 text-tertiary">
-<span class="material-symbols-outlined text-[20px]">menu_book</span>
-<span class="font-title-sm text-title-sm font-bold">Academic Screen Time</span>
-</div>
-<ul class="space-y-2 font-body-sm text-body-sm text-on-surface-variant">
-<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>Library Database &amp; Paper Research</li>
-<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>Synchronous Classes &amp; Video Seminars</li>
-<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>Source Code Programming &amp; Debugging</li>
-<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>Course Assignments &amp; Team Projects</li>
-</ul>
-</div>
-<div class="p-5 rounded-xl bg-surface-container-high border border-secondary/20 space-y-3">
-<div class="flex items-center gap-2 text-secondary">
-<span class="material-symbols-outlined text-[20px]">sports_esports</span>
-<span class="font-title-sm text-title-sm font-bold">Non-Academic Screen Time</span>
-</div>
-<ul class="space-y-2 font-body-sm text-body-sm text-on-surface-variant">
-<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>Social Media Algorithmic Feeds</li>
-<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>Online Multiplayer Video Games</li>
-<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>Passive Video &amp; Series Streaming</li>
-<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>Unstructured Web Browsing Habits</li>
-</ul>
-</div>
-</div>
-<!-- 5 Major Categories -->
-<div class="space-y-3 pt-2">
-<span class="font-title-sm text-title-sm text-on-surface font-bold block">5 Core Driver Categories of Usage</span>
-<div class="grid grid-cols-2 sm:grid-cols-5 gap-2.5">
-<div class="p-3 rounded-xl bg-surface-container-lowest border border-outline-variant/30 text-center hover:border-primary transition-all">
-<span class="material-symbols-outlined text-primary text-[22px] block mb-1">travel_explore</span>
-<span class="font-label-sm text-label-sm text-on-surface font-semibold block">Academic</span>
-<span class="text-[11px] text-on-surface-variant">Research</span>
-</div>
-<div class="p-3 rounded-xl bg-surface-container-lowest border border-outline-variant/30 text-center hover:border-tertiary transition-all">
-<span class="material-symbols-outlined text-tertiary text-[22px] block mb-1">forum</span>
-<span class="font-label-sm text-label-sm text-on-surface font-semibold block">Messaging</span>
-<span class="text-[11px] text-on-surface-variant">Comms</span>
-</div>
-<div class="p-3 rounded-xl bg-surface-container-lowest border border-outline-variant/30 text-center hover:border-secondary transition-all">
-<span class="material-symbols-outlined text-secondary text-[22px] block mb-1">school</span>
-<span class="font-label-sm text-label-sm text-on-surface font-semibold block">E-Learning</span>
-<span class="text-[11px] text-on-surface-variant">Modules</span>
-</div>
-<div class="p-3 rounded-xl bg-surface-container-lowest border border-outline-variant/30 text-center hover:border-primary-container transition-all">
-<span class="material-symbols-outlined text-primary-container text-[22px] block mb-1">movie</span>
-<span class="font-label-sm text-label-sm text-on-surface font-semibold block">Streaming</span>
-<span class="text-[11px] text-on-surface-variant">Media</span>
-</div>
-<div class="p-3 rounded-xl bg-surface-container-lowest border border-outline-variant/30 text-center col-span-2 sm:col-span-1 hover:border-secondary-container transition-all">
-<span class="material-symbols-outlined text-secondary-container text-[22px] block mb-1">share</span>
-<span class="font-label-sm text-label-sm text-on-surface font-semibold block">Social</span>
-<span class="text-[11px] text-on-surface-variant">Feeds</span>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Section 2: Positive Effects of Technology Use on Academic Activities -->
-<section class="space-y-8 scroll-mt-36" id="sec-02">
-<div class="flex flex-col gap-2">
-<div class="flex items-center gap-2">
-<span class="px-2.5 py-0.5 rounded bg-tertiary-container text-on-tertiary-container font-label-sm text-label-sm font-bold shadow-sm">02</span>
-<span class="font-label-sm text-label-sm uppercase tracking-widest text-tertiary font-semibold">Constructive Vectors</span>
-</div>
-<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight">Positive Effects of Technology Use on Academic Activities</h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant">
-            Empirical research identifies six structural pillars where modern computational tools significantly augment undergraduate pedagogical outcomes and research throughput.
-          </p>
-</div>
-<!-- Bento Grid with Emerald/Cyan Glow Highlights -->
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-<!-- Pillar 1 -->
-<div class="card-glow rounded-2xl bg-surface-container p-6 space-y-3 shadow-lg border border-outline-variant/30 hover:-translate-y-1 transition-all">
-<div class="flex items-center justify-between">
-<span class="w-9 h-9 rounded-xl bg-tertiary/15 text-tertiary font-bold flex items-center justify-center border border-tertiary/30">1</span>
-<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">Sullivan (2026)</span>
-</div>
-<h3 class="font-title-md text-title-md text-on-surface font-bold">Access to Educational Resources</h3>
-<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
-              Removes physical geographic barriers to global scientific literature, peer-reviewed journals, and specialized digital textbooks, enabling undergraduate researchers to survey state-of-the-art findings seamlessly.
-            </p>
-</div>
-<!-- Pillar 2 -->
-<div class="card-glow rounded-2xl bg-surface-container p-6 space-y-3 shadow-lg border border-outline-variant/30 hover:-translate-y-1 transition-all">
-<div class="flex items-center justify-between">
-<span class="w-9 h-9 rounded-xl bg-tertiary/15 text-tertiary font-bold flex items-center justify-center border border-tertiary/30">2</span>
-<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">Sullivan 2026 / Quintilian 2025</span>
-</div>
-<h3 class="font-title-md text-title-md text-on-surface font-bold">Improved Learning and Understanding</h3>
-<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
-              Interactive visual simulation suites, animated logic circuits, and dynamic algorithmic sandboxes transform abstract engineering theory into tactile, intuitive mental models.
-            </p>
-</div>
-<!-- Pillar 3 -->
-<div class="card-glow rounded-2xl bg-surface-container p-6 space-y-3 shadow-lg border border-outline-variant/30 hover:-translate-y-1 transition-all">
-<div class="flex items-center justify-between">
-<span class="w-9 h-9 rounded-xl bg-tertiary/15 text-tertiary font-bold flex items-center justify-center border border-tertiary/30">3</span>
-<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">Sullivan (2026)</span>
-</div>
-<h3 class="font-title-md text-title-md text-on-surface font-bold">Increased Academic Productivity</h3>
-<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
-              Automation of reference citation compiling, automated syntax verification in modern IDEs, and structured digital calendars drastically reduce administrative study friction.
-            </p>
-</div>
-<!-- Pillar 4 -->
-<div class="card-glow rounded-2xl bg-surface-container p-6 space-y-3 shadow-lg border border-outline-variant/30 hover:-translate-y-1 transition-all">
-<div class="flex items-center justify-between">
-<span class="w-9 h-9 rounded-xl bg-tertiary/15 text-tertiary font-bold flex items-center justify-center border border-tertiary/30">4</span>
-<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">Skill Mastery</span>
-</div>
-<h3 class="font-title-md text-title-md text-on-surface font-bold">Independent Learning &amp; Skill Development</h3>
-<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
-              Students cultivate self-directed agency through asynchronous open-courseware, mastering modern software development toolchains, data structures, and hardware descriptive languages outside classroom boundaries.
-            </p>
-</div>
-<!-- Pillar 5 -->
-<div class="card-glow rounded-2xl bg-surface-container p-6 space-y-3 shadow-lg border border-outline-variant/30 hover:-translate-y-1 transition-all">
-<div class="flex items-center justify-between">
-<span class="w-9 h-9 rounded-xl bg-tertiary/15 text-tertiary font-bold flex items-center justify-center border border-tertiary/30">5</span>
-<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">Quintilian School (2025)</span>
-</div>
-<h3 class="font-title-md text-title-md text-on-surface font-bold">Collaboration and Communication</h3>
-<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
-              Cloud-based collaborative versioning control platforms (e.g. Git repositories, synchronized spreadsheets) enable real-time joint engineering research and agile group execution.
-            </p>
-</div>
-<!-- Pillar 6 -->
-<div class="card-glow rounded-2xl bg-surface-container p-6 space-y-3 shadow-lg border border-outline-variant/30 hover:-translate-y-1 transition-all">
-<div class="flex items-center justify-between">
-<span class="w-9 h-9 rounded-xl bg-tertiary/15 text-tertiary font-bold flex items-center justify-center border border-tertiary/30">6</span>
-<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">Delmo et al. (2024)</span>
-</div>
-<h3 class="font-title-md text-title-md text-on-surface font-bold">The Importance of Digital Infrastructure</h3>
-<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
-              Robust high-bandwidth campus networks, dedicated computational laboratory access, and centralized learning systems represent the baseline prerequisite for sustainable academic success in modern higher education.
-            </p>
-</div>
-</div>
-</section>
-<!-- Section 3: Negative Effects of Technology Use on Academic Activities -->
-<section class="space-y-8 scroll-mt-36" id="sec-03">
-<div class="flex flex-col gap-2">
-<div class="flex items-center gap-2">
-<span class="px-2.5 py-0.5 rounded bg-rose-500/20 text-rose-400 font-label-sm text-label-sm font-bold border border-rose-500/30">03</span>
-<span class="font-label-sm text-label-sm uppercase tracking-widest text-rose-400 font-semibold">Cognitive Hazards</span>
-</div>
-<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight">Negative Effects of Technology Use on Academic Activities</h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant">
-            Unregulated usage induces severe physiological and cognitive penalties, eroding prolonged analytical focus and destabilizing academic retention.
-          </p>
-</div>
-<!-- Glowing Rose/Amber Hazards Grid -->
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-<div class="card-glow card-glow-rose rounded-2xl bg-surface-container p-6 space-y-3 border border-rose-500/20 shadow-lg hover:-translate-y-1 transition-all">
-<div class="w-12 h-12 rounded-xl bg-rose-500/15 border border-rose-500/30 flex items-center justify-center text-rose-400 shadow-inner">
-<span class="material-symbols-outlined text-[28px]">notifications_paused</span>
-</div>
-<h3 class="font-title-md text-title-md text-on-surface font-bold">Attention Splintering</h3>
-<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
-              Continuous push notifications from social networks and instant messaging platforms cause chronic context switching, fragmenting deep work states required for engineering proofs.
-            </p>
-</div>
-<div class="card-glow card-glow-rose rounded-2xl bg-surface-container p-6 space-y-3 border border-rose-500/20 shadow-lg hover:-translate-y-1 transition-all">
-<div class="w-12 h-12 rounded-xl bg-rose-500/15 border border-rose-500/30 flex items-center justify-center text-rose-400 shadow-inner">
-<span class="material-symbols-outlined text-[28px]">hourglass_disabled</span>
-</div>
-<h3 class="font-title-md text-title-md text-on-surface font-bold">Academic Procrastination</h3>
-<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
-              Instant dopamine loops delivered by short-form video algorithms and online gaming displace critical homework timeframes, culminating in rushed submissions and heightened anxiety.
-            </p>
-</div>
-<div class="card-glow card-glow-rose rounded-2xl bg-surface-container p-6 space-y-3 border border-rose-500/20 shadow-lg hover:-translate-y-1 transition-all">
-<div class="w-12 h-12 rounded-xl bg-rose-500/15 border border-rose-500/30 flex items-center justify-center text-rose-400 shadow-inner">
-<span class="material-symbols-outlined text-[28px]">psychology_alt</span>
-</div>
-<h3 class="font-title-md text-title-md text-on-surface font-bold">Cognitive Fatigue</h3>
-<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
-              Sensory hyperstimulation and infinite-scroll feeds deplete finite prefrontal executive reserves, leaving students mentally exhausted before engaging in rigorous STEM coursework.
-            </p>
-</div>
-<div class="card-glow card-glow-rose rounded-2xl bg-surface-container p-6 space-y-3 border border-rose-500/20 shadow-lg hover:-translate-y-1 transition-all">
-<div class="w-12 h-12 rounded-xl bg-rose-500/15 border border-rose-500/30 flex items-center justify-center text-rose-400 shadow-inner">
-<span class="material-symbols-outlined text-[28px]">bedtime</span>
-</div>
-<h3 class="font-title-md text-title-md text-on-surface font-bold">Sleep Architecture Impact</h3>
-<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
-              Late-night blue-light exposure suppresses physiological melatonin secretion, truncating restorative REM cycles and impairing synaptic memory consolidation essential for engineering examinations.
-            </p>
-</div>
-</div>
-</section>
-<!-- Pure CSS/SVG Visual Diagnostic Slot 2 (Replacing AI Image) -->
-<div class="rounded-2xl bg-surface-container-low border border-outline-variant/40 p-6 lg:p-8 shadow-xl space-y-6">
-<div class="flex flex-col sm:flex-row sm:items-center justify-between pb-4 border-b border-outline-variant/30 gap-2">
-<div class="flex items-center gap-2.5">
-<span class="material-symbols-outlined text-tertiary text-[24px]">monitoring</span>
-<div>
-<span class="font-title-md text-title-md text-on-surface font-semibold block">Empirical Performance Curves Across Technology-Aided Learning Modules</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant">Longitudinal distribution comparing GPA retention against daily non-academic screen-time hours</span>
-</div>
-</div>
-<!-- Clean GitHub dashed repository slot indicator -->
-<div class="flex items-center gap-2 px-3 py-1.5 rounded-lg border border-dashed border-tertiary/40 bg-surface-container-lowest text-tertiary font-mono text-xs">
-<span class="material-symbols-outlined text-[16px]">folder_zip</span>
-<span>assets/images/discussion-position-metrics.jpg</span>
-</div>
-</div>
-<!-- Pure CSS/SVG Interactive Chart -->
-<div class="p-6 rounded-xl bg-surface-container-lowest border border-outline-variant/30 space-y-6">
-<div class="flex flex-wrap items-center justify-between gap-4">
-<div class="flex items-center gap-4 text-xs font-mono">
-<span class="flex items-center gap-1.5"><span class="w-3 h-1 bg-tertiary rounded"></span> High Structured Use (Optimized)</span>
-<span class="flex items-center gap-1.5"><span class="w-3 h-1 bg-rose-400 rounded"></span> Unregulated Screen Time (Decay Curve)</span>
-</div>
-<span class="text-xs font-mono text-on-surface-variant">N = 470 BSCpE &amp; STEM Undergraduate Cohorts</span>
-</div>
-<!-- Scalable SVG Line & Telemetry Graph -->
-<div class="w-full h-48 relative">
-<svg class="w-full h-full overflow-visible" preserveaspectratio="none" viewbox="0 0 500 150">
-<defs>
-<lineargradient id="grad-tertiary" x1="0" x2="0" y1="0" y2="1">
-<stop offset="0%" stop-color="#4ee6aa" stop-opacity="0.25"></stop>
-<stop offset="100%" stop-color="#4ee6aa" stop-opacity="0"></stop>
-</lineargradient>
-<lineargradient id="grad-rose" x1="0" x2="0" y1="0" y2="1">
-<stop offset="0%" stop-color="#f43f5e" stop-opacity="0.25"></stop>
-<stop offset="100%" stop-color="#f43f5e" stop-opacity="0"></stop>
-</lineargradient>
-</defs>
-<!-- Grid lines -->
-<line stroke="rgba(255,255,255,0.06)" stroke-dasharray="4 4" x1="0" x2="500" y1="30" y2="30"></line>
-<line stroke="rgba(255,255,255,0.06)" stroke-dasharray="4 4" x1="0" x2="500" y1="75" y2="75"></line>
-<line stroke="rgba(255,255,255,0.06)" stroke-dasharray="4 4" x1="0" x2="500" y1="120" y2="120"></line>
-<!-- Shaded Areas -->
-<polygon fill="url(#grad-tertiary)" points="0,110 80,70 180,45 280,35 380,30 500,28 500,150 0,150"></polygon>
-<polygon fill="url(#grad-rose)" points="0,60 80,62 180,85 280,118 380,135 500,145 500,150 0,150"></polygon>
-<!-- Lines -->
-<polyline fill="none" points="0,110 80,70 180,45 280,35 380,30 500,28" stroke="#4ee6aa" stroke-linecap="round" stroke-width="2.5"></polyline>
-<polyline fill="none" points="0,60 80,62 180,85 280,118 380,135 500,145" stroke="#f43f5e" stroke-linecap="round" stroke-width="2.5"></polyline>
-<!-- Threshold marker -->
-<line stroke="#38bdf8" stroke-dasharray="2 2" stroke-width="1.5" x1="280" x2="280" y1="10" y2="145"></line>
-<circle cx="280" cy="118" fill="#f43f5e" r="4"></circle>
-<circle cx="280" cy="35" fill="#4ee6aa" r="4"></circle>
-</svg>
-</div>
-<div class="flex items-center justify-between text-xs text-on-surface-variant font-mono pt-2 border-t border-outline-variant/20">
-<span>0h (Baseline)</span>
-<span>2.5h (Optimal Engagement)</span>
-<span class="text-primary font-bold">4.0h (Critical Saturation Threshold)</span>
-<span>6h+ (Severe Cognitive Depletion)</span>
-</div>
-</div>
-</div>
-<!-- Section 4: Influence of Technology Use on Academic Performance -->
-<section class="space-y-8 scroll-mt-36" id="sec-04">
-<div class="flex flex-col gap-2">
-<div class="flex items-center gap-2">
-<span class="px-2.5 py-0.5 rounded bg-primary-container text-on-primary-container font-label-sm text-label-sm font-bold shadow-sm">04</span>
-<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-semibold">Academic Influence</span>
-</div>
-<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight">Influence of Technology Use on Academic Performance</h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant">
-            The nexus between technological saturation and GPA is not linear. It oscillates based on deliberate intent, cognitive bottlenecks, and the divergence between perceived and measured performance.
-          </p>
-</div>
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
-<div class="card-glow rounded-2xl bg-surface-container p-6 lg:p-8 space-y-4 shadow-xl border border-outline-variant/30">
-<div class="flex items-center gap-3">
-<div class="w-12 h-12 rounded-xl bg-tertiary/15 text-tertiary flex items-center justify-center border border-tertiary/30">
-<span class="material-symbols-outlined text-[26px]">trending_up</span>
-</div>
-<div>
-<h3 class="font-title-md text-title-md text-on-surface font-bold">Positive Influences</h3>
-<span class="font-label-sm text-label-sm text-tertiary font-semibold">Constructive Trajectory</span>
-</div>
-</div>
-<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
-              When applied purposefully, digital tooling scales information retrieval velocity by a factor of 10. Students leveraging automated compile environments, collaborative cloud code editors, and mathematical computing notebooks exhibit superior comprehension of multi-layered technical models and agile problem-solving agility.
-            </p>
-<div class="p-4 rounded-xl bg-surface-container-high border-l-4 border-tertiary font-label-sm text-label-sm text-on-surface">
-<strong class="text-tertiary">Key Benefit:</strong> Enhanced problem-solving speed and access to high-fidelity academic simulation.
-            </div>
-</div>
-<div class="card-glow card-glow-rose rounded-2xl bg-surface-container p-6 lg:p-8 space-y-4 shadow-xl border border-outline-variant/30">
-<div class="flex items-center gap-3">
-<div class="w-12 h-12 rounded-xl bg-rose-500/15 text-rose-400 flex items-center justify-center border border-rose-500/30">
-<span class="material-symbols-outlined text-[26px]">trending_down</span>
-</div>
-<div>
-<h3 class="font-title-md text-title-md text-on-surface font-bold">Negative Influences &amp; Cognitive Bottlenecks</h3>
-<span class="font-label-sm text-label-sm text-rose-400 font-semibold">Cognitive Friction</span>
-</div>
-</div>
-<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
-              Perceived academic multitasking is an empirical illusion. Cognitive bottlenecks emerge when students toggle between assignment problem sets and streaming feeds. Laboratory diagnostics confirm this split reduces retention rates, elevates coding syntax errors, and creates an artificial sense of productivity that deteriorates in proctored examinations.
-            </p>
-<div class="p-4 rounded-xl bg-surface-container-high border-l-4 border-rose-400 font-label-sm text-label-sm text-on-surface">
-<strong class="text-rose-400">Key Risk:</strong> Multitasking cognitive bottleneck causing elevated syntax error rates and knowledge degradation.
-            </div>
-</div>
-</div>
-</section>
-<!-- Section 5: Technology-Related Challenges in Computer Engineering Education -->
-<section class="space-y-8 scroll-mt-36" id="sec-05">
-<div class="flex flex-col gap-2">
-<div class="flex items-center gap-2">
-<span class="px-2.5 py-0.5 rounded bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold shadow-sm">05</span>
-<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold">Disciplinary Focus</span>
-</div>
-<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight">Technology-Related Challenges in Computer Engineering Education</h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant">
-            First-year Bachelor of Science in Computer Engineering (BSCpE) students encounter a unique institutional paradigm where technology acts concurrently as the subject matter, the development medium, and the primary vector of distraction.
-          </p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-<div class="card-glow rounded-2xl bg-surface-container p-6 space-y-3 shadow-lg border border-outline-variant/30 hover:-translate-y-1 transition-all">
-<span class="material-symbols-outlined text-primary text-[32px] p-2 rounded-xl bg-primary/10">balance</span>
-<h3 class="font-title-md text-title-md text-on-surface font-bold">Balancing Toolchains</h3>
-<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
-              Undergraduate engineers must master multiple complex development suites simultaneously (IDEs, compilers, CAD tools, circuit simulators) without formal onboarding.
-            </p>
-</div>
-<div class="card-glow rounded-2xl bg-surface-container p-6 space-y-3 shadow-lg border border-outline-variant/30 hover:-translate-y-1 transition-all">
-<span class="material-symbols-outlined text-primary text-[32px] p-2 rounded-xl bg-primary/10">sports_esports</span>
-<h3 class="font-title-md text-title-md text-on-surface font-bold">Entertainment Proximity</h3>
-<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
-              Because heavy-duty desktop rigs and gaming laptops are mandated for technical simulations, high-end entertainment software sits just one click away from programming environments.
-            </p>
-</div>
-<div class="card-glow rounded-2xl bg-surface-container p-6 space-y-3 shadow-lg border border-outline-variant/30 hover:-translate-y-1 transition-all">
-<span class="material-symbols-outlined text-primary text-[32px] p-2 rounded-xl bg-primary/10">schedule</span>
-<h3 class="font-title-md text-title-md text-on-surface font-bold">Time Management</h3>
-<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
-              Debugging recursive logic or synthesizing digital logic tables often involves open-ended problem solving, leading to severe misestimations of project time requirements.
-            </p>
-</div>
-<div class="card-glow rounded-2xl bg-surface-container p-6 space-y-3 shadow-lg border border-outline-variant/30 hover:-translate-y-1 transition-all">
-<span class="material-symbols-outlined text-primary text-[32px] p-2 rounded-xl bg-primary/10">memory</span>
-<h3 class="font-title-md text-title-md text-on-surface font-bold">Hardware-Software Divergence</h3>
-<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
-              Navigating the gap between physical lab hardware equipment (microcontrollers, breadboards, oscilloscopes) and cloud software IDEs requires intensive dual-domain competence.
-            </p>
-</div>
-</div>
-</section>
-<!-- Section 6: Major Challenges in Philippine Higher Education -->
-<section class="space-y-8 scroll-mt-36" id="sec-06">
-<div class="flex flex-col gap-2">
-<div class="flex items-center gap-2">
-<span class="px-2.5 py-0.5 rounded bg-primary-container text-on-primary-container font-label-sm text-label-sm font-bold shadow-sm">06</span>
-<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-semibold">Macro Structural Barriers</span>
-</div>
-<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight">Major Challenges in Philippine Higher Education</h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant">
-            Structural inequalities, infrastructural bottlenecks, and national empirical benchmarks underscore the complex realities of tertiary education across the Philippine archipelago.
-          </p>
-</div>
-<!-- Bento Grid for PH Higher Ed -->
-<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-<!-- Digital Divide Card -->
-<div class="card-glow rounded-2xl bg-surface-container p-6 lg:p-8 space-y-4 shadow-xl border border-outline-variant/30">
-<div class="flex items-center justify-between">
-<span class="px-3 py-1 rounded-full bg-primary/10 text-primary font-label-sm text-label-sm font-semibold border border-primary/20">PSA 2026 Telemetry</span>
-<span class="material-symbols-outlined text-primary">wifi_off</span>
-</div>
-<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Digital Divide and Unequal Access</h3>
-<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
-              While national surveys indicate an overall <strong>78.2% internet use</strong> across the demographic, granular access to personal computing hardware and stable, high-throughput home broadband remains severely skewed. Underprivileged students frequently rely on capped mobile data subscriptions on entry-level smartphones, creating severe systemic disadvantages during complex technical engineering deliverables.
-            </p>
-<div class="w-full bg-surface-container-high p-4 rounded-xl flex items-center justify-between border border-outline-variant/20">
-<span class="font-label-md text-label-md text-on-surface">Reported Internet Access</span>
-<span class="font-headline-sm text-headline-sm text-primary font-bold">78.2%</span>
-</div>
-</div>
-<!-- Connectivity Difficulties -->
-<div class="card-glow rounded-2xl bg-surface-container p-6 lg:p-8 space-y-4 shadow-xl border border-outline-variant/30">
-<div class="flex items-center justify-between">
-<span class="px-3 py-1 rounded-full bg-secondary/15 text-secondary font-label-sm text-label-sm font-semibold border border-secondary/20">Bandwidth Infrastructure</span>
-<span class="material-symbols-outlined text-secondary">speed</span>
-</div>
-<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Internet Connectivity and Learning Difficulties</h3>
-<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
-              Intermittent packet drops, high ping latency, and regional telecommunication brownouts frequently disrupt virtual lectures and laboratory uploads. This friction forces faculty and engineering learners to default to asynchronous text exchanges, forfeiting rich interactive coding sessions and collaborative engineering work.
-            </p>
-<div class="w-full bg-surface-container-high p-4 rounded-xl flex items-center justify-between border border-outline-variant/20">
-<span class="font-label-md text-label-md text-on-surface">Core Infrastructure Constraint</span>
-<span class="font-title-md text-title-md text-secondary font-bold">High Latency &amp; Data Caps</span>
-</div>
-</div>
-<!-- PISA / Distractions Card -->
-<div class="card-glow card-glow-rose rounded-2xl bg-surface-container p-6 lg:p-8 space-y-4 shadow-xl border border-outline-variant/30">
-<div class="flex items-center justify-between">
-<span class="px-3 py-1 rounded-full bg-rose-500/15 text-rose-400 font-label-sm text-label-sm font-semibold border border-rose-500/20">OECD 2026 / PISA 2025</span>
-<span class="material-symbols-outlined text-rose-400">warning</span>
-</div>
-<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Digital Distractions and Excessive Use</h3>
-<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
-              The OECD (2026) report synthesizing PISA 2025 diagnostic assessments identified a staggering <strong>39% distraction rate</strong> in classrooms equipped with unmonitored digital terminals. Crucially, cohorts exhibiting high distraction indices suffered a demonstrable <strong>-11 points science score gap</strong> relative to focused, regulated peers.
-            </p>
-<div class="w-full bg-surface-container-high p-4 rounded-xl grid grid-cols-2 gap-4 text-center border border-outline-variant/20">
-<div>
-<span class="font-label-sm text-label-sm text-on-surface-variant block mb-1">Distraction Rate</span>
-<span class="font-headline-sm text-headline-sm text-rose-400 font-bold">39%</span>
-</div>
-<div class="border-l border-outline-variant/30">
-<span class="font-label-sm text-label-sm text-on-surface-variant block mb-1">Science Score Deficit</span>
-<span class="font-headline-sm text-headline-sm text-rose-400 font-bold">-11 Pts</span>
-</div>
-</div>
-</div>
-<!-- FLEMMS ICT Skills Card with Interactive Disparity Bars -->
-<div class="card-glow rounded-2xl bg-surface-container p-6 lg:p-8 space-y-4 shadow-xl border border-outline-variant/30">
-<div class="flex items-center justify-between">
-<span class="px-3 py-1 rounded-full bg-tertiary/15 text-tertiary font-label-sm text-label-sm font-semibold border border-tertiary/20">PSA 2024 FLEMMS</span>
-<span class="material-symbols-outlined text-tertiary">code</span>
-</div>
-<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Differences in Digital Skills &amp; Technical Knowledge</h3>
-<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
-              The PSA 2024 Functional Literacy, Education and Mass Media Survey (FLEMMS) exposes an acute divergence between recreational digital competency and high-tier functional ICT creation. While <strong>92.3% of respondents</strong> excel at basic online messaging, merely <strong>52.8% possess digital content creation</strong> and technical execution skills.
-            </p>
-<div class="w-full bg-surface-container-high p-4 rounded-xl flex items-center justify-between border border-outline-variant/20">
-<span class="font-label-md text-label-md text-on-surface">Communication (92.3%) vs Creation (52.8%)</span>
-<span class="font-title-md text-title-md text-tertiary font-bold">-39.5% Gap</span>
-</div>
-</div>
-</div>
-</section>
-<!-- Pure CSS/SVG Visual Diagnostic Slot 3 (Replacing AI Image) -->
-<div class="rounded-2xl bg-surface-container-low border border-outline-variant/40 p-6 lg:p-8 shadow-xl space-y-6">
-<div class="flex flex-col sm:flex-row sm:items-center justify-between pb-4 border-b border-outline-variant/30 gap-2">
-<div class="flex items-center gap-2.5">
-<span class="material-symbols-outlined text-primary text-[24px]">public</span>
-<div>
-<span class="font-title-md text-title-md text-on-surface font-semibold block">Regional Telecommunication &amp; Campus Computer Lab Distribution Index</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant">Archipelago infrastructure map detailing network latency and hardware terminals</span>
-</div>
-</div>
-<!-- Clean GitHub dashed repository slot indicator -->
-<div class="flex items-center gap-2 px-3 py-1.5 rounded-lg border border-dashed border-primary/40 bg-surface-container-lowest text-primary font-mono text-xs">
-<span class="material-symbols-outlined text-[16px]">folder_zip</span>
-<span>assets/images/discussion-infrastructure-map.jpg</span>
-</div>
-</div>
-<!-- Interactive Archipelago Region Grid Graphic -->
-<div class="p-6 rounded-xl bg-surface-container-lowest border border-outline-variant/30 space-y-4">
-<div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-<!-- Region 1 -->
-<div class="p-4 rounded-xl bg-surface-container/80 border border-outline-variant/30 space-y-2">
-<div class="flex justify-between items-center text-xs">
-<span class="font-bold text-on-surface">Luzon (NCR / CALABARZON)</span>
-<span class="px-2 py-0.5 rounded bg-primary/10 text-primary font-mono">Dense Backbone</span>
-</div>
-<div class="space-y-1">
-<div class="flex justify-between text-xs text-on-surface-variant">
-<span>Terminal Ratio</span>
-<span class="text-on-surface font-bold">1 : 4 Students</span>
-</div>
-<div class="w-full bg-surface-container-highest rounded-full h-1.5">
-<div class="bg-primary h-1.5 rounded-full" style="width: 78%"></div>
-</div>
-</div>
-<div class="text-[11px] text-on-surface-variant pt-1">Avg latency: 28ms • Fiber backbone connected</div>
-</div>
-<!-- Region 2 -->
-<div class="p-4 rounded-xl bg-surface-container/80 border border-outline-variant/30 space-y-2">
-<div class="flex justify-between items-center text-xs">
-<span class="font-bold text-on-surface">Visayas Region</span>
-<span class="px-2 py-0.5 rounded bg-secondary/15 text-secondary font-mono">Island Interconnect</span>
-</div>
-<div class="space-y-1">
-<div class="flex justify-between text-xs text-on-surface-variant">
-<span>Terminal Ratio</span>
-<span class="text-on-surface font-bold">1 : 9 Students</span>
-</div>
-<div class="w-full bg-surface-container-highest rounded-full h-1.5">
-<div class="bg-secondary h-1.5 rounded-full" style="width: 52%"></div>
-</div>
-</div>
-<div class="text-[11px] text-on-surface-variant pt-1">Avg latency: 64ms • Microwave &amp; sub-sea cable links</div>
-</div>
-<!-- Region 3 -->
-<div class="p-4 rounded-xl bg-surface-container/80 border border-outline-variant/30 space-y-2">
-<div class="flex justify-between items-center text-xs">
-<span class="font-bold text-on-surface">Mindanao SUCs</span>
-<span class="px-2 py-0.5 rounded bg-tertiary/15 text-tertiary font-mono">Provincial Expansion</span>
-</div>
-<div class="space-y-1">
-<div class="flex justify-between text-xs text-on-surface-variant">
-<span>Terminal Ratio</span>
-<span class="text-on-surface font-bold">1 : 14 Students</span>
-</div>
-<div class="w-full bg-surface-container-highest rounded-full h-1.5">
-<div class="bg-tertiary h-1.5 rounded-full" style="width: 41%"></div>
-</div>
-</div>
-<div class="text-[11px] text-on-surface-variant pt-1">Avg latency: 82ms • Talandron-Felipe &amp; Intao (2024)</div>
-</div>
-</div>
-<div class="flex items-center justify-between text-xs text-on-surface-variant pt-2 border-t border-outline-variant/20">
-<span>Spatial telemetry validated via National Higher Ed Telemetry Indices</span>
-<span class="font-mono text-primary">PH-ARCHIPELAGO-TELEMETRY-2026</span>
-</div>
-</div>
-</div>
-<!-- Section 7: Responsible and Effective Technology Use -->
-<section class="space-y-8 scroll-mt-36" id="sec-07">
-<div class="flex flex-col gap-2">
-<div class="flex items-center gap-2">
-<span class="px-2.5 py-0.5 rounded bg-tertiary text-on-tertiary font-label-sm text-label-sm font-bold shadow-sm">07</span>
-<span class="font-label-sm text-label-sm uppercase tracking-widest text-tertiary font-semibold">Ethical &amp; Operational Frameworks</span>
-</div>
-<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight">Responsible and Effective Technology Use</h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant">
-            Grounded in the <strong>UNESCO (2023)</strong> global mandate advocating human-centered technology integration in education, modern students must operate with ethical rigor, algorithmic literacy, and disciplined temporal boundaries.
-          </p>
-</div>
-<!-- Technology as a Learning Tool Grid -->
-<div class="rounded-2xl bg-surface-container p-6 lg:p-8 space-y-4 shadow-xl border border-outline-variant/30">
-<div class="flex items-center justify-between">
-<h3 class="font-title-md text-title-md text-on-surface font-bold">Technology as a Learning Tool</h3>
-<span class="font-label-sm text-label-sm text-primary font-semibold px-2.5 py-0.5 rounded-full bg-primary/10 border border-primary/20">Core Ecosystem</span>
-</div>
-<div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
-<div class="p-4 rounded-xl bg-surface-container-high border border-outline-variant/30 flex flex-col items-center text-center gap-2 hover:border-primary transition-all">
-<span class="material-symbols-outlined text-primary text-[32px]">co_present</span>
-<span class="font-title-sm text-title-sm text-on-surface font-semibold">Google Classroom</span>
-<span class="font-label-sm text-label-sm text-on-surface-variant">LMS Hub</span>
-</div>
-<div class="p-4 rounded-xl bg-surface-container-high border border-outline-variant/30 flex flex-col items-center text-center gap-2 hover:border-tertiary transition-all">
-<span class="material-symbols-outlined text-tertiary text-[32px]">article</span>
-<span class="font-title-sm text-title-sm text-on-surface font-semibold">Google Scholar</span>
-<span class="font-label-sm text-label-sm text-on-surface-variant">Peer Review</span>
-</div>
-<div class="p-4 rounded-xl bg-surface-container-high border border-outline-variant/30 flex flex-col items-center text-center gap-2 hover:border-secondary transition-all">
-<span class="material-symbols-outlined text-secondary text-[32px]">terminal</span>
-<span class="font-title-sm text-title-sm text-on-surface font-semibold">VS Code</span>
-<span class="font-label-sm text-label-sm text-on-surface-variant">IDE Compilation</span>
-</div>
-<div class="p-4 rounded-xl bg-surface-container-high border border-outline-variant/30 flex flex-col items-center text-center gap-2 hover:border-primary-container transition-all">
-<span class="material-symbols-outlined text-primary-container text-[32px]">video_library</span>
-<span class="font-title-sm text-title-sm text-on-surface font-semibold">YouTube</span>
-<span class="font-label-sm text-label-sm text-on-surface-variant">Tutorial Sandboxes</span>
-</div>
-<div class="p-4 rounded-xl bg-surface-container-high border border-outline-variant/30 flex flex-col items-center text-center gap-2 hover:border-tertiary-fixed transition-all">
-<span class="material-symbols-outlined text-tertiary-fixed text-[32px]">table_chart</span>
-<span class="font-title-sm text-title-sm text-on-surface font-semibold">Microsoft Excel</span>
-<span class="font-label-sm text-label-sm text-on-surface-variant">Data Modeling</span>
-</div>
-<div class="p-4 rounded-xl bg-surface-container-high border border-outline-variant/30 flex flex-col items-center text-center gap-2 hover:border-secondary-fixed transition-all">
-<span class="material-symbols-outlined text-secondary-fixed text-[32px]">smart_toy</span>
-<span class="font-title-sm text-title-sm text-on-surface font-semibold">AI Tools</span>
-<span class="font-label-sm text-label-sm text-on-surface-variant">Iterative Assistance</span>
-</div>
-</div>
-</div>
-<!-- Time Management Strategies & AI Ethics -->
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
-<!-- 5 Practical Time Management Strategies -->
-<div class="lg:col-span-6 p-6 lg:p-8 rounded-2xl bg-surface-container space-y-4 shadow-xl border border-outline-variant/30">
-<div class="flex items-center gap-2">
-<span class="material-symbols-outlined text-primary text-[24px]">timer</span>
-<h3 class="font-title-md text-title-md text-on-surface font-bold">5 Time Management &amp; Self-Discipline Strategies</h3>
-</div>
-<div class="space-y-3">
-<div class="flex items-start gap-3 p-3.5 rounded-xl bg-surface-container-high border border-outline-variant/20 hover:border-primary/40 transition-colors">
-<span class="w-6 h-6 rounded-full bg-primary/20 text-primary flex items-center justify-center shrink-0 font-bold font-label-sm text-label-sm">1</span>
-<div>
-<span class="font-title-sm text-title-sm text-on-surface font-semibold block">Rigorous Study Scheduling</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant">Block dedicated calendar chunks strictly allocated for deep problem-solving without device overlap.</span>
-</div>
-</div>
-<div class="flex items-start gap-3 p-3.5 rounded-xl bg-surface-container-high border border-outline-variant/20 hover:border-primary/40 transition-colors">
-<span class="w-6 h-6 rounded-full bg-primary/20 text-primary flex items-center justify-center shrink-0 font-bold font-label-sm text-label-sm">2</span>
-<div>
-<span class="font-title-sm text-title-sm text-on-surface font-semibold block">Disable Non-Essential Notifications</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant">Mute banner and sound alerts from social networking algorithms during study sessions.</span>
-</div>
-</div>
-<div class="flex items-start gap-3 p-3.5 rounded-xl bg-surface-container-high border border-outline-variant/20 hover:border-primary/40 transition-colors">
-<span class="w-6 h-6 rounded-full bg-primary/20 text-primary flex items-center justify-center shrink-0 font-bold font-label-sm text-label-sm">3</span>
-<div>
-<span class="font-title-sm text-title-sm text-on-surface font-semibold block">Prioritize Deliverables by Complexity</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant">Execute highest-order algorithmic tasks first when cognitive energy reserves are peak.</span>
-</div>
-</div>
-<div class="flex items-start gap-3 p-3.5 rounded-xl bg-surface-container-high border border-outline-variant/20 hover:border-primary/40 transition-colors">
-<span class="w-6 h-6 rounded-full bg-primary/20 text-primary flex items-center justify-center shrink-0 font-bold font-label-sm text-label-sm">4</span>
-<div>
-<span class="font-title-sm text-title-sm text-on-surface font-semibold block">Deploy Dedicated Productivity Software</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant">Use Pomodoro trackers, application lockers, and automated digital timekeepers.</span>
-</div>
-</div>
-<div class="flex items-start gap-3 p-3.5 rounded-xl bg-surface-container-high border border-outline-variant/20 hover:border-primary/40 transition-colors">
-<span class="w-6 h-6 rounded-full bg-primary/20 text-primary flex items-center justify-center shrink-0 font-bold font-label-sm text-label-sm">5</span>
-<div>
-<span class="font-title-sm text-title-sm text-on-surface font-semibold block">Enforce Scheduled Offline Pauses</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant">Mandate physical breaks away from screens every 60 minutes to reduce ocular fatigue.</span>
-</div>
-</div>
-</div>
-</div>
-<!-- AI Ethics & Usage In PISA 2025 with Dynamic Progress Meters -->
-<div class="lg:col-span-6 p-6 lg:p-8 rounded-2xl bg-surface-container space-y-4 shadow-xl border border-outline-variant/30 flex flex-col justify-between">
-<div class="space-y-4">
-<div class="flex items-center justify-between">
-<div class="flex items-center gap-2">
-<span class="material-symbols-outlined text-secondary text-[24px]">psychology</span>
-<h3 class="font-title-md text-title-md text-on-surface font-bold">Responsible Use of Artificial Intelligence</h3>
-</div>
-<span class="font-label-sm text-label-sm px-2.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-semibold border border-secondary/30">OECD 2026 / PISA 2025</span>
-</div>
-<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
-                The modern undergraduate research paradigm increasingly relies on Large Language Models. PISA 2025 data outlines standard baseline engagement patterns across global tertiary cohorts:
-              </p>
-<div class="space-y-3 pt-1">
-<div class="space-y-1.5">
-<div class="flex justify-between font-label-sm text-label-sm">
-<span class="text-on-surface font-semibold">Weekly AI Chatbot Consultation</span>
-<span class="text-primary font-bold">55%</span>
-</div>
-<div class="w-full bg-surface-container-high rounded-full h-2 overflow-hidden">
-<div class="bg-gradient-to-r from-primary to-primary-container h-2 rounded-full" style="width: 55%"></div>
-</div>
-</div>
-<div class="space-y-1.5">
-<div class="flex justify-between font-label-sm text-label-sm">
-<span class="text-on-surface font-semibold">Complex Text Summarization</span>
-<span class="text-tertiary font-bold">45%</span>
-</div>
-<div class="w-full bg-surface-container-high rounded-full h-2 overflow-hidden">
-<div class="bg-gradient-to-r from-tertiary to-tertiary-container h-2 rounded-full" style="width: 45%"></div>
-</div>
-</div>
-<div class="space-y-1.5">
-<div class="flex justify-between font-label-sm text-label-sm">
-<span class="text-on-surface font-semibold">Initial Report Drafting &amp; Ideation</span>
-<span class="text-secondary font-bold">42%</span>
-</div>
-<div class="w-full bg-surface-container-high rounded-full h-2 overflow-hidden">
-<div class="bg-gradient-to-r from-secondary to-secondary-container h-2 rounded-full" style="width: 42%"></div>
-</div>
-</div>
-</div>
-<div class="p-4 rounded-xl bg-surface-container-high border-l-4 border-secondary">
-<p class="font-body-sm text-body-sm text-on-surface-variant">
-<strong class="text-on-surface">Critical Distinction:</strong> AI must serve as an intellectual scaffold to clarify and debug concepts, never as an uncritical replacement for authentic synthesis or analytical derivation.
-                </p>
-</div>
-</div>
-<span class="font-label-sm text-label-sm text-on-surface-variant font-mono pt-2 border-t border-outline-variant/20">OECD Global Artificial Intelligence Education Metric Index</span>
-</div>
-</div>
-<!-- 4 Pillars of Responsible Use & 4 Strategies for Effective Use -->
-<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-<!-- 4 Pillars of Responsible Use -->
-<div class="card-glow rounded-2xl bg-surface-container p-6 lg:p-8 space-y-4 shadow-xl border border-outline-variant/30">
-<div class="flex items-center gap-2">
-<span class="material-symbols-outlined text-tertiary text-[24px]">verified_user</span>
-<h3 class="font-title-md text-title-md text-on-surface font-bold">4 Pillars of Responsible Use</h3>
-</div>
-<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-<div class="p-4 rounded-xl bg-surface-container-high border border-outline-variant/20 space-y-1 hover:border-tertiary/40 transition-colors">
-<span class="font-label-sm text-label-sm text-tertiary uppercase font-bold">Pillar 1</span>
-<h4 class="font-title-sm text-title-sm text-on-surface font-bold">Protecting Personal Information</h4>
-<p class="font-body-sm text-body-sm text-on-surface-variant">Safeguarding credentials, session tokens, and privacy configurations.</p>
-</div>
-<div class="p-4 rounded-xl bg-surface-container-high border border-outline-variant/20 space-y-1 hover:border-tertiary/40 transition-colors">
-<span class="font-label-sm text-label-sm text-tertiary uppercase font-bold">Pillar 2</span>
-<h4 class="font-title-sm text-title-sm text-on-surface font-bold">Respecting Others Online</h4>
-<p class="font-body-sm text-body-sm text-on-surface-variant">Upholding academic netiquette in collective project discussions.</p>
-</div>
-<div class="p-4 rounded-xl bg-surface-container-high border border-outline-variant/20 space-y-1 hover:border-tertiary/40 transition-colors">
-<span class="font-label-sm text-label-sm text-tertiary uppercase font-bold">Pillar 3</span>
-<h4 class="font-title-sm text-title-sm text-on-surface font-bold">Checking Information</h4>
-<p class="font-body-sm text-body-sm text-on-surface-variant">Fact-checking citations, empirical claims, and verifying algorithmic outputs.</p>
-</div>
-<div class="p-4 rounded-xl bg-surface-container-high border border-outline-variant/20 space-y-1 hover:border-tertiary/40 transition-colors">
-<span class="font-label-sm text-label-sm text-tertiary uppercase font-bold">Pillar 4</span>
-<h4 class="font-title-sm text-title-sm text-on-surface font-bold">Avoiding Plagiarism</h4>
-<p class="font-body-sm text-body-sm text-on-surface-variant">Attributing all references transparently with appropriate IEEE/APA citation format.</p>
-</div>
-</div>
-</div>
-<!-- 4 Strategies for Effective Use -->
-<div class="card-glow rounded-2xl bg-surface-container p-6 lg:p-8 space-y-4 shadow-xl border border-outline-variant/30">
-<div class="flex items-center gap-2">
-<span class="material-symbols-outlined text-primary text-[24px]">dynamic_form</span>
-<h3 class="font-title-md text-title-md text-on-surface font-bold">4 Strategies for Effective Use</h3>
-</div>
-<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-<div class="p-4 rounded-xl bg-surface-container-high border border-outline-variant/20 space-y-1 hover:border-primary/40 transition-colors">
-<span class="font-label-sm text-label-sm text-primary uppercase font-bold">Strategy 1</span>
-<h4 class="font-title-sm text-title-sm text-on-surface font-bold">Organizing School Activities</h4>
-<p class="font-body-sm text-body-sm text-on-surface-variant">Maintaining digital task pipelines and clear milestone roadmaps.</p>
-</div>
-<div class="p-4 rounded-xl bg-surface-container-high border border-outline-variant/20 space-y-1 hover:border-primary/40 transition-colors">
-<span class="font-label-sm text-label-sm text-primary uppercase font-bold">Strategy 2</span>
-<h4 class="font-title-sm text-title-sm text-on-surface font-bold">Finding Learning Resources</h4>
-<p class="font-body-sm text-body-sm text-on-surface-variant">Extracting whitepapers, open repos, and verified technical documentation.</p>
-</div>
-<div class="p-4 rounded-xl bg-surface-container-high border border-outline-variant/20 space-y-1 hover:border-primary/40 transition-colors">
-<span class="font-label-sm text-label-sm text-primary uppercase font-bold">Strategy 3</span>
-<h4 class="font-title-sm text-title-sm text-on-surface font-bold">Communicating Proactively</h4>
-<p class="font-body-sm text-body-sm text-on-surface-variant">Synchronizing rapidly with classmates and course faculty on milestones.</p>
-</div>
-<div class="p-4 rounded-xl bg-surface-container-high border border-outline-variant/20 space-y-1 hover:border-primary/40 transition-colors">
-<span class="font-label-sm text-label-sm text-primary uppercase font-bold">Strategy 4</span>
-<h4 class="font-title-sm text-title-sm text-on-surface font-bold">Managing Screen Time</h4>
-<p class="font-body-sm text-body-sm text-on-surface-variant">Balancing high-intensity coding with screen-free cognitive reflection.</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Section 8: Research Findings and Supporting Evidence -->
-<section class="space-y-8 scroll-mt-36" id="sec-08">
-<div class="flex flex-col gap-2">
-<div class="flex items-center gap-2">
-<span class="px-2.5 py-0.5 rounded bg-secondary text-on-secondary font-label-sm text-label-sm font-bold shadow-sm">08</span>
-<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold">Empirical Corpus</span>
-</div>
-<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight">Research Findings and Supporting Evidence</h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant">
-            Comprehensive synthesis of key scientific publications and statistical surveys examining technological interactions within higher education.
-          </p>
-</div>
-<!-- Study Synthesis Cards with Interactive Metrics -->
-<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-<!-- Study 1 -->
-<div class="card-glow rounded-2xl bg-surface-container p-6 lg:p-8 space-y-4 shadow-xl border border-outline-variant/30">
-<div class="flex items-center justify-between">
-<span class="font-label-sm text-label-sm px-3 py-1 rounded-full bg-primary/15 text-primary font-semibold border border-primary/20">Talandron-Felipe &amp; Intao (2024)</span>
-<span class="material-symbols-outlined text-primary">school</span>
-</div>
-<h3 class="font-title-md text-title-md text-on-surface font-bold">Digital Divide &amp; Academic Performance</h3>
-<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
-              Investigating state university cohorts across Mindanao and Visayas, Talandron-Felipe &amp; Intao established a direct statistical correlation between computer laboratory terminal accessibility and final term grades in technical computing disciplines. Students who were confined to shared smartphone interfaces demonstrated lower retention rates in procedural programming assessments.
-            </p>
-<div class="p-4 rounded-xl bg-surface-container-high border-l-4 border-primary text-on-surface font-label-sm text-label-sm">
-<strong class="text-primary">Key takeaway:</strong> Hardware equity is an essential precursor to fair academic outcomes.
-            </div>
-</div>
-<!-- Study 2 -->
-<div class="card-glow card-glow-rose rounded-2xl bg-surface-container p-6 lg:p-8 space-y-4 shadow-xl border border-outline-variant/30">
-<div class="flex items-center justify-between">
-<span class="font-label-sm text-label-sm px-3 py-1 rounded-full bg-rose-500/15 text-rose-400 font-semibold border border-rose-500/20">Giray et al. (2024)</span>
-<span class="material-symbols-outlined text-rose-400">psychology</span>
-</div>
-<h3 class="font-title-md text-title-md text-on-surface font-bold">Digital Device Engagement &amp; Digital Stress</h3>
-<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
-              A targeted study of <strong>384 Filipino college students</strong> demonstrated that high screen-time saturation, particularly passive browsing on Facebook and similar networks, constituted a pronounced chronic stressor. The perceived compulsion for uninterrupted connectivity triggered elevated social comparison fatigue and sleep disturbances.
-            </p>
-<div class="p-4 rounded-xl bg-surface-container-high border-l-4 border-rose-400 text-on-surface font-label-sm text-label-sm">
-<strong class="text-rose-400">Key takeaway:</strong> Passive social consumption elevates cortisol and diminishes engineering focus.
-            </div>
-</div>
-<!-- Study 3 -->
-<div class="card-glow rounded-2xl bg-surface-container p-6 lg:p-8 space-y-4 shadow-xl border border-outline-variant/30">
-<div class="flex items-center justify-between">
-<span class="font-label-sm text-label-sm px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container font-semibold border border-secondary/30">OECD (2026)</span>
-<span class="material-symbols-outlined text-secondary">analytics</span>
-</div>
-<h3 class="font-title-md text-title-md text-on-surface font-bold">Digital Distractions &amp; PISA 2025 Performance</h3>
-<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
-              The cross-national OECD 2026 diagnostic highlights that the presence of digital technology in educational settings without enforced focus protocols results in a net negative impact on science and mathematics scores, confirming that unguided access often impedes student concentration.
-            </p>
-<div class="p-4 rounded-xl bg-surface-container-high border-l-4 border-secondary text-on-surface font-label-sm text-label-sm">
-<strong class="text-secondary">Key takeaway:</strong> Guided technological boundaries directly safeguard academic scores.
-            </div>
-</div>
-<!-- Study 4 -->
-<div class="card-glow rounded-2xl bg-surface-container p-6 lg:p-8 space-y-4 shadow-xl border border-outline-variant/30">
-<div class="flex items-center justify-between">
-<span class="font-label-sm text-label-sm px-3 py-1 rounded-full bg-tertiary-container/20 text-tertiary font-semibold border border-tertiary/30">PSA (2026)</span>
-<span class="material-symbols-outlined text-tertiary">equalizer</span>
-</div>
-<h3 class="font-title-md text-title-md text-on-surface font-bold">FLEMMS ICT Skills Hierarchy</h3>
-<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
-              The latest national survey metrics categorizing technical competency across the student demographic demonstrate clear tier differentiation:
-            </p>
-<div class="space-y-3 pt-2">
-<div>
-<div class="flex justify-between font-label-sm text-label-sm mb-1">
-<span class="text-on-surface font-semibold">Communication (Messaging/Social)</span>
-<span class="text-tertiary font-bold">92.3%</span>
-</div>
-<div class="w-full bg-surface-container-high rounded-full h-2 overflow-hidden">
-<div class="bg-tertiary h-2 rounded-full" style="width: 92.3%"></div>
-</div>
-</div>
-<div>
-<div class="flex justify-between font-label-sm text-label-sm mb-1">
-<span class="text-on-surface font-semibold">Information &amp; Data Literacy</span>
-<span class="text-primary font-bold">85.1%</span>
-</div>
-<div class="w-full bg-surface-container-high rounded-full h-2 overflow-hidden">
-<div class="bg-primary h-2 rounded-full" style="width: 85.1%"></div>
-</div>
-</div>
-<div>
-<div class="flex justify-between font-label-sm text-label-sm mb-1">
-<span class="text-on-surface font-semibold">Problem Solving &amp; Debugging</span>
-<span class="text-secondary font-bold">72.6%</span>
-</div>
-<div class="w-full bg-surface-container-high rounded-full h-2 overflow-hidden">
-<div class="bg-secondary h-2 rounded-full" style="width: 72.6%"></div>
-</div>
-</div>
-<div>
-<div class="flex justify-between font-label-sm text-label-sm mb-1">
-<span class="text-on-surface font-semibold">Digital Content Creation &amp; Programming</span>
-<span class="text-rose-400 font-bold">52.8%</span>
-</div>
-<div class="w-full bg-surface-container-high rounded-full h-2 overflow-hidden">
-<div class="bg-rose-400 h-2 rounded-full" style="width: 52.8%"></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Pagination Navigation -->
-<div class="pt-10 flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-outline-variant/30">
-<a class="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-surface-container-high hover:bg-surface-bright text-on-surface font-title-sm text-title-sm flex items-center justify-center gap-2.5 transition-all shadow-md border border-outline-variant/30 group" href="introduction.html">
-<span class="material-symbols-outlined text-[20px] group-hover:-translate-x-1 transition-transform">arrow_back</span>
-<span>Back: Introduction</span>
-</a>
-<div class="flex items-center gap-2 text-on-surface-variant font-label-sm text-label-sm">
-<span class="font-mono">Section 3 of 6</span>
-<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
-<span>TechTrack PH GEd 104 Repository</span>
-</div>
-<a class="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-primary-container text-on-primary-container hover:bg-primary font-title-sm text-title-sm flex items-center justify-center gap-2.5 transition-all shadow-lg shadow-primary-container/20 font-bold group" href="significance.html">
-<span>Next: Significance</span>
-<span class="material-symbols-outlined text-[20px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
-</a>
-</div>
-</div>
-<!-- Smooth Scroll Offset Correction -->
-<script>
-      document.querySelectorAll('a[href^="#sec-"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-          e.preventDefault();
-          const targetId = this.getAttribute('href');
-          const targetEl = document.querySelector(targetId);
-          if (targetEl) {
-            const headerOffset = 140;
-            const elementPosition = targetEl.getBoundingClientRect().top;
-            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-            window.scrollTo({
-              top: offsetPosition,
-              behavior: 'smooth'
-            });
-          }
-        });
-      });
-    </script>
-</div>
-</main>
-<!-- Main Global Footer -->
-<footer class="relative z-10 w-full bg-surface-container-low mt-16 border-t border-outline-variant/30 shadow-[0_-4px_24px_rgba(0,0,0,0.2)]">
-<div class="max-w-7xl mx-auto px-6 lg:px-12 py-12 flex flex-col gap-8">
-<div class="flex flex-col md:flex-row md:items-start justify-between gap-6">
-<div class="space-y-3 max-w-xl">
-<div class="flex items-center gap-2"><img alt="Batangas State University CpE Logo" class="w-8 h-8 object-contain drop-shadow" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8I4Y4qA3HiYpx-eP2bNItynO3o-zxGMmZ10pnuXHJ4DyJ-FZH94xZvHh4ldZ5plNjawoUYgPG6F-1pMEGESBuGniDYeJ8it-fohcYd8ZYVxgoB6K7Z-XTzEcNANwzDZKQsXLOmN2V3W0w-hTf9wcfWo2tPWH9jYv4I-PVg9A9KeNv7L7FbM64AfZcT9inY_JTpl8ANjJOgohr27qhYzOS5e45SoVLX2lXr5oBX5ARuIJPC2R_o02S"/>
-<span class="font-headline-sm text-headline-sm font-bold text-on-surface">TechTrack PH</span>
-<span class="font-label-sm text-label-sm px-2.5 py-0.5 rounded-full bg-primary-container text-on-primary-container font-semibold">ALN-CEAFA</span>
-</div>
-<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
-          College of Engineering, Architecture and Fine Arts (CEAFA), BatStateU Alangilan Campus, Golden Country Homes, Alangilan, Batangas City, Philippines. Bachelor of Science in Computer Engineering 1st Year - GEd 104.
+<!-- Overview Callout Box -->
+<div class="rounded-xl p-space-lg bg-surface-container/70 backdrop-blur-md shadow-lg">
+<p class="font-body-lg text-body-lg text-on-surface leading-relaxed">
+          “Technology has become a part of everyday college life. For students it has been a form of convenience. From searching for academic resources and materials to communicating with classmates and enjoying online entertainment, students rely on digital devices for different purposes. However, how often they use technology and what they use it for may vary depending on their needs and daily activities.”
         </p>
 </div>
-<div class="flex flex-col gap-2">
-<span class="font-title-sm text-title-sm text-on-surface font-bold">Portal Navigation</span>
-<div class="grid grid-cols-2 sm:grid-cols-3 gap-x-6 gap-y-2">
-<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="overview" href="index.html">Overview</a>
-<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="introduction" href="introduction.html">Introduction</a>
-<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors font-semibold text-primary" data-path="discussion" href="discussion.html">Discussion</a>
-<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="significance" href="significance.html">Significance</a>
-<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="research-team" href="team.html">Research Team</a>
-<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="references" href="references.html">References</a>
+<!-- Typical Devices Array -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<div class="rounded-xl p-space-md bg-surface-container-low shadow-md hover:bg-surface-container transition-all">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="material-symbols-outlined text-primary text-headline-md">laptop_chromebook</span>
+<span class="px-space-xs py-0.5 rounded-full bg-primary/10 text-primary font-label-sm text-label-sm">PRIMARY COMPUTE</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface mb-1">Laptops &amp; Desktop Computers</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Research, technical report drafting, embedded systems programming, simulation workflows, engineering presentations, and specialized engineering software execution.
+          </p>
+</div>
+<div class="rounded-xl p-space-md bg-surface-container-low shadow-md hover:bg-surface-container transition-all">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="material-symbols-outlined text-tertiary text-headline-md">smartphone</span>
+<span class="px-space-xs py-0.5 rounded-full bg-tertiary-container/15 text-tertiary font-label-sm text-label-sm">ALWAYS SYNCED</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface mb-1">Smartphones</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Continuous peer messaging, rapid review of course repositories, urgent administrative notifications, reference browsing, and digital community interactions.
+          </p>
+</div>
+<div class="rounded-xl p-space-md bg-surface-container-low shadow-md hover:bg-surface-container transition-all">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="material-symbols-outlined text-secondary text-headline-md">tablet_mac</span>
+<span class="px-space-xs py-0.5 rounded-full bg-secondary-container/30 text-secondary font-label-sm text-label-sm">HYBRID WORK</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface mb-1">Tablets</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Interactive annotation of technical schematics, e-book digestion, schematic review, handwritten formula derivations, and recorded lecture playbacks.
+          </p>
+</div>
+</div>
+<!-- Hardware Split Slot & Frequency Data -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-stretch">
+<!-- Visual Slot: Clean dashed box for discussion-chart.png -->
+<div class="lg:col-span-7 rounded-xl p-space-lg bg-surface-container-lowest/80 flex flex-col justify-between shadow-xl">
+<div class="flex items-center justify-between mb-space-md">
+<div>
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-wider">HARDWARE ARTIFACT // DEPLOYMENT REPO</span>
+<h4 class="font-title-md text-title-md text-on-surface">BSCpE 2025 Hardware Deployment Split</h4>
+</div>
+<span class="px-space-sm py-1 rounded-full bg-primary-container/20 text-primary font-label-sm text-label-sm">
+              PORTABLE COMPUTE: 91.4%
+            </span>
+</div>
+<!-- Clean Dashed Box Target for assets/images/discussion-chart.png -->
+<div class="relative w-full rounded-xl p-space-md bg-surface-container-low/70 flex flex-col gap-space-md shadow-inner border border-primary/20"><div class="flex flex-wrap items-center justify-between gap-space-xs pb-space-xs border-b border-outline-variant/30"><div class="flex items-center gap-space-xs"><span class="w-2.5 h-2.5 rounded-full bg-primary animate-ping opacity-75"></span><span class="font-label-sm text-label-sm text-on-surface uppercase tracking-wider font-semibold">Hardware Cohort Telemetry (N=470)</span></div><div class="inline-flex items-center p-0.5 rounded-lg bg-surface-container-highest" id="chart-mode-toggle"><button type="button" id="btn-view-hardware" class="px-space-sm py-1 rounded-md text-label-sm font-semibold transition-all bg-primary text-on-primary shadow-sm">Deployment %</button><button type="button" id="btn-view-split" class="px-space-sm py-1 rounded-md text-label-sm font-semibold transition-all text-on-surface-variant hover:text-on-surface">Academic vs Ambient</button></div></div><div class="w-full flex flex-col gap-space-md" id="hardware-view-panel"><div class="w-full"><svg class="w-full h-44 overflow-visible" viewBox="0 0 540 160" preserveAspectRatio="xMidYMid meet"><defs><linearGradient id="laptopGrad" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#38bdf8"></stop><stop offset="100%" stop-color="#8ed5ff"></stop></linearGradient><linearGradient id="phoneGrad" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#22c990"></stop><stop offset="100%" stop-color="#4ee6aa"></stop></linearGradient><linearGradient id="tabletGrad" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#7bd0ff"></stop><stop offset="100%" stop-color="#bdc2ff"></stop></linearGradient><linearGradient id="sbcGrad" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#c4e7ff"></stop><stop offset="100%" stop-color="#38bdf8"></stop></linearGradient></defs><line x1="160" y1="0" x2="160" y2="140" stroke="rgba(135,146,154,0.2)" stroke-width="1"></line><line x1="252.5" y1="0" x2="252.5" y2="140" stroke="rgba(135,146,154,0.1)" stroke-dasharray="3,3"></line><line x1="345" y1="0" x2="345" y2="140" stroke="rgba(135,146,154,0.1)" stroke-dasharray="3,3"></line><line x1="437.5" y1="0" x2="437.5" y2="140" stroke="rgba(135,146,154,0.1)" stroke-dasharray="3,3"></line><line x1="530" y1="0" x2="530" y2="140" stroke="rgba(135,146,154,0.2)" stroke-width="1"></line><g transform="translate(0, 10)"><text x="150" y="16" text-anchor="end" fill="#d6e3ff" font-size="12" font-family="Inter" font-weight="500">Laptops &amp; PCs</text><rect x="160" y="3" width="370" height="18" rx="4" fill="#1c2a41" opacity="0.5"></rect><rect x="160" y="3" width="338.2" height="18" rx="4" fill="url(#laptopGrad)"></rect><text x="506" y="16" fill="#ffffff" font-size="11" font-family="Inter" font-weight="700">91.4%</text></g><g transform="translate(0, 45)"><text x="150" y="16" text-anchor="end" fill="#d6e3ff" font-size="12" font-family="Inter" font-weight="500">Smartphones</text><rect x="160" y="3" width="370" height="18" rx="4" fill="#1c2a41" opacity="0.5"></rect><rect x="160" y="3" width="364.8" height="18" rx="4" fill="url(#phoneGrad)"></rect><text x="532" y="16" fill="#ffffff" font-size="11" font-family="Inter" font-weight="700">98.6%</text></g><g transform="translate(0, 80)"><text x="150" y="16" text-anchor="end" fill="#d6e3ff" font-size="12" font-family="Inter" font-weight="500">SBC &amp; Dev Boards</text><rect x="160" y="3" width="370" height="18" rx="4" fill="#1c2a41" opacity="0.5"></rect><rect x="160" y="3" width="239.8" height="18" rx="4" fill="url(#sbcGrad)"></rect><text x="408" y="16" fill="#8ed5ff" font-size="11" font-family="Inter" font-weight="700">64.8%</text></g><g transform="translate(0, 115)"><text x="150" y="16" text-anchor="end" fill="#d6e3ff" font-size="12" font-family="Inter" font-weight="500">Tablets &amp; Slates</text><rect x="160" y="3" width="370" height="18" rx="4" fill="#1c2a41" opacity="0.5"></rect><rect x="160" y="3" width="155.8" height="18" rx="4" fill="url(#tabletGrad)"></rect><text x="324" y="16" fill="#bdc2ff" font-size="11" font-family="Inter" font-weight="700">42.1%</text></g><text x="160" y="154" fill="#87929a" font-size="10" font-family="Inter">0%</text><text x="252.5" y="154" text-anchor="middle" fill="#87929a" font-size="10" font-family="Inter">25%</text><text x="345" y="154" text-anchor="middle" fill="#87929a" font-size="10" font-family="Inter">50%</text><text x="437.5" y="154" text-anchor="middle" fill="#87929a" font-size="10" font-family="Inter">75%</text><text x="530" y="154" text-anchor="end" fill="#87929a" font-size="10" font-family="Inter">100%</text></svg></div><div class="grid grid-cols-2 sm:grid-cols-4 gap-2 pt-space-xs border-t border-outline-variant/20"><div class="flex flex-col"><span class="text-on-surface-variant font-label-sm text-label-sm">Primary Compute</span><span class="text-primary font-title-sm text-title-sm font-semibold">91.4% Laptops</span></div><div class="flex flex-col"><span class="text-on-surface-variant font-label-sm text-label-sm">Ubiquitous Mobile</span><span class="text-tertiary font-title-sm text-title-sm font-semibold">98.6% Phones</span></div><div class="flex flex-col"><span class="text-on-surface-variant font-label-sm text-label-sm">Hardware Labs</span><span class="text-primary-fixed-dim font-title-sm text-title-sm font-semibold">64.8% SBCs</span></div><div class="flex flex-col"><span class="text-on-surface-variant font-label-sm text-label-sm">Schematic Pads</span><span class="text-secondary font-title-sm text-title-sm font-semibold">42.1% Tablets</span></div></div></div><div class="w-full hidden flex-col gap-space-sm" id="split-view-panel"><div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant"><span>Device Category</span><div class="flex items-center gap-space-sm"><span class="inline-flex items-center gap-1"><span class="w-2.5 h-2.5 rounded bg-primary"></span>Academic</span><span class="inline-flex items-center gap-1"><span class="w-2.5 h-2.5 rounded bg-secondary"></span>Ambient/Media</span></div></div><div class="flex flex-col gap-2.5"><div class="flex flex-col gap-1"><div class="flex justify-between font-body-sm text-body-sm"><span class="text-on-surface font-semibold">Laptops / Desktops</span><span class="text-on-surface-variant"><strong class="text-primary">78%</strong> vs 22%</span></div><div class="h-3 w-full bg-surface-container-highest rounded-full overflow-hidden flex"><div class="h-full bg-primary" style="width: 78%;"></div><div class="h-full bg-secondary" style="width: 22%;"></div></div></div><div class="flex flex-col gap-1"><div class="flex justify-between font-body-sm text-body-sm"><span class="text-on-surface font-semibold">Smartphones</span><span class="text-on-surface-variant"><strong class="text-primary">31%</strong> vs 69%</span></div><div class="h-3 w-full bg-surface-container-highest rounded-full overflow-hidden flex"><div class="h-full bg-primary" style="width: 31%;"></div><div class="h-full bg-secondary" style="width: 69%;"></div></div></div><div class="flex flex-col gap-1"><div class="flex justify-between font-body-sm text-body-sm"><span class="text-on-surface font-semibold">SBCs &amp; Microcontrollers</span><span class="text-on-surface-variant"><strong class="text-primary">94%</strong> vs 6%</span></div><div class="h-3 w-full bg-surface-container-highest rounded-full overflow-hidden flex"><div class="h-full bg-primary" style="width: 94%;"></div><div class="h-full bg-secondary" style="width: 6%;"></div></div></div><div class="flex flex-col gap-1"><div class="flex justify-between font-body-sm text-body-sm"><span class="text-on-surface font-semibold">Tablets &amp; Stylus Slates</span><span class="text-on-surface-variant"><strong class="text-primary">62%</strong> vs 38%</span></div><div class="h-3 w-full bg-surface-container-highest rounded-full overflow-hidden flex"><div class="h-full bg-primary" style="width: 62%;"></div><div class="h-full bg-secondary" style="width: 38%;"></div></div></div></div><p class="font-body-sm text-body-sm text-on-surface-variant italic pt-space-xs border-t border-outline-variant/20">BSCpE field observation: Dedicated computing hardware is heavily leveraged for compile pipelines and coursework, while mobile phones absorb recreational multi-channel load.</p></div></div>
+<div class="mt-space-md flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>TELEMETRY: TNEU-ALANGILAN-NODE</span>
+<span>VERIFIED HARDWARE METRICS</span>
+</div>
+</div>
+<!-- Corrin et al Spectrum & Chrono Allocation -->
+<div class="lg:col-span-5 flex flex-col gap-space-md">
+<div class="rounded-xl p-space-md bg-surface-container-low shadow-md">
+<div class="flex items-center gap-space-xs text-primary mb-1">
+<span class="material-symbols-outlined text-title-sm">timelapse</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Frequency Spectrum (Corrin et al., 2010)</span>
+</div>
+<h4 class="font-title-md text-title-md text-on-surface">How Often Do Students Use Technology?</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+              Based on the 470 first-year university student benchmark by Corrin, Lockyer, and Bennett (2010), communicative and social media nodes are activated daily on a continuous cycle, whereas deep, deliberate academic engagement is triggered far less frequently and mostly during deadline convergence.
+            </p>
+</div>
+<div class="rounded-xl p-space-md bg-surface-container-low shadow-md">
+<div class="flex items-center gap-space-xs text-tertiary mb-1">
+<span class="material-symbols-outlined text-title-sm">schedule</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Chrono Allocation Matrix</span>
+</div>
+<h4 class="font-title-md text-title-md text-on-surface">How Much Time Do Students Spend?</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+              Empirical data demands a clear distinction between <strong class="text-on-surface">Academic Screen Time</strong> and <strong class="text-on-surface">Non-Academic Screen Time</strong>. Total screen hours do not automatically scale into productivity or academic mastery without directed intention.
+            </p>
+<div class="mt-space-sm pt-space-sm flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-tertiary font-bold tracking-tight">4.2h / day</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Avg Academic Session</span>
+</div>
+<div class="flex flex-col text-right">
+<span class="font-headline-sm text-headline-sm text-secondary font-bold tracking-tight">5.8h / day</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Ambient / Media Session</span>
 </div>
 </div>
 </div>
-<div class="pt-6 border-t border-outline-variant/30 flex flex-col sm:flex-row items-center justify-between gap-4">
+</div>
+</div>
+<!-- 5 Major Categories Taxonomy -->
+<div class="rounded-xl p-space-lg bg-surface-container/60 shadow-lg">
+<div class="flex items-center gap-space-sm mb-space-md">
+<span class="material-symbols-outlined text-primary">category</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Why Do Students Use Technology? (5 Major Functional Taxonomies)</h3>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-space-md">
+<div class="p-space-md rounded-lg bg-surface-container-low flex flex-col justify-between">
+<div>
+<div class="font-label-sm text-label-sm text-primary mb-1">CLASS 01</div>
+<div class="font-title-sm text-title-sm text-on-surface mb-1">Academic Research</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Scholarly articles, peer-reviewed journals, hardware datasheets, and reference manuals.</p>
+</div>
+<span class="material-symbols-outlined text-primary self-end mt-space-md">menu_book</span>
+</div>
+<div class="p-space-md rounded-lg bg-surface-container-low flex flex-col justify-between">
+<div>
+<div class="font-label-sm text-label-sm text-tertiary mb-1">CLASS 02</div>
+<div class="font-title-sm text-title-sm text-on-surface mb-1">Communication</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Messaging channels, university email queues, project Slack/Discord rooms, and video syncs.</p>
+</div>
+<span class="material-symbols-outlined text-tertiary self-end mt-space-md">forum</span>
+</div>
+<div class="p-space-md rounded-lg bg-surface-container-low flex flex-col justify-between">
+<div>
+<div class="font-label-sm text-label-sm text-secondary mb-1">CLASS 03</div>
+<div class="font-title-sm text-title-sm text-on-surface mb-1">Online Learning</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Virtual classrooms, learning management systems, video lectures, and simulation toolkits.</p>
+</div>
+<span class="material-symbols-outlined text-secondary self-end mt-space-md">school</span>
+</div>
+<div class="p-space-md rounded-lg bg-surface-container-low flex flex-col justify-between">
+<div>
+<div class="font-label-sm text-label-sm text-on-surface-variant mb-1">CLASS 04</div>
+<div class="font-title-sm text-title-sm text-on-surface mb-1">Entertainment</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Gaming, high-fidelity audio streams, video on demand, and recreational recreation.</p>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant self-end mt-space-md">sports_esports</span>
+</div>
+<div class="p-space-md rounded-lg bg-surface-container-low flex flex-col justify-between">
+<div>
+<div class="font-label-sm text-label-sm text-primary mb-1">CLASS 05</div>
+<div class="font-title-sm text-title-sm text-on-surface mb-1">Social Media</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Feed streams, social media updates, and professional networks like LinkedIn and GitHub.</p>
+</div>
+<span class="material-symbols-outlined text-primary self-end mt-space-md">hub</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 02: Positive Effects -->
+<section class="flex flex-col gap-space-lg">
+<div class="flex items-center gap-space-sm pb-space-sm">
+<span class="flex items-center justify-center w-8 h-8 rounded-lg bg-tertiary-container/20 text-tertiary font-headline-sm text-headline-sm">02</span>
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Positive Effects of Technology Use on Academic Activities</h2>
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Empirical Enhancers &amp; Productive Yields</p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-md">
+<!-- Card 1 -->
+<div class="rounded-xl p-space-lg bg-surface-container-low shadow-md flex flex-col justify-between hover:bg-surface-container transition-all">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="material-symbols-outlined text-primary text-headline-md">library_books</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-primary-container/20 text-primary">Sullivan 2026</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface mb-space-xs">Access to Educational Resources</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Accelerates research cycles through immediate open-access repositories, digital indexing, IEEE Xplore archives, and peer-reviewed preprint archives.
+            </p>
+</div>
+<div class="mt-space-md pt-space-xs text-primary font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-body-sm">check_circle</span>
+            High Reliability Signal
+          </div>
+</div>
+<!-- Card 2 -->
+<div class="rounded-xl p-space-lg bg-surface-container-low shadow-md flex flex-col justify-between hover:bg-surface-container transition-all">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="material-symbols-outlined text-tertiary text-headline-md">psychology</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-tertiary-container/20 text-tertiary">Quintilian 2025</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface mb-space-xs">Improved Learning &amp; Understanding</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Dynamic multimedia, circuit animation engines, logic state analyzers, and algorithmic trace visualizers transform abstract theory into tangible mental models.
+            </p>
+</div>
+<div class="mt-space-md pt-space-xs text-tertiary font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-body-sm">check_circle</span>
+            Cognitive Comprehension Peak
+          </div>
+</div>
+<!-- Card 3 -->
+<div class="rounded-xl p-space-lg bg-surface-container-low shadow-md flex flex-col justify-between hover:bg-surface-container transition-all">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="material-symbols-outlined text-secondary text-headline-md">speed</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-secondary-container/30 text-secondary">Sullivan 2026</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface mb-space-xs">Increased Academic Productivity</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Automated document formatting, integrated compile pipelines, citation processors, and computational notebooks compress delivery timelines.
+            </p>
+</div>
+<div class="mt-space-md pt-space-xs text-secondary font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-body-sm">check_circle</span>
+            Linear Output Acceleration
+          </div>
+</div>
+<!-- Card 4 -->
+<div class="rounded-xl p-space-lg bg-surface-container-low shadow-md flex flex-col justify-between hover:bg-surface-container transition-all">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="material-symbols-outlined text-primary text-headline-md">auto_mode</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-primary-container/20 text-primary">BSCpE Adaptation</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface mb-space-xs">Independent Learning &amp; Skill Dev</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Self-guided mastery of HDL syntax, firmware programming, embedded Linux kernels, and PCB routing through online documentation and specialized communities.
+            </p>
+</div>
+<div class="mt-space-md pt-space-xs text-primary font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-body-sm">check_circle</span>
+            Autonomous Execution
+          </div>
+</div>
+<!-- Card 5 -->
+<div class="rounded-xl p-space-lg bg-surface-container-low shadow-md flex flex-col justify-between hover:bg-surface-container transition-all">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="material-symbols-outlined text-tertiary text-headline-md">groups</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-tertiary-container/20 text-tertiary">Quintilian 2025</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface mb-space-xs">Collaboration &amp; Communication</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Synchronous cloud IDEs, Git commit topologies, and distributed design reviews eliminate location dependencies across engineering design teams.
+            </p>
+</div>
+<div class="mt-space-md pt-space-xs text-tertiary font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-body-sm">check_circle</span>
+            High-Bandwidth Sync
+          </div>
+</div>
+<!-- Card 6 -->
+<div class="rounded-xl p-space-lg bg-surface-container-low shadow-md flex flex-col justify-between hover:bg-surface-container transition-all">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="material-symbols-outlined text-secondary text-headline-md">cell_tower</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-secondary-container/30 text-secondary">Delmo et al., 2024</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface mb-space-xs">Importance of Digital Infrastructure</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Reliable high-speed institutional backbones, low-latency campus networks, and accessible cloud resources serve as the vital base for high-tier academic research.
+            </p>
+</div>
+<div class="mt-space-md pt-space-xs text-secondary font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-body-sm">check_circle</span>
+            Core System Requirement
+          </div>
+</div>
+</div>
+</section>
+<!-- Section 03: Negative Effects & Challenges -->
+<section class="flex flex-col gap-space-lg">
+<div class="flex items-center gap-space-sm pb-space-sm">
+<span class="flex items-center justify-center w-8 h-8 rounded-lg bg-error-container text-on-error font-headline-sm text-headline-sm">03</span>
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Negative Effects &amp; Engineering Challenges</h2>
+<p class="font-label-sm text-label-sm text-error uppercase tracking-wider">System Vulnerabilities &amp; Cognitive Degradation Risks</p>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<div class="lg:col-span-6 flex flex-col gap-space-md">
+<!-- Vulnerability 1 -->
+<div class="rounded-xl p-space-lg bg-surface-container-low shadow-md">
+<div class="flex items-center gap-space-sm text-error mb-2">
+<span class="material-symbols-outlined">warning</span>
+<h3 class="font-title-md text-title-md text-on-surface">Negative Effects on Academic Activities</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Procrastination loops induced by dopamine-driven notification engines, social media distraction during complex problem-solving, and chronic sleep deprivation from late-night blue-spectrum display exposure erode core cognitive functions.
+            </p>
+</div>
+<!-- Vulnerability 2 -->
+<div class="rounded-xl p-space-lg bg-surface-container-low shadow-md">
+<div class="flex items-center gap-space-sm text-secondary mb-2">
+<span class="material-symbols-outlined">compare_arrows</span>
+<h3 class="font-title-md text-title-md text-on-surface">Influence on Academic Performance</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              A clear mismatch exists between perceived utility and measured academic performance: students often assume continuous online connectivity equates to learning, whereas true mastery requires focused self-regulation and distraction filtering.
+            </p>
+</div>
+<!-- Vulnerability 3 -->
+<div class="rounded-xl p-space-lg bg-surface-container-low shadow-md">
+<div class="flex items-center gap-space-sm text-primary mb-2">
+<span class="material-symbols-outlined">memory</span>
+<h3 class="font-title-md text-title-md text-on-surface">Technology-Related Challenges in CpE Education</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              BSCpE students face uniquely demanding hurdles: setting up complex cross-compiler toolchains, resolving difficult HDL syntax errors, low-level architecture debugging, and physical screen fatigue during extended logic design sessions.
+            </p>
+</div>
+</div>
+<!-- BSCpE Workflow Repository Slot -->
+<div class="lg:col-span-6 rounded-xl p-space-lg bg-surface-container-lowest/90 flex flex-col justify-between shadow-xl">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="px-space-sm py-0.5 rounded-full bg-error-container/20 text-error font-label-sm text-label-sm">
+                SYSTEM PIPELINE ARTIFACT
+              </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">FLOW // REPO-03</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">BSCpE Integrated Pipeline Flow</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+              Cross-compilation, simulation layers, toolchain synthesis, and hardware-in-the-loop debugging friction checkpoints.
+            </p>
+</div>
+<!-- Clean Dashed Box Target for assets/images/bscpe-workflow.png -->
+<div class="relative w-full rounded-lg p-space-lg flex flex-col items-center justify-center text-center bg-surface-container-low/50 my-space-md min-h-[240px]" style="border: 2px dashed rgba(255, 180, 171, 0.4);">
+<div class="p-space-md rounded-full bg-surface-container-high mb-space-sm text-error">
+<span class="material-symbols-outlined text-headline-lg">account_tree</span>
+</div>
+<div class="font-headline-sm text-headline-sm text-on-surface tracking-wide">assets/images/bscpe-workflow.png</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm mt-1">
+              Engineering workflow pipeline: from hardware logic description synthesis to cross-compilation errors and embedded validation hurdles.
+            </p>
+<div class="mt-space-md flex gap-2">
+<span class="px-space-sm py-0.5 rounded-full bg-surface-container-highest text-error font-label-sm text-label-sm">TARGET REPOSITORY</span>
+<span class="px-space-sm py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm">PNG DEPLOYMENT</span>
+</div>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm pt-space-xs">
+<span>PIPELINE RECOVERY LOG</span>
+<span class="text-tertiary">STABLE MONITORING</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 04: Major Challenges in Philippine Higher Education -->
+<section class="flex flex-col gap-space-lg">
+<div class="flex items-center gap-space-sm pb-space-sm">
+<span class="flex items-center justify-center w-8 h-8 rounded-lg bg-surface-container-high text-primary font-headline-sm text-headline-sm">04</span>
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Major Challenges in Philippine Higher Education</h2>
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Macro Structural Constraints &amp; Regional Digital Divide</p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Metric 1 -->
+<div class="rounded-xl p-space-lg bg-surface-container-low shadow-md flex flex-col justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-primary uppercase">PSA 2024 REGISTRY</span>
+<div class="font-headline-xl text-headline-xl text-on-surface my-2 font-bold tracking-tight">78.2%</div>
+<h3 class="font-title-md text-title-md text-on-surface mb-1">Digital Divide &amp; Access</h3>
 <p class="font-body-sm text-body-sm text-on-surface-variant">
-        © 2025 BatStateU The NEU Alangilan • GEd 104 Research Group • CEAFA Scientific Repository • Open Scholarly Access.
-      </p>
-<div class="flex items-center gap-4 text-on-surface-variant">
-<span class="font-label-sm text-label-sm font-mono">Campus Code: ALN-CEAFA</span>
-<span class="font-label-sm text-label-sm text-tertiary flex items-center gap-1.5 font-semibold">
-<span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>Verified Archive
-        </span>
+              78.2% internet penetration among Filipinos aged 15-64, leaving significant connectivity gaps across peripheral regions.
+            </p>
+</div>
+<div class="mt-space-md h-1.5 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 78.2%"></div>
+</div>
+</div>
+<!-- Metric 2 -->
+<div class="rounded-xl p-space-lg bg-surface-container-low shadow-md flex flex-col justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-error uppercase">BANDWIDTH LATENCY</span>
+<div class="font-headline-xl text-headline-xl text-on-surface my-2 font-bold tracking-tight">Critical</div>
+<h3 class="font-title-md text-title-md text-on-surface mb-1">Connectivity Bottlenecks</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Rural signal attenuation directly interrupts synchronous laboratory sessions, exam authentication, and large data fetches.
+            </p>
+</div>
+<div class="mt-space-md h-1.5 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-error rounded-full" style="width: 88%"></div>
+</div>
+</div>
+<!-- Metric 3 -->
+<div class="rounded-xl p-space-lg bg-surface-container-low shadow-md flex flex-col justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-secondary uppercase">OECD PISA 2025</span>
+<div class="font-headline-xl text-headline-xl text-on-surface my-2 font-bold tracking-tight">38%</div>
+<h3 class="font-title-md text-title-md text-on-surface mb-1">In-Class Distractions</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              38% of students report chronic digital distraction during lectures, resulting in an average -11 point performance penalty.
+            </p>
+</div>
+<div class="mt-space-md h-1.5 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 38%"></div>
+</div>
+</div>
+<!-- Metric 4 -->
+<div class="rounded-xl p-space-lg bg-surface-container-low shadow-md flex flex-col justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-tertiary uppercase">PENALTY METRIC</span>
+<div class="font-headline-xl text-headline-xl text-on-surface my-2 font-bold tracking-tight">-11 pts</div>
+<h3 class="font-title-md text-title-md text-on-surface mb-1">Cognitive Score Impact</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Standardized performance drop linked directly to unmonitored digital multitasking during core instructional blocks.
+            </p>
+</div>
+<div class="mt-space-md h-1.5 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-tertiary rounded-full" style="width: 65%"></div>
 </div>
 </div>
 </div>
-</footer>
+<!-- PSA 2024 FLEMMS Taxonomy with Interactive Progress Bars -->
+<div class="rounded-xl p-space-lg bg-surface-container/70 shadow-lg flex flex-col gap-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs">
+<div>
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-wider">PSA 2024 FLEMMS TAXONOMY</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Differences in Digital Skills &amp; Technical Competencies</h3>
+</div>
+<span class="text-on-surface-variant font-body-sm text-body-sm">Stratified by Functional Domain</span>
+</div>
+<div class="flex flex-col gap-space-md">
+<!-- Item 1 -->
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between font-title-sm text-title-sm">
+<span class="text-on-surface">Digital Communication (Messaging, Email, Meetings)</span>
+<span class="text-primary font-bold">92.3%</span>
+</div>
+<div class="h-3 w-full bg-surface-container-highest rounded-full overflow-hidden p-0.5">
+<div class="h-full bg-primary rounded-full transition-all duration-1000" style="width: 92.3%"></div>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between font-title-sm text-title-sm">
+<span class="text-on-surface">Information Literacy (Search Engines, Verification, Filtering)</span>
+<span class="text-tertiary font-bold">85.1%</span>
+</div>
+<div class="h-3 w-full bg-surface-container-highest rounded-full overflow-hidden p-0.5">
+<div class="h-full bg-tertiary rounded-full transition-all duration-1000" style="width: 85.1%"></div>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between font-title-sm text-title-sm">
+<span class="text-on-surface">Problem Solving &amp; Troubleshooting (Diagnostics, Software Logic)</span>
+<span class="text-secondary font-bold">72.4%</span>
+</div>
+<div class="h-3 w-full bg-surface-container-highest rounded-full overflow-hidden p-0.5">
+<div class="h-full bg-secondary rounded-full transition-all duration-1000" style="width: 72.4%"></div>
+</div>
+</div>
+<!-- Item 4 -->
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between font-title-sm text-title-sm">
+<span class="text-on-surface">Advanced Content Creation &amp; Computer Programming (Code, HDL, Architecture)</span>
+<span class="text-error font-bold">52.8%</span>
+</div>
+<div class="h-3 w-full bg-surface-container-highest rounded-full overflow-hidden p-0.5">
+<div class="h-full bg-error rounded-full transition-all duration-1000" style="width: 52.8%"></div>
+</div>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic">
+          Source: Philippine Statistics Authority (PSA) Functional Literacy, Education and Mass Media Survey (FLEMMS) Baseline Data.
+        </p>
+</div>
+</section>
+<!-- Section 05: Responsible & Effective Technology Use -->
+<section class="flex flex-col gap-space-lg">
+<div class="flex items-center gap-space-sm pb-space-sm">
+<span class="flex items-center justify-center w-8 h-8 rounded-lg bg-surface-container-high text-tertiary font-headline-sm text-headline-sm">05</span>
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Responsible &amp; Effective Technology Use</h2>
+<p class="font-label-sm text-label-sm text-tertiary uppercase tracking-wider">UNESCO 2023 Guidelines Matrix &amp; Operational Protocols</p>
+</div>
+</div>
+<!-- Technology as a Learning Tool Hub -->
+<div class="rounded-xl p-space-lg bg-surface-container/80 shadow-lg">
+<h3 class="font-title-md text-title-md text-on-surface mb-space-sm">Technology as a Primary Learning Tool (Essential Toolchain)</h3>
+<div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-space-sm">
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-primary text-headline-sm mb-1">school</span>
+<span class="font-title-sm text-title-sm text-on-surface">Google Classroom</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">LMS Sync</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-tertiary text-headline-sm mb-1">auto_stories</span>
+<span class="font-title-sm text-title-sm text-on-surface">Google Scholar</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Scholarly Query</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-primary text-headline-sm mb-1">code</span>
+<span class="font-title-sm text-title-sm text-on-surface">VS Code</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Development</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-error text-headline-sm mb-1">smart_display</span>
+<span class="font-title-sm text-title-sm text-on-surface">YouTube</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Visual Walkthroughs</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-tertiary text-headline-sm mb-1">table_chart</span>
+<span class="font-title-sm text-title-sm text-on-surface">MS Excel</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Data Models</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-secondary text-headline-sm mb-1">neurology</span>
+<span class="font-title-sm text-title-sm text-on-surface">AI Tools</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Synthesizers</span>
+</div>
+</div>
+</div>
+<!-- Comparison Lists: Academic vs Non-Academic -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-lg">
+<div class="rounded-xl p-space-lg bg-surface-container-low shadow-md flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-sm text-primary mb-1">
+<span class="material-symbols-outlined">menu_book</span>
+<h4 class="font-title-md text-title-md text-on-surface">Academic Technology Use</h4>
+</div>
+<ul class="flex flex-col gap-space-xs font-body-md text-body-md text-on-surface-variant">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-title-sm mt-0.5">check</span>
+<span>Rigorous IEEE and peer-reviewed literature reviews and methodology extraction.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-title-sm mt-0.5">check</span>
+<span>Source code writing, hardware synthesis testing, and timing analysis.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-title-sm mt-0.5">check</span>
+<span>Collaborative documentation through cloud editors and distributed version repositories.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-title-sm mt-0.5">check</span>
+<span>Virtual classroom synchronization and laboratory dataset post-processing.</span>
+</li>
+</ul>
+</div>
+<div class="rounded-xl p-space-lg bg-surface-container-low shadow-md flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-sm text-on-surface-variant mb-1">
+<span class="material-symbols-outlined">sports_esports</span>
+<h4 class="font-title-md text-title-md text-on-surface">Non-Academic Technology Use</h4>
+</div>
+<ul class="flex flex-col gap-space-xs font-body-md text-body-md text-on-surface-variant">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-on-surface-variant text-title-sm mt-0.5">radio_button_unchecked</span>
+<span>Continuous passive media scrolling across video networks without time caps.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-on-surface-variant text-title-sm mt-0.5">radio_button_unchecked</span>
+<span>Competitive online multiplayer gaming extending into biological sleep windows.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-on-surface-variant text-title-sm mt-0.5">radio_button_unchecked</span>
+<span>Recreational group messaging conversations unaligned with academic deliverables.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-on-surface-variant text-title-sm mt-0.5">radio_button_unchecked</span>
+<span>Passive content consumption leading to high digital fatigue with zero educational gain.</span>
+</li>
+</ul>
+</div>
+</div>
+<!-- 5 Practical Ways & Responsible vs Effective -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- 5 Practical Ways -->
+<div class="lg:col-span-7 rounded-xl p-space-lg bg-surface-container/60 shadow-lg flex flex-col gap-space-md">
+<h4 class="font-headline-sm text-headline-sm text-on-surface">5 Practical Ways to Manage Technology Use</h4>
+<div class="relative w-full rounded-xl p-space-md bg-surface-container-low/70 flex flex-col gap-space-md shadow-inner border border-primary/20"><div class="flex flex-wrap items-center justify-between gap-space-xs pb-space-xs border-b border-outline-variant/30"><div class="flex items-center gap-space-xs"><span class="w-2.5 h-2.5 rounded-full bg-primary animate-ping opacity-75"></span><span class="font-label-sm text-label-sm text-on-surface uppercase tracking-wider font-semibold">Hardware Cohort Telemetry (N=470)</span></div><div class="inline-flex items-center p-0.5 rounded-lg bg-surface-container-highest" id="chart-mode-toggle"><button type="button" id="btn-view-hardware" class="px-space-sm py-1 rounded-md text-label-sm font-semibold transition-all bg-primary text-on-primary shadow-sm">Deployment %</button><button type="button" id="btn-view-split" class="px-space-sm py-1 rounded-md text-label-sm font-semibold transition-all text-on-surface-variant hover:text-on-surface">Academic vs Ambient</button></div></div><div class="w-full flex flex-col gap-space-md" id="hardware-view-panel"><div class="w-full"><svg class="w-full h-44 overflow-visible" viewBox="0 0 540 160" preserveAspectRatio="xMidYMid meet"><defs><linearGradient id="laptopGrad" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#38bdf8"></stop><stop offset="100%" stop-color="#8ed5ff"></stop></linearGradient><linearGradient id="phoneGrad" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#22c990"></stop><stop offset="100%" stop-color="#4ee6aa"></stop></linearGradient><linearGradient id="tabletGrad" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#7bd0ff"></stop><stop offset="100%" stop-color="#bdc2ff"></stop></linearGradient><linearGradient id="sbcGrad" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#c4e7ff"></stop><stop offset="100%" stop-color="#38bdf8"></stop></linearGradient></defs><line x1="160" y1="0" x2="160" y2="140" stroke="rgba(135,146,154,0.2)" stroke-width="1"></line><line x1="252.5" y1="0" x2="252.5" y2="140" stroke="rgba(135,146,154,0.1)" stroke-dasharray="3,3"></line><line x1="345" y1="0" x2="345" y2="140" stroke="rgba(135,146,154,0.1)" stroke-dasharray="3,3"></line><line x1="437.5" y1="0" x2="437.5" y2="140" stroke="rgba(135,146,154,0.1)" stroke-dasharray="3,3"></line><line x1="530" y1="0" x2="530" y2="140" stroke="rgba(135,146,154,0.2)" stroke-width="1"></line><g transform="translate(0, 10)"><text x="150" y="16" text-anchor="end" fill="#d6e3ff" font-size="12" font-family="Inter" font-weight="500">Laptops &amp; PCs</text><rect x="160" y="3" width="370" height="18" rx="4" fill="#1c2a41" opacity="0.5"></rect><rect x="160" y="3" width="338.2" height="18" rx="4" fill="url(#laptopGrad)"></rect><text x="506" y="16" fill="#ffffff" font-size="11" font-family="Inter" font-weight="700">91.4%</text></g><g transform="translate(0, 45)"><text x="150" y="16" text-anchor="end" fill="#d6e3ff" font-size="12" font-family="Inter" font-weight="500">Smartphones</text><rect x="160" y="3" width="370" height="18" rx="4" fill="#1c2a41" opacity="0.5"></rect><rect x="160" y="3" width="364.8" height="18" rx="4" fill="url(#phoneGrad)"></rect><text x="532" y="16" fill="#ffffff" font-size="11" font-family="Inter" font-weight="700">98.6%</text></g><g transform="translate(0, 80)"><text x="150" y="16" text-anchor="end" fill="#d6e3ff" font-size="12" font-family="Inter" font-weight="500">SBC &amp; Dev Boards</text><rect x="160" y="3" width="370" height="18" rx="4" fill="#1c2a41" opacity="0.5"></rect><rect x="160" y="3" width="239.8" height="18" rx="4" fill="url(#sbcGrad)"></rect><text x="408" y="16" fill="#8ed5ff" font-size="11" font-family="Inter" font-weight="700">64.8%</text></g><g transform="translate(0, 115)"><text x="150" y="16" text-anchor="end" fill="#d6e3ff" font-size="12" font-family="Inter" font-weight="500">Tablets &amp; Slates</text><rect x="160" y="3" width="370" height="18" rx="4" fill="#1c2a41" opacity="0.5"></rect><rect x="160" y="3" width="155.8" height="18" rx="4" fill="url(#tabletGrad)"></rect><text x="324" y="16" fill="#bdc2ff" font-size="11" font-family="Inter" font-weight="700">42.1%</text></g><text x="160" y="154" fill="#87929a" font-size="10" font-family="Inter">0%</text><text x="252.5" y="154" text-anchor="middle" fill="#87929a" font-size="10" font-family="Inter">25%</text><text x="345" y="154" text-anchor="middle" fill="#87929a" font-size="10" font-family="Inter">50%</text><text x="437.5" y="154" text-anchor="middle" fill="#87929a" font-size="10" font-family="Inter">75%</text><text x="530" y="154" text-anchor="end" fill="#87929a" font-size="10" font-family="Inter">100%</text></svg></div><div class="grid grid-cols-2 sm:grid-cols-4 gap-2 pt-space-xs border-t border-outline-variant/20"><div class="flex flex-col"><span class="text-on-surface-variant font-label-sm text-label-sm">Primary Compute</span><span class="text-primary font-title-sm text-title-sm font-semibold">91.4% Laptops</span></div><div class="flex flex-col"><span class="text-on-surface-variant font-label-sm text-label-sm">Ubiquitous Mobile</span><span class="text-tertiary font-title-sm text-title-sm font-semibold">98.6% Phones</span></div><div class="flex flex-col"><span class="text-on-surface-variant font-label-sm text-label-sm">Hardware Labs</span><span class="text-primary-fixed-dim font-title-sm text-title-sm font-semibold">64.8% SBCs</span></div><div class="flex flex-col"><span class="text-on-surface-variant font-label-sm text-label-sm">Schematic Pads</span><span class="text-secondary font-title-sm text-title-sm font-semibold">42.1% Tablets</span></div></div></div><div class="w-full hidden flex-col gap-space-sm" id="split-view-panel"><div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant"><span>Device Category</span><div class="flex items-center gap-space-sm"><span class="inline-flex items-center gap-1"><span class="w-2.5 h-2.5 rounded bg-primary"></span>Academic</span><span class="inline-flex items-center gap-1"><span class="w-2.5 h-2.5 rounded bg-secondary"></span>Ambient/Media</span></div></div><div class="flex flex-col gap-2.5"><div class="flex flex-col gap-1"><div class="flex justify-between font-body-sm text-body-sm"><span class="text-on-surface font-semibold">Laptops / Desktops</span><span class="text-on-surface-variant"><strong class="text-primary">78%</strong> vs 22%</span></div><div class="h-3 w-full bg-surface-container-highest rounded-full overflow-hidden flex"><div class="h-full bg-primary" style="width: 78%;"></div><div class="h-full bg-secondary" style="width: 22%;"></div></div></div><div class="flex flex-col gap-1"><div class="flex justify-between font-body-sm text-body-sm"><span class="text-on-surface font-semibold">Smartphones</span><span class="text-on-surface-variant"><strong class="text-primary">31%</strong> vs 69%</span></div><div class="h-3 w-full bg-surface-container-highest rounded-full overflow-hidden flex"><div class="h-full bg-primary" style="width: 31%;"></div><div class="h-full bg-secondary" style="width: 69%;"></div></div></div><div class="flex flex-col gap-1"><div class="flex justify-between font-body-sm text-body-sm"><span class="text-on-surface font-semibold">SBCs &amp; Microcontrollers</span><span class="text-on-surface-variant"><strong class="text-primary">94%</strong> vs 6%</span></div><div class="h-3 w-full bg-surface-container-highest rounded-full overflow-hidden flex"><div class="h-full bg-primary" style="width: 94%;"></div><div class="h-full bg-secondary" style="width: 6%;"></div></div></div><div class="flex flex-col gap-1"><div class="flex justify-between font-body-sm text-body-sm"><span class="text-on-surface font-semibold">Tablets &amp; Stylus Slates</span><span class="text-on-surface-variant"><strong class="text-primary">62%</strong> vs 38%</span></div><div class="h-3 w-full bg-surface-container-highest rounded-full overflow-hidden flex"><div class="h-full bg-primary" style="width: 62%;"></div><div class="h-full bg-secondary" style="width: 38%;"></div></div></div></div><p class="font-body-sm text-body-sm text-on-surface-variant italic pt-space-xs border-t border-outline-variant/20">BSCpE field observation: Dedicated computing hardware is heavily leveraged for compile pipelines and coursework, while mobile phones absorb recreational multi-channel load.</p></div></div>
+</div>
+<!-- Responsible vs Effective & AI Section -->
+<div class="lg:col-span-5 flex flex-col gap-space-md">
+<div class="rounded-xl p-space-md bg-surface-container-low shadow-md">
+<h4 class="font-title-md text-title-md text-on-surface mb-2">Responsible Use vs Effective Use</h4>
+<div class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface-variant">
+<p><strong class="text-tertiary">Responsible Use:</strong> Adherence to academic integrity, safeguarding data privacy, respecting intellectual property, and mitigating personal cyber stress.</p>
+<p><strong class="text-primary">Effective Use:</strong> Strategic application of digital utilities to achieve higher learning retention, rapid debugging, and proven output acceleration.</p>
+</div>
+</div>
+<!-- AI Utilization Matrix (OECD PISA 2025) -->
+<div class="rounded-xl p-space-md bg-surface-container-low shadow-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">OECD PISA 2025 BENCHMARK</span>
+<span class="px-space-xs py-0.5 rounded-full bg-secondary-container/20 text-secondary font-label-sm text-label-sm">AI IN ACADEMIA</span>
+</div>
+<h4 class="font-title-md text-title-md text-on-surface">Responsible Use of Artificial Intelligence</h4>
+<div class="flex flex-col gap-2 mt-1">
+<div>
+<div class="flex justify-between font-label-sm text-label-sm mb-1">
+<span class="text-on-surface">Weekly Chatbot Query &amp; Research</span>
+<span class="text-primary font-bold">55%</span>
+</div>
+<div class="h-1.5 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 55%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between font-label-sm text-label-sm mb-1">
+<span class="text-on-surface">Summarizing Complex Texts</span>
+<span class="text-tertiary font-bold">45%</span>
+</div>
+<div class="h-1.5 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-tertiary rounded-full" style="width: 45%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between font-label-sm text-label-sm mb-1">
+<span class="text-on-surface">Drafting &amp; Refining Writing Tasks</span>
+<span class="text-secondary font-bold">42%</span>
+</div>
+<div class="h-1.5 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 42%"></div>
+</div>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic mt-1">
+              Guidelines require critical verification of all AI outputs to avoid hallucinations and maintain academic integrity.
+            </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 06: Research Findings and Supporting Evidence -->
+<section class="flex flex-col gap-space-lg">
+<div class="flex items-center gap-space-sm pb-space-sm">
+<span class="flex items-center justify-center w-8 h-8 rounded-lg bg-surface-container-high text-primary font-headline-sm text-headline-sm">06</span>
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Research Findings and Supporting Evidence</h2>
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Empirical Compendium &amp; Peer-Reviewed Literature</p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Compendium Node 1 -->
+<div class="rounded-xl p-space-lg bg-surface-container-low shadow-md flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="px-space-sm py-0.5 rounded-full bg-primary-container/20 text-primary font-label-sm text-label-sm">
+                Talandron-Felipe &amp; Intao (2024)
+              </span>
+<span class="material-symbols-outlined text-primary text-title-md">menu_book</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface mb-space-xs">Digital Divide and Academic Performance</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Investigated the empirical correlation between personal computing access, high-speed campus connectivity, and student GPA in Philippine technical programs. Found statistically significant disparities in software engineering assignment completion rates between properly equipped and device-constrained students.
+            </p>
+</div>
+<div class="mt-space-md pt-space-xs text-on-surface-variant font-label-sm text-label-sm">
+            INDEX: DOI // 10.1016/j.chb.2024.108291
+          </div>
+</div>
+<!-- Compendium Node 2 -->
+<div class="rounded-xl p-space-lg bg-surface-container-low shadow-md flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="px-space-sm py-0.5 rounded-full bg-tertiary-container/20 text-tertiary font-label-sm text-label-sm">
+                Gizay et al. (2024) • N=384
+              </span>
+<span class="material-symbols-outlined text-tertiary text-title-md">psychology</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface mb-space-xs">Digital Device Engagement and Digital Stress</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Conducted an extensive empirical study across N=384 engineering undergraduates. Documented clear correlations between round-the-clock notifications, multi-screen fragmentation, elevated cortisol levels, and heightened subjective feelings of cognitive burnout.
+            </p>
+</div>
+<div class="mt-space-md pt-space-xs text-on-surface-variant font-label-sm text-label-sm">
+            INDEX: DOI // 10.1080/08886504.2024.231908
+          </div>
+</div>
+<!-- Compendium Node 3 -->
+<div class="rounded-xl p-space-lg bg-surface-container-low shadow-md flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="px-space-sm py-0.5 rounded-full bg-secondary-container/30 text-secondary font-label-sm text-label-sm">
+                OECD PISA (2025)
+              </span>
+<span class="material-symbols-outlined text-secondary text-title-md">analytics</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface mb-space-xs">Digital Distractions and Academic Performance</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Global cross-cohort diagnostic demonstrating that uncontrolled digital multitasking in technical classrooms directly triggers an average drop of 11 score points in quantitative problem-solving and algorithmic thinking.
+            </p>
+</div>
+<div class="mt-space-md pt-space-xs text-on-surface-variant font-label-sm text-label-sm">
+            INDEX: OECD EDUCATIONAL SURVEY // 2025-PISA-VOL1
+          </div>
+</div>
+<!-- Compendium Node 4 -->
+<div class="rounded-xl p-space-lg bg-surface-container-low shadow-md flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="px-space-sm py-0.5 rounded-full bg-primary-container/20 text-primary font-label-sm text-label-sm">
+                PSA FLEMMS (2024)
+              </span>
+<span class="material-symbols-outlined text-primary text-title-md">dataset</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface mb-space-xs">ICT Skills Among Filipino Youth and Adults</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              National census metrics detailing the steep drop-off between consumer communication usage (92.3%) and specialized code development and hardware engineering competencies (52.8%), underlining the critical role of university labs in closing the skill gap.
+            </p>
+</div>
+<div class="mt-space-md pt-space-xs text-on-surface-variant font-label-sm text-label-sm">
+            INDEX: PSA-FLEMMS-STAT-2024-SUMMARY
+          </div>
+</div>
+</div>
+</section>
+<!-- Bottom Pagination Navigation -->
+<nav aria-label="Section Pagination" class="flex flex-col sm:flex-row items-center justify-between gap-space-md pt-space-lg">
+<a class="w-full sm:w-auto group flex items-center justify-center gap-space-sm px-space-lg py-space-md rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface transition-all duration-200 shadow-md" href="introduction.html">
+<span class="material-symbols-outlined text-primary transition-transform group-hover:-translate-x-1">arrow_back</span>
+<div class="flex flex-col text-left">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Previous</span>
+<span class="font-title-md text-title-md font-semibold text-primary">&lt; Back: Introduction</span>
+</div>
+</a>
+<div class="hidden md:flex flex-col items-center">
+<span class="font-label-sm text-label-sm text-on-surface-variant">NODE PIPELINE 03 OF 06</span>
+<div class="flex gap-1.5 mt-1">
+<span class="w-2 h-2 rounded-full bg-surface-container-highest"></span>
+<span class="w-2 h-2 rounded-full bg-surface-container-highest"></span>
+<span class="w-5 h-2 rounded-full bg-primary"></span>
+<span class="w-2 h-2 rounded-full bg-surface-container-highest"></span>
+<span class="w-2 h-2 rounded-full bg-surface-container-highest"></span>
+<span class="w-2 h-2 rounded-full bg-surface-container-highest"></span>
+</div>
+</div>
+<a class="w-full sm:w-auto group flex items-center justify-center gap-space-sm px-space-lg py-space-md rounded-xl bg-primary hover:bg-primary-container text-on-primary transition-all duration-200 shadow-lg" href="significance.html">
+<div class="flex flex-col text-right">
+<span class="font-label-sm text-label-sm text-on-primary-container uppercase">Next Phase</span>
+<span class="font-title-md text-title-md font-bold text-on-primary">Next: Significance &gt;</span>
+</div>
+<span class="material-symbols-outlined text-on-primary transition-transform group-hover:translate-x-1">arrow_forward</span>
+</a>
+</nav>
+</div>
+</div>
+<script>
+  (function() {
+    // Copy Citation Node Micro-interaction
+    const copyBtn = document.getElementById('copy-citation-btn');
+    const toast = document.getElementById('citation-toast');
+
+    if (copyBtn && toast) {
+      copyBtn.addEventListener('click', function() {
+        const citationText = 'TechTrack PH (2025). MODULE REF // 03 • DOCUMENT 104 • SYNTHESIS ENGINE: Discussion of Assigned Topic. Batangas State University The NEU Alangilan BSCpE Research Group Node 11. Citations: Corrin et al. (2010), Gizay et al. (2024), PSA FLEMMS (2024), OECD PISA (2025).';
+        
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(citationText).then(showToast);
+        } else {
+          showToast();
+        }
+      });
+    }
+
+    function showToast() {
+      toast.classList.remove('hidden');
+      setTimeout(function() {
+        toast.classList.add('hidden');
+      }, 3000);
+    }
+  })();
+</script><script>(function(){const btnHw=document.getElementById('btn-view-hardware');const btnSplit=document.getElementById('btn-view-split');const panelHw=document.getElementById('hardware-view-panel');const panelSplit=document.getElementById('split-view-panel');if(!btnHw||!btnSplit||!panelHw||!panelSplit)return;btnHw.addEventListener('click',function(){btnHw.className='px-space-sm py-1 rounded-md text-label-sm font-semibold transition-all bg-primary text-on-primary shadow-sm';btnSplit.className='px-space-sm py-1 rounded-md text-label-sm font-semibold transition-all text-on-surface-variant hover:text-on-surface';panelHw.classList.remove('hidden');panelHw.classList.add('flex');panelSplit.classList.add('hidden');panelSplit.classList.remove('flex');});btnSplit.addEventListener('click',function(){btnSplit.className='px-space-sm py-1 rounded-md text-label-sm font-semibold transition-all bg-primary text-on-primary shadow-sm';btnHw.className='px-space-sm py-1 rounded-md text-label-sm font-semibold transition-all text-on-surface-variant hover:text-on-surface';panelSplit.classList.remove('hidden');panelSplit.classList.add('flex');panelHw.classList.add('hidden');panelHw.classList.remove('flex');});})();</script></main><footer class="relative z-10 w-full bg-surface-container-lowest/90 backdrop-blur-xl mt-space-xl"><div class="max-w-7xl mx-auto px-gutter py-space-xl flex flex-col md:flex-row items-center justify-between gap-space-lg"><div class="flex items-center gap-space-md"><div class="p-space-xs rounded-full bg-surface-container-high"><img alt="BatStateU CpE Emblem" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/ALJJyrD70Mqaz-Z-5Wk9K6vnxSldkJtxg8ZVMvaGR7_QMK0sRd4tYIWdEPvvqgCRdMsHlx6OK2N-1-3_l2-ULfSW3iuz2mF2U4OQg4kh1Gl8ndZkU5XmEAMXOQyL8-Zx6PVj5BL8AkT6l1AidcjGD1N0Wgt3e0FuribDcZgUQ00IP_u-tla9EMQvAAyDS5_eHuxUhfjBUS9oNScPddH_a_-DapyhC3AhBGsdGlL82u5yHDdtIc5Ih1kVUydiJQ"></div><div><div class="font-title-md text-title-md text-on-surface">TechTrack PH • GEd 104</div><p class="font-body-sm text-body-sm text-on-surface-variant">Batangas State University The National Engineering University • Alangilan Campus</p></div></div><nav class="flex flex-wrap items-center justify-center gap-space-md" data-active-classes="text-primary font-semibold"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="overview" href="index.html">Overview</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="introduction" href="introduction.html">Introduction</a><a aria-current="page" class="transition-colors text-primary font-semibold" data-path="discussion" href="discussion.html">Discussion</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="significance" href="significance.html">Significance</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="research-team" href="team.html">Research Team</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="references" href="references.html">References</a></nav><div class="flex flex-col items-center md:items-end gap-1"><div class="flex items-center gap-2 font-label-sm text-label-sm text-tertiary"><span class="inline-block w-1.5 h-1.5 rounded-full bg-tertiary"></span><span>TELEMETRY SYNCHRONIZED [NODE 11]</span></div><p class="font-body-sm text-body-sm text-on-surface-variant">© 2025 BatStateU The NEU Alangilan BSCpE. All rights reserved.</p></div></div></footer><script>(function(){const storageKey='techtrack_theme';const currentTheme=localStorage.getItem(storageKey);const htmlElement=document.documentElement;const icon=document.getElementById('theme-toggle-icon');function applyTheme(isDark){if(isDark){htmlElement.classList.add('dark');if(icon)icon.textContent='light_mode';}else{htmlElement.classList.remove('dark');if(icon)icon.textContent='dark_mode';}}if(currentTheme==='light'){applyTheme(false);}else{applyTheme(true);}const toggleBtn=document.getElementById('theme-toggle-btn');if(toggleBtn){toggleBtn.addEventListener('click',function(){const isNowDark=!htmlElement.classList.contains('dark');applyTheme(isNowDark);localStorage.setItem(storageKey,isNowDark?'dark':'light');});}})();</script>
+
 </body></html>
