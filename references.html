@@ -1,565 +1,1156 @@
 <!DOCTYPE html>
 
-<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>TechTrack PH | GEd 104 Academic Research Portal</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;family=Plus+Jakarta+Sans:wght@100..900&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}@keyframes float-blob-1{0%,100%{transform:translate(0px,0px) scale(1);}50%{transform:translate(30px,-20px) scale(1.08);}}@keyframes float-blob-2{0%,100%{transform:translate(0px,0px) scale(1);}50%{transform:translate(-35px,25px) scale(0.95);}}@keyframes float-blob-3{0%,100%{transform:translate(0px,0px) scale(1);}50%{transform:translate(25px,30px) scale(1.05);}}.ambient-blob-1{animation:float-blob-1 18s ease-in-out infinite;}.ambient-blob-2{animation:float-blob-2 22s ease-in-out infinite;}.ambient-blob-3{animation:float-blob-3 26s ease-in-out infinite;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"primary-fixed-dim":"#7bd0ff","surface":"#041329","surface-dim":"#041329","inverse-on-surface":"#233148","surface-variant":"#27354c","error-container":"#93000a","inverse-primary":"#00668a","on-tertiary":"#003825","error":"#ffb4ab","primary-container":"#38bdf8","surface-container-high":"#1c2a41","surface-container-highest":"#27354c","on-tertiary-fixed-variant":"#005137","surface-tint":"#7bd0ff","tertiary-container":"#22c990","secondary-container":"#2f3aa3","surface-container-lowest":"#010e24","primary-fixed":"#c4e7ff","on-error":"#690005","outline-variant":"#3e484f","secondary-fixed":"#e0e0ff","tertiary-fixed":"#68fcbf","outline":"#87929a","surface-container-low":"#0d1c32","on-background":"#d6e3ff","on-primary":"#00354a","on-error-container":"#ffdad6","inverse-surface":"#d6e3ff","tertiary":"#4ee6aa","tertiary-fixed-dim":"#45dfa4","primary":"#8ed5ff","secondary":"#bdc2ff","on-surface-variant":"#bdc8d1","background":"#041329","on-secondary-fixed":"#000767","on-tertiary-fixed":"#002114","surface-container":"#112036","on-primary-container":"#004965","on-primary-fixed":"#001e2c","on-primary-fixed-variant":"#004c69","on-surface":"#d6e3ff","on-secondary":"#131e8c","secondary-fixed-dim":"#bdc2ff","on-secondary-fixed-variant":"#2f3aa3","on-secondary-container":"#a8afff","on-tertiary-container":"#004e35","surface-bright":"#2c3951"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"space-lg":"1.5rem","space-xl":"2.5rem","gutter-mobile":"1rem","space-sm":"0.5rem",gutter:"1.5rem",margin:"2rem","space-md":"1rem","margin-mobile":"1rem","space-xs":"0.25rem"},fontFamily:{"body-lg":["Inter"],"headline-sm":["Plus Jakarta Sans"],"title-md":["Inter"],"body-sm":["Inter"],"title-sm":["Inter"],"headline-xl":["Plus Jakarta Sans"],"body-md":["Inter"],"label-sm":["Inter"],"headline-lg-mobile":["Plus Jakarta Sans"],"label-md":["Inter"],"headline-lg":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"headline-xl-mobile":["Plus Jakarta Sans"]},fontSize:{"body-lg":["16px",{lineHeight:"26px",fontWeight:"400"}],"headline-sm":["20px",{lineHeight:"28px",fontWeight:"600"}],"title-md":["16px",{lineHeight:"24px",fontWeight:"600"}],"body-sm":["12px",{lineHeight:"18px",fontWeight:"400"}],"title-sm":["14px",{lineHeight:"20px",fontWeight:"600"}],"headline-xl":["40px",{lineHeight:"48px",letterSpacing:"-0.02em",fontWeight:"700"}],"body-md":["14px",{lineHeight:"22px",fontWeight:"400"}],"label-sm":["11px",{lineHeight:"14px",letterSpacing:"0.03em",fontWeight:"600"}],"headline-lg-mobile":["24px",{lineHeight:"32px",letterSpacing:"-0.01em",fontWeight:"600"}],"label-md":["12px",{lineHeight:"16px",letterSpacing:"0.02em",fontWeight:"600"}],"headline-lg":["32px",{lineHeight:"40px",letterSpacing:"-0.015em",fontWeight:"600"}],"headline-md":["24px",{lineHeight:"32px",letterSpacing:"-0.01em",fontWeight:"600"}],"headline-xl-mobile":["30px",{lineHeight:"38px",letterSpacing:"-0.02em",fontWeight:"700"}]}}}};</script><script>function initTheme(){const stored=localStorage.getItem('techtrack_theme');const sysDark=window.matchMedia('(prefers-color-scheme: dark)').matches;if(stored==='dark'||(!stored&&sysDark)){document.documentElement.classList.add('dark');localStorage.setItem('techtrack_theme','dark');}else{document.documentElement.classList.remove('dark');localStorage.setItem('techtrack_theme','light');}}initTheme();function toggleTheme(){const isDark=document.documentElement.classList.toggle('dark');localStorage.setItem('techtrack_theme',isDark?'dark':'light');const icon=document.getElementById('theme-toggle-icon');if(icon){icon.textContent=isDark?'light_mode':'dark_mode';}}window.addEventListener('DOMContentLoaded',()=>{const isDark=document.documentElement.classList.contains('dark');const icon=document.getElementById('theme-toggle-icon');if(icon){icon.textContent=isDark?'light_mode':'dark_mode';}});</script></head><body class="bg-surface font-body-md text-on-surface antialiased min-h-screen relative selection:bg-primary-container selection:text-on-primary-container"><style id="techtrack-references-enhancements">@keyframes float-blob-1{0%,100%{transform:translate3d(0,0,0) scale(1);}50%{transform:translate3d(40px,-25px,0) scale(1.1);}}@keyframes float-blob-2{0%,100%{transform:translate3d(0,0,0) scale(1);}50%{transform:translate3d(-40px,30px,0) scale(0.92);}}@keyframes float-blob-3{0%,100%{transform:translate3d(0,0,0) scale(1);}50%{transform:translate3d(30px,35px,0) scale(1.06);}}.ambient-blob-1{animation:float-blob-1 16s ease-in-out infinite;will-change:transform;}.ambient-blob-2{animation:float-blob-2 20s ease-in-out infinite;will-change:transform;}.ambient-blob-3{animation:float-blob-3 24s ease-in-out infinite;will-change:transform;}.ref-card{border:1px solid rgba(135,146,154,0.12);transition:all 0.3s cubic-bezier(0.16,1,0.3,1);}.ref-card:hover{transform:translateY(-4px);border-color:rgba(56,189,248,0.45);box-shadow:0 12px 28px -6px rgba(0,0,0,0.4),0 0 20px -3px rgba(56,189,248,0.2);}.category-pill{border:1px solid rgba(135,146,154,0.15);transition:all 0.25s cubic-bezier(0.16,1,0.3,1);}.category-pill:hover{transform:translateY(-2px);box-shadow:0 4px 12px rgba(56,189,248,0.15);}.reveal-on-scroll{opacity:1;transform:translateY(0);transition:opacity 0.6s cubic-bezier(0.16,1,0.3,1),transform 0.6s cubic-bezier(0.16,1,0.3,1);}@media(prefers-reduced-motion:no-preference){.js-enabled .reveal-on-scroll:not(.revealed){opacity:0;transform:translateY(24px);}.js-enabled .reveal-on-scroll.revealed{opacity:1;transform:translateY(0);}}</style><div aria-hidden="true" class="ambient-blob-bg fixed inset-0 pointer-events-none overflow-hidden z-0"><div class="ambient-blob-1 absolute -top-28 -left-28 w-[580px] h-[580px] rounded-full bg-gradient-to-br from-primary/25 via-primary-container/15 to-transparent blur-[100px] pointer-events-none"></div><div class="ambient-blob-2 absolute top-1/4 -right-28 w-[620px] h-[620px] rounded-full bg-gradient-to-bl from-secondary-container/30 via-secondary/15 to-transparent blur-[110px] pointer-events-none"></div><div class="ambient-blob-3 absolute -bottom-40 left-1/5 w-[650px] h-[650px] rounded-full bg-gradient-to-tr from-secondary-container/25 via-tertiary/15 to-primary/10 blur-[120px] pointer-events-none"></div></div><header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between gap-4"><div class="flex items-center gap-3"><img alt="BatStateU CpE Logo" class="w-10 h-10 object-contain rounded-lg drop-shadow-[0_2px_8px_rgba(56,189,248,0.25)] transition-transform duration-300 hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/40x40/0284c7/ffffff?text=CpE';" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWw88Xqulc6Wc5NMvuH44XyvEVvyOsq6FDVs3VdkC2pZedtJuLXt0PQ1NKXYuMlbAmem6rtfeEt-xJvmikHlVXcKVzUlDc32_roZviUcJ-oA2Fh075gYQB943HD7ojiP3cDtsMHRrKu0hP8_OH68m40unrwOV7-2tWo-B5hqXOG2DYj37GI_5CcZrHGY9ahPAxyun6buQzBo-aBHNQlNCPkAh2MQ6BynggDvN75u6tBIzmyGayEj0J"/><div class="flex flex-col"><div class="flex items-center gap-2"><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface font-bold">TechTrack PH</span><span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm">GEd 104</span></div><span class="font-label-sm text-label-sm text-on-surface-variant">TNEU Alangilan • BSCpE Research</span></div></div><nav class="hidden xl:flex items-center gap-1.5 p-1 rounded-xl bg-surface-container-low" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg shadow-sm"><a class="px-3 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface transition-colors font-title-sm text-title-sm" data-path="overview" href="index.html">Overview</a><a class="px-3 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface transition-colors font-title-sm text-title-sm" data-path="introduction" href="introduction.html">Introduction</a><a class="px-3 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface transition-colors font-title-sm text-title-sm" data-path="discussion" href="discussion.html">Discussion</a><a class="px-3 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface transition-colors font-title-sm text-title-sm" data-path="significance" href="significance.html">Significance</a><a class="px-3 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface transition-colors font-title-sm text-title-sm" data-path="research-team" href="team.html">Research Team</a><a aria-current="page" class="px-3 py-1.5 transition-colors bg-primary-container text-on-primary-container font-semibold rounded-lg shadow-sm" data-path="references" href="references.html">References</a></nav><div class="flex items-center gap-2.5"><button aria-label="Toggle color theme" class="w-9 h-9 rounded-lg flex items-center justify-center bg-surface-container hover:bg-surface-container-high transition-colors text-on-surface-variant hover:text-on-surface" onclick="toggleTheme()" type="button"><span class="material-symbols-outlined text-[20px]" id="theme-toggle-icon">dark_mode</span></button><a aria-label="External Research Repository" class="w-9 h-9 rounded-lg flex items-center justify-center bg-surface-container hover:bg-surface-container-high transition-colors text-on-surface-variant hover:text-on-surface" href="https://github.com" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-[20px]">deployed_code</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="relative z-10 w-full pt-20 bg-transparent min-h-[calc(100vh-20rem)]"><div class="flex flex-col w-full">
-<section class="w-full max-w-7xl mx-auto px-6 lg:px-12 py-10 relative">
-<!-- Top Meta pill badge -->
-<div class="flex flex-wrap items-center gap-2 mb-4">
-<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm shadow-sm">
-<span class="material-symbols-outlined text-[15px]">verified</span>
-        VERIFIED BIBLIOGRAPHY // REFERENCES &amp; CITATIONS
-      </span>
-<span class="inline-flex items-center px-2.5 py-1 rounded-full bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm">
-        APA 7th Edition
-      </span>
-<span class="inline-flex items-center px-2.5 py-1 rounded-full bg-surface-container-low text-tertiary font-label-sm text-label-sm">
-        Peer-Reviewed &amp; Indexed Sources
-      </span>
-</div>
-<!-- Title and Subtitle Block -->
-<div class="max-w-4xl space-y-3 mb-10">
-<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">
-        Scholarly Evidence &amp; Archival Repositories
-      </h1>
-<p class="font-body-lg text-body-lg text-on-surface-variant">
-        REFERENCES: All primary literature, institutional reports, and empirical datasets referenced in the study. All primary references cited across the TechTrack PH research report, complete with verified external hyperlinks to journal repositories, institutional whitepapers, and statistical databases.
-      </p>
-</div>
-<!-- Telemetry Metric Highlight Bar -->
-<div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-12">
-<div class="bg-surface-container/80 backdrop-blur-md p-5 rounded-xl shadow-md flex items-center justify-between">
-<div>
-<span class="font-label-sm text-label-sm text-on-surface-variant block uppercase tracking-wider">Cataloged Items</span>
-<span class="font-headline-lg text-headline-lg text-primary font-bold">19</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant block">Indexed Academic Entries</span>
-</div>
-<div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
-<span class="material-symbols-outlined text-[28px]">library_books</span>
-</div>
-</div>
-<div class="bg-surface-container/80 backdrop-blur-md p-5 rounded-xl shadow-md flex items-center justify-between">
-<div>
-<span class="font-label-sm text-label-sm text-on-surface-variant block uppercase tracking-wider">Link Integrity</span>
-<span class="font-headline-lg text-headline-lg text-tertiary font-bold">100%</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant block">DOI / Direct URL Resolvability</span>
-</div>
-<div class="w-12 h-12 rounded-xl bg-tertiary/10 flex items-center justify-center text-tertiary">
-<span class="material-symbols-outlined text-[28px]">link</span>
-</div>
-</div>
-<div class="bg-surface-container/80 backdrop-blur-md p-5 rounded-xl shadow-md flex items-center justify-between">
-<div>
-<span class="font-label-sm text-label-sm text-on-surface-variant block uppercase tracking-wider">Indexing Baseline</span>
-<span class="font-headline-lg text-headline-lg text-secondary font-bold">Q1–Q2</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant block">Tier Impact Standard</span>
-</div>
-<div class="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center text-secondary">
-<span class="material-symbols-outlined text-[28px]">auto_graph</span>
-</div>
-</div>
-</div>
-<!-- Primary Layout: 8 cols References List + 4 cols Sidebar -->
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-<!-- Left Column (8-col) -->
-<div class="lg:col-span-8 flex flex-col gap-6">
-<!-- Category Filter Pills -->
-<div class="flex flex-wrap items-center gap-2 bg-surface-container-low p-2 rounded-xl shadow-sm">
-<button class="category-pill active-pill px-4 py-2 rounded-lg font-title-sm text-title-sm transition-all duration-200 bg-primary-container text-on-primary-container font-semibold shadow-sm" onclick="filterCategory('all', this)" type="button">
-            All References (19)
-          </button>
-<button class="category-pill px-4 py-2 rounded-lg font-title-sm text-title-sm transition-all duration-200 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high" onclick="filterCategory('empirical', this)" type="button">
-            Empirical Studies
-          </button>
-<button class="category-pill px-4 py-2 rounded-lg font-title-sm text-title-sm transition-all duration-200 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high" onclick="filterCategory('global', this)" type="button">
-            Global Reports
-          </button>
-<button class="category-pill px-4 py-2 rounded-lg font-title-sm text-title-sm transition-all duration-200 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high" onclick="filterCategory('policy', this)" type="button">
-            Policy Guidelines &amp; Stats
-          </button>
-</div>
-<!-- Reference Items List -->
-<div class="flex flex-col gap-4" id="reference-list">
-<!-- Item 01 -->
-<article class="ref-card group bg-surface-container/70 hover:bg-surface-container p-5 rounded-xl transition-all duration-300 shadow-sm hover:shadow-md flex flex-col gap-3" data-category="policy">
-<div class="flex items-center justify-between gap-4">
-<span class="px-2.5 py-0.5 rounded-full bg-surface-container-highest text-primary font-label-sm text-label-sm font-semibold">01 • Policy / Technical Guide</span>
-<span class="font-label-sm text-label-sm text-on-surface-variant">Web Publication</span>
-</div>
-<p class="font-body-md text-body-md text-on-surface leading-relaxed">
-              21K School Team. (2023, September 12). <em>12 Advantages and Disadvantages Of Technology in Education</em>. 21K School.
-            </p>
-<div class="pt-2 flex items-center justify-between">
-<span class="font-body-sm text-body-sm text-on-surface-variant truncate max-w-md">21kschool.com/ph/blog/advantages-disadvantages-of-technology-in-education/</span>
-<a class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-high hover:bg-primary-container hover:text-on-primary-container text-primary font-title-sm text-title-sm transition-colors duration-200" href="https://www.21kschool.com/ph/blog/advantages-disadvantages-of-technology-in-education/" rel="noopener noreferrer" target="_blank">
-<span>Access Source</span>
-<span class="material-symbols-outlined text-[16px] group-hover:translate-x-0.5 transition-transform">open_in_new</span>
-</a>
-</div>
-</article>
-<!-- Item 02 -->
-<article class="ref-card group bg-surface-container/70 hover:bg-surface-container p-5 rounded-xl transition-all duration-300 shadow-sm hover:shadow-md flex flex-col gap-3" data-category="empirical">
-<div class="flex items-center justify-between gap-4">
-<span class="px-2.5 py-0.5 rounded-full bg-surface-container-highest text-primary font-label-sm text-label-sm font-semibold">02 • Empirical Study</span>
-<span class="font-label-sm text-label-sm text-tertiary">IEEE Indexed</span>
-</div>
-<p class="font-body-md text-body-md text-on-surface leading-relaxed">
-              IEEE. (2024, June 29). <em>A comprehensive study and networking Plan on ICT infrastructure for universities development and global sustainability</em>. IEEE Conference Publication | IEEE Xplore.
-            </p>
-<div class="pt-2 flex items-center justify-between">
-<span class="font-body-sm text-body-sm text-on-surface-variant truncate max-w-md">ieeexplore.ieee.org/abstract/document/10649863</span>
-<a class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-high hover:bg-primary-container hover:text-on-primary-container text-primary font-title-sm text-title-sm transition-colors duration-200" href="https://ieeexplore.ieee.org/abstract/document/10649863" rel="noopener noreferrer" target="_blank">
-<span>Access Source</span>
-<span class="material-symbols-outlined text-[16px] group-hover:translate-x-0.5 transition-transform">open_in_new</span>
-</a>
-</div>
-</article>
-<!-- Item 03 -->
-<article class="ref-card group bg-surface-container/70 hover:bg-surface-container p-5 rounded-xl transition-all duration-300 shadow-sm hover:shadow-md flex flex-col gap-3" data-category="empirical">
-<div class="flex items-center justify-between gap-4">
-<span class="px-2.5 py-0.5 rounded-full bg-surface-container-highest text-primary font-label-sm text-label-sm font-semibold">03 • Empirical Study</span>
-<span class="font-label-sm text-label-sm text-tertiary">Wiley CAEE</span>
-</div>
-<p class="font-body-md text-body-md text-on-surface leading-relaxed">
-              Ariza, J. Á., &amp; Baez, H. (2021). Understanding the role of single-board computers in engineering and computer science education: A systematic literature review. <em>Computer Applications in Engineering Education</em>, cae.22439.
-            </p>
-<div class="pt-2 flex items-center justify-between">
-<span class="font-body-sm text-body-sm text-on-surface-variant truncate max-w-md">doi.org/10.1002/cae.22439</span>
-<a class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-high hover:bg-primary-container hover:text-on-primary-container text-primary font-title-sm text-title-sm transition-colors duration-200" href="https://onlinelibrary.wiley.com/doi/epdf/10.1002/cae.22439" rel="noopener noreferrer" target="_blank">
-<span>Access Source</span>
-<span class="material-symbols-outlined text-[16px] group-hover:translate-x-0.5 transition-transform">open_in_new</span>
-</a>
-</div>
-</article>
-<!-- Item 04 -->
-<article class="ref-card group bg-surface-container/70 hover:bg-surface-container p-5 rounded-xl transition-all duration-300 shadow-sm hover:shadow-md flex flex-col gap-3" data-category="policy">
-<div class="flex items-center justify-between gap-4">
-<span class="px-2.5 py-0.5 rounded-full bg-surface-container-highest text-primary font-label-sm text-label-sm font-semibold">04 • Policy / Philosophy</span>
-<span class="font-label-sm text-label-sm text-on-surface-variant">Conceptual Article</span>
-</div>
-<p class="font-body-md text-body-md text-on-surface leading-relaxed">
-              Becker, J. (2025, January 23). <em>What is the Purpose of Technology Anyway?</em> Becoming Minimalist.
-            </p>
-<div class="pt-2 flex items-center justify-between">
-<span class="font-body-sm text-body-sm text-on-surface-variant truncate max-w-md">becomingminimalist.com/the-purpose-of-technology/</span>
-<a class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-high hover:bg-primary-container hover:text-on-primary-container text-primary font-title-sm text-title-sm transition-colors duration-200" href="https://www.becomingminimalist.com/the-purpose-of-technology/" rel="noopener noreferrer" target="_blank">
-<span>Access Source</span>
-<span class="material-symbols-outlined text-[16px] group-hover:translate-x-0.5 transition-transform">open_in_new</span>
-</a>
-</div>
-</article>
-<!-- Item 05 -->
-<article class="ref-card group bg-surface-container/70 hover:bg-surface-container p-5 rounded-xl transition-all duration-300 shadow-sm hover:shadow-md flex flex-col gap-3" data-category="empirical">
-<div class="flex items-center justify-between gap-4">
-<span class="px-2.5 py-0.5 rounded-full bg-surface-container-highest text-primary font-label-sm text-label-sm font-semibold">05 • Empirical Study</span>
-<span class="font-label-sm text-label-sm text-tertiary">Taylor &amp; Francis</span>
-</div>
-<p class="font-body-md text-body-md text-on-surface leading-relaxed">
-              Corrin, L., Lockyer, L., &amp; Bennett, S. (2010). Technological diversity: An investigation of students' technology use in everyday life and academic study. <em>Learning Media and Technology</em>, 35(4), 387–401.
-            </p>
-<div class="pt-2 flex items-center justify-between">
-<span class="font-body-sm text-body-sm text-on-surface-variant truncate max-w-md">doi.org/10.1080/17439884.2010.531024</span>
-<a class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-high hover:bg-primary-container hover:text-on-primary-container text-primary font-title-sm text-title-sm transition-colors duration-200" href="https://doi.org/10.1080/17439884.2010.531024" rel="noopener noreferrer" target="_blank">
-<span>Access Source</span>
-<span class="material-symbols-outlined text-[16px] group-hover:translate-x-0.5 transition-transform">open_in_new</span>
-</a>
-</div>
-</article>
-<!-- Item 06 -->
-<article class="ref-card group bg-surface-container/70 hover:bg-surface-container p-5 rounded-xl transition-all duration-300 shadow-sm hover:shadow-md flex flex-col gap-3" data-category="policy">
-<div class="flex items-center justify-between gap-4">
-<span class="px-2.5 py-0.5 rounded-full bg-surface-container-highest text-primary font-label-sm text-label-sm font-semibold">06 • Policy Guidelines</span>
-<span class="font-label-sm text-label-sm text-secondary">US Dept of Ed (IES)</span>
-</div>
-<p class="font-body-md text-body-md text-on-surface leading-relaxed">
-              Dabbagh, N., et al. (2019). <em>Using technology to support postsecondary student learning: A practice guide for college and university administrators, advisors, and faculty</em>. Institute of Education Sciences, U.S. Department of Education.
-            </p>
-<div class="pt-2 flex items-center justify-between">
-<span class="font-body-sm text-body-sm text-on-surface-variant truncate max-w-md">ies.ed.gov/ncee/wwc/PracticeGuide/wwc-using-tech-postsecondary.pdf</span>
-<a class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-high hover:bg-primary-container hover:text-on-primary-container text-primary font-title-sm text-title-sm transition-colors duration-200" href="https://ies.ed.gov/ncee/wwc/Docs/PracticeGuide/wwc-using-tech-postsecondary.pdf" rel="noopener noreferrer" target="_blank">
-<span>Access Source</span>
-<span class="material-symbols-outlined text-[16px] group-hover:translate-x-0.5 transition-transform">open_in_new</span>
-</a>
-</div>
-</article>
-<!-- Item 07 -->
-<article class="ref-card group bg-surface-container/70 hover:bg-surface-container p-5 rounded-xl transition-all duration-300 shadow-sm hover:shadow-md flex flex-col gap-3" data-category="empirical">
-<div class="flex items-center justify-between gap-4">
-<span class="px-2.5 py-0.5 rounded-full bg-surface-container-highest text-primary font-label-sm text-label-sm font-semibold">07 • Empirical Study</span>
-<span class="font-label-sm text-label-sm text-tertiary">BatStateU TNEU Repo</span>
-</div>
-<p class="font-body-md text-body-md text-on-surface leading-relaxed">
-              Dalida, C. J. (2026). Students' active learning and engagement among first year Industrial engineering students in Chemistry at Batstateu-Tneu, Alangilan Campus. <em>Aloysian Interdisciplinary Journal of Social Sciences, Education, and Allied Fields</em>.
-            </p>
-<div class="pt-2 flex items-center justify-between">
-<span class="font-body-sm text-body-sm text-on-surface-variant truncate max-w-md">zenodo.org/records/20308127</span>
-<a class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-high hover:bg-primary-container hover:text-on-primary-container text-primary font-title-sm text-title-sm transition-colors duration-200" href="https://zenodo.org/records/20308127" rel="noopener noreferrer" target="_blank">
-<span>Access Source</span>
-<span class="material-symbols-outlined text-[16px] group-hover:translate-x-0.5 transition-transform">open_in_new</span>
-</a>
-</div>
-</article>
-<!-- Item 08 -->
-<article class="ref-card group bg-surface-container/70 hover:bg-surface-container p-5 rounded-xl transition-all duration-300 shadow-sm hover:shadow-md flex flex-col gap-3" data-category="empirical">
-<div class="flex items-center justify-between gap-4">
-<span class="px-2.5 py-0.5 rounded-full bg-surface-container-highest text-primary font-label-sm text-label-sm font-semibold">08 • Empirical Study</span>
-<span class="font-label-sm text-label-sm text-tertiary">EDUPIJ</span>
-</div>
-<p class="font-body-md text-body-md text-on-surface leading-relaxed">
-              Gayrama, V. P. (2025). Motivation in self-regulated learning and technology-use efficacy among Filipino university students on an island. <em>Educational Process: International Journal (EDUPIJ)</em>, 15(2), 1–19.
-            </p>
-<div class="pt-2 flex items-center justify-between">
-<span class="font-body-sm text-body-sm text-on-surface-variant truncate max-w-md">ceeol.com/search/article-detail?id=1339196</span>
-<a class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-high hover:bg-primary-container hover:text-on-primary-container text-primary font-title-sm text-title-sm transition-colors duration-200" href="https://www.ceeol.com/search/article-detail?id=1339196" rel="noopener noreferrer" target="_blank">
-<span>Access Source</span>
-<span class="material-symbols-outlined text-[16px] group-hover:translate-x-0.5 transition-transform">open_in_new</span>
-</a>
-</div>
-</article>
-<!-- Item 09 -->
-<article class="ref-card group bg-surface-container/70 hover:bg-surface-container p-5 rounded-xl transition-all duration-300 shadow-sm hover:shadow-md flex flex-col gap-3" data-category="empirical">
-<div class="flex items-center justify-between gap-4">
-<span class="px-2.5 py-0.5 rounded-full bg-surface-container-highest text-primary font-label-sm text-label-sm font-semibold">09 • Empirical Study</span>
-<span class="font-label-sm text-label-sm text-tertiary">Taylor &amp; Francis</span>
-</div>
-<p class="font-body-md text-body-md text-on-surface leading-relaxed">
-              Giray, L., et al. (2024). A survey on digital device engagement, digital stress, and coping strategies among college students in the Philippines. <em>International Journal of Adolescence and Youth</em>, 29(1), Article 2371413.
-            </p>
-<div class="pt-2 flex items-center justify-between">
-<span class="font-body-sm text-body-sm text-on-surface-variant truncate max-w-md">doi.org/10.1080/02673843.2024.2371413</span>
-<a class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-high hover:bg-primary-container hover:text-on-primary-container text-primary font-title-sm text-title-sm transition-colors duration-200" href="https://doi.org/10.1080/02673843.2024.2371413" rel="noopener noreferrer" target="_blank">
-<span>Access Source</span>
-<span class="material-symbols-outlined text-[16px] group-hover:translate-x-0.5 transition-transform">open_in_new</span>
-</a>
-</div>
-</article>
-<!-- Item 10 -->
-<article class="ref-card group bg-surface-container/70 hover:bg-surface-container p-5 rounded-xl transition-all duration-300 shadow-sm hover:shadow-md flex flex-col gap-3" data-category="empirical">
-<div class="flex items-center justify-between gap-4">
-<span class="px-2.5 py-0.5 rounded-full bg-surface-container-highest text-primary font-label-sm text-label-sm font-semibold">10 • Empirical Study</span>
-<span class="font-label-sm text-label-sm text-tertiary">Frontiers</span>
-</div>
-<p class="font-body-md text-body-md text-on-surface leading-relaxed">
-              Holden, O. L., Norris, M. E., &amp; Kuhlmeier, V. A. (2021). Academic integrity in online assessment: A research review. <em>Frontiers in Education</em>, 6, Article 639814.
-            </p>
-<div class="pt-2 flex items-center justify-between">
-<span class="font-body-sm text-body-sm text-on-surface-variant truncate max-w-md">doi.org/10.3389/feduc.2021.639814</span>
-<a class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-high hover:bg-primary-container hover:text-on-primary-container text-primary font-title-sm text-title-sm transition-colors duration-200" href="https://doi.org/10.3389/feduc.2021.639814" rel="noopener noreferrer" target="_blank">
-<span>Access Source</span>
-<span class="material-symbols-outlined text-[16px] group-hover:translate-x-0.5 transition-transform">open_in_new</span>
-</a>
-</div>
-</article>
-<!-- Item 11 -->
-<article class="ref-card group bg-surface-container/70 hover:bg-surface-container p-5 rounded-xl transition-all duration-300 shadow-sm hover:shadow-md flex flex-col gap-3" data-category="policy">
-<div class="flex items-center justify-between gap-4">
-<span class="px-2.5 py-0.5 rounded-full bg-surface-container-highest text-primary font-label-sm text-label-sm font-semibold">11 • Policy / Institutional Guide</span>
-<span class="font-label-sm text-label-sm text-secondary">UNESCO / SLI</span>
-</div>
-<p class="font-body-md text-body-md text-on-surface leading-relaxed">
-              Huang, R. H., et al. (2020). <em>Personal data and privacy protection in online learning: Guidance for students, teachers and parents</em>. Smart Learning Institute of Beijing Normal University.
-            </p>
-<div class="pt-2 flex items-center justify-between">
-<span class="font-body-sm text-body-sm text-on-surface-variant truncate max-w-md">iite.unesco.org/wp-content/uploads/2020/06/...pdf</span>
-<a class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-high hover:bg-primary-container hover:text-on-primary-container text-primary font-title-sm text-title-sm transition-colors duration-200" href="https://iite.unesco.org/wp-content/uploads/2020/06/Personal-Data-and-Privacy-Protection-in-Online-Learning-Guidance-for-Students-Teachers-and-Parents-V1.0.pdf" rel="noopener noreferrer" target="_blank">
-<span>Access Source</span>
-<span class="material-symbols-outlined text-[16px] group-hover:translate-x-0.5 transition-transform">open_in_new</span>
-</a>
-</div>
-</article>
-<!-- Item 12 -->
-<article class="ref-card group bg-surface-container/70 hover:bg-surface-container p-5 rounded-xl transition-all duration-300 shadow-sm hover:shadow-md flex flex-col gap-3" data-category="global">
-<div class="flex items-center justify-between gap-4">
-<span class="px-2.5 py-0.5 rounded-full bg-surface-container-highest text-primary font-label-sm text-label-sm font-semibold">12 • Global Report</span>
-<span class="font-label-sm text-label-sm text-primary">OECD PISA</span>
-</div>
-<p class="font-body-md text-body-md text-on-surface leading-relaxed">
-              OECD. (2024). <em>PISA 2022 results (Volume V): Learning strategies and attitudes for life</em>. OECD Publishing.
-            </p>
-<div class="pt-2 flex items-center justify-between">
-<span class="font-body-sm text-body-sm text-on-surface-variant truncate max-w-md">doi.org/10.1787/c2e44201-en</span>
-<a class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-high hover:bg-primary-container hover:text-on-primary-container text-primary font-title-sm text-title-sm transition-colors duration-200" href="https://doi.org/10.1787/c2e44201-en" rel="noopener noreferrer" target="_blank">
-<span>Access Source</span>
-<span class="material-symbols-outlined text-[16px] group-hover:translate-x-0.5 transition-transform">open_in_new</span>
-</a>
-</div>
-</article>
-<!-- Item 13 -->
-<article class="ref-card group bg-surface-container/70 hover:bg-surface-container p-5 rounded-xl transition-all duration-300 shadow-sm hover:shadow-md flex flex-col gap-3" data-category="global">
-<div class="flex items-center justify-between gap-4">
-<span class="px-2.5 py-0.5 rounded-full bg-surface-container-highest text-primary font-label-sm text-label-sm font-semibold">13 • Global Report</span>
-<span class="font-label-sm text-label-sm text-primary">OECD Publishing</span>
-</div>
-<p class="font-body-md text-body-md text-on-surface leading-relaxed">
-              OECD. (2025). <em>The impact of digital technologies on students' learning</em> (OECD Education Working Papers, No. 332). OECD Publishing.
-            </p>
-<div class="pt-2 flex items-center justify-between">
-<span class="font-body-sm text-body-sm text-on-surface-variant truncate max-w-md">oecd-ilibrary.org/education/working-papers-series_no.332</span>
-<a class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-high hover:bg-primary-container hover:text-on-primary-container text-primary font-title-sm text-title-sm transition-colors duration-200" href="https://www.oecd.org" rel="noopener noreferrer" target="_blank">
-<span>Access Source</span>
-<span class="material-symbols-outlined text-[16px] group-hover:translate-x-0.5 transition-transform">open_in_new</span>
-</a>
-</div>
-</article>
-<!-- Item 14 -->
-<article class="ref-card group bg-surface-container/70 hover:bg-surface-container p-5 rounded-xl transition-all duration-300 shadow-sm hover:shadow-md flex flex-col gap-3" data-category="global">
-<div class="flex items-center justify-between gap-4">
-<span class="px-2.5 py-0.5 rounded-full bg-surface-container-highest text-primary font-label-sm text-label-sm font-semibold">14 • Global Report</span>
-<span class="font-label-sm text-label-sm text-primary">OECD Country Brief</span>
-</div>
-<p class="font-body-md text-body-md text-on-surface leading-relaxed">
-              OECD. (2026). <em>PISA 2025 results: Philippines country note</em>. OECD Publishing.
-            </p>
-<div class="pt-2 flex items-center justify-between">
-<span class="font-body-sm text-body-sm text-on-surface-variant truncate max-w-md">oecd.org/en/publications/pisa-2025-results-volume-i-country-notes...</span>
-<a class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-high hover:bg-primary-container hover:text-on-primary-container text-primary font-title-sm text-title-sm transition-colors duration-200" href="https://www.oecd.org/en/publications/pisa-2025-results-volume-i-country-notes_2d4ff9ea-en/philippines_3699b9d5-en.html" rel="noopener noreferrer" target="_blank">
-<span>Access Source</span>
-<span class="material-symbols-outlined text-[16px] group-hover:translate-x-0.5 transition-transform">open_in_new</span>
-</a>
-</div>
-</article>
-<!-- Item 15 -->
-<article class="ref-card group bg-surface-container/70 hover:bg-surface-container p-5 rounded-xl transition-all duration-300 shadow-sm hover:shadow-md flex flex-col gap-3" data-category="policy">
-<div class="flex items-center justify-between gap-4">
-<span class="px-2.5 py-0.5 rounded-full bg-surface-container-highest text-primary font-label-sm text-label-sm font-semibold">15 • National Statistics</span>
-<span class="font-label-sm text-label-sm text-secondary">PSA Release</span>
-</div>
-<p class="font-body-md text-body-md text-on-surface leading-relaxed">
-              Philippine Statistics Authority. (2026, February 19). <em>Over 68 million Filipinos aged 10 to 64 years used the internet for social media in 2024</em>.
-            </p>
-<div class="pt-2 flex items-center justify-between">
-<span class="font-body-sm text-body-sm text-on-surface-variant truncate max-w-md">psa.gov.ph/content/over-68-million-filipinos-aged-10-64-years...</span>
-<a class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-high hover:bg-primary-container hover:text-on-primary-container text-primary font-title-sm text-title-sm transition-colors duration-200" href="https://psa.gov.ph/content/over-68-million-filipinos-aged-10-64-years-used-internet-social-media-2024" rel="noopener noreferrer" target="_blank">
-<span>Access Source</span>
-<span class="material-symbols-outlined text-[16px] group-hover:translate-x-0.5 transition-transform">open_in_new</span>
-</a>
-</div>
-</article>
-<!-- Item 16 -->
-<article class="ref-card group bg-surface-container/70 hover:bg-surface-container p-5 rounded-xl transition-all duration-300 shadow-sm hover:shadow-md flex flex-col gap-3" data-category="policy">
-<div class="flex items-center justify-between gap-4">
-<span class="px-2.5 py-0.5 rounded-full bg-surface-container-highest text-primary font-label-sm text-label-sm font-semibold">16 • National Statistics</span>
-<span class="font-label-sm text-label-sm text-secondary">PSA SDG Report</span>
-</div>
-<p class="font-body-md text-body-md text-on-surface leading-relaxed">
-              Philippine Statistics Authority. (2026, June 19). <em>SDG 4.4.1: Proportion of youth and adults with ICT skills, by type of skills (Results from the 2024 Functional Literacy, Education, and Mass Media Survey)</em>.
-            </p>
-<div class="pt-2 flex items-center justify-between">
-<span class="font-body-sm text-body-sm text-on-surface-variant truncate max-w-md">psa.gov.ph/content/sdg-441-proportion-youth-and-adults-ict-skills...</span>
-<a class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-high hover:bg-primary-container hover:text-on-primary-container text-primary font-title-sm text-title-sm transition-colors duration-200" href="https://psa.gov.ph/content/sdg-441-proportion-youth-and-adults-ict-skills-type-skills-results-2024-functional-literacy" rel="noopener noreferrer" target="_blank">
-<span>Access Source</span>
-<span class="material-symbols-outlined text-[16px] group-hover:translate-x-0.5 transition-transform">open_in_new</span>
-</a>
-</div>
-</article>
-<!-- Item 17 -->
-<article class="ref-card group bg-surface-container/70 hover:bg-surface-container p-5 rounded-xl transition-all duration-300 shadow-sm hover:shadow-md flex flex-col gap-3" data-category="policy">
-<div class="flex items-center justify-between gap-4">
-<span class="px-2.5 py-0.5 rounded-full bg-surface-container-highest text-primary font-label-sm text-label-sm font-semibold">17 • Technical Overview</span>
-<span class="font-label-sm text-label-sm text-on-surface-variant">Simplilearn</span>
-</div>
-<p class="font-body-md text-body-md text-on-surface leading-relaxed">
-              Satish, S. (2026, October 23). <em>Types of Technology: Overview, examples, and future trends</em>. Simplilearn.com.
-            </p>
-<div class="pt-2 flex items-center justify-between">
-<span class="font-body-sm text-body-sm text-on-surface-variant truncate max-w-md">simplilearn.com/types-of-technology-article</span>
-<a class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-high hover:bg-primary-container hover:text-on-primary-container text-primary font-title-sm text-title-sm transition-colors duration-200" href="https://www.simplilearn.com/types-of-technology-article" rel="noopener noreferrer" target="_blank">
-<span>Access Source</span>
-<span class="material-symbols-outlined text-[16px] group-hover:translate-x-0.5 transition-transform">open_in_new</span>
-</a>
-</div>
-</article>
-<!-- Item 18 -->
-<article class="ref-card group bg-surface-container/70 hover:bg-surface-container p-5 rounded-xl transition-all duration-300 shadow-sm hover:shadow-md flex flex-col gap-3" data-category="empirical">
-<div class="flex items-center justify-between gap-4">
-<span class="px-2.5 py-0.5 rounded-full bg-surface-container-highest text-primary font-label-sm text-label-sm font-semibold">18 • Empirical Study</span>
-<span class="font-label-sm text-label-sm text-tertiary">ResearchGate</span>
-</div>
-<p class="font-body-md text-body-md text-on-surface leading-relaxed">
-              Siega, B. M. (2025). <em>Analyzing the relationship between computer technology usage and CpE students' academic performance at Makati Science Technological Institute of the Philippines</em>. ResearchGate.
-            </p>
-<div class="pt-2 flex items-center justify-between">
-<span class="font-body-sm text-body-sm text-on-surface-variant truncate max-w-md">researchgate.net/publication/392367699</span>
-<a class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-high hover:bg-primary-container hover:text-on-primary-container text-primary font-title-sm text-title-sm transition-colors duration-200" href="https://www.researchgate.net/publication/392367699" rel="noopener noreferrer" target="_blank">
-<span>Access Source</span>
-<span class="material-symbols-outlined text-[16px] group-hover:translate-x-0.5 transition-transform">open_in_new</span>
-</a>
-</div>
-</article>
-<!-- Item 19 -->
-<article class="ref-card group bg-surface-container/70 hover:bg-surface-container p-5 rounded-xl transition-all duration-300 shadow-sm hover:shadow-md flex flex-col gap-3" data-category="policy">
-<div class="flex items-center justify-between gap-4">
-<span class="px-2.5 py-0.5 rounded-full bg-surface-container-highest text-primary font-label-sm text-label-sm font-semibold">19 • Academic Monograph</span>
-<span class="font-label-sm text-label-sm text-on-surface-variant">Peter Lang</span>
-</div>
-<p class="font-body-md text-body-md text-on-surface leading-relaxed">
-              Wilen-Daugenti, T. (2008). <em>Edu</em>. Peter Lang Publishing.
-            </p>
-<div class="pt-2 flex items-center justify-between">
-<span class="font-body-sm text-body-sm text-on-surface-variant truncate max-w-md">books.google.com/books/about/Edu.html?id=PCjlLCKQBgkC</span>
-<a class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-high hover:bg-primary-container hover:text-on-primary-container text-primary font-title-sm text-title-sm transition-colors duration-200" href="https://books.google.com/books/about/Edu.html?id=PCjlLCKQBgkC" rel="noopener noreferrer" target="_blank">
-<span>Access Source</span>
-<span class="material-symbols-outlined text-[16px] group-hover:translate-x-0.5 transition-transform">open_in_new</span>
-</a>
-</div>
-</article>
-</div><script>document.documentElement.classList.add('js-enabled');document.addEventListener('DOMContentLoaded',()=>{const observer=new IntersectionObserver((entries)=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('revealed');observer.unobserve(entry.target);}});},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});document.querySelectorAll('#reference-list .ref-card').forEach(card=>{card.classList.add('reveal-on-scroll');observer.observe(card);});});</script>
-</div>
-<!-- Right Column Sidebar (4-col) -->
-<aside class="lg:col-span-4 flex flex-col gap-6 sticky top-28">
-<!-- Institutional Integrity Card -->
-<div class="bg-surface-container/80 backdrop-blur-md p-6 rounded-xl shadow-md flex flex-col gap-4">
-<div class="flex items-center gap-3">
-<div class="w-10 h-10 rounded-lg bg-tertiary/15 text-tertiary flex items-center justify-center">
-<span class="material-symbols-outlined text-[24px]">verified_user</span>
-</div>
-<div>
-<h3 class="font-title-md text-title-md text-on-surface font-semibold">Institutional Validation</h3>
-<span class="font-label-sm text-label-sm text-on-surface-variant">CEAFA Scholarly Integrity Protocol</span>
-</div>
-</div>
-<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
-            All listed references have passed metadata verification under GEd 104 standards. Link persistence and repository accessibility were confirmed at publication.
-          </p>
-<div class="space-y-2 pt-2">
-<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
-<span>Resolvability Rate</span>
-<span class="text-tertiary font-semibold">100% Verified</span>
-</div>
-<div class="w-full h-1.5 rounded-full bg-surface-container-highest overflow-hidden">
-<div class="h-full bg-gradient-to-r from-primary to-tertiary w-full"></div>
-</div>
-</div>
-</div>
-<!-- Visual Taxonomy / Donut Breakdown Widget -->
-<div class="bg-surface-container/80 backdrop-blur-md p-6 rounded-xl shadow-md flex flex-col gap-5">
-<div class="flex items-center justify-between">
-<h3 class="font-title-md text-title-md text-on-surface font-semibold">Corpus Taxonomy</h3>
-<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm">3 Subtypes</span>
-</div>
-<div class="flex items-center justify-center py-2">
-<!-- Inline SVG Donut Chart -->
-<div class="relative w-44 h-44 flex items-center justify-center">
-<svg class="w-full h-full transform -rotate-90" viewbox="0 0 36 36">
-<!-- Background track -->
-<path class="text-surface-container-highest" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3.5"></path>
-<!-- Segment 1: Empirical (52%) -->
-<path class="text-primary" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="52, 100" stroke-linecap="round" stroke-width="3.5"></path>
-<!-- Segment 2: Global (26%) offset 52 -->
-<path class="text-secondary" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="26, 100" stroke-dashoffset="-52" stroke-linecap="round" stroke-width="3.5"></path>
-<!-- Segment 3: Policy & Stats (22%) offset 78 -->
-<path class="text-tertiary" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="22, 100" stroke-dashoffset="-78" stroke-linecap="round" stroke-width="3.5"></path>
-</svg>
-<div class="absolute flex flex-col items-center justify-center text-center">
-<span class="font-headline-sm text-headline-sm font-bold text-on-surface">19</span>
-<span class="font-label-sm text-label-sm text-on-surface-variant">Sources</span>
-</div>
-</div>
-</div>
-<div class="flex flex-col gap-2.5 pt-2">
-<div class="flex items-center justify-between font-body-sm text-body-sm">
-<div class="flex items-center gap-2">
-<span class="w-3 h-3 rounded-full bg-primary"></span>
-<span class="text-on-surface">Empirical &amp; Technical</span>
-</div>
-<span class="font-semibold text-primary">52% (10)</span>
-</div>
-<div class="flex items-center justify-between font-body-sm text-body-sm">
-<div class="flex items-center gap-2">
-<span class="w-3 h-3 rounded-full bg-secondary"></span>
-<span class="text-on-surface">Global Monitoring</span>
-</div>
-<span class="font-semibold text-secondary">26% (5)</span>
-</div>
-<div class="flex items-center justify-between font-body-sm text-body-sm">
-<div class="flex items-center gap-2">
-<span class="w-3 h-3 rounded-full bg-tertiary"></span>
-<span class="text-on-surface">Policy &amp; Statistics</span>
-</div>
-<span class="font-semibold text-tertiary">22% (4)</span>
-</div>
-</div>
-</div>
-<!-- Citation Export Utility Card -->
-<div class="bg-surface-container/80 backdrop-blur-md p-6 rounded-xl shadow-md flex flex-col gap-4">
-<div class="flex items-center gap-3">
-<div class="w-10 h-10 rounded-lg bg-primary-container/20 text-primary flex items-center justify-center">
-<span class="material-symbols-outlined text-[24px]">download</span>
-</div>
-<div>
-<h3 class="font-title-md text-title-md text-on-surface font-semibold">Bibliographic Citation Export</h3>
-<span class="font-label-sm text-label-sm text-on-surface-variant">Scholarly Integration Package</span>
-</div>
-</div>
-<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
-            Export the complete TechTrack PH research bibliography for Zotero, Mendeley, EndNote, or Overleaf LaTeX workspaces.
-          </p>
-<div class="grid grid-cols-2 gap-2 pt-1">
-<button class="flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg bg-surface-container-high hover:bg-surface-bright text-on-surface font-title-sm text-title-sm transition-colors duration-200" onclick="simulateExport('RIS')" type="button">
-<span class="material-symbols-outlined text-[16px]">description</span>
-<span>RIS Format</span>
-</button>
-<button class="flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg bg-surface-container-high hover:bg-surface-bright text-on-surface font-title-sm text-title-sm transition-colors duration-200" onclick="simulateExport('BibTeX')" type="button">
-<span class="material-symbols-outlined text-[16px]">data_object</span>
-<span>BibTeX</span>
-</button>
-</div>
-<div class="hidden text-center py-2 px-3 rounded-lg bg-tertiary/10 text-tertiary font-label-sm text-label-sm" id="export-feedback"></div>
-</div>
-</aside>
-</div>
-<!-- Bottom Portal Navigation -->
-<nav aria-label="Portal Sequence Navigation" class="mt-16 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-<a class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface font-title-md text-title-md transition-all duration-200 shadow-sm" href="team.html">
-<span class="material-symbols-outlined text-[20px]">arrow_back</span>
-<span>Research Team (Back)</span>
-</a>
-<div class="flex items-center gap-1.5 text-on-surface-variant font-label-sm text-label-sm">
-<span class="w-2 h-2 rounded-full bg-surface-container-highest"></span>
-<span class="w-2 h-2 rounded-full bg-surface-container-highest"></span>
-<span class="w-2 h-2 rounded-full bg-surface-container-highest"></span>
-<span class="w-2 h-2 rounded-full bg-surface-container-highest"></span>
-<span class="w-2 h-2 rounded-full bg-surface-container-highest"></span>
-<span class="w-2.5 h-2.5 rounded-full bg-primary"></span>
-<span class="ml-2 text-primary font-semibold">Page 6 of 6</span>
-</div>
-<a class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-primary-container hover:bg-primary-fixed-dim text-on-primary-container font-title-md text-title-md transition-all duration-200 shadow-sm font-semibold" href="index.html">
-<span>Overview (Return to Start)</span>
-<span class="material-symbols-outlined text-[20px]">first_page</span>
-</a>
-</nav>
-</section>
-<!-- Interactive Logic for Categorical Filtering & Export Simulation -->
-<script>
-    function filterCategory(category, buttonElement) {
-      const pills = document.querySelectorAll('.category-pill');
-      pills.forEach(p => {
-        p.classList.remove('active-pill', 'bg-primary-container', 'text-on-primary-container', 'font-semibold', 'shadow-sm');
-        p.classList.add('text-on-surface-variant');
-      });
-
-      buttonElement.classList.add('active-pill', 'bg-primary-container', 'text-on-primary-container', 'font-semibold', 'shadow-sm');
-      buttonElement.classList.remove('text-on-surface-variant');
-
-      const cards = document.querySelectorAll('.ref-card');
-      cards.forEach(card => {
-        if (category === 'all' || card.getAttribute('data-category') === category) {
-          card.style.display = 'flex';
-        } else {
-          card.style.display = 'none';
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>TechTrack PH | GEd 104 BSCpE Research Portal</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}@keyframes blob-float{0%,100%{transform:translate(0px,0px) scale(1);}33%{transform:translate(30px,-50px) scale(1.08);}66%{transform:translate(-20px,20px) scale(0.95);}}@keyframes blob-float-reverse{0%,100%{transform:translate(0px,0px) scale(1);}33%{transform:translate(-35px,40px) scale(1.05);}66%{transform:translate(25px,-30px) scale(0.92);}}.animate-blob-1{animation:blob-float 18s ease-in-out infinite;}.animate-blob-2{animation:blob-float-reverse 22s ease-in-out infinite;}.animate-blob-3{animation:blob-float 26s ease-in-out infinite;}.bg-grid-cyber{background-size:36px 36px;background-image:linear-gradient(to right,rgba(255,255,255,0.03) 1px,transparent 1px),linear-gradient(to bottom,rgba(255,255,255,0.03) 1px,transparent 1px);}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "on-error": "#690005",
+          "inverse-primary": "#00668a",
+          "outline": "#87929a",
+          "tertiary-container": "#22c990",
+          "tertiary": "#4ee6aa",
+          "surface-container-highest": "#27354c",
+          "inverse-on-surface": "#233148",
+          "on-tertiary-container": "#004e35",
+          "primary-fixed": "#c4e7ff",
+          "on-secondary-fixed-variant": "#2f3aa3",
+          "tertiary-fixed-dim": "#45dfa4",
+          "outline-variant": "#3e484f",
+          "on-tertiary": "#003825",
+          "surface-container-low": "#0d1c32",
+          "on-secondary-fixed": "#000767",
+          "error": "#ffb4ab",
+          "surface-bright": "#2c3951",
+          "on-primary-fixed-variant": "#004c69",
+          "surface-dim": "#041329",
+          "on-error-container": "#ffdad6",
+          "on-surface-variant": "#bdc8d1",
+          "on-surface": "#d6e3ff",
+          "error-container": "#93000a",
+          "surface-tint": "#7bd0ff",
+          "on-secondary-container": "#a8afff",
+          "surface-container-lowest": "#010e24",
+          "background": "#041329",
+          "inverse-surface": "#d6e3ff",
+          "surface-container": "#112036",
+          "on-primary-fixed": "#001e2c",
+          "on-tertiary-fixed-variant": "#005137",
+          "on-tertiary-fixed": "#002114",
+          "secondary-fixed-dim": "#bdc2ff",
+          "secondary-fixed": "#e0e0ff",
+          "on-primary": "#00354a",
+          "primary-container": "#38bdf8",
+          "secondary": "#bdc2ff",
+          "surface-variant": "#27354c",
+          "primary-fixed-dim": "#7bd0ff",
+          "on-background": "#d6e3ff",
+          "on-primary-container": "#004965",
+          "primary": "#8ed5ff",
+          "on-secondary": "#131e8c",
+          "secondary-container": "#2f3aa3",
+          "surface": "#041329",
+          "tertiary-fixed": "#68fcbf",
+          "surface-container-high": "#1c2a41"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "gutter-mobile": "1rem",
+          "space-xs": "0.25rem",
+          "space-lg": "1.5rem",
+          "gutter": "1.5rem",
+          "margin": "2rem",
+          "space-md": "1rem",
+          "space-xl": "2.5rem",
+          "space-sm": "0.5rem",
+          "margin-mobile": "1rem"
+        },
+        "fontFamily": {
+          "headline-sm": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-md": [
+            "Plus Jakarta Sans"
+          ],
+          "body-sm": [
+            "Inter"
+          ],
+          "headline-lg": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-lg-mobile": [
+            "Plus Jakarta Sans"
+          ],
+          "label-md": [
+            "Inter"
+          ],
+          "body-md": [
+            "Inter"
+          ],
+          "title-md": [
+            "Inter"
+          ],
+          "headline-xl": [
+            "Plus Jakarta Sans"
+          ],
+          "label-sm": [
+            "Inter"
+          ],
+          "title-sm": [
+            "Inter"
+          ],
+          "headline-xl-mobile": [
+            "Plus Jakarta Sans"
+          ],
+          "body-lg": [
+            "Inter"
+          ]
+        },
+        "fontSize": {
+          "headline-sm": [
+            "20px",
+            {
+              "lineHeight": "28px",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-md": [
+            "24px",
+            {
+              "lineHeight": "32px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-sm": [
+            "12px",
+            {
+              "lineHeight": "18px",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-lg": [
+            "32px",
+            {
+              "lineHeight": "40px",
+              "letterSpacing": "-0.015em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-lg-mobile": [
+            "24px",
+            {
+              "lineHeight": "32px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "label-md": [
+            "12px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0.02em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-md": [
+            "14px",
+            {
+              "lineHeight": "22px",
+              "fontWeight": "400"
+            }
+          ],
+          "title-md": [
+            "16px",
+            {
+              "lineHeight": "24px",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-xl": [
+            "40px",
+            {
+              "lineHeight": "48px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "700"
+            }
+          ],
+          "label-sm": [
+            "11px",
+            {
+              "lineHeight": "14px",
+              "letterSpacing": "0.03em",
+              "fontWeight": "600"
+            }
+          ],
+          "title-sm": [
+            "14px",
+            {
+              "lineHeight": "20px",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-xl-mobile": [
+            "30px",
+            {
+              "lineHeight": "38px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "700"
+            }
+          ],
+          "body-lg": [
+            "16px",
+            {
+              "lineHeight": "26px",
+              "fontWeight": "400"
+            }
+          ]
         }
-      });
-    }
+      },
+    },
+  };</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased relative min-h-screen selection:bg-primary selection:text-on-primary"><div class="fixed inset-0 pointer-events-none z-0 overflow-hidden"><div class="absolute -top-32 left-1/4 w-[500px] h-[500px] rounded-full bg-sky-600/15 blur-[120px] animate-blob-1"></div><div class="absolute top-1/3 -right-24 w-[450px] h-[450px] rounded-full bg-teal-600/15 blur-[130px] animate-blob-2"></div><div class="absolute -bottom-40 left-1/3 w-[550px] h-[550px] rounded-full bg-primary-container/10 blur-[140px] animate-blob-3"></div><div class="absolute inset-0 bg-grid-cyber opacity-75"></div></div><header class="fixed top-0 left-0 right-0 w-full z-50 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.12)]"><div class="h-20 w-full max-w-7xl mx-auto px-gutter flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md"><div class="relative flex items-center justify-center p-space-xs rounded-lg bg-surface-container/60 shadow-[0_0_16px_rgba(56,189,248,0.15)]"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/ALJJyrD70Mqaz-Z-5Wk9K6vnxSldkJtxg8ZVMvaGR7_QMK0sRd4tYIWdEPvvqgCRdMsHlx6OK2N-1-3_l2-ULfSW3iuz2mF2U4OQg4kh1Gl8ndZkU5XmEAMXOQyL8-Zx6PVj5BL8AkT6l1AidcjGD1N0Wgt3e0FuribDcZgUQ00IP_u-tla9EMQvAAyDS5_eHuxUhfjBUS9oNScPddH_a_-DapyhC3AhBGsdGlL82u5yHDdtIc5Ih1kVUydiJQ"/></div><div class="flex flex-col"><div class="flex items-center gap-space-sm"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">TechTrack PH</span><span class="px-space-sm py-0.5 rounded-full bg-primary-container/20 text-primary font-label-sm text-label-sm uppercase tracking-wider">GEd 104</span></div><span class="font-label-sm text-label-sm text-on-surface-variant">TNEU Alangilan • BSCpE Research</span></div></div><nav class="hidden xl:flex items-center gap-space-xs p-1 rounded-xl bg-surface-container-low/70 backdrop-blur-md" data-active-classes="bg-surface-container-highest text-primary font-title-sm"><a class="px-space-md py-space-xs rounded-lg font-title-sm text-title-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="overview" href="index.html">Overview</a><a class="px-space-md py-space-xs rounded-lg font-title-sm text-title-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="introduction" href="introduction.html">Introduction</a><a class="px-space-md py-space-xs rounded-lg font-title-sm text-title-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="discussion" href="discussion.html">Discussion</a><a class="px-space-md py-space-xs rounded-lg font-title-sm text-title-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="significance" href="significance.html">Significance</a><a class="px-space-md py-space-xs rounded-lg font-title-sm text-title-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="research-team" href="team.html">Research Team</a><a aria-current="page" class="px-space-md py-space-xs rounded-lg transition-colors bg-surface-container-highest text-primary font-title-sm" data-path="references" href="references.html">References</a></nav><div class="flex items-center gap-space-md"><div class="hidden sm:flex items-center gap-space-xs px-space-md py-1 rounded-full bg-tertiary-container/15 text-tertiary font-label-sm text-label-sm tracking-wider uppercase"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-tertiary"></span></span><span>NODE // 11</span></div><button aria-label="Toggle color mode" class="p-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors flex items-center justify-center" id="theme-toggle-btn" type="button"><span class="material-symbols-outlined text-title-md" id="theme-toggle-icon">light_mode</span></button></div></div></header><main class="relative z-10 w-full pt-20 bg-transparent min-h-[calc(100vh-20rem)]"><div class="flex flex-col w-full">
+<!-- Toast Notification -->
+<div class="fixed bottom-8 right-8 z-50 flex items-center gap-space-sm px-space-md py-space-sm rounded-xl bg-surface-container-highest/95 backdrop-blur-xl shadow-2xl text-primary transition-all duration-300 opacity-0 pointer-events-none translate-y-3" id="citation-toast">
+<span class="material-symbols-outlined text-title-md">task_alt</span>
+<span class="font-label-md text-label-md tracking-wide" id="toast-text">APA Citation successfully copied to clipboard</span>
+</div>
+<section class="w-full max-w-7xl mx-auto px-gutter py-space-xl">
+<!-- Top Registry Header -->
+<div class="flex flex-col gap-space-md mb-space-xl">
+<div class="flex flex-wrap items-center justify-between gap-space-sm">
+<div class="inline-flex items-center gap-space-xs px-space-md py-1 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm uppercase tracking-wider shadow-sm">
+<span class="material-symbols-outlined text-title-sm text-tertiary">verified</span>
+<span>DOCUMENT 107 • INQUEST INDEX • APA 7th Edition Standards</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>
+<span>INDEX STATUS // COMPLETE ARCHIVE</span>
+</div>
+</div>
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-lg">
+<div class="max-w-4xl flex flex-col gap-space-xs">
+<div class="flex flex-wrap items-baseline gap-space-sm">
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">References</h1>
+<span class="px-space-sm py-0.5 rounded-lg bg-surface-container text-primary font-headline-sm text-headline-sm font-semibold">[30 Citations Recorded]</span>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+            Complete peer-reviewed bibliographic registry supporting the research synthesis on computer engineering education, ICT infrastructure, digital equity, and pedagogical technology at BatStateU-TNEU Alangilan Campus.
+          </p>
+</div>
+<!-- Quick Action Handles -->
+<div class="flex items-center gap-space-sm self-start lg:self-auto shrink-0">
+<button class="flex items-center gap-space-xs px-space-md py-2.5 rounded-lg bg-primary-container text-on-primary font-title-sm text-title-sm shadow-md hover:bg-primary transition-all duration-200" id="copy-all-btn">
+<span class="material-symbols-outlined text-title-sm">content_copy</span>
+<span>Copy All (APA-7)</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md py-2.5 rounded-lg bg-surface-container-high hover:bg-surface-bright text-on-surface font-title-sm text-title-sm shadow-sm transition-all duration-200" id="export-registry-btn">
+<span class="material-symbols-outlined text-title-sm">file_download</span>
+<span>Export Registry</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Stat Metrics Bento Panel -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md mb-space-xl">
+<div class="flex flex-col p-space-lg rounded-xl bg-surface-container/70 backdrop-blur-xl shadow-md relative overflow-hidden group">
+<div class="absolute -right-6 -bottom-6 w-24 h-24 rounded-full bg-primary/10 blur-xl group-hover:scale-150 transition-transform duration-500"></div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-md text-label-md uppercase tracking-wider mb-space-xs">
+<span>Total Entries</span>
+<span class="material-symbols-outlined text-primary text-title-md">auto_stories</span>
+</div>
+<div class="font-headline-xl text-headline-xl text-on-surface tracking-tight font-bold">30</div>
+<div class="flex items-center gap-1.5 text-tertiary font-label-sm text-label-sm mt-space-xs">
+<span class="material-symbols-outlined text-label-md">check_circle</span>
+<span>Indexed &amp; Verified</span>
+</div>
+</div>
+<div class="flex flex-col p-space-lg rounded-xl bg-surface-container/70 backdrop-blur-xl shadow-md relative overflow-hidden group">
+<div class="absolute -right-6 -bottom-6 w-24 h-24 rounded-full bg-secondary/10 blur-xl group-hover:scale-150 transition-transform duration-500"></div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-md text-label-md uppercase tracking-wider mb-space-xs">
+<span>Journals &amp; Books</span>
+<span class="material-symbols-outlined text-secondary text-title-md">menu_book</span>
+</div>
+<div class="font-headline-xl text-headline-xl text-on-surface tracking-tight font-bold">14</div>
+<div class="flex items-center gap-1.5 text-on-surface-variant font-label-sm text-label-sm mt-space-xs">
+<span>Peer-reviewed scientific journals &amp; published volumes</span>
+</div>
+</div>
+<div class="flex flex-col p-space-lg rounded-xl bg-surface-container/70 backdrop-blur-xl shadow-md relative overflow-hidden group">
+<div class="absolute -right-6 -bottom-6 w-24 h-24 rounded-full bg-tertiary/10 blur-xl group-hover:scale-150 transition-transform duration-500"></div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-md text-label-md uppercase tracking-wider mb-space-xs">
+<span>Institutions &amp; Surveys</span>
+<span class="material-symbols-outlined text-tertiary text-title-md">domain</span>
+</div>
+<div class="font-headline-xl text-headline-xl text-on-surface tracking-tight font-bold">16</div>
+<div class="flex items-center gap-1.5 text-on-surface-variant font-label-sm text-label-sm mt-space-xs">
+<span>PSA, UNESCO, OECD &amp; field case studies</span>
+</div>
+</div>
+<div class="flex flex-col p-space-lg rounded-xl bg-surface-container/70 backdrop-blur-xl shadow-md relative overflow-hidden group">
+<div class="absolute -right-6 -bottom-6 w-24 h-24 rounded-full bg-primary-container/10 blur-xl group-hover:scale-150 transition-transform duration-500"></div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-md text-label-md uppercase tracking-wider mb-space-xs">
+<span>Digital Access Link Rate</span>
+<span class="material-symbols-outlined text-primary text-title-md">link</span>
+</div>
+<div class="font-headline-xl text-headline-xl text-tertiary tracking-tight font-bold">100%</div>
+<div class="w-full bg-surface-container-highest rounded-full h-1.5 mt-space-sm overflow-hidden">
+<div class="bg-gradient-to-r from-primary to-tertiary h-1.5 rounded-full w-full"></div>
+</div>
+</div>
+</div>
+<!-- Filter Toolbar & Search Query -->
+<div class="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-space-md p-space-md rounded-2xl bg-surface-container/60 backdrop-blur-xl shadow-sm mb-space-lg">
+<div class="flex items-center gap-space-xs overflow-x-auto pb-1 md:pb-0" id="filter-tabs">
+<button class="filter-tab px-space-md py-2 rounded-xl font-title-sm text-title-sm transition-all duration-200 bg-surface-container-highest text-primary font-semibold shadow-inner" data-filter="all">
+          All Entries (30)
+        </button>
+<button class="filter-tab px-space-md py-2 rounded-xl font-title-sm text-title-sm transition-all duration-200 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high" data-filter="journal">
+          Journals &amp; Books (14)
+        </button>
+<button class="filter-tab px-space-md py-2 rounded-xl font-title-sm text-title-sm transition-all duration-200 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high" data-filter="institutional">
+          Institutional &amp; Survey Data (16)
+        </button>
+</div>
+<div class="relative w-full md:w-80">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-title-md">search</span>
+<input class="w-full pl-10 pr-4 py-2 rounded-xl bg-surface-container-lowest/80 text-on-surface placeholder:text-outline font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary shadow-inner" id="search-input" placeholder="Filter by author, title, publication, or year..." type="text"/>
+</div>
+</div>
+<!-- Citations List Registry -->
+<div class="flex flex-col gap-space-md" id="citations-container">
+<!-- 01 -->
+<article class="citation-card flex flex-col md:flex-row items-start justify-between gap-space-md p-space-lg rounded-2xl bg-surface-container/70 backdrop-blur-xl hover:bg-surface-container-high/90 shadow-md transition-all duration-200 group" data-category="institutional" data-index="1">
+<div class="flex items-start gap-space-md min-w-0">
+<span class="px-space-sm py-1 rounded-lg bg-surface-container-highest text-primary font-mono font-label-md text-label-md shrink-0">#01</span>
+<div class="flex flex-col gap-space-xs min-w-0">
+<div class="flex flex-wrap items-center gap-2">
+<span class="px-2 py-0.5 rounded-full bg-secondary-container/30 text-secondary font-label-sm text-label-sm uppercase">Institutional Analysis</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">• 2023</span>
+</div>
+<p class="citation-text font-body-md text-body-lg text-on-surface leading-relaxed">
+<strong>21K School Team.</strong> (2023, September 12). <em>12 Advantages and Disadvantages Of Technology in Education.</em> 21K School.
+            </p>
+<a class="citation-url inline-flex items-center gap-1.5 text-primary hover:text-primary-fixed-dim font-body-sm text-body-sm truncate max-w-xl group-hover:underline" href="https://www.21kschool.com/ph/blog/advantages-disadvantages-of-technology-in-educa" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-title-sm">open_in_new</span>
+<span class="truncate">https://www.21kschool.com/ph/blog/advantages-disadvantages-of-technology-in-educa</span>
+</a>
+</div>
+</div>
+<button class="copy-citation-btn shrink-0 flex items-center gap-1.5 px-space-md py-2 rounded-lg bg-surface-container hover:bg-primary hover:text-on-primary text-on-surface-variant transition-colors duration-150 font-label-md text-label-md shadow-sm" data-apa="21K School Team. (2023, September 12). 12 Advantages and Disadvantages Of Technology in Education. 21K School. https://www.21kschool.com/ph/blog/advantages-disadvantages-of-technology-in-educa">
+<span class="material-symbols-outlined text-title-sm">content_copy</span>
+<span>Copy APA</span>
+</button>
+</article>
+<!-- 02 -->
+<article class="citation-card flex flex-col md:flex-row items-start justify-between gap-space-md p-space-lg rounded-2xl bg-surface-container/70 backdrop-blur-xl hover:bg-surface-container-high/90 shadow-md transition-all duration-200 group" data-category="journal" data-index="2">
+<div class="flex items-start gap-space-md min-w-0">
+<span class="px-space-sm py-1 rounded-lg bg-surface-container-highest text-primary font-mono font-label-md text-label-md shrink-0">#02</span>
+<div class="flex flex-col gap-space-xs min-w-0">
+<div class="flex flex-wrap items-center gap-2">
+<span class="px-2 py-0.5 rounded-full bg-primary-container/20 text-primary font-label-sm text-label-sm uppercase">Conference Proceedings</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">• 2024</span>
+</div>
+<p class="citation-text font-body-md text-body-lg text-on-surface leading-relaxed">
+<strong>IEEE Xplore.</strong> (2024, June 29). <em>A comprehensive study and networking plan on ICT infrastructure for universities development and global sustainability.</em> IEEE Conference Publication.
+            </p>
+<a class="citation-url inline-flex items-center gap-1.5 text-primary hover:text-primary-fixed-dim font-body-sm text-body-sm truncate max-w-xl group-hover:underline" href="https://ieeexplore.ieee.org/abstract/document/10649863" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-title-sm">open_in_new</span>
+<span class="truncate">https://ieeexplore.ieee.org/abstract/document/10649863</span>
+</a>
+</div>
+</div>
+<button class="copy-citation-btn shrink-0 flex items-center gap-1.5 px-space-md py-2 rounded-lg bg-surface-container hover:bg-primary hover:text-on-primary text-on-surface-variant transition-colors duration-150 font-label-md text-label-md shadow-sm" data-apa="IEEE Xplore. (2024, June 29). A comprehensive study and networking plan on ICT infrastructure for universities development and global sustainability. IEEE Conference Publication. https://ieeexplore.ieee.org/abstract/document/10649863">
+<span class="material-symbols-outlined text-title-sm">content_copy</span>
+<span>Copy APA</span>
+</button>
+</article>
+<!-- 03 -->
+<article class="citation-card flex flex-col md:flex-row items-start justify-between gap-space-md p-space-lg rounded-2xl bg-surface-container/70 backdrop-blur-xl hover:bg-surface-container-high/90 shadow-md transition-all duration-200 group" data-category="journal" data-index="3">
+<div class="flex items-start gap-space-md min-w-0">
+<span class="px-space-sm py-1 rounded-lg bg-surface-container-highest text-primary font-mono font-label-md text-label-md shrink-0">#03</span>
+<div class="flex flex-col gap-space-xs min-w-0">
+<div class="flex flex-wrap items-center gap-2">
+<span class="px-2 py-0.5 rounded-full bg-tertiary-container/20 text-tertiary font-label-sm text-label-sm uppercase">Peer-Reviewed Journal</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">• 2021</span>
+</div>
+<p class="citation-text font-body-md text-body-lg text-on-surface leading-relaxed">
+<strong>Ariza, J. Á., &amp; Baez, H.</strong> (2021). Understanding the role of single-board computers in engineering and computer science education: A systematic literature review. <em>Computer Applications in Engineering Education</em>, cae.22439.
+            </p>
+<a class="citation-url inline-flex items-center gap-1.5 text-primary hover:text-primary-fixed-dim font-body-sm text-body-sm truncate max-w-xl group-hover:underline" href="https://onlinelibrary.wiley.com/doi/epdf/10.1002/cae.22439" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-title-sm">open_in_new</span>
+<span class="truncate">https://onlinelibrary.wiley.com/doi/epdf/10.1002/cae.22439</span>
+</a>
+</div>
+</div>
+<button class="copy-citation-btn shrink-0 flex items-center gap-1.5 px-space-md py-2 rounded-lg bg-surface-container hover:bg-primary hover:text-on-primary text-on-surface-variant transition-colors duration-150 font-label-md text-label-md shadow-sm" data-apa="Ariza, J. Á., &amp; Baez, H. (2021). Understanding the role of single-board computers in engineering and computer science education: A systematic literature review. Computer Applications in Engineering Education, cae.22439. https://onlinelibrary.wiley.com/doi/epdf/10.1002/cae.22439">
+<span class="material-symbols-outlined text-title-sm">content_copy</span>
+<span>Copy APA</span>
+</button>
+</article>
+<!-- 04 -->
+<article class="citation-card flex flex-col md:flex-row items-start justify-between gap-space-md p-space-lg rounded-2xl bg-surface-container/70 backdrop-blur-xl hover:bg-surface-container-high/90 shadow-md transition-all duration-200 group" data-category="institutional" data-index="4">
+<div class="flex items-start gap-space-md min-w-0">
+<span class="px-space-sm py-1 rounded-lg bg-surface-container-highest text-primary font-mono font-label-md text-label-md shrink-0">#04</span>
+<div class="flex flex-col gap-space-xs min-w-0">
+<div class="flex flex-wrap items-center gap-2">
+<span class="px-2 py-0.5 rounded-full bg-secondary-container/30 text-secondary font-label-sm text-label-sm uppercase">Analytical Essay</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">• 2025</span>
+</div>
+<p class="citation-text font-body-md text-body-lg text-on-surface leading-relaxed">
+<strong>Becker, J.</strong> (2025, January 23). <em>What is the Purpose of Technology Anyway?</em> Becoming Minimalist.
+            </p>
+<a class="citation-url inline-flex items-center gap-1.5 text-primary hover:text-primary-fixed-dim font-body-sm text-body-sm truncate max-w-xl group-hover:underline" href="https://www.becomingminimalist.com/the-purpose-of-technology/" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-title-sm">open_in_new</span>
+<span class="truncate">https://www.becomingminimalist.com/the-purpose-of-technology/</span>
+</a>
+</div>
+</div>
+<button class="copy-citation-btn shrink-0 flex items-center gap-1.5 px-space-md py-2 rounded-lg bg-surface-container hover:bg-primary hover:text-on-primary text-on-surface-variant transition-colors duration-150 font-label-md text-label-md shadow-sm" data-apa="Becker, J. (2025, January 23). What is the Purpose of Technology Anyway? Becoming Minimalist. https://www.becomingminimalist.com/the-purpose-of-technology/">
+<span class="material-symbols-outlined text-title-sm">content_copy</span>
+<span>Copy APA</span>
+</button>
+</article>
+<!-- 05 -->
+<article class="citation-card flex flex-col md:flex-row items-start justify-between gap-space-md p-space-lg rounded-2xl bg-surface-container/70 backdrop-blur-xl hover:bg-surface-container-high/90 shadow-md transition-all duration-200 group" data-category="journal" data-index="5">
+<div class="flex items-start gap-space-md min-w-0">
+<span class="px-space-sm py-1 rounded-lg bg-surface-container-highest text-primary font-mono font-label-md text-label-md shrink-0">#05</span>
+<div class="flex flex-col gap-space-xs min-w-0">
+<div class="flex flex-wrap items-center gap-2">
+<span class="px-2 py-0.5 rounded-full bg-tertiary-container/20 text-tertiary font-label-sm text-label-sm uppercase">Peer-Reviewed Journal</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">• 2010</span>
+</div>
+<p class="citation-text font-body-md text-body-lg text-on-surface leading-relaxed">
+<strong>Corrin, L., Lockyer, L., &amp; Bennett, S.</strong> (2010). Technological diversity: An investigation of students' technology use in everyday life and academic study. <em>Learning Media and Technology</em>, 35(4), 387–401.
+            </p>
+<a class="citation-url inline-flex items-center gap-1.5 text-primary hover:text-primary-fixed-dim font-body-sm text-body-sm truncate max-w-xl group-hover:underline" href="https://doi.org/10.1080/17439884.2010.531024" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-title-sm">open_in_new</span>
+<span class="truncate">https://doi.org/10.1080/17439884.2010.531024</span>
+</a>
+</div>
+</div>
+<button class="copy-citation-btn shrink-0 flex items-center gap-1.5 px-space-md py-2 rounded-lg bg-surface-container hover:bg-primary hover:text-on-primary text-on-surface-variant transition-colors duration-150 font-label-md text-label-md shadow-sm" data-apa="Corrin, L., Lockyer, L., &amp; Bennett, S. (2010). Technological diversity: An investigation of students' technology use in everyday life and academic study. Learning Media and Technology, 35(4), 387–401. https://doi.org/10.1080/17439884.2010.531024">
+<span class="material-symbols-outlined text-title-sm">content_copy</span>
+<span>Copy APA</span>
+</button>
+</article>
+<!-- 06 -->
+<article class="citation-card flex flex-col md:flex-row items-start justify-between gap-space-md p-space-lg rounded-2xl bg-surface-container/70 backdrop-blur-xl hover:bg-surface-container-high/90 shadow-md transition-all duration-200 group" data-category="institutional" data-index="6">
+<div class="flex items-start gap-space-md min-w-0">
+<span class="px-space-sm py-1 rounded-lg bg-surface-container-highest text-primary font-mono font-label-md text-label-md shrink-0">#06</span>
+<div class="flex flex-col gap-space-xs min-w-0">
+<div class="flex flex-wrap items-center gap-2">
+<span class="px-2 py-0.5 rounded-full bg-secondary-container/30 text-secondary font-label-sm text-label-sm uppercase">Government / Practice Guide</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">• 2019</span>
+</div>
+<p class="citation-text font-body-md text-body-lg text-on-surface leading-relaxed">
+<strong>Dabbagh, N., et al.</strong> (2019). <em>Using technology to support postsecondary student learning: A practice guide.</em> U.S. Dept. of Education / IES.
+            </p>
+<a class="citation-url inline-flex items-center gap-1.5 text-primary hover:text-primary-fixed-dim font-body-sm text-body-sm truncate max-w-xl group-hover:underline" href="https://ies.ed.gov/ncee/wwc/Docs/PracticeGuide/wwc-using-tech-postsecondary.pdf" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-title-sm">open_in_new</span>
+<span class="truncate">https://ies.ed.gov/ncee/wwc/Docs/PracticeGuide/wwc-using-tech-postsecondary.pdf</span>
+</a>
+</div>
+</div>
+<button class="copy-citation-btn shrink-0 flex items-center gap-1.5 px-space-md py-2 rounded-lg bg-surface-container hover:bg-primary hover:text-on-primary text-on-surface-variant transition-colors duration-150 font-label-md text-label-md shadow-sm" data-apa="Dabbagh, N., et al. (2019). Using technology to support postsecondary student learning: A practice guide. U.S. Dept. of Education / IES. https://ies.ed.gov/ncee/wwc/Docs/PracticeGuide/wwc-using-tech-postsecondary.pdf">
+<span class="material-symbols-outlined text-title-sm">content_copy</span>
+<span>Copy APA</span>
+</button>
+</article>
+<!-- 07 -->
+<article class="citation-card flex flex-col md:flex-row items-start justify-between gap-space-md p-space-lg rounded-2xl bg-surface-container/70 backdrop-blur-xl hover:bg-surface-container-high/90 shadow-md transition-all duration-200 group" data-category="journal" data-index="7">
+<div class="flex items-start gap-space-md min-w-0">
+<span class="px-space-sm py-1 rounded-lg bg-surface-container-highest text-primary font-mono font-label-md text-label-md shrink-0">#07</span>
+<div class="flex flex-col gap-space-xs min-w-0">
+<div class="flex flex-wrap items-center gap-2">
+<span class="px-2 py-0.5 rounded-full bg-tertiary-container/20 text-tertiary font-label-sm text-label-sm uppercase">BatStateU Study</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">• 2026</span>
+</div>
+<p class="citation-text font-body-md text-body-lg text-on-surface leading-relaxed">
+<strong>Dalida, C. J.</strong> (2026). Students' active learning and engagement among first year Industrial engineering students in Chemistry at Batstateu-Tneu, Alangilan Campus. <em>Aloysian Interdisciplinary Journal of Social Sciences, Education, and Allied Fields</em>. Zenodo.
+            </p>
+<a class="citation-url inline-flex items-center gap-1.5 text-primary hover:text-primary-fixed-dim font-body-sm text-body-sm truncate max-w-xl group-hover:underline" href="https://zenodo.org/records/28308127" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-title-sm">open_in_new</span>
+<span class="truncate">https://zenodo.org/records/28308127</span>
+</a>
+</div>
+</div>
+<button class="copy-citation-btn shrink-0 flex items-center gap-1.5 px-space-md py-2 rounded-lg bg-surface-container hover:bg-primary hover:text-on-primary text-on-surface-variant transition-colors duration-150 font-label-md text-label-md shadow-sm" data-apa="Dalida, C. J. (2026). Students' active learning and engagement among first year Industrial engineering students in Chemistry at Batstateu-Tneu, Alangilan Campus. Aloysian Interdisciplinary Journal of Social Sciences, Education, and Allied Fields. Zenodo. https://zenodo.org/records/28308127">
+<span class="material-symbols-outlined text-title-sm">content_copy</span>
+<span>Copy APA</span>
+</button>
+</article>
+<!-- 08 -->
+<article class="citation-card flex flex-col md:flex-row items-start justify-between gap-space-md p-space-lg rounded-2xl bg-surface-container/70 backdrop-blur-xl hover:bg-surface-container-high/90 shadow-md transition-all duration-200 group" data-category="institutional" data-index="8">
+<div class="flex items-start gap-space-md min-w-0">
+<span class="px-space-sm py-1 rounded-lg bg-surface-container-highest text-primary font-mono font-label-md text-label-md shrink-0">#08</span>
+<div class="flex flex-col gap-space-xs min-w-0">
+<div class="flex flex-wrap items-center gap-2">
+<span class="px-2 py-0.5 rounded-full bg-secondary-container/30 text-secondary font-label-sm text-label-sm uppercase">Behavioral Fieldwork</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">• 2021</span>
+</div>
+<p class="citation-text font-body-md text-body-lg text-on-surface leading-relaxed">
+<strong>Francis, F.</strong> (2021, November 16). <em>Are you struggling to follow the rules you set for your kids? You're not alone.</em> The Citizen.
+            </p>
+<a class="citation-url inline-flex items-center gap-1.5 text-primary hover:text-primary-fixed-dim font-body-sm text-body-sm truncate max-w-xl group-hover:underline" href="https://www.citizen.co.za/lifestyle/are-you-struggling-to-follow-the-rules-you-se" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-title-sm">open_in_new</span>
+<span class="truncate">https://www.citizen.co.za/lifestyle/are-you-struggling-to-follow-the-rules-you-se</span>
+</a>
+</div>
+</div>
+<button class="copy-citation-btn shrink-0 flex items-center gap-1.5 px-space-md py-2 rounded-lg bg-surface-container hover:bg-primary hover:text-on-primary text-on-surface-variant transition-colors duration-150 font-label-md text-label-md shadow-sm" data-apa="Francis, F. (2021, November 16). Are you struggling to follow the rules you set for your kids? You're not alone. The Citizen. https://www.citizen.co.za/lifestyle/are-you-struggling-to-follow-the-rules-you-se">
+<span class="material-symbols-outlined text-title-sm">content_copy</span>
+<span>Copy APA</span>
+</button>
+</article>
+<!-- 09 -->
+<article class="citation-card flex flex-col md:flex-row items-start justify-between gap-space-md p-space-lg rounded-2xl bg-surface-container/70 backdrop-blur-xl hover:bg-surface-container-high/90 shadow-md transition-all duration-200 group" data-category="journal" data-index="9">
+<div class="flex items-start gap-space-md min-w-0">
+<span class="px-space-sm py-1 rounded-lg bg-surface-container-highest text-primary font-mono font-label-md text-label-md shrink-0">#09</span>
+<div class="flex flex-col gap-space-xs min-w-0">
+<div class="flex flex-wrap items-center gap-2">
+<span class="px-2 py-0.5 rounded-full bg-tertiary-container/20 text-tertiary font-label-sm text-label-sm uppercase">Peer-Reviewed Journal</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">• 2025</span>
+</div>
+<p class="citation-text font-body-md text-body-lg text-on-surface leading-relaxed">
+<strong>Gayrama, V. P.</strong> (2025). Motivation in self-regulated learning and technology-use efficacy among Filipino university students on an island: Indirect effects of perceived value, pressure, interest, and effort. <em>Educational Process: International Journal (EDUPU)</em>, 15(2), 1-19.
+            </p>
+<a class="citation-url inline-flex items-center gap-1.5 text-primary hover:text-primary-fixed-dim font-body-sm text-body-sm truncate max-w-xl group-hover:underline" href="https://www.ceeol.com/search/article-detail?id=1339196" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-title-sm">open_in_new</span>
+<span class="truncate">https://www.ceeol.com/search/article-detail?id=1339196</span>
+</a>
+</div>
+</div>
+<button class="copy-citation-btn shrink-0 flex items-center gap-1.5 px-space-md py-2 rounded-lg bg-surface-container hover:bg-primary hover:text-on-primary text-on-surface-variant transition-colors duration-150 font-label-md text-label-md shadow-sm" data-apa="Gayrama, V. P. (2025). Motivation in self-regulated learning and technology-use efficacy among Filipino university students on an island: Indirect effects of perceived value, pressure, interest, and effort. Educational Process: International Journal (EDUPU), 15(2), 1-19. https://www.ceeol.com/search/article-detail?id=1339196">
+<span class="material-symbols-outlined text-title-sm">content_copy</span>
+<span>Copy APA</span>
+</button>
+</article>
+<!-- 10 -->
+<article class="citation-card flex flex-col md:flex-row items-start justify-between gap-space-md p-space-lg rounded-2xl bg-surface-container/70 backdrop-blur-xl hover:bg-surface-container-high/90 shadow-md transition-all duration-200 group" data-category="journal" data-index="10">
+<div class="flex items-start gap-space-md min-w-0">
+<span class="px-space-sm py-1 rounded-lg bg-surface-container-highest text-primary font-mono font-label-md text-label-md shrink-0">#10</span>
+<div class="flex flex-col gap-space-xs min-w-0">
+<div class="flex flex-wrap items-center gap-2">
+<span class="px-2 py-0.5 rounded-full bg-tertiary-container/20 text-tertiary font-label-sm text-label-sm uppercase">Peer-Reviewed Journal</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">• 2024</span>
+</div>
+<p class="citation-text font-body-md text-body-lg text-on-surface leading-relaxed">
+<strong>Giray, L., et al.</strong> (2024). A survey on digital device engagement, digital stress, and coping strategies among college students in the Philippines. <em>International Journal of Adolescence and Youth</em>, 29(1), Article 2371413.
+            </p>
+<a class="citation-url inline-flex items-center gap-1.5 text-primary hover:text-primary-fixed-dim font-body-sm text-body-sm truncate max-w-xl group-hover:underline" href="https://doi.org/10.1080/02673843.2024.2371413" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-title-sm">open_in_new</span>
+<span class="truncate">https://doi.org/10.1080/02673843.2024.2371413</span>
+</a>
+</div>
+</div>
+<button class="copy-citation-btn shrink-0 flex items-center gap-1.5 px-space-md py-2 rounded-lg bg-surface-container hover:bg-primary hover:text-on-primary text-on-surface-variant transition-colors duration-150 font-label-md text-label-md shadow-sm" data-apa="Giray, L., et al. (2024). A survey on digital device engagement, digital stress, and coping strategies among college students in the Philippines. International Journal of Adolescence and Youth, 29(1), Article 2371413. https://doi.org/10.1080/02673843.2024.2371413">
+<span class="material-symbols-outlined text-title-sm">content_copy</span>
+<span>Copy APA</span>
+</button>
+</article>
+<!-- 11 -->
+<article class="citation-card flex flex-col md:flex-row items-start justify-between gap-space-md p-space-lg rounded-2xl bg-surface-container/70 backdrop-blur-xl hover:bg-surface-container-high/90 shadow-md transition-all duration-200 group" data-category="institutional" data-index="11">
+<div class="flex items-start gap-space-md min-w-0">
+<span class="px-space-sm py-1 rounded-lg bg-surface-container-highest text-primary font-mono font-label-md text-label-md shrink-0">#11</span>
+<div class="flex flex-col gap-space-xs min-w-0">
+<div class="flex flex-wrap items-center gap-2">
+<span class="px-2 py-0.5 rounded-full bg-secondary-container/30 text-secondary font-label-sm text-label-sm uppercase">Media Media &amp; Pedagogy</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">• n.d.</span>
+</div>
+<p class="citation-text font-body-md text-body-lg text-on-surface leading-relaxed">
+<strong>Gnil.</strong> (n.d.). <em>Confident young Polish male teacher in classroom smiling in front of blackboard for education and teaching concepts.</em> Vecteezy.
+            </p>
+<a class="citation-url inline-flex items-center gap-1.5 text-primary hover:text-primary-fixed-dim font-body-sm text-body-sm truncate max-w-xl group-hover:underline" href="https://www.vecteezy.com/free-photos/male-teacher" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-title-sm">open_in_new</span>
+<span class="truncate">https://www.vecteezy.com/free-photos/male-teacher</span>
+</a>
+</div>
+</div>
+<button class="copy-citation-btn shrink-0 flex items-center gap-1.5 px-space-md py-2 rounded-lg bg-surface-container hover:bg-primary hover:text-on-primary text-on-surface-variant transition-colors duration-150 font-label-md text-label-md shadow-sm" data-apa="Gnil. (n.d.). Confident young Polish male teacher in classroom smiling in front of blackboard for education and teaching concepts. Vecteezy. https://www.vecteezy.com/free-photos/male-teacher">
+<span class="material-symbols-outlined text-title-sm">content_copy</span>
+<span>Copy APA</span>
+</button>
+</article>
+<!-- 12 -->
+<article class="citation-card flex flex-col md:flex-row items-start justify-between gap-space-md p-space-lg rounded-2xl bg-surface-container/70 backdrop-blur-xl hover:bg-surface-container-high/90 shadow-md transition-all duration-200 group" data-category="institutional" data-index="12">
+<div class="flex items-start gap-space-md min-w-0">
+<span class="px-space-sm py-1 rounded-lg bg-surface-container-highest text-primary font-mono font-label-md text-label-md shrink-0">#12</span>
+<div class="flex flex-col gap-space-xs min-w-0">
+<div class="flex flex-wrap items-center gap-2">
+<span class="px-2 py-0.5 rounded-full bg-secondary-container/30 text-secondary font-label-sm text-label-sm uppercase">Counseling Practice</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">• n.d.</span>
+</div>
+<p class="citation-text font-body-md text-body-lg text-on-surface leading-relaxed">
+<strong>Hamilton Family Counseling.</strong> (n.d.). <em>Parent only strategy sessions.</em> Hamilton Family Counseling.
+            </p>
+<a class="citation-url inline-flex items-center gap-1.5 text-primary hover:text-primary-fixed-dim font-body-sm text-body-sm truncate max-w-xl group-hover:underline" href="https://hamiltonfamilycounseling.com/parentonly" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-title-sm">open_in_new</span>
+<span class="truncate">https://hamiltonfamilycounseling.com/parentonly</span>
+</a>
+</div>
+</div>
+<button class="copy-citation-btn shrink-0 flex items-center gap-1.5 px-space-md py-2 rounded-lg bg-surface-container hover:bg-primary hover:text-on-primary text-on-surface-variant transition-colors duration-150 font-label-md text-label-md shadow-sm" data-apa="Hamilton Family Counseling. (n.d.). Parent only strategy sessions. Hamilton Family Counseling. https://hamiltonfamilycounseling.com/parentonly">
+<span class="material-symbols-outlined text-title-sm">content_copy</span>
+<span>Copy APA</span>
+</button>
+</article>
+<!-- 13 -->
+<article class="citation-card flex flex-col md:flex-row items-start justify-between gap-space-md p-space-lg rounded-2xl bg-surface-container/70 backdrop-blur-xl hover:bg-surface-container-high/90 shadow-md transition-all duration-200 group" data-category="journal" data-index="13">
+<div class="flex items-start gap-space-md min-w-0">
+<span class="px-space-sm py-1 rounded-lg bg-surface-container-highest text-primary font-mono font-label-md text-label-md shrink-0">#13</span>
+<div class="flex flex-col gap-space-xs min-w-0">
+<div class="flex flex-wrap items-center gap-2">
+<span class="px-2 py-0.5 rounded-full bg-tertiary-container/20 text-tertiary font-label-sm text-label-sm uppercase">Peer-Reviewed Journal</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">• 2021</span>
+</div>
+<p class="citation-text font-body-md text-body-lg text-on-surface leading-relaxed">
+<strong>Holden, O. L., Norris, M. E., &amp; Kuhlmeier, V. A.</strong> (2021). Academic integrity in online assessment: A research review. <em>Frontiers in Education</em>, 6, Article 639814.
+            </p>
+<a class="citation-url inline-flex items-center gap-1.5 text-primary hover:text-primary-fixed-dim font-body-sm text-body-sm truncate max-w-xl group-hover:underline" href="https://doi.org/10.3389/feduc.2021.639814" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-title-sm">open_in_new</span>
+<span class="truncate">https://doi.org/10.3389/feduc.2021.639814</span>
+</a>
+</div>
+</div>
+<button class="copy-citation-btn shrink-0 flex items-center gap-1.5 px-space-md py-2 rounded-lg bg-surface-container hover:bg-primary hover:text-on-primary text-on-surface-variant transition-colors duration-150 font-label-md text-label-md shadow-sm" data-apa="Holden, O. L., Norris, M. E., &amp; Kuhlmeier, V. A. (2021). Academic integrity in online assessment: A research review. Frontiers in Education, 6, Article 639814. https://doi.org/10.3389/feduc.2021.639814">
+<span class="material-symbols-outlined text-title-sm">content_copy</span>
+<span>Copy APA</span>
+</button>
+</article>
+<!-- 14 -->
+<article class="citation-card flex flex-col md:flex-row items-start justify-between gap-space-md p-space-lg rounded-2xl bg-surface-container/70 backdrop-blur-xl hover:bg-surface-container-high/90 shadow-md transition-all duration-200 group" data-category="institutional" data-index="14">
+<div class="flex items-start gap-space-md min-w-0">
+<span class="px-space-sm py-1 rounded-lg bg-surface-container-highest text-primary font-mono font-label-md text-label-md shrink-0">#14</span>
+<div class="flex flex-col gap-space-xs min-w-0">
+<div class="flex flex-wrap items-center gap-2">
+<span class="px-2 py-0.5 rounded-full bg-secondary-container/30 text-secondary font-label-sm text-label-sm uppercase">UNESCO Guidance</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">• 2020</span>
+</div>
+<p class="citation-text font-body-md text-body-lg text-on-surface leading-relaxed">
+<strong>Huang, R. H., et al.</strong> (2020). <em>Personal data and privacy protection in online learning: Guidance for students, teachers and parents.</em> Smart Learning Institute of Beijing Normal University / UNESCO.
+            </p>
+<a class="citation-url inline-flex items-center gap-1.5 text-primary hover:text-primary-fixed-dim font-body-sm text-body-sm truncate max-w-xl group-hover:underline" href="https://iite.unesco.org/wp-content/uploads/2020/06/Personal-Data-and-Privacy-Prot" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-title-sm">open_in_new</span>
+<span class="truncate">https://iite.unesco.org/wp-content/uploads/2020/06/Personal-Data-and-Privacy-Prot</span>
+</a>
+</div>
+</div>
+<button class="copy-citation-btn shrink-0 flex items-center gap-1.5 px-space-md py-2 rounded-lg bg-surface-container hover:bg-primary hover:text-on-primary text-on-surface-variant transition-colors duration-150 font-label-md text-label-md shadow-sm" data-apa="Huang, R. H., et al. (2020). Personal data and privacy protection in online learning: Guidance for students, teachers and parents. Smart Learning Institute of Beijing Normal University / UNESCO. https://iite.unesco.org/wp-content/uploads/2020/06/Personal-Data-and-Privacy-Prot">
+<span class="material-symbols-outlined text-title-sm">content_copy</span>
+<span>Copy APA</span>
+</button>
+</article>
+<!-- 15 -->
+<article class="citation-card flex flex-col md:flex-row items-start justify-between gap-space-md p-space-lg rounded-2xl bg-surface-container/70 backdrop-blur-xl hover:bg-surface-container-high/90 shadow-md transition-all duration-200 group" data-category="institutional" data-index="15">
+<div class="flex items-start gap-space-md min-w-0">
+<span class="px-space-sm py-1 rounded-lg bg-surface-container-highest text-primary font-mono font-label-md text-label-md shrink-0">#15</span>
+<div class="flex flex-col gap-space-xs min-w-0">
+<div class="flex flex-wrap items-center gap-2">
+<span class="px-2 py-0.5 rounded-full bg-secondary-container/30 text-secondary font-label-sm text-label-sm uppercase">Industry Fieldwork</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">• 2022</span>
+</div>
+<p class="citation-text font-body-md text-body-lg text-on-surface leading-relaxed">
+<strong>Kramer, J.</strong> (2022, July 21). <em>How Technology Can Help Teachers Increase Their Students' Performance.</em> Jarvee.
+            </p>
+<a class="citation-url inline-flex items-center gap-1.5 text-primary hover:text-primary-fixed-dim font-body-sm text-body-sm truncate max-w-xl group-hover:underline" href="https://jarvee.com/how-technology-can-help-teachers-increase-their-students-perfo" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-title-sm">open_in_new</span>
+<span class="truncate">https://jarvee.com/how-technology-can-help-teachers-increase-their-students-perfo</span>
+</a>
+</div>
+</div>
+<button class="copy-citation-btn shrink-0 flex items-center gap-1.5 px-space-md py-2 rounded-lg bg-surface-container hover:bg-primary hover:text-on-primary text-on-surface-variant transition-colors duration-150 font-label-md text-label-md shadow-sm" data-apa="Kramer, J. (2022, July 21). How Technology Can Help Teachers Increase Their Students' Performance. Jarvee. https://jarvee.com/how-technology-can-help-teachers-increase-their-students-perfo">
+<span class="material-symbols-outlined text-title-sm">content_copy</span>
+<span>Copy APA</span>
+</button>
+</article>
+<!-- 16 -->
+<article class="citation-card flex flex-col md:flex-row items-start justify-between gap-space-md p-space-lg rounded-2xl bg-surface-container/70 backdrop-blur-xl hover:bg-surface-container-high/90 shadow-md transition-all duration-200 group" data-category="institutional" data-index="16">
+<div class="flex items-start gap-space-md min-w-0">
+<span class="px-space-sm py-1 rounded-lg bg-surface-container-highest text-primary font-mono font-label-md text-label-md shrink-0">#16</span>
+<div class="flex flex-col gap-space-xs min-w-0">
+<div class="flex flex-wrap items-center gap-2">
+<span class="px-2 py-0.5 rounded-full bg-secondary-container/30 text-secondary font-label-sm text-label-sm uppercase">UC Berkeley Report</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">• 2024</span>
+</div>
+<p class="citation-text font-body-md text-body-lg text-on-surface leading-relaxed">
+<strong>Mora-Gonzalez, M.</strong> (2024, April 20). <em>3 Habits of Successful Students – Life.</em> Life. UC Berkeley Life.
+            </p>
+<a class="citation-url inline-flex items-center gap-1.5 text-primary hover:text-primary-fixed-dim font-body-sm text-body-sm truncate max-w-xl group-hover:underline" href="https://life.berkeley.edu/3-habits-of-successful-students/" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-title-sm">open_in_new</span>
+<span class="truncate">https://life.berkeley.edu/3-habits-of-successful-students/</span>
+</a>
+</div>
+</div>
+<button class="copy-citation-btn shrink-0 flex items-center gap-1.5 px-space-md py-2 rounded-lg bg-surface-container hover:bg-primary hover:text-on-primary text-on-surface-variant transition-colors duration-150 font-label-md text-label-md shadow-sm" data-apa="Mora-Gonzalez, M. (2024, April 20). 3 Habits of Successful Students – Life. Life. UC Berkeley Life. https://life.berkeley.edu/3-habits-of-successful-students/">
+<span class="material-symbols-outlined text-title-sm">content_copy</span>
+<span>Copy APA</span>
+</button>
+</article>
+<!-- 17 -->
+<article class="citation-card flex flex-col md:flex-row items-start justify-between gap-space-md p-space-lg rounded-2xl bg-surface-container/70 backdrop-blur-xl hover:bg-surface-container-high/90 shadow-md transition-all duration-200 group" data-category="institutional" data-index="17">
+<div class="flex items-start gap-space-md min-w-0">
+<span class="px-space-sm py-1 rounded-lg bg-surface-container-highest text-primary font-mono font-label-md text-label-md shrink-0">#17</span>
+<div class="flex flex-col gap-space-xs min-w-0">
+<div class="flex flex-wrap items-center gap-2">
+<span class="px-2 py-0.5 rounded-full bg-secondary-container/30 text-secondary font-label-sm text-label-sm uppercase">OECD Publication</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">• 2024</span>
+</div>
+<p class="citation-text font-body-md text-body-lg text-on-surface leading-relaxed">
+<strong>OECD.</strong> (2024). <em>PISA 2022 results (Volume V): Learning strategies and attitudes for life.</em> OECD Publishing.
+            </p>
+<a class="citation-url inline-flex items-center gap-1.5 text-primary hover:text-primary-fixed-dim font-body-sm text-body-sm truncate max-w-xl group-hover:underline" href="https://doi.org/10.1787/c2e44281-en" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-title-sm">open_in_new</span>
+<span class="truncate">https://doi.org/10.1787/c2e44281-en</span>
+</a>
+</div>
+</div>
+<button class="copy-citation-btn shrink-0 flex items-center gap-1.5 px-space-md py-2 rounded-lg bg-surface-container hover:bg-primary hover:text-on-primary text-on-surface-variant transition-colors duration-150 font-label-md text-label-md shadow-sm" data-apa="OECD. (2024). PISA 2022 results (Volume V): Learning strategies and attitudes for life. OECD Publishing. https://doi.org/10.1787/c2e44281-en">
+<span class="material-symbols-outlined text-title-sm">content_copy</span>
+<span>Copy APA</span>
+</button>
+</article>
+<!-- 18 -->
+<article class="citation-card flex flex-col md:flex-row items-start justify-between gap-space-md p-space-lg rounded-2xl bg-surface-container/70 backdrop-blur-xl hover:bg-surface-container-high/90 shadow-md transition-all duration-200 group" data-category="journal" data-index="18">
+<div class="flex items-start gap-space-md min-w-0">
+<span class="px-space-sm py-1 rounded-lg bg-surface-container-highest text-primary font-mono font-label-md text-label-md shrink-0">#18</span>
+<div class="flex flex-col gap-space-xs min-w-0">
+<div class="flex flex-wrap items-center gap-2">
+<span class="px-2 py-0.5 rounded-full bg-tertiary-container/20 text-tertiary font-label-sm text-label-sm uppercase">Working Paper Series</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">• 2025</span>
+</div>
+<p class="citation-text font-body-md text-body-lg text-on-surface leading-relaxed">
+<strong>Organisation for Economic Co-operation and Development.</strong> (2025). <em>The impact of digital technologies on students' learning</em> (OECD Education Working Papers, No. 332). OECD Publishing.
+            </p>
+<span class="text-on-surface-variant font-body-sm text-body-sm flex items-center gap-1.5">
+<span class="material-symbols-outlined text-title-sm">library_books</span>
+<span>OECD Working Paper Series Database</span>
+</span>
+</div>
+</div>
+<button class="copy-citation-btn shrink-0 flex items-center gap-1.5 px-space-md py-2 rounded-lg bg-surface-container hover:bg-primary hover:text-on-primary text-on-surface-variant transition-colors duration-150 font-label-md text-label-md shadow-sm" data-apa="Organisation for Economic Co-operation and Development. (2025). The impact of digital technologies on students' learning (OECD Education Working Papers, No. 332). OECD Publishing.">
+<span class="material-symbols-outlined text-title-sm">content_copy</span>
+<span>Copy APA</span>
+</button>
+</article>
+<!-- 19 -->
+<article class="citation-card flex flex-col md:flex-row items-start justify-between gap-space-md p-space-lg rounded-2xl bg-surface-container/70 backdrop-blur-xl hover:bg-surface-container-high/90 shadow-md transition-all duration-200 group" data-category="institutional" data-index="19">
+<div class="flex items-start gap-space-md min-w-0">
+<span class="px-space-sm py-1 rounded-lg bg-surface-container-highest text-primary font-mono font-label-md text-label-md shrink-0">#19</span>
+<div class="flex flex-col gap-space-xs min-w-0">
+<div class="flex flex-wrap items-center gap-2">
+<span class="px-2 py-0.5 rounded-full bg-secondary-container/30 text-secondary font-label-sm text-label-sm uppercase">OECD Philippines Profile</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">• 2026</span>
+</div>
+<p class="citation-text font-body-md text-body-lg text-on-surface leading-relaxed">
+<strong>Organisation for Economic Co-operation and Development.</strong> (2026). <em>PISA 2025 results: Philippines country note.</em> OECD.
+            </p>
+<a class="citation-url inline-flex items-center gap-1.5 text-primary hover:text-primary-fixed-dim font-body-sm text-body-sm truncate max-w-xl group-hover:underline" href="https://www.oecd.org/en/publications/pisa-2025-results-volume-1-country-notes..." rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-title-sm">open_in_new</span>
+<span class="truncate">https://www.oecd.org/en/publications/pisa-2025-results-volume-1-country-notes...</span>
+</a>
+</div>
+</div>
+<button class="copy-citation-btn shrink-0 flex items-center gap-1.5 px-space-md py-2 rounded-lg bg-surface-container hover:bg-primary hover:text-on-primary text-on-surface-variant transition-colors duration-150 font-label-md text-label-md shadow-sm" data-apa="Organisation for Economic Co-operation and Development. (2026). PISA 2025 results: Philippines country note. OECD. https://www.oecd.org/en/publications/pisa-2025-results-volume-1-country-notes...">
+<span class="material-symbols-outlined text-title-sm">content_copy</span>
+<span>Copy APA</span>
+</button>
+</article>
+<!-- 20 -->
+<article class="citation-card flex flex-col md:flex-row items-start justify-between gap-space-md p-space-lg rounded-2xl bg-surface-container/70 backdrop-blur-xl hover:bg-surface-container-high/90 shadow-md transition-all duration-200 group" data-category="institutional" data-index="20">
+<div class="flex items-start gap-space-md min-w-0">
+<span class="px-space-sm py-1 rounded-lg bg-surface-container-highest text-primary font-mono font-label-md text-label-md shrink-0">#20</span>
+<div class="flex flex-col gap-space-xs min-w-0">
+<div class="flex flex-wrap items-center gap-2">
+<span class="px-2 py-0.5 rounded-full bg-secondary-container/30 text-secondary font-label-sm text-label-sm uppercase">Innovation Index</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">• 2026</span>
+</div>
+<p class="citation-text font-body-md text-body-lg text-on-surface leading-relaxed">
+<strong>Oettle, J.</strong> (2026, April 17). <em>How Research Networks Drive Innovation: Success Stories and Impact.</em> WAITRO.
+            </p>
+<a class="citation-url inline-flex items-center gap-1.5 text-primary hover:text-primary-fixed-dim font-body-sm text-body-sm truncate max-w-xl group-hover:underline" href="https://waitro.org/blog/how-research-networks-drive-innovation-success-stories-an" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-title-sm">open_in_new</span>
+<span class="truncate">https://waitro.org/blog/how-research-networks-drive-innovation-success-stories-an</span>
+</a>
+</div>
+</div>
+<button class="copy-citation-btn shrink-0 flex items-center gap-1.5 px-space-md py-2 rounded-lg bg-surface-container hover:bg-primary hover:text-on-primary text-on-surface-variant transition-colors duration-150 font-label-md text-label-md shadow-sm" data-apa="Oettle, J. (2026, April 17). How Research Networks Drive Innovation: Success Stories and Impact. WAITRO. https://waitro.org/blog/how-research-networks-drive-innovation-success-stories-an">
+<span class="material-symbols-outlined text-title-sm">content_copy</span>
+<span>Copy APA</span>
+</button>
+</article>
+<!-- 21 -->
+<article class="citation-card flex flex-col md:flex-row items-start justify-between gap-space-md p-space-lg rounded-2xl bg-surface-container/70 backdrop-blur-xl hover:bg-surface-container-high/90 shadow-md transition-all duration-200 group" data-category="institutional" data-index="21">
+<div class="flex items-start gap-space-md min-w-0">
+<span class="px-space-sm py-1 rounded-lg bg-surface-container-highest text-primary font-mono font-label-md text-label-md shrink-0">#21</span>
+<div class="flex flex-col gap-space-xs min-w-0">
+<div class="flex flex-wrap items-center gap-2">
+<span class="px-2 py-0.5 rounded-full bg-secondary-container/30 text-secondary font-label-sm text-label-sm uppercase">Philippine Gov Census</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">• 2026</span>
+</div>
+<p class="citation-text font-body-md text-body-lg text-on-surface leading-relaxed">
+<strong>Philippine Statistics Authority.</strong> (2026, February 19). <em>Over 68 million Filipinos aged 10 to 64 years used the Internet for social media in 2024.</em> PSA.
+            </p>
+<a class="citation-url inline-flex items-center gap-1.5 text-primary hover:text-primary-fixed-dim font-body-sm text-body-sm truncate max-w-xl group-hover:underline" href="https://psa.gov.ph/content/over-68-million-filipinos-aged-10-64-years-used-intern" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-title-sm">open_in_new</span>
+<span class="truncate">https://psa.gov.ph/content/over-68-million-filipinos-aged-10-64-years-used-intern</span>
+</a>
+</div>
+</div>
+<button class="copy-citation-btn shrink-0 flex items-center gap-1.5 px-space-md py-2 rounded-lg bg-surface-container hover:bg-primary hover:text-on-primary text-on-surface-variant transition-colors duration-150 font-label-md text-label-md shadow-sm" data-apa="Philippine Statistics Authority. (2026, February 19). Over 68 million Filipinos aged 10 to 64 years used the Internet for social media in 2024. PSA. https://psa.gov.ph/content/over-68-million-filipinos-aged-10-64-years-used-intern">
+<span class="material-symbols-outlined text-title-sm">content_copy</span>
+<span>Copy APA</span>
+</button>
+</article>
+<!-- 22 -->
+<article class="citation-card flex flex-col md:flex-row items-start justify-between gap-space-md p-space-lg rounded-2xl bg-surface-container/70 backdrop-blur-xl hover:bg-surface-container-high/90 shadow-md transition-all duration-200 group" data-category="institutional" data-index="22">
+<div class="flex items-start gap-space-md min-w-0">
+<span class="px-space-sm py-1 rounded-lg bg-surface-container-highest text-primary font-mono font-label-md text-label-md shrink-0">#22</span>
+<div class="flex flex-col gap-space-xs min-w-0">
+<div class="flex flex-wrap items-center gap-2">
+<span class="px-2 py-0.5 rounded-full bg-secondary-container/30 text-secondary font-label-sm text-label-sm uppercase">PSA FLEMMS Registry</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">• 2026</span>
+</div>
+<p class="citation-text font-body-md text-body-lg text-on-surface leading-relaxed">
+<strong>Philippine Statistics Authority.</strong> (2026, June 19). <em>SDG 4.4.1: Proportion of youth and adults with ICT skills, by type of skills.</em> PSA FLEMMS.
+            </p>
+<a class="citation-url inline-flex items-center gap-1.5 text-primary hover:text-primary-fixed-dim font-body-sm text-body-sm truncate max-w-xl group-hover:underline" href="https://psa.gov.ph/content/sdg-441-proportion-youth-and-adults-ict-skills-type-sk" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-title-sm">open_in_new</span>
+<span class="truncate">https://psa.gov.ph/content/sdg-441-proportion-youth-and-adults-ict-skills-type-sk</span>
+</a>
+</div>
+</div>
+<button class="copy-citation-btn shrink-0 flex items-center gap-1.5 px-space-md py-2 rounded-lg bg-surface-container hover:bg-primary hover:text-on-primary text-on-surface-variant transition-colors duration-150 font-label-md text-label-md shadow-sm" data-apa="Philippine Statistics Authority. (2026, June 19). SDG 4.4.1: Proportion of youth and adults with ICT skills, by type of skills. PSA FLEMMS. https://psa.gov.ph/content/sdg-441-proportion-youth-and-adults-ict-skills-type-sk">
+<span class="material-symbols-outlined text-title-sm">content_copy</span>
+<span>Copy APA</span>
+</button>
+</article>
+<!-- 23 -->
+<article class="citation-card flex flex-col md:flex-row items-start justify-between gap-space-md p-space-lg rounded-2xl bg-surface-container/70 backdrop-blur-xl hover:bg-surface-container-high/90 shadow-md transition-all duration-200 group" data-category="institutional" data-index="23">
+<div class="flex items-start gap-space-md min-w-0">
+<span class="px-space-sm py-1 rounded-lg bg-surface-container-highest text-primary font-mono font-label-md text-label-md shrink-0">#23</span>
+<div class="flex flex-col gap-space-xs min-w-0">
+<div class="flex flex-wrap items-center gap-2">
+<span class="px-2 py-0.5 rounded-full bg-secondary-container/30 text-secondary font-label-sm text-label-sm uppercase">Technical Overview</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">• 2026</span>
+</div>
+<p class="citation-text font-body-md text-body-lg text-on-surface leading-relaxed">
+<strong>Satish, S.</strong> (2026, October 23). <em>Types of Technology: Overview, examples, and future trends.</em> Simplilearn.com.
+            </p>
+<a class="citation-url inline-flex items-center gap-1.5 text-primary hover:text-primary-fixed-dim font-body-sm text-body-sm truncate max-w-xl group-hover:underline" href="https://www.simplilearn.com/types-of-technology-article" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-title-sm">open_in_new</span>
+<span class="truncate">https://www.simplilearn.com/types-of-technology-article</span>
+</a>
+</div>
+</div>
+<button class="copy-citation-btn shrink-0 flex items-center gap-1.5 px-space-md py-2 rounded-lg bg-surface-container hover:bg-primary hover:text-on-primary text-on-surface-variant transition-colors duration-150 font-label-md text-label-md shadow-sm" data-apa="Satish, S. (2026, October 23). Types of Technology: Overview, examples, and future trends. Simplilearn.com. https://www.simplilearn.com/types-of-technology-article">
+<span class="material-symbols-outlined text-title-sm">content_copy</span>
+<span>Copy APA</span>
+</button>
+</article>
+<!-- 24 -->
+<article class="citation-card flex flex-col md:flex-row items-start justify-between gap-space-md p-space-lg rounded-2xl bg-surface-container/70 backdrop-blur-xl hover:bg-surface-container-high/90 shadow-md transition-all duration-200 group" data-category="institutional" data-index="24">
+<div class="flex items-start gap-space-md min-w-0">
+<span class="px-space-sm py-1 rounded-lg bg-surface-container-highest text-primary font-mono font-label-md text-label-md shrink-0">#24</span>
+<div class="flex flex-col gap-space-xs min-w-0">
+<div class="flex flex-wrap items-center gap-2">
+<span class="px-2 py-0.5 rounded-full bg-secondary-container/30 text-secondary font-label-sm text-label-sm uppercase">Local Institutional Census</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">• n.d.</span>
+</div>
+<p class="citation-text font-body-md text-body-lg text-on-surface leading-relaxed">
+<strong>SchoolFinderPH.</strong> (n.d.). <em>Private schools in Batangas City.</em> SchoolFinderPH.
+            </p>
+<a class="citation-url inline-flex items-center gap-1.5 text-primary hover:text-primary-fixed-dim font-body-sm text-body-sm truncate max-w-xl group-hover:underline" href="https://schoolfinderph.com" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-title-sm">open_in_new</span>
+<span class="truncate">https://schoolfinderph.com</span>
+</a>
+</div>
+</div>
+<button class="copy-citation-btn shrink-0 flex items-center gap-1.5 px-space-md py-2 rounded-lg bg-surface-container hover:bg-primary hover:text-on-primary text-on-surface-variant transition-colors duration-150 font-label-md text-label-md shadow-sm" data-apa="SchoolFinderPH. (n.d.). Private schools in Batangas City. SchoolFinderPH. https://schoolfinderph.com">
+<span class="material-symbols-outlined text-title-sm">content_copy</span>
+<span>Copy APA</span>
+</button>
+</article>
+<!-- 25 -->
+<article class="citation-card flex flex-col md:flex-row items-start justify-between gap-space-md p-space-lg rounded-2xl bg-surface-container/70 backdrop-blur-xl hover:bg-surface-container-high/90 shadow-md transition-all duration-200 group" data-category="journal" data-index="25">
+<div class="flex items-start gap-space-md min-w-0">
+<span class="px-space-sm py-1 rounded-lg bg-surface-container-highest text-primary font-mono font-label-md text-label-md shrink-0">#25</span>
+<div class="flex flex-col gap-space-xs min-w-0">
+<div class="flex flex-wrap items-center gap-2">
+<span class="px-2 py-0.5 rounded-full bg-tertiary-container/20 text-tertiary font-label-sm text-label-sm uppercase">CpE Thesis / Monograph</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">• 2025</span>
+</div>
+<p class="citation-text font-body-md text-body-lg text-on-surface leading-relaxed">
+<strong>Siega, B. M.</strong> (2025). Analyzing the relationship between computer technology usage and CpE students' academic performance at Makati Science Technological Institute of the Philippines. <em>ResearchGate</em>.
+            </p>
+<a class="citation-url inline-flex items-center gap-1.5 text-primary hover:text-primary-fixed-dim font-body-sm text-body-sm truncate max-w-xl group-hover:underline" href="https://www.researchgate.net/publication/392367699" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-title-sm">open_in_new</span>
+<span class="truncate">https://www.researchgate.net/publication/392367699</span>
+</a>
+</div>
+</div>
+<button class="copy-citation-btn shrink-0 flex items-center gap-1.5 px-space-md py-2 rounded-lg bg-surface-container hover:bg-primary hover:text-on-primary text-on-surface-variant transition-colors duration-150 font-label-md text-label-md shadow-sm" data-apa="Siega, B. M. (2025). Analyzing the relationship between computer technology usage and CpE students' academic performance at Makati Science Technological Institute of the Philippines. ResearchGate. https://www.researchgate.net/publication/392367699">
+<span class="material-symbols-outlined text-title-sm">content_copy</span>
+<span>Copy APA</span>
+</button>
+</article>
+<!-- 26 -->
+<article class="citation-card flex flex-col md:flex-row items-start justify-between gap-space-md p-space-lg rounded-2xl bg-surface-container/70 backdrop-blur-xl hover:bg-surface-container-high/90 shadow-md transition-all duration-200 group" data-category="institutional" data-index="26">
+<div class="flex items-start gap-space-md min-w-0">
+<span class="px-space-sm py-1 rounded-lg bg-surface-container-highest text-primary font-mono font-label-md text-label-md shrink-0">#26</span>
+<div class="flex flex-col gap-space-xs min-w-0">
+<div class="flex flex-wrap items-center gap-2">
+<span class="px-2 py-0.5 rounded-full bg-secondary-container/30 text-secondary font-label-sm text-label-sm uppercase">Pedagogy Evaluation</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">• 2026</span>
+</div>
+<p class="citation-text font-body-md text-body-lg text-on-surface leading-relaxed">
+<strong>Sullivan, A.</strong> (2026, June 22). <em>Exploring the benefits of technology in education.</em> SmartLab Learning.
+            </p>
+<a class="citation-url inline-flex items-center gap-1.5 text-primary hover:text-primary-fixed-dim font-body-sm text-body-sm truncate max-w-xl group-hover:underline" href="https://www.smartlablearning.com/benefits-of-technology-in-education/" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-title-sm">open_in_new</span>
+<span class="truncate">https://www.smartlablearning.com/benefits-of-technology-in-education/</span>
+</a>
+</div>
+</div>
+<button class="copy-citation-btn shrink-0 flex items-center gap-1.5 px-space-md py-2 rounded-lg bg-surface-container hover:bg-primary hover:text-on-primary text-on-surface-variant transition-colors duration-150 font-label-md text-label-md shadow-sm" data-apa="Sullivan, A. (2026, June 22). Exploring the benefits of technology in education. SmartLab Learning. https://www.smartlablearning.com/benefits-of-technology-in-education/">
+<span class="material-symbols-outlined text-title-sm">content_copy</span>
+<span>Copy APA</span>
+</button>
+</article>
+<!-- 27 -->
+<article class="citation-card flex flex-col md:flex-row items-start justify-between gap-space-md p-space-lg rounded-2xl bg-surface-container/70 backdrop-blur-xl hover:bg-surface-container-high/90 shadow-md transition-all duration-200 group" data-category="journal" data-index="27">
+<div class="flex items-start gap-space-md min-w-0">
+<span class="px-space-sm py-1 rounded-lg bg-surface-container-highest text-primary font-mono font-label-md text-label-md shrink-0">#27</span>
+<div class="flex flex-col gap-space-xs min-w-0">
+<div class="flex flex-wrap items-center gap-2">
+<span class="px-2 py-0.5 rounded-full bg-primary-container/20 text-primary font-label-sm text-label-sm uppercase">Conference Proceedings</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">• 2024</span>
+</div>
+<p class="citation-text font-body-md text-body-lg text-on-surface leading-relaxed">
+<strong>Talandron-Felipe, M. M. P., &amp; Intao, J. V.</strong> (2024). Exploring the impact of digital divide on the academic performance of STEM students in hybrid modality. <em>Proceedings of the 32nd International Conference on Computers in Education</em>.
+            </p>
+<a class="citation-url inline-flex items-center gap-1.5 text-primary hover:text-primary-fixed-dim font-body-sm text-body-sm truncate max-w-xl group-hover:underline" href="https://doi.org/10.58458/icce.2024.4981" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-title-sm">open_in_new</span>
+<span class="truncate">https://doi.org/10.58458/icce.2024.4981</span>
+</a>
+</div>
+</div>
+<button class="copy-citation-btn shrink-0 flex items-center gap-1.5 px-space-md py-2 rounded-lg bg-surface-container hover:bg-primary hover:text-on-primary text-on-surface-variant transition-colors duration-150 font-label-md text-label-md shadow-sm" data-apa="Talandron-Felipe, M. M. P., &amp; Intao, J. V. (2024). Exploring the impact of digital divide on the academic performance of STEM students in hybrid modality. Proceedings of the 32nd International Conference on Computers in Education. https://doi.org/10.58458/icce.2024.4981">
+<span class="material-symbols-outlined text-title-sm">content_copy</span>
+<span>Copy APA</span>
+</button>
+</article>
+<!-- 28 -->
+<article class="citation-card flex flex-col md:flex-row items-start justify-between gap-space-md p-space-lg rounded-2xl bg-surface-container/70 backdrop-blur-xl hover:bg-surface-container-high/90 shadow-md transition-all duration-200 group" data-category="institutional" data-index="28">
+<div class="flex items-start gap-space-md min-w-0">
+<span class="px-space-sm py-1 rounded-lg bg-surface-container-highest text-primary font-mono font-label-md text-label-md shrink-0">#28</span>
+<div class="flex flex-col gap-space-xs min-w-0">
+<div class="flex flex-wrap items-center gap-2">
+<span class="px-2 py-0.5 rounded-full bg-secondary-container/30 text-secondary font-label-sm text-label-sm uppercase">Curriculum Review</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">• 2025</span>
+</div>
+<p class="citation-text font-body-md text-body-lg text-on-surface leading-relaxed">
+<strong>Team, O. D.</strong> (2025, November 20). <em>The role of technology in education: Pros and cons.</em> Quintilian School.
+            </p>
+<a class="citation-url inline-flex items-center gap-1.5 text-primary hover:text-primary-fixed-dim font-body-sm text-body-sm truncate max-w-xl group-hover:underline" href="https://www.quintilianschool.wa.edu.au/the-role-of-technology-in-education-pros-a" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-title-sm">open_in_new</span>
+<span class="truncate">https://www.quintilianschool.wa.edu.au/the-role-of-technology-in-education-pros-a</span>
+</a>
+</div>
+</div>
+<button class="copy-citation-btn shrink-0 flex items-center gap-1.5 px-space-md py-2 rounded-lg bg-surface-container hover:bg-primary hover:text-on-primary text-on-surface-variant transition-colors duration-150 font-label-md text-label-md shadow-sm" data-apa="Team, O. D. (2025, November 20). The role of technology in education: Pros and cons. Quintilian School. https://www.quintilianschool.wa.edu.au/the-role-of-technology-in-education-pros-a">
+<span class="material-symbols-outlined text-title-sm">content_copy</span>
+<span>Copy APA</span>
+</button>
+</article>
+<!-- 29 -->
+<article class="citation-card flex flex-col md:flex-row items-start justify-between gap-space-md p-space-lg rounded-2xl bg-surface-container/70 backdrop-blur-xl hover:bg-surface-container-high/90 shadow-md transition-all duration-200 group" data-category="institutional" data-index="29">
+<div class="flex items-start gap-space-md min-w-0">
+<span class="px-space-sm py-1 rounded-lg bg-surface-container-highest text-primary font-mono font-label-md text-label-md shrink-0">#29</span>
+<div class="flex flex-col gap-space-xs min-w-0">
+<div class="flex flex-wrap items-center gap-2">
+<span class="px-2 py-0.5 rounded-full bg-secondary-container/30 text-secondary font-label-sm text-label-sm uppercase">UNESCO Global Report</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">• 2023</span>
+</div>
+<p class="citation-text font-body-md text-body-lg text-on-surface leading-relaxed">
+<strong>UNESCO.</strong> (2023). <em>Global education monitoring report 2023: Technology in education: A tool on whose terms?</em> UNESCO.
+            </p>
+<a class="citation-url inline-flex items-center gap-1.5 text-primary hover:text-primary-fixed-dim font-body-sm text-body-sm truncate max-w-xl group-hover:underline" href="https://unesdoc.unesco.org/ark:/48223/pf0000385723" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-title-sm">open_in_new</span>
+<span class="truncate">https://unesdoc.unesco.org/ark:/48223/pf0000385723</span>
+</a>
+</div>
+</div>
+<button class="copy-citation-btn shrink-0 flex items-center gap-1.5 px-space-md py-2 rounded-lg bg-surface-container hover:bg-primary hover:text-on-primary text-on-surface-variant transition-colors duration-150 font-label-md text-label-md shadow-sm" data-apa="UNESCO. (2023). Global education monitoring report 2023: Technology in education: A tool on whose terms? UNESCO. https://unesdoc.unesco.org/ark:/48223/pf0000385723">
+<span class="material-symbols-outlined text-title-sm">content_copy</span>
+<span>Copy APA</span>
+</button>
+</article>
+<!-- 30 -->
+<article class="citation-card flex flex-col md:flex-row items-start justify-between gap-space-md p-space-lg rounded-2xl bg-surface-container/70 backdrop-blur-xl hover:bg-surface-container-high/90 shadow-md transition-all duration-200 group" data-category="journal" data-index="30">
+<div class="flex items-start gap-space-md min-w-0">
+<span class="px-space-sm py-1 rounded-lg bg-surface-container-highest text-primary font-mono font-label-md text-label-md shrink-0">#30</span>
+<div class="flex flex-col gap-space-xs min-w-0">
+<div class="flex flex-wrap items-center gap-2">
+<span class="px-2 py-0.5 rounded-full bg-tertiary-container/20 text-tertiary font-label-sm text-label-sm uppercase">Published Book</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">• 2008</span>
+</div>
+<p class="citation-text font-body-md text-body-lg text-on-surface leading-relaxed">
+<strong>Wilen-Daugenti, T.</strong> (2008). <em>.Edu: Google Books.</em>
+</p>
+<a class="citation-url inline-flex items-center gap-1.5 text-primary hover:text-primary-fixed-dim font-body-sm text-body-sm truncate max-w-xl group-hover:underline" href="https://books.google.com/books/about/Edu.html?id=PCj1lCKQ0gkC" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-title-sm">open_in_new</span>
+<span class="truncate">https://books.google.com/books/about/Edu.html?id=PCj1lCKQ0gkC</span>
+</a>
+</div>
+</div>
+<button class="copy-citation-btn shrink-0 flex items-center gap-1.5 px-space-md py-2 rounded-lg bg-surface-container hover:bg-primary hover:text-on-primary text-on-surface-variant transition-colors duration-150 font-label-md text-label-md shadow-sm" data-apa="Wilen-Daugenti, T. (2008). .Edu: Google Books. https://books.google.com/books/about/Edu.html?id=PCj1lCKQ0gkC">
+<span class="material-symbols-outlined text-title-sm">content_copy</span>
+<span>Copy APA</span>
+</button>
+</article>
+</div>
+<!-- Empty Filter Notice -->
+<div class="hidden flex-col items-center justify-center p-space-xl rounded-2xl bg-surface-container/40 text-center" id="no-results">
+<span class="material-symbols-outlined text-on-surface-variant text-4xl mb-space-sm">find_in_page</span>
+<p class="font-title-md text-title-md text-on-surface">No references match your current filter query.</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Try adjusting keywords or selecting 'All Entries'.</p>
+</div>
+<!-- Bottom Pagination Section -->
+<div class="mt-space-xl pt-space-lg flex flex-col sm:flex-row items-center justify-between gap-space-md">
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-space-sm px-space-lg py-3 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface font-title-sm text-title-sm shadow-md transition-all duration-200 group" href="team.html">
+<span class="material-symbols-outlined text-title-md group-hover:-translate-x-1 transition-transform">arrow_back</span>
+<span>&lt; Back to Research Team</span>
+</a>
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-space-sm px-space-lg py-3 rounded-xl bg-primary-container hover:bg-primary text-on-primary font-title-sm text-title-sm shadow-md transition-all duration-200 group" href="index.html">
+<span>Return to Overview &gt;</span>
+<span class="material-symbols-outlined text-title-md group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</section>
+<!-- Interactive Search, Filter, Copy, and Export Logic -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const searchInput = document.getElementById('search-input');
+      const filterTabs = document.querySelectorAll('.filter-tab');
+      const cards = document.querySelectorAll('.citation-card');
+      const noResults = document.getElementById('no-results');
+      const toast = document.getElementById('citation-toast');
+      const toastText = document.getElementById('toast-text');
+      const copyAllBtn = document.getElementById('copy-all-btn');
+      const exportBtn = document.getElementById('export-registry-btn');
 
-    function simulateExport(format) {
-      const fb = document.getElementById('export-feedback');
-      if (fb) {
-        fb.textContent = `Generated ${format} bundle for 19 citations. Download initiated.`;
-        fb.classList.remove('hidden');
+      let currentCategory = 'all';
+      let currentQuery = '';
+
+      function showToast(message) {
+        toastText.textContent = message;
+        toast.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-3');
+        toast.classList.add('opacity-100', 'translate-y-0');
         setTimeout(() => {
-          fb.classList.add('hidden');
-        }, 3500);
+          toast.classList.remove('opacity-100', 'translate-y-0');
+          toast.classList.add('opacity-0', 'pointer-events-none', 'translate-y-3');
+        }, 3000);
       }
-    }
+
+      function filterCards() {
+        let visibleCount = 0;
+        cards.forEach(card => {
+          const cat = card.dataset.category;
+          const text = card.textContent.toLowerCase();
+          const matchesCat = (currentCategory === 'all') || (cat === currentCategory);
+          const matchesQuery = !currentQuery || text.includes(currentQuery);
+
+          if (matchesCat && matchesQuery) {
+            card.classList.remove('hidden');
+            visibleCount++;
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+
+        if (visibleCount === 0) {
+          noResults.classList.remove('hidden');
+          noResults.classList.add('flex');
+        } else {
+          noResults.classList.add('hidden');
+          noResults.classList.remove('flex');
+        }
+      }
+
+      filterTabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          filterTabs.forEach(t => {
+            t.classList.remove('bg-surface-container-highest', 'text-primary', 'font-semibold', 'shadow-inner');
+            t.classList.add('text-on-surface-variant');
+          });
+          tab.classList.add('bg-surface-container-highest', 'text-primary', 'font-semibold', 'shadow-inner');
+          tab.classList.remove('text-on-surface-variant');
+
+          currentCategory = tab.dataset.filter;
+          filterCards();
+        });
+      });
+
+      if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+          currentQuery = e.target.value.toLowerCase().trim();
+          filterCards();
+        });
+      }
+
+      // Copy individual citation
+      document.querySelectorAll('.copy-citation-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          const apaText = btn.getAttribute('data-apa');
+          navigator.clipboard.writeText(apaText).then(() => {
+            showToast('APA-7 citation copied to clipboard');
+          }).catch(() => {
+            showToast('Citation copied successfully');
+          });
+        });
+      });
+
+      // Copy All Citations in APA format
+      if (copyAllBtn) {
+        copyAllBtn.addEventListener('click', () => {
+          const citations = [];
+          document.querySelectorAll('.copy-citation-btn').forEach((btn, idx) => {
+            citations.push(`[${idx + 1}] ` + btn.getAttribute('data-apa'));
+          });
+          const fullText = citations.join('\n\n');
+          navigator.clipboard.writeText(fullText).then(() => {
+            showToast('All 30 APA-7 citations copied to clipboard!');
+          });
+        });
+      }
+
+      // Export Registry (.txt / markdown download)
+      if (exportBtn) {
+        exportBtn.addEventListener('click', () => {
+          const citations = [];
+          citations.push("TECHTRACK PH // RESEARCH REGISTRY - APA 7TH EDITION");
+          citations.push("BatStateU-TNEU Alangilan Campus • GEd 104 BSCpE Research Synthesis\n");
+          document.querySelectorAll('.copy-citation-btn').forEach((btn, idx) => {
+            citations.push(`[${idx + 1}] ` + btn.getAttribute('data-apa'));
+          });
+          const blob = new Blob([citations.join('\n\n')], { type: 'text/plain;charset=utf-8' });
+          const url = URL.createObjectURL(blob);
+          const a = document.createElement('a');
+          a.href = url;
+          a.download = 'TechTrackPH-References-APA7.txt';
+          document.body.appendChild(a);
+          a.click();
+          document.body.removeChild(a);
+          URL.revokeObjectURL(url);
+          showToast('References exported as TechTrackPH-References-APA7.txt');
+        });
+      }
+    });
   </script>
-</div></main><footer class="relative z-10 w-full bg-surface-container-low mt-16 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="max-w-7xl mx-auto px-6 lg:px-12 py-12 flex flex-col gap-8"><div class="flex flex-col md:flex-row md:items-start justify-between gap-6"><div class="space-y-2 max-w-xl"><div class="flex items-center gap-2"><img alt="BatStateU CpE Logo" class="w-9 h-9 object-contain rounded-lg drop-shadow-[0_2px_8px_rgba(56,189,248,0.2)]" onerror="this.onerror=null; this.src='https://placehold.co/40x40/0284c7/ffffff?text=CpE';" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWw88Xqulc6Wc5NMvuH44XyvEVvyOsq6FDVs3VdkC2pZedtJuLXt0PQ1NKXYuMlbAmem6rtfeEt-xJvmikHlVXcKVzUlDc32_roZviUcJ-oA2Fh075gYQB943HD7ojiP3cDtsMHRrKu0hP8_OH68m40unrwOV7-2tWo-B5hqXOG2DYj37GI_5CcZrHGY9ahPAxyun6buQzBo-aBHNQlNCPkAh2MQ6BynggDvN75u6tBIzmyGayEj0J"/><span class="font-headline-sm text-headline-sm font-bold text-on-surface">TechTrack PH</span><span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-primary-container text-on-primary-container font-semibold">ALN-CEAFA</span></div><p class="font-body-sm text-body-sm text-on-surface-variant">College of Engineering, Architecture and Fine Arts (CEAFA), BatStateU Alangilan Campus, Golden Country Homes, Alangilan, Batangas City, Philippines. Bachelor of Science in Computer Engineering 1st Year - GEd 104.</p></div><div class="flex flex-col gap-2"><span class="font-title-sm text-title-sm text-on-surface font-semibold">Portal Navigation</span><div class="grid grid-cols-2 sm:grid-cols-3 gap-x-6 gap-y-2"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="overview" href="index.html">Overview</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="introduction" href="introduction.html">Introduction</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="discussion" href="discussion.html">Discussion</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="significance" href="significance.html">Significance</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="research-team" href="team.html">Research Team</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="references" href="references.html">References</a></div></div></div><div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4"><p class="font-body-sm text-body-sm text-on-surface-variant">© 2025 BatStateU The NEU Alangilan • GEd 104 Research Group • CEAPA Scientific Repository • Open Scholarly Access.</p><div class="flex items-center gap-4 text-on-surface-variant"><span class="font-label-sm text-label-sm">Campus Code: ALN-CEAFA</span><span class="font-label-sm text-label-sm text-tertiary flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>Verified Archive</span></div></div></div></footer></body></html>
+</div></main><footer class="relative z-10 w-full bg-surface-container-lowest/90 backdrop-blur-xl mt-space-xl"><div class="max-w-7xl mx-auto px-gutter py-space-xl flex flex-col md:flex-row items-center justify-between gap-space-lg"><div class="flex items-center gap-space-md"><div class="p-space-xs rounded-full bg-surface-container-high"><img alt="BatStateU CpE Emblem" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/ALJJyrD70Mqaz-Z-5Wk9K6vnxSldkJtxg8ZVMvaGR7_QMK0sRd4tYIWdEPvvqgCRdMsHlx6OK2N-1-3_l2-ULfSW3iuz2mF2U4OQg4kh1Gl8ndZkU5XmEAMXOQyL8-Zx6PVj5BL8AkT6l1AidcjGD1N0Wgt3e0FuribDcZgUQ00IP_u-tla9EMQvAAyDS5_eHuxUhfjBUS9oNScPddH_a_-DapyhC3AhBGsdGlL82u5yHDdtIc5Ih1kVUydiJQ"/></div><div><div class="font-title-md text-title-md text-on-surface">TechTrack PH • GEd 104</div><p class="font-body-sm text-body-sm text-on-surface-variant">Batangas State University The National Engineering University • Alangilan Campus</p></div></div><nav class="flex flex-wrap items-center justify-center gap-space-md" data-active-classes="text-primary font-semibold"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="overview" href="index.html">Overview</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="introduction" href="introduction.html">Introduction</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="discussion" href="discussion.html">Discussion</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="significance" href="significance.html">Significance</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="research-team" href="team.html">Research Team</a><a aria-current="page" class="transition-colors text-primary font-semibold" data-path="references" href="references.html">References</a></nav><div class="flex flex-col items-center md:items-end gap-1"><div class="flex items-center gap-2 font-label-sm text-label-sm text-tertiary"><span class="inline-block w-1.5 h-1.5 rounded-full bg-tertiary"></span><span>TELEMETRY SYNCHRONIZED [NODE 11]</span></div><p class="font-body-sm text-body-sm text-on-surface-variant">© 2025 BatStateU The NEU Alangilan BSCpE. All rights reserved.</p></div></div></footer><script>(function(){const storageKey='techtrack_theme';const currentTheme=localStorage.getItem(storageKey);const htmlElement=document.documentElement;const icon=document.getElementById('theme-toggle-icon');function applyTheme(isDark){if(isDark){htmlElement.classList.add('dark');if(icon)icon.textContent='light_mode';}else{htmlElement.classList.remove('dark');if(icon)icon.textContent='dark_mode';}}if(currentTheme==='light'){applyTheme(false);}else{applyTheme(true);}const toggleBtn=document.getElementById('theme-toggle-btn');if(toggleBtn){toggleBtn.addEventListener('click',function(){const isNowDark=!htmlElement.classList.contains('dark');applyTheme(isNowDark);localStorage.setItem(storageKey,isNowDark?'dark':'light');});}})();</script></body></html>
