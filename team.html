@@ -1,698 +1,498 @@
 <!DOCTYPE html>
 
-<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>Research Team | TechTrack PH • BatStateU - The NEU Alangilan</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config = {
-  darkMode: "class",
-  theme: {
-    extend: {
-      "colors": {
-        "primary": "#8ed5ff",
-        "surface-tint": "#7bd0ff",
-        "inverse-primary": "#00668a",
-        "on-secondary-container": "#a8afff",
-        "error-container": "#93000a",
-        "surface-container-high": "#1c2a41",
-        "on-tertiary": "#003825",
-        "on-primary-fixed": "#001e2c",
-        "surface-bright": "#2c3951",
-        "secondary-container": "#2f3aa3",
-        "surface-container-highest": "#27354c",
-        "secondary": "#bdc2ff",
-        "error": "#ffb4ab",
-        "on-tertiary-fixed": "#002114",
-        "on-secondary": "#131e8c",
-        "surface-dim": "#041329",
-        "tertiary": "#4ee6aa",
-        "surface-container-lowest": "#010e24",
-        "on-primary": "#00354a",
-        "inverse-on-surface": "#233148",
-        "surface-container-low": "#0d1c32",
-        "on-surface-variant": "#bdc8d1",
-        "on-secondary-fixed-variant": "#2f3aa3",
-        "on-tertiary-fixed-variant": "#005137",
-        "tertiary-container": "#22c990",
-        "on-surface": "#d6e3ff",
-        "secondary-fixed": "#e0e0ff",
-        "surface": "#041329",
-        "on-background": "#d6e3ff",
-        "primary-fixed-dim": "#7bd0ff",
-        "tertiary-fixed": "#68fcbf",
-        "on-error": "#690005",
-        "background": "#041329",
-        "surface-container": "#112036",
-        "primary-fixed": "#c4e7ff",
-        "surface-variant": "#27354c",
-        "on-error-container": "#ffdad6",
-        "tertiary-fixed-dim": "#45dfa4",
-        "secondary-fixed-dim": "#bdc2ff",
-        "on-primary-container": "#004965",
-        "outline": "#87929a",
-        "on-tertiary-container": "#004e35",
-        "inverse-surface": "#d6e3ff",
-        "on-secondary-fixed": "#000767",
-        "on-primary-fixed-variant": "#004c69",
-        "primary-container": "#38bdf8",
-        "outline-variant": "#3e484f"
-      },
-      "borderRadius": {
-        "DEFAULT": "0.25rem",
-        "lg": "0.5rem",
-        "xl": "0.75rem",
-        "full": "9999px"
-      },
-      "spacing": {
-        "margin-mobile": "1rem",
-        "space-xs": "0.25rem",
-        "space-lg": "1.5rem",
-        "space-sm": "0.5rem",
-        "margin": "2rem",
-        "gutter-mobile": "1rem",
-        "space-md": "1rem",
-        "space-xl": "2.5rem",
-        "gutter": "1.5rem"
-      },
-      "fontFamily": {
-        "label-sm": ["Inter"],
-        "body-md": ["Inter"],
-        "title-sm": ["Inter"],
-        "body-sm": ["Inter"],
-        "headline-lg-mobile": ["Plus Jakarta Sans"],
-        "headline-xl-mobile": ["Plus Jakarta Sans"],
-        "headline-xl": ["Plus Jakarta Sans"],
-        "body-lg": ["Inter"],
-        "headline-sm": ["Plus Jakarta Sans"],
-        "headline-lg": ["Plus Jakarta Sans"],
-        "label-md": ["Inter"],
-        "headline-md": ["Plus Jakarta Sans"],
-        "title-md": ["Inter"]
-      },
-      "fontSize": {
-        "label-sm": ["11px", {"lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "600"}],
-        "body-md": ["14px", {"lineHeight": "22px", "fontWeight": "400"}],
-        "title-sm": ["14px", {"lineHeight": "20px", "fontWeight": "600"}],
-        "body-sm": ["12px", {"lineHeight": "18px", "fontWeight": "400"}],
-        "headline-lg-mobile": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
-        "headline-xl-mobile": ["30px", {"lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
-        "headline-xl": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
-        "body-lg": ["16px", {"lineHeight": "26px", "fontWeight": "400"}],
-        "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
-        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.015em", "fontWeight": "600"}],
-        "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600"}],
-        "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
-        "title-md": ["16px", {"lineHeight": "24px", "fontWeight": "600"}]
-      }
-    }
-  }
-}</script><style>
-@layer base {
-  html, body {
-    margin: 0;
-    padding: 0;
-  }
-  body {
-    overscroll-behavior: none;
-  }
-  main > :first-child {
-    margin-top: 0 !important;
-  }
-  main > :last-child {
-    margin-bottom: 0 !important;
-  }
-}
-::-webkit-scrollbar {
-  display: none;
-}
-
-/* Light Mode Overrides for High Contrast Legibility */
-html:not(.dark) body {
-  background-color: #f8f9ff !important;
-  color: #0f172a !important;
-}
-html:not(.dark) header {
-  background-color: rgba(255, 255, 255, 0.9) !important;
-  border-bottom: 1px solid #e2e8f0;
-}
-html:not(.dark) main {
-  background-color: #f8f9ff !important;
-}
-html:not(.dark) .bg-surface-container-low,
-html:not(.dark) .bg-surface-container {
-  background-color: #ffffff !important;
-  border: 1px solid #e2e8f0;
-  color: #0f172a !important;
-}
-html:not(.dark) .bg-surface-container-high {
-  background-color: #f1f5f9 !important;
-  color: #1e293b !important;
-}
-html:not(.dark) .bg-surface-container-highest {
-  background-color: #e2e8f0 !important;
-  color: #0f172a !important;
-}
-html:not(.dark) .bg-surface-container-lowest {
-  background-color: #f8fafc !important;
-  border: 1px solid #e2e8f0;
-}
-html:not(.dark) .text-on-surface {
-  color: #0f172a !important;
-}
-html:not(.dark) .text-on-surface-variant {
-  color: #475569 !important;
-}
-html:not(.dark) .text-outline {
-  color: #64748b !important;
-}
-html:not(.dark) .text-primary {
-  color: #0284c7 !important;
-}
-html:not(.dark) .text-secondary {
-  color: #4338ca !important;
-}
-html:not(.dark) .text-tertiary {
-  color: #059669 !important;
-}
-html:not(.dark) footer {
-  background-color: #f1f5f9 !important;
-  border-top: 1px solid #e2e8f0;
-  color: #334155 !important;
-}
-
-/* Pure CSS Floating Ambient Blobs */
-@keyframes blobFloat1 {
-  0%, 100% {
-    transform: translate(0px, 0px) scale(1);
-    opacity: 0.35;
-  }
-  33% {
-    transform: translate(45px, -60px) scale(1.12);
-    opacity: 0.5;
-  }
-  66% {
-    transform: translate(-35px, 35px) scale(0.95);
-    opacity: 0.4;
-  }
-}
-@keyframes blobFloat2 {
-  0%, 100% {
-    transform: translate(0px, 0px) scale(1);
-    opacity: 0.3;
-  }
-  33% {
-    transform: translate(-50px, 45px) scale(1.18);
-    opacity: 0.45;
-  }
-  66% {
-    transform: translate(40px, -40px) scale(0.92);
-    opacity: 0.35;
-  }
-}
-@keyframes blobFloat3 {
-  0%, 100% {
-    transform: translate(0px, 0px) scale(1);
-    opacity: 0.25;
-  }
-  50% {
-    transform: translate(60px, -35px) scale(1.15);
-    opacity: 0.4;
-  }
-}
-
-.ambient-blob-1 {
-  animation: blobFloat1 18s ease-in-out infinite alternate;
-}
-.ambient-blob-2 {
-  animation: blobFloat2 22s ease-in-out infinite alternate;
-}
-.ambient-blob-3 {
-  animation: blobFloat3 26s ease-in-out infinite alternate;
-}
-
-/* ZERO INVISIBLE/BLANK CONTENT GUARANTEE: Opacity 1 Immediately */
-.content-visible {
-  opacity: 1 !important;
-  transform: none !important;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .ambient-blob-1, .ambient-blob-2, .ambient-blob-3 {
-    animation: none !important;
-  }
-}
-</style></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased relative min-h-screen selection:bg-primary selection:text-on-primary"><div class="fixed inset-0 pointer-events-none overflow-hidden z-0"><div class="ambient-blob-1 absolute -top-32 -left-32 w-[500px] h-[500px] rounded-full bg-gradient-to-tr from-primary/30 to-sky-400/20 blur-[130px]"></div><div class="ambient-blob-2 absolute top-1/3 -right-20 w-[500px] h-[500px] rounded-full bg-gradient-to-bl from-tertiary/25 to-emerald-400/20 blur-[140px]"></div><div class="ambient-blob-3 absolute -bottom-32 left-1/4 w-[500px] h-[500px] rounded-full bg-gradient-to-r from-secondary-container/40 to-indigo-500/20 blur-[150px]"></div></div><header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.15)]"><div class="h-20 w-full px-gutter flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md"><a class="group flex items-center gap-space-sm" data-path="overview" href="index.html"><img alt="TechTrack PH Logo" class="w-9 h-9 object-contain rounded-full shadow-sm" onerror="this.onerror=null; this.src='https://lh3.googleusercontent.com/aida/ALJJyrArnDPkj_0L8qUNY7gb4AQnB-gduF1550n67Rqbwn7F_KoA60ZNjVvagQdox0E2MV60SoeV_arubR7Wi87XAEeplnrl45NoM2FHxP-2SYtd-0XomeuEe3shNUMgFYflcEAQpnKNn466WnzzqC2q8J-N1TH8QOeeJvQx56wVTnUd5PFYDuEMhUBExrp-9evPhXXWe0qnPoccEFXK-59JL_Cz5TTcP-RIQnGVJbjKaGs';" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlt3IavoVskEZCuhvC0pQz5HQc5SpxwUOUeLe1JFYol7jPM0hWAmXSLPckkMzX_ffjc1DWHTzC7pAry4nNjf3NRUYIiKfBrq8ALbDXUGcO2IEitAJ5hsZnmsO9BEL2e0-r23W_YyJ7jEaqHwMhloG6NcgaKFgOpbjfMotF2aZLvc1Ren9bZctL9fVcOvXb4uz1b2zoFDoSm0xnGBrMGEpj7wUpgFI63AXuicQvH6U"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary tracking-tight group-hover:text-primary-fixed transition-colors">TechTrack PH</span><span class="font-label-sm text-label-sm text-tertiary tracking-widest uppercase">GEd 104 Research Portal</span></div></a><div class="hidden xl:flex items-center gap-space-xs px-space-sm py-0.5 rounded-full bg-surface-container-highest"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span><span class="font-label-sm text-label-sm text-on-surface-variant font-semibold">TNEU ALANGILAN</span></div></div><nav class="hidden lg:flex items-center gap-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg"><a class="px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="overview" href="index.html">Overview</a><a class="px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="introduction" href="introduction.html">Introduction</a><a class="px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="discussion" href="discussion.html">Discussion</a><a class="px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="significance" href="significance.html">Significance</a><a aria-current="page" class="px-space-md py-space-sm transition-all bg-primary-container text-on-primary-container font-semibold rounded-lg" data-path="research-team" href="team.html">Research Team</a><a class="px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="references" href="references.html">References</a></nav><div class="flex items-center gap-space-sm"><button aria-label="Toggle dark and light mode" class="p-2 rounded-lg bg-surface-container-high text-on-surface-variant hover:bg-surface-bright hover:text-on-surface transition-colors cursor-pointer" id="theme-toggle-btn" title="Toggle color scheme" type="button"><span class="material-symbols-outlined text-[20px]" id="theme-toggle-icon">light_mode</span></button><a aria-label="TechTrack PH Repository" class="p-2 rounded-lg bg-surface-container-high text-on-surface-variant hover:bg-surface-bright hover:text-on-surface transition-colors flex items-center justify-center" href="https://github.com" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-[20px]">code</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-surface relative z-10"><div class="flex flex-col w-full">
-<div class="w-full px-gutter py-space-xl flex flex-col gap-space-xl max-w-7xl mx-auto relative">
-<!-- Ambient Backdrop Accent Shapes -->
-<div class="absolute -top-12 right-12 w-96 h-96 bg-primary/10 rounded-full blur-[100px] pointer-events-none -z-10"></div>
-<div class="absolute top-1/2 left-4 w-80 h-80 bg-tertiary/10 rounded-full blur-[120px] pointer-events-none -z-10"></div>
-<!-- Header & Institutional Banner (Immediately visible, no blank screen) -->
-<section class="content-visible flex flex-col gap-space-md">
-<div class="flex flex-wrap items-center justify-between gap-space-sm">
-<div class="flex items-center gap-space-xs font-label-sm text-label-sm uppercase tracking-widest text-primary px-space-sm py-1 rounded-full bg-surface-container-high shadow-sm">
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>TechTrack PH | GEd 104 Academic Research Portal</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}@keyframes float-blob-1{0%,100%{transform:translate(0px,0px) scale(1);}50%{transform:translate(45px,-35px) scale(1.15);}}@keyframes float-blob-2{0%,100%{transform:translate(0px,0px) scale(1);}50%{transform:translate(-50px,40px) scale(0.9);}}@keyframes float-blob-3{0%,100%{transform:translate(0px,0px) scale(1);}50%{transform:translate(40px,45px) scale(1.1);}}@keyframes grid-drift{0%{background-position:0 0;}100%{background-position:40px 40px;}}.ambient-blob-1{animation:float-blob-1 18s ease-in-out infinite;}.ambient-blob-2{animation:float-blob-2 22s ease-in-out infinite;}.ambient-blob-3{animation:float-blob-3 26s ease-in-out infinite;}.cyber-grid{background-size:32px 32px;background-image:linear-gradient(to right,rgba(56,189,248,0.05) 1px,transparent 1px),linear-gradient(to bottom,rgba(56,189,248,0.05) 1px,transparent 1px);animation:grid-drift 30s linear infinite;}.glow-card-interactive{transition:all 0.3s cubic-bezier(0.16,1,0.3,1);}.glow-card-interactive:hover{transform:translateY(-6px);border-color:rgba(56,189,248,0.7)!important;box-shadow:0 0 28px rgba(56,189,248,0.25),0 16px 32px -10px rgba(0,0,0,0.45)!important;}.scroll-reveal{opacity:1;transform:translateY(0);transition:opacity 0.65s cubic-bezier(0.16,1,0.3,1),transform 0.65s cubic-bezier(0.16,1,0.3,1);}.js-animate-init{opacity:0;transform:translateY(24px);}.js-animate-visible{opacity:1!important;transform:translateY(0)!important;}html:not(.dark) .cyber-grid{background-image:linear-gradient(to right,rgba(0,102,138,0.07) 1px,transparent 1px),linear-gradient(to bottom,rgba(0,102,138,0.07) 1px,transparent 1px);}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"primary-fixed-dim":"#7bd0ff","surface":"#041329","surface-dim":"#041329","inverse-on-surface":"#233148","surface-variant":"#27354c","error-container":"#93000a","inverse-primary":"#00668a","on-tertiary":"#003825","error":"#ffb4ab","primary-container":"#38bdf8","surface-container-high":"#1c2a41","surface-container-highest":"#27354c","on-tertiary-fixed-variant":"#005137","surface-tint":"#7bd0ff","tertiary-container":"#22c990","secondary-container":"#2f3aa3","surface-container-lowest":"#010e24","primary-fixed":"#c4e7ff","on-error":"#690005","outline-variant":"#3e484f","secondary-fixed":"#e0e0ff","tertiary-fixed":"#68fcbf","outline":"#87929a","surface-container-low":"#0d1c32","on-background":"#d6e3ff","on-primary":"#00354a","on-error-container":"#ffdad6","inverse-surface":"#d6e3ff","tertiary":"#4ee6aa","tertiary-fixed-dim":"#45dfa4","primary":"#8ed5ff","secondary":"#bdc2ff","on-surface-variant":"#bdc8d1","background":"#041329","on-secondary-fixed":"#000767","on-tertiary-fixed":"#002114","surface-container":"#112036","on-primary-container":"#004965","on-primary-fixed":"#001e2c","on-primary-fixed-variant":"#004c69","on-surface":"#d6e3ff","on-secondary":"#131e8c","secondary-fixed-dim":"#bdc2ff","on-secondary-fixed-variant":"#2f3aa3","on-secondary-container":"#a8afff","on-tertiary-container":"#004e35","surface-bright":"#2c3951"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"space-lg":"1.5rem","space-xl":"2.5rem","gutter-mobile":"1rem","space-sm":"0.5rem",gutter:"1.5rem",margin:"2rem","space-md":"1rem","margin-mobile":"1rem","space-xs":"0.25rem"},fontFamily:{"body-lg":["Inter"],"headline-sm":["Plus Jakarta Sans"],"title-md":["Inter"],"body-sm":["Inter"],"title-sm":["Inter"],"headline-xl":["Plus Jakarta Sans"],"body-md":["Inter"],"label-sm":["Inter"],"headline-lg-mobile":["Plus Jakarta Sans"],"label-md":["Inter"],"headline-lg":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"headline-xl-mobile":["Plus Jakarta Sans"],"mono":["JetBrains Mono","monospace"]},fontSize:{"body-lg":["16px",{lineHeight:"26px",fontWeight:"400"}],"headline-sm":["20px",{lineHeight:"28px",fontWeight:"600"}],"title-md":["16px",{lineHeight:"24px",fontWeight:"600"}],"body-sm":["12px",{lineHeight:"18px",fontWeight:"400"}],"title-sm":["14px",{lineHeight:"20px",fontWeight:"600"}],"headline-xl":["40px",{lineHeight:"48px",letterSpacing:"-0.02em",fontWeight:"700"}],"body-md":["14px",{lineHeight:"22px",fontWeight:"400"}],"label-sm":["11px",{lineHeight:"14px",letterSpacing:"0.03em",fontWeight:"600"}],"headline-lg-mobile":["24px",{lineHeight:"32px",letterSpacing:"-0.01em",fontWeight:"600"}],"label-md":["12px",{lineHeight:"16px",letterSpacing:"0.02em",fontWeight:"600"}],"headline-lg":["32px",{lineHeight:"40px",letterSpacing:"-0.015em",fontWeight:"600"}],"headline-md":["24px",{lineHeight:"32px",letterSpacing:"-0.01em",fontWeight:"600"}],"headline-xl-mobile":["30px",{lineHeight:"38px",letterSpacing:"-0.02em",fontWeight:"700"}]}}}};</script><script>function initTheme(){const stored=localStorage.getItem('techtrack_theme');const sysDark=window.matchMedia('(prefers-color-scheme: dark)').matches;if(stored==='dark'||(!stored&&sysDark)){document.documentElement.classList.add('dark');localStorage.setItem('techtrack_theme','dark');}else{document.documentElement.classList.remove('dark');localStorage.setItem('techtrack_theme','light');}}initTheme();function toggleTheme(){const isDark=document.documentElement.classList.toggle('dark');localStorage.setItem('techtrack_theme',isDark?'dark':'light');const icon=document.getElementById('theme-toggle-icon');if(icon){icon.textContent=isDark?'light_mode':'dark_mode';}}window.addEventListener('DOMContentLoaded',()=>{const isDark=document.documentElement.classList.contains('dark');const icon=document.getElementById('theme-toggle-icon');if(icon){icon.textContent=isDark?'light_mode':'dark_mode';}const revealElements=document.querySelectorAll('.scroll-reveal');if('IntersectionObserver' in window){revealElements.forEach(el=>el.classList.add('js-animate-init'));const observer=new IntersectionObserver((entries)=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('js-animate-visible');observer.unobserve(entry.target);}});},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});revealElements.forEach(el=>observer.observe(el));}});</script></head><body class="bg-surface font-body-md text-on-surface antialiased min-h-screen relative selection:bg-primary-container selection:text-on-primary-container"><div aria-hidden="true" class="cyber-grid fixed inset-0 pointer-events-none z-0 opacity-40 dark:opacity-60"></div><div aria-hidden="true" class="ambient-blob-bg fixed inset-0 pointer-events-none overflow-hidden z-0"><div class="ambient-blob-1 absolute -top-28 -left-28 w-[620px] h-[620px] rounded-full bg-gradient-to-br from-primary/25 via-primary-container/20 to-transparent blur-[95px]"></div><div class="ambient-blob-2 absolute top-1/3 -right-28 w-[650px] h-[650px] rounded-full bg-gradient-to-bl from-secondary-container/30 via-tertiary/15 to-transparent blur-[105px]"></div><div class="ambient-blob-3 absolute -bottom-36 left-1/4 w-[680px] h-[680px] rounded-full bg-gradient-to-tr from-primary/15 via-tertiary-container/20 to-transparent blur-[115px]"></div></div><header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-md border-b border-surface-variant/40 shadow-[0_4px_20px_rgba(0,0,0,0.15)]"><div class="h-20 max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between gap-4"><div class="flex items-center gap-3"><a class="relative flex items-center justify-center p-0.5 rounded-xl transition-transform hover:scale-105" href="index.html" title="Batangas State University - CpE"><img alt="Batangas State University CpE Logo" class="w-10 h-10 object-contain drop-shadow" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8I4Y4qA3HiYpx-eP2bNItynO3o-zxGMmZ10pnuXHJ4DyJ-FZH94xZvHh4ldZ5plNjawoUYgPG6F-1pMEGESBuGniDYeJ8it-fohcYd8ZYVxgoB6K7Z-XTzEcNANwzDZKQsXLOmN2V3W0w-hTf9wcfWo2tPWH9jYv4I-PVg9A9KeNv7L7FbM64AfZcT9inY_JTpl8ANjJOgohr27qhYzOS5e45SoVLX2lXr5oBX5ARuIJPC2R_o02S"/></a><div class="flex flex-col"><div class="flex items-center gap-2"><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface font-bold">TechTrack PH</span><span class="px-2 py-0.5 rounded-full bg-secondary-container/70 border border-secondary/30 text-on-secondary-container font-label-sm text-label-sm">GEd 104</span></div><span class="font-label-sm text-label-sm text-on-surface-variant">TNEU Alangilan • BSCpE Research</span></div></div><nav class="hidden xl:flex items-center gap-1.5 p-1 rounded-xl bg-surface-container-low/80 border border-outline-variant/30 backdrop-blur-md" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg shadow-sm"><a class="px-3.5 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface transition-colors font-title-sm text-title-sm" data-path="overview" href="index.html">Overview</a><a class="px-3.5 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface transition-colors font-title-sm text-title-sm" data-path="introduction" href="introduction.html">Introduction</a><a class="px-3.5 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface transition-colors font-title-sm text-title-sm" data-path="discussion" href="discussion.html">Discussion</a><a class="px-3.5 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface transition-colors font-title-sm text-title-sm" data-path="significance" href="significance.html">Significance</a><a aria-current="page" class="px-3.5 py-1.5 transition-all bg-primary-container text-on-primary-container font-semibold rounded-lg shadow-[0_0_12px_rgba(56,189,248,0.4)] flex items-center gap-1.5" data-path="research-team" href="team.html"><span class="w-1.5 h-1.5 rounded-full bg-on-primary-container animate-ping"></span>Research Team</a><a class="px-3.5 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface transition-colors font-title-sm text-title-sm" data-path="references" href="references.html">References</a></nav><div class="flex items-center gap-2.5"><button aria-label="Toggle color theme" class="w-9 h-9 rounded-lg flex items-center justify-center bg-surface-container border border-outline-variant/40 hover:border-primary/40 hover:bg-surface-container-high transition-all text-on-surface-variant hover:text-primary shadow-sm" onclick="toggleTheme()" type="button"><span class="material-symbols-outlined text-[20px]" id="theme-toggle-icon">dark_mode</span></button><a aria-label="External Research Repository" class="w-9 h-9 rounded-lg flex items-center justify-center bg-surface-container border border-outline-variant/40 hover:border-primary/40 hover:bg-surface-container-high transition-all text-on-surface-variant hover:text-primary shadow-sm" href="https://github.com" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-[20px]">terminal</span></a><div class="px-3 py-1.5 rounded-lg bg-surface-container border border-tertiary/40 flex items-center gap-2 shadow-[0_0_12px_rgba(78,230,170,0.15)]"><span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span><span class="font-mono text-[11px] font-semibold text-tertiary">NODE // 11</span></div></div></div></header><main class="relative z-10 w-full pt-20 bg-transparent min-h-[calc(100vh-20rem)]"><div class="flex flex-col w-full">
+<section class="relative w-full max-w-7xl mx-auto px-6 lg:px-12 pt-8 pb-16">
+<div class="scroll-reveal relative overflow-hidden rounded-3xl bg-gradient-to-br from-surface-container-low via-surface-container to-surface-container-lowest p-8 lg:p-12 shadow-2xl border border-primary/20 mb-12">
+<div class="absolute -top-32 -right-32 w-96 h-96 rounded-full bg-primary-container/20 blur-3xl pointer-events-none"></div>
+<div class="absolute -bottom-32 -left-32 w-96 h-96 rounded-full bg-tertiary-container/20 blur-3xl pointer-events-none"></div>
+<div class="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-primary to-transparent opacity-60"></div>
+<div class="relative z-10 flex flex-col gap-6">
+<div class="flex flex-wrap items-center gap-3">
+<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-container-high/90 border border-primary/30 text-primary font-label-sm text-label-sm shadow-[0_0_12px_rgba(56,189,248,0.2)]">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+<span class="font-mono tracking-wider">RESEARCH ROSTER // INVESTIGATORS MATRIX</span>
+</div>
+<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-container-highest/70 border border-surface-variant text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-tertiary">school</span>
+<span>Submitted to: <strong class="text-on-surface">Dr. Belen E. Bagui</strong> (GEd 104 Course Instructor)</span>
+</div>
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-tertiary/10 border border-tertiary/30 text-tertiary font-mono text-[11px]">
+<span class="material-symbols-outlined text-[14px]">terminal</span>
+<span>ACADEMIC VERIFICATION v2.4</span>
+</div>
+</div>
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div class="space-y-3 max-w-3xl">
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight flex items-center gap-3">
+              Research Team / Academic Roster
+              <span class="inline-block px-2.5 py-0.5 rounded-md text-xs font-mono font-medium bg-primary/10 text-primary border border-primary/30 align-middle">SEC 05/06</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Bachelor of Science in Computer Engineering — 1st Year (GEd 104) • Batangas State University Alangilan Campus</p>
+</div>
+<div class="flex flex-wrap sm:flex-nowrap gap-3">
+<div class="flex items-center gap-3 px-4 py-3 rounded-2xl bg-surface-container/90 border border-outline-variant/30 shadow-md">
+<div class="w-9 h-9 rounded-xl bg-primary/15 border border-primary/30 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-[22px]">groups</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Cohort Scope</span>
+<span class="font-title-sm text-title-sm text-on-surface font-semibold">11 Investigators</span>
+</div>
+</div>
+<div class="flex items-center gap-3 px-4 py-3 rounded-2xl bg-surface-container/90 border border-outline-variant/30 shadow-md">
+<div class="w-9 h-9 rounded-xl bg-tertiary/15 border border-tertiary/30 flex items-center justify-center">
+<span class="material-symbols-outlined text-tertiary text-[22px]">hub</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Dept Node</span>
+<span class="font-title-sm text-title-sm text-on-surface font-semibold">CpE • CEAFA</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="mb-14 scroll-reveal">
+<div class="flex items-center justify-between gap-4 mb-6">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-primary/15 border border-primary/40 flex items-center justify-center shadow-[0_0_12px_rgba(56,189,248,0.25)]">
+<span class="material-symbols-outlined text-primary text-[24px]">stars</span>
+</div>
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Project Leadership</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Principal Investigators &amp; Lead Systems Architecture Node</p>
+</div>
+</div>
+<span class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-primary/15 border border-primary/30 text-primary font-mono text-label-sm font-semibold shadow-sm">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+            COHORT LEADS (2)
+          </span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+<div class="glow-card-interactive group relative rounded-3xl bg-surface-container-low/90 border border-primary/30 p-6 lg:p-8 backdrop-blur-md overflow-hidden hover:border-cyan-400">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-2xl pointer-events-none group-hover:bg-primary/25 transition-all"></div>
+<div class="flex flex-col sm:flex-row gap-6 items-start">
+<div class="flex flex-col items-center gap-2.5 shrink-0 w-full sm:w-auto">
+<div class="relative w-28 h-28 sm:w-32 sm:h-32 rounded-2xl overflow-hidden bg-gradient-to-br from-surface-container-highest to-surface-container-lowest border-2 border-primary/70 shadow-[0_0_20px_rgba(56,189,248,0.35)] flex flex-col items-center justify-center p-3 group-hover:scale-105 transition-transform duration-300">
+<div class="w-16 h-16 rounded-xl bg-gradient-to-br from-primary-container/20 to-primary/30 border border-primary/50 flex items-center justify-center shadow-inner">
+<span class="font-headline-md font-extrabold tracking-wider bg-gradient-to-r from-primary to-tertiary bg-clip-text text-transparent">LV</span>
+</div>
+<span class="font-mono text-[9px] uppercase tracking-wider text-primary mt-1.5 font-semibold">LEAD INVESTIGATOR</span>
+<div class="absolute top-2 right-2 flex items-center gap-1 bg-surface-container-lowest/90 px-1.5 py-0.5 rounded border border-tertiary/40">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span>
+<span class="font-mono text-[9px] text-tertiary font-bold">ONLINE</span>
+</div>
+</div>
+<div class="w-full sm:w-32 px-2 py-1 rounded border border-dashed border-primary/40 bg-surface-container-lowest/80 text-center font-mono text-[10px] text-primary/80 truncate group-hover:border-primary group-hover:text-primary transition-colors" title="assets/images/team/villanueva-lanz.jpg">
+                  villanueva-lanz.jpg
+                </div>
+</div>
+<div class="flex flex-col justify-between flex-grow min-w-0 space-y-3 w-full">
+<div>
+<div class="flex flex-wrap items-center gap-2 mb-1.5">
+<span class="px-2.5 py-0.5 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm font-semibold shadow-sm group-hover:shadow-[0_0_12px_rgba(56,189,248,0.5)] transition-all">Lead Auth • ID #01</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high border border-outline-variant/40 text-on-surface-variant font-label-sm text-label-sm">BS CpE - 1st Year</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold tracking-tight group-hover:text-primary transition-colors">LANZ MAVERICK VILLANUEVA</h3>
+<p class="font-label-md text-label-md text-primary font-semibold mt-0.5 flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">military_tech</span>
+                  Project Leader • Principal Investigator
+                </p>
+</div>
+<div class="rounded-xl bg-surface-container-high/70 border border-outline-variant/30 p-3.5 space-y-1.5">
+<div class="flex items-center gap-1.5 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-primary">account_tree</span>
+<span>Operational Assignment</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-snug">Systems Architecture, Conceptual Framework &amp; Empirical Synthesis.</p>
+</div>
+<div class="flex items-center justify-between pt-2 border-t border-surface-variant/40">
+<div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[18px] text-primary">verified_user</span>
+<span>GEd 104 Verified Co-Author</span>
+</div>
+<span class="inline-flex items-center gap-1 font-mono text-[11px] text-tertiary font-semibold tracking-wide">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span> NODE STABLE
+                </span>
+</div>
+</div>
+</div>
+</div>
+<div class="glow-card-interactive group relative rounded-3xl bg-surface-container-low/90 border border-secondary/40 p-6 lg:p-8 backdrop-blur-md overflow-hidden hover:border-cyan-400">
+<div class="absolute top-0 right-0 w-32 h-32 bg-secondary-container/20 rounded-full blur-2xl pointer-events-none group-hover:bg-secondary-container/30 transition-all"></div>
+<div class="flex flex-col sm:flex-row gap-6 items-start">
+<div class="flex flex-col items-center gap-2.5 shrink-0 w-full sm:w-auto">
+<div class="relative w-28 h-28 sm:w-32 sm:h-32 rounded-2xl overflow-hidden bg-gradient-to-br from-surface-container-highest to-surface-container-lowest border-2 border-secondary/70 shadow-[0_0_20px_rgba(189,194,255,0.3)] flex flex-col items-center justify-center p-3 group-hover:scale-105 transition-transform duration-300">
+<div class="w-16 h-16 rounded-xl bg-gradient-to-br from-secondary-container/30 to-secondary/30 border border-secondary/50 flex items-center justify-center shadow-inner">
+<span class="font-headline-md font-extrabold tracking-wider bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent">PI</span>
+</div>
+<span class="font-mono text-[9px] uppercase tracking-wider text-secondary mt-1.5 font-semibold">CO-LEAD INVESTIGATOR</span>
+<div class="absolute top-2 right-2 flex items-center gap-1 bg-surface-container-lowest/90 px-1.5 py-0.5 rounded border border-tertiary/40">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span>
+<span class="font-mono text-[9px] text-tertiary font-bold">ONLINE</span>
+</div>
+</div>
+<div class="w-full sm:w-32 px-2 py-1 rounded border border-dashed border-secondary/40 bg-surface-container-lowest/80 text-center font-mono text-[10px] text-secondary/90 truncate group-hover:border-secondary group-hover:text-secondary transition-colors" title="assets/images/team/ilagan-paul.jpg">
+                  ilagan-paul.jpg
+                </div>
+</div>
+<div class="flex flex-col justify-between flex-grow min-w-0 space-y-3 w-full">
+<div>
+<div class="flex flex-wrap items-center gap-2 mb-1.5">
+<span class="px-2.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold shadow-sm group-hover:shadow-[0_0_12px_rgba(189,194,255,0.5)] transition-all">Co-Lead Auth • ID #02</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high border border-outline-variant/40 text-on-surface-variant font-label-sm text-label-sm">BS CpE - 1st Year</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold tracking-tight group-hover:text-secondary transition-colors">PAUL JUSTINE A. ILAGAN</h3>
+<p class="font-label-md text-label-md text-secondary font-semibold mt-0.5 flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">code</span>
+                  Project Co-Leader • Technical Director
+                </p>
+</div>
+<div class="rounded-xl bg-surface-container-high/70 border border-outline-variant/30 p-3.5 space-y-1.5">
+<div class="flex items-center gap-1.5 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">database</span>
+<span>Operational Assignment</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-snug">Data Infrastructure, Methodology &amp; Technical Verification Protocols.</p>
+</div>
+<div class="flex items-center justify-between pt-2 border-t border-surface-variant/40">
+<div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[18px] text-secondary">rule_folder</span>
+<span>Methodology Auditor</span>
+</div>
+<span class="inline-flex items-center gap-1 font-mono text-[11px] text-tertiary font-semibold tracking-wide">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span> NODE STABLE
+                </span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="mb-14 scroll-reveal">
+<div class="flex items-center justify-between gap-4 mb-6">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-tertiary/15 border border-tertiary/40 flex items-center justify-center shadow-[0_0_12px_rgba(78,230,170,0.2)]">
+<span class="material-symbols-outlined text-tertiary text-[24px]">badge</span>
+</div>
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Contributing BS CpE Investigators</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Active Co-Investigators • Data Aggregation &amp; Telemetry Co-Authors</p>
+</div>
+</div>
+<span class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-high border border-outline-variant/40 text-on-surface-variant font-mono text-label-sm">
 <span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>
-<span>RESEARCH TEAM // AUTHORS &amp; INVESTIGATORS</span>
+            9 RESEARCH FELLOWS
+          </span>
 </div>
-<!-- Course Supervisor Pill Badge -->
-<div class="flex items-center gap-space-xs px-space-md py-1.5 rounded-full bg-surface-container-highest text-tertiary shadow-sm hover:shadow-md transition-shadow">
-<span class="material-symbols-outlined text-[16px] text-tertiary" style="font-variation-settings: 'FILL' 1;">verified</span>
-<span class="font-label-md text-label-md tracking-wide">Submitted to: Dr. Belen E. Bagui (GEd 104 Course Instructor)</span>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<div class="glow-card-interactive group rounded-2xl bg-surface-container-low/85 border border-outline-variant/40 p-5 backdrop-blur-sm flex flex-col justify-between hover:border-cyan-400">
+<div>
+<div class="flex items-start gap-4">
+<div class="flex flex-col items-center gap-1.5 shrink-0">
+<div class="w-14 h-14 rounded-xl bg-gradient-to-tr from-surface-container-highest to-surface-container-low border border-primary/60 shadow-[0_0_12px_rgba(56,189,248,0.25)] flex items-center justify-center group-hover:border-primary group-hover:scale-105 transition-all">
+<span class="font-headline-sm font-bold text-primary tracking-wide">MA</span>
+</div>
+<span class="px-1.5 py-0.2 rounded border border-dashed border-primary/40 font-mono text-[9px] text-primary/80 max-w-[70px] truncate group-hover:border-primary transition-colors" title="assets/images/team/arcega-sofhia.jpg">arcega.jpg</span>
+</div>
+<div class="min-w-0 flex-grow">
+<div class="flex items-center gap-1.5 mb-1">
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-primary font-mono text-[10px] font-semibold border border-primary/20 group-hover:border-primary/50 transition-colors">ID #03</span>
+<span class="text-tertiary font-label-sm text-label-sm flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span> Active</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface font-bold truncate group-hover:text-primary transition-colors">ARCEGA, MA. SOFHIA A.</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Member • BS CpE Investigator</p>
 </div>
 </div>
-<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-md">
-<div class="flex flex-col gap-space-xs max-w-3xl">
-<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">
-            Research Team / Academic Roster
-          </h1>
-<p class="font-body-lg text-body-lg text-on-surface-variant font-normal">
-            Bachelor of Science in Computer Engineering — 1st Year (GEd 104) • Batangas State University Alangilan Campus
+</div>
+<div class="mt-4 pt-3 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm bg-surface-container/70 border border-outline-variant/20 px-3 py-2 rounded-xl group-hover:border-primary/30 transition-colors">
+<span class="truncate">Domain: Field Data Analysis</span>
+<span class="material-symbols-outlined text-[18px] text-primary shrink-0">analytics</span>
+</div>
+</div>
+<div class="glow-card-interactive group rounded-2xl bg-surface-container-low/85 border border-outline-variant/40 p-5 backdrop-blur-sm flex flex-col justify-between hover:border-cyan-400">
+<div>
+<div class="flex items-start gap-4">
+<div class="flex flex-col items-center gap-1.5 shrink-0">
+<div class="w-14 h-14 rounded-xl bg-gradient-to-tr from-surface-container-highest to-surface-container-low border border-tertiary/60 shadow-[0_0_12px_rgba(78,230,170,0.25)] flex items-center justify-center group-hover:border-tertiary group-hover:scale-105 transition-all">
+<span class="font-headline-sm font-bold text-tertiary tracking-wide">JB</span>
+</div>
+<span class="px-1.5 py-0.2 rounded border border-dashed border-tertiary/40 font-mono text-[9px] text-tertiary/80 max-w-[70px] truncate group-hover:border-tertiary transition-colors" title="assets/images/team/bendana-joylene.jpg">bendana.jpg</span>
+</div>
+<div class="min-w-0 flex-grow">
+<div class="flex items-center gap-1.5 mb-1">
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-primary font-mono text-[10px] font-semibold border border-primary/20 group-hover:border-primary/50 transition-colors">ID #04</span>
+<span class="text-tertiary font-label-sm text-label-sm flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span> Active</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface font-bold truncate group-hover:text-tertiary transition-colors">BENDAÑA, JOYLENE B.</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Member • BS CpE Investigator</p>
+</div>
+</div>
+</div>
+<div class="mt-4 pt-3 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm bg-surface-container/70 border border-outline-variant/20 px-3 py-2 rounded-xl group-hover:border-tertiary/30 transition-colors">
+<span class="truncate">Domain: Telemetry Verification</span>
+<span class="material-symbols-outlined text-[18px] text-tertiary shrink-0">sensors</span>
+</div>
+</div>
+<div class="glow-card-interactive group rounded-2xl bg-surface-container-low/85 border border-outline-variant/40 p-5 backdrop-blur-sm flex flex-col justify-between hover:border-cyan-400">
+<div>
+<div class="flex items-start gap-4">
+<div class="flex flex-col items-center gap-1.5 shrink-0">
+<div class="w-14 h-14 rounded-xl bg-gradient-to-tr from-surface-container-highest to-surface-container-low border border-primary/60 shadow-[0_0_12px_rgba(56,189,248,0.25)] flex items-center justify-center group-hover:border-primary group-hover:scale-105 transition-all">
+<span class="font-headline-sm font-bold text-primary tracking-wide">BB</span>
+</div>
+<span class="px-1.5 py-0.2 rounded border border-dashed border-primary/40 font-mono text-[9px] text-primary/80 max-w-[70px] truncate group-hover:border-primary transition-colors" title="assets/images/team/binaban-bryan.jpg">binaban.jpg</span>
+</div>
+<div class="min-w-0 flex-grow">
+<div class="flex items-center gap-1.5 mb-1">
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-primary font-mono text-[10px] font-semibold border border-primary/20 group-hover:border-primary/50 transition-colors">ID #05</span>
+<span class="text-tertiary font-label-sm text-label-sm flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span> Active</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface font-bold truncate group-hover:text-primary transition-colors">BINABAN, BRYAN JUSTINE L.</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Member • BS CpE Investigator</p>
+</div>
+</div>
+</div>
+<div class="mt-4 pt-3 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm bg-surface-container/70 border border-outline-variant/20 px-3 py-2 rounded-xl group-hover:border-primary/30 transition-colors">
+<span class="truncate">Domain: Literature &amp; Policy Matrix</span>
+<span class="material-symbols-outlined text-[18px] text-primary shrink-0">policy</span>
+</div>
+</div>
+<div class="glow-card-interactive group rounded-2xl bg-surface-container-low/85 border border-outline-variant/40 p-5 backdrop-blur-sm flex flex-col justify-between hover:border-cyan-400">
+<div>
+<div class="flex items-start gap-4">
+<div class="flex flex-col items-center gap-1.5 shrink-0">
+<div class="w-14 h-14 rounded-xl bg-gradient-to-tr from-surface-container-highest to-surface-container-low border border-secondary/60 shadow-[0_0_12px_rgba(189,194,255,0.25)] flex items-center justify-center group-hover:border-secondary group-hover:scale-105 transition-all">
+<span class="font-headline-sm font-bold text-secondary tracking-wide">ZB</span>
+</div>
+<span class="px-1.5 py-0.2 rounded border border-dashed border-secondary/40 font-mono text-[9px] text-secondary/80 max-w-[70px] truncate group-hover:border-secondary transition-colors" title="assets/images/team/boncodin-zamrohbert.jpg">boncodin.jpg</span>
+</div>
+<div class="min-w-0 flex-grow">
+<div class="flex items-center gap-1.5 mb-1">
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-primary font-mono text-[10px] font-semibold border border-primary/20 group-hover:border-primary/50 transition-colors">ID #06</span>
+<span class="text-tertiary font-label-sm text-label-sm flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span> Active</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface font-bold truncate group-hover:text-secondary transition-colors">BONCODIN, ZAMROHBERT R.</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Member • BS CpE Investigator</p>
+</div>
+</div>
+</div>
+<div class="mt-4 pt-3 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm bg-surface-container/70 border border-outline-variant/20 px-3 py-2 rounded-xl group-hover:border-secondary/30 transition-colors">
+<span class="truncate">Domain: Network Protocols</span>
+<span class="material-symbols-outlined text-[18px] text-secondary shrink-0">lan</span>
+</div>
+</div>
+<div class="glow-card-interactive group rounded-2xl bg-surface-container-low/85 border border-outline-variant/40 p-5 backdrop-blur-sm flex flex-col justify-between hover:border-cyan-400">
+<div>
+<div class="flex items-start gap-4">
+<div class="flex flex-col items-center gap-1.5 shrink-0">
+<div class="w-14 h-14 rounded-xl bg-gradient-to-tr from-surface-container-highest to-surface-container-low border border-primary/60 shadow-[0_0_12px_rgba(56,189,248,0.25)] flex items-center justify-center group-hover:border-primary group-hover:scale-105 transition-all">
+<span class="font-headline-sm font-bold text-primary tracking-wide">JD</span>
+</div>
+<span class="px-1.5 py-0.2 rounded border border-dashed border-primary/40 font-mono text-[9px] text-primary/80 max-w-[70px] truncate group-hover:border-primary transition-colors" title="assets/images/team/desagun-jan.jpg">desagun.jpg</span>
+</div>
+<div class="min-w-0 flex-grow">
+<div class="flex items-center gap-1.5 mb-1">
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-primary font-mono text-[10px] font-semibold border border-primary/20 group-hover:border-primary/50 transition-colors">ID #07</span>
+<span class="text-tertiary font-label-sm text-label-sm flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span> Active</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface font-bold truncate group-hover:text-primary transition-colors">DE SAGUN, JAN GABRIEL</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Member • BS CpE Investigator</p>
+</div>
+</div>
+</div>
+<div class="mt-4 pt-3 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm bg-surface-container/70 border border-outline-variant/20 px-3 py-2 rounded-xl group-hover:border-primary/30 transition-colors">
+<span class="truncate">Domain: Hardware Integration</span>
+<span class="material-symbols-outlined text-[18px] text-primary shrink-0">memory</span>
+</div>
+</div>
+<div class="glow-card-interactive group rounded-2xl bg-surface-container-low/85 border border-outline-variant/40 p-5 backdrop-blur-sm flex flex-col justify-between hover:border-cyan-400">
+<div>
+<div class="flex items-start gap-4">
+<div class="flex flex-col items-center gap-1.5 shrink-0">
+<div class="w-14 h-14 rounded-xl bg-gradient-to-tr from-surface-container-highest to-surface-container-low border border-tertiary/60 shadow-[0_0_12px_rgba(78,230,170,0.25)] flex items-center justify-center group-hover:border-tertiary group-hover:scale-105 transition-all">
+<span class="font-headline-sm font-bold text-tertiary tracking-wide">AE</span>
+</div>
+<span class="px-1.5 py-0.2 rounded border border-dashed border-tertiary/40 font-mono text-[9px] text-tertiary/80 max-w-[70px] truncate group-hover:border-tertiary transition-colors" title="assets/images/team/escala-april.jpg">escala.jpg</span>
+</div>
+<div class="min-w-0 flex-grow">
+<div class="flex items-center gap-1.5 mb-1">
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-primary font-mono text-[10px] font-semibold border border-primary/20 group-hover:border-primary/50 transition-colors">ID #08</span>
+<span class="text-tertiary font-label-sm text-label-sm flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span> Active</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface font-bold truncate group-hover:text-tertiary transition-colors">ESCALA, APRIL JOYCE A.</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Member • BS CpE Investigator</p>
+</div>
+</div>
+</div>
+<div class="mt-4 pt-3 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm bg-surface-container/70 border border-outline-variant/20 px-3 py-2 rounded-xl group-hover:border-tertiary/30 transition-colors">
+<span class="truncate">Domain: Dataset Normalization</span>
+<span class="material-symbols-outlined text-[18px] text-tertiary shrink-0">table_chart</span>
+</div>
+</div>
+<div class="glow-card-interactive group rounded-2xl bg-surface-container-low/85 border border-outline-variant/40 p-5 backdrop-blur-sm flex flex-col justify-between hover:border-cyan-400">
+<div>
+<div class="flex items-start gap-4">
+<div class="flex flex-col items-center gap-1.5 shrink-0">
+<div class="w-14 h-14 rounded-xl bg-gradient-to-tr from-surface-container-highest to-surface-container-low border border-primary/60 shadow-[0_0_12px_rgba(56,189,248,0.25)] flex items-center justify-center group-hover:border-primary group-hover:scale-105 transition-all">
+<span class="font-headline-sm font-bold text-primary tracking-wide">JR</span>
+</div>
+<span class="px-1.5 py-0.2 rounded border border-dashed border-primary/40 font-mono text-[9px] text-primary/80 max-w-[70px] truncate group-hover:border-primary transition-colors" title="assets/images/team/ramos-justin.jpg">ramos.jpg</span>
+</div>
+<div class="min-w-0 flex-grow">
+<div class="flex items-center gap-1.5 mb-1">
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-primary font-mono text-[10px] font-semibold border border-primary/20 group-hover:border-primary/50 transition-colors">ID #09</span>
+<span class="text-tertiary font-label-sm text-label-sm flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span> Active</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface font-bold truncate group-hover:text-primary transition-colors">RAMOS, JUSTIN ROVIC A.</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Member • BS CpE Investigator</p>
+</div>
+</div>
+</div>
+<div class="mt-4 pt-3 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm bg-surface-container/70 border border-outline-variant/20 px-3 py-2 rounded-xl group-hover:border-primary/30 transition-colors">
+<span class="truncate">Domain: Statistical Validation</span>
+<span class="material-symbols-outlined text-[18px] text-primary shrink-0">query_stats</span>
+</div>
+</div>
+<div class="glow-card-interactive group rounded-2xl bg-surface-container-low/85 border border-outline-variant/40 p-5 backdrop-blur-sm flex flex-col justify-between hover:border-cyan-400">
+<div>
+<div class="flex items-start gap-4">
+<div class="flex flex-col items-center gap-1.5 shrink-0">
+<div class="w-14 h-14 rounded-xl bg-gradient-to-tr from-surface-container-highest to-surface-container-low border border-secondary/60 shadow-[0_0_12px_rgba(189,194,255,0.25)] flex items-center justify-center group-hover:border-secondary group-hover:scale-105 transition-all">
+<span class="font-headline-sm font-bold text-secondary tracking-wide">RS</span>
+</div>
+<span class="px-1.5 py-0.2 rounded border border-dashed border-secondary/40 font-mono text-[9px] text-secondary/80 max-w-[70px] truncate group-hover:border-secondary transition-colors" title="assets/images/team/serrano-rex.jpg">serrano.jpg</span>
+</div>
+<div class="min-w-0 flex-grow">
+<div class="flex items-center gap-1.5 mb-1">
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-primary font-mono text-[10px] font-semibold border border-primary/20 group-hover:border-primary/50 transition-colors">ID #10</span>
+<span class="text-tertiary font-label-sm text-label-sm flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span> Active</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface font-bold truncate group-hover:text-secondary transition-colors">SERRANO, REX EMIL B.</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Member • BS CpE Investigator</p>
+</div>
+</div>
+</div>
+<div class="mt-4 pt-3 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm bg-surface-container/70 border border-outline-variant/20 px-3 py-2 rounded-xl group-hover:border-secondary/30 transition-colors">
+<span class="truncate">Domain: Telemetric Archival</span>
+<span class="material-symbols-outlined text-[18px] text-secondary shrink-0">inventory_2</span>
+</div>
+</div>
+<div class="glow-card-interactive group rounded-2xl bg-surface-container-low/85 border border-outline-variant/40 p-5 backdrop-blur-sm flex flex-col justify-between hover:border-cyan-400">
+<div>
+<div class="flex items-start gap-4">
+<div class="flex flex-col items-center gap-1.5 shrink-0">
+<div class="w-14 h-14 rounded-xl bg-gradient-to-tr from-surface-container-highest to-surface-container-low border border-tertiary/60 shadow-[0_0_12px_rgba(78,230,170,0.25)] flex items-center justify-center group-hover:border-tertiary group-hover:scale-105 transition-all">
+<span class="font-headline-sm font-bold text-tertiary tracking-wide">AT</span>
+</div>
+<span class="px-1.5 py-0.2 rounded border border-dashed border-tertiary/40 font-mono text-[9px] text-tertiary/80 max-w-[70px] truncate group-hover:border-tertiary transition-colors" title="assets/images/team/tinamisan-angelica.jpg">tinamisan.jpg</span>
+</div>
+<div class="min-w-0 flex-grow">
+<div class="flex items-center gap-1.5 mb-1">
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-primary font-mono text-[10px] font-semibold border border-primary/20 group-hover:border-primary/50 transition-colors">ID #11</span>
+<span class="text-tertiary font-label-sm text-label-sm flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span> Active</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface font-bold truncate group-hover:text-tertiary transition-colors">TINAMISAN, ANGELICA MARIE V.</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Member • BS CpE Investigator</p>
+</div>
+</div>
+</div>
+<div class="mt-4 pt-3 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm bg-surface-container/70 border border-outline-variant/20 px-3 py-2 rounded-xl group-hover:border-tertiary/30 transition-colors">
+<span class="truncate">Domain: Synthesis &amp; Documentation</span>
+<span class="material-symbols-outlined text-[18px] text-tertiary shrink-0">draw</span>
+</div>
+</div>
+</div>
+</div>
+<div class="scroll-reveal rounded-3xl bg-surface-container-low/90 border border-primary/25 p-8 lg:p-10 mb-12 shadow-xl backdrop-blur-md relative overflow-hidden">
+<div class="absolute -right-24 -bottom-24 w-80 h-80 rounded-full bg-primary/10 blur-3xl pointer-events-none"></div>
+<div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8">
+<div class="space-y-4 max-w-3xl">
+<div class="flex items-center gap-2 text-primary font-mono text-label-md">
+<span class="material-symbols-outlined text-[20px]">science</span>
+<span class="tracking-wide">EMPIRICAL COLLABORATION FRAMEWORK</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold">Empirical Research Pipeline &amp; Collaborative Protocols</h2>
+<div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-surface-container border border-outline-variant/40 font-label-sm text-label-sm text-tertiary font-medium">
+<span class="material-symbols-outlined text-[16px]">domain</span>
+<span>Institutional Node: BatStateU Alangilan • CEAFA Computing Lab</span>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+            This investigation was formulated under the GEd 104 module, synthesizing foundational engineering metrics, hardware telemetric tracking, and national infrastructure readiness frameworks. Authors collaboratively authored datasets, telemetry records, and verified policy frameworks.
           </p>
 </div>
-<!-- Metric Telemetry Capsule -->
-<div class="flex items-center gap-space-md px-space-md py-space-sm rounded-xl bg-surface-container-low border border-surface-container-high/60 shadow-sm">
-<div class="flex flex-col">
-<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Cohort Scope</span>
-<span class="font-title-md text-title-md text-primary font-bold">11 Investigators</span>
+<div class="flex flex-col gap-3 w-full lg:w-auto shrink-0">
+<div class="flex items-center gap-3 px-4 py-3 rounded-2xl bg-surface-container/90 border border-tertiary/30 shadow-sm">
+<span class="material-symbols-outlined text-tertiary text-[22px]">verified</span>
+<span class="font-title-sm text-title-sm text-on-surface font-semibold">ISO 9001:2015 Institutional Protocol</span>
 </div>
-<div class="w-px h-8 bg-surface-container-highest"></div>
-<div class="flex flex-col">
-<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Dept Node</span>
-<span class="font-title-md text-title-md text-tertiary font-bold">CpE • CEAFA</span>
+<div class="flex items-center gap-3 px-4 py-3 rounded-2xl bg-surface-container/90 border border-primary/30 shadow-sm">
+<span class="material-symbols-outlined text-primary text-[22px]">workspace_premium</span>
+<span class="font-title-sm text-title-sm text-on-surface font-semibold">CHED Center of Excellence (CpE)</span>
 </div>
+<div class="flex items-center gap-3 px-4 py-3 rounded-2xl bg-surface-container/90 border border-secondary/30 shadow-sm">
+<span class="material-symbols-outlined text-secondary text-[22px]">published_with_changes</span>
+<span class="font-title-sm text-title-sm text-on-surface font-semibold">Peer Convergence: 99.4%</span>
 </div>
 </div>
-</section>
-<!-- Leadership Section: Featured Bento Dual Cards -->
-<section class="content-visible flex flex-col gap-space-md">
-<div class="flex items-center justify-between">
-<div class="flex items-center gap-space-xs">
-<span class="material-symbols-outlined text-primary text-[20px]">stars</span>
-<h2 class="font-headline-sm text-headline-sm text-on-surface">Project Leadership</h2>
 </div>
-<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Principal Investigators</span>
+<div class="mt-8 pt-8 border-t border-surface-variant/40 grid grid-cols-2 sm:grid-cols-4 gap-4">
+<div class="p-4 rounded-2xl bg-surface-container/80 border border-outline-variant/30 flex flex-col justify-between">
+<span class="font-mono text-[10px] text-on-surface-variant block mb-1">TOTAL WORKSTATIONS</span>
+<span class="font-headline-sm text-headline-sm text-primary font-bold">11 Nodes</span>
+<div class="w-full bg-surface-container-highest h-1.5 rounded-full mt-3 overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 100%"></div>
 </div>
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-lg">
-<!-- Lead Researcher 1: VILLANUEVA, LANZ MAVERICK -->
-<div class="group relative rounded-xl bg-surface-container-low hover:bg-surface-container border border-surface-container-high/60 transition-all duration-300 p-space-lg shadow-xl overflow-hidden flex flex-col justify-between gap-space-lg hover:-translate-y-1">
-<div class="absolute top-0 right-0 w-44 h-44 bg-primary/10 rounded-bl-[100px] pointer-events-none transition-all duration-500 group-hover:scale-110"></div>
-<div class="flex flex-col sm:flex-row items-start sm:items-center gap-space-md relative z-10">
-<!-- Monogram Avatar Ring with Hover Glow -->
-<div class="relative shrink-0">
-<div class="w-20 h-20 rounded-xl bg-surface-container-highest border border-primary/30 flex items-center justify-center shadow-[0_0_20px_rgba(56,189,248,0.25)] group-hover:shadow-[0_0_30px_rgba(56,189,248,0.55)] transition-shadow duration-300">
-<span class="font-headline-md text-headline-md text-primary font-bold tracking-tight">LV</span>
 </div>
-<div class="absolute -bottom-1 -right-1 w-6 h-6 rounded-full bg-primary flex items-center justify-center shadow-md">
-<span class="material-symbols-outlined text-on-primary text-[14px]" style="font-variation-settings: 'FILL' 1;">shield</span>
+<div class="p-4 rounded-2xl bg-surface-container/80 border border-outline-variant/30 flex flex-col justify-between">
+<span class="font-mono text-[10px] text-on-surface-variant block mb-1">REPOSITORIES SYNCED</span>
+<span class="font-headline-sm text-headline-sm text-tertiary font-bold">100%</span>
+<div class="w-full bg-surface-container-highest h-1.5 rounded-full mt-3 overflow-hidden">
+<div class="bg-tertiary h-full rounded-full" style="width: 100%"></div>
 </div>
 </div>
-<!-- Profile Info -->
-<div class="flex flex-col gap-1 min-w-0">
-<div class="flex items-center gap-2">
-<span class="px-2.5 py-0.5 rounded-full bg-primary/15 text-primary font-label-sm text-label-sm font-semibold tracking-wider uppercase">
-                  LEADER
-                </span>
-<span class="font-label-sm text-label-sm text-outline">Lead Auth • ID #01</span>
+<div class="p-4 rounded-2xl bg-surface-container/80 border border-outline-variant/30 flex flex-col justify-between">
+<span class="font-mono text-[10px] text-on-surface-variant block mb-1">MODULE CREDITATION</span>
+<span class="font-headline-sm text-headline-sm text-secondary font-bold">GEd 104</span>
+<div class="w-full bg-surface-container-highest h-1.5 rounded-full mt-3 overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 95%"></div>
 </div>
-<h3 class="font-headline-md text-headline-md text-on-surface font-bold tracking-tight group-hover:text-primary transition-colors truncate">
-                VILLANUEVA, LANZ MAVERICK
-              </h3>
-<p class="font-body-sm text-body-sm text-on-surface-variant">
-                Systems Architecture, Conceptual Framework &amp; Empirical Synthesis
-              </p>
 </div>
+<div class="p-4 rounded-2xl bg-surface-container/80 border border-outline-variant/30 flex flex-col justify-between">
+<span class="font-mono text-[10px] text-on-surface-variant block mb-1">ARCHIVE SIGN-OFF</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold flex items-center gap-1.5">
+              VERIFIED
+              <span class="material-symbols-outlined text-tertiary text-[18px]">check_circle</span>
+</span>
+<div class="w-full bg-surface-container-highest h-1.5 rounded-full mt-3 overflow-hidden">
+<div class="bg-gradient-to-r from-primary to-tertiary h-full rounded-full" style="width: 100%"></div>
 </div>
-<!-- Clean Dashed Technical Repository Slot (Zero AI portrait placeholder) -->
-<div class="flex flex-col gap-space-xs pt-space-xs relative z-10">
-<div class="border border-dashed border-primary/40 rounded-lg p-space-sm bg-surface-container-lowest/60 flex items-center justify-between font-label-sm text-label-sm">
-<div class="flex items-center gap-2 font-mono text-on-surface-variant truncate">
-<span class="material-symbols-outlined text-[16px] text-primary">code_blocks</span>
-<span class="text-primary font-semibold">PATH:</span>
-<span class="truncate">assets/images/team/villanueva-lanz.jpg</span>
 </div>
-<span class="text-tertiary font-mono text-xs px-2 py-0.5 rounded bg-tertiary/10 shrink-0">ACTIVE</span>
 </div>
-<div class="w-full h-1.5 rounded-full bg-surface-container-highest overflow-hidden mt-1">
-<div class="h-full bg-gradient-to-r from-primary to-tertiary w-[95%] rounded-full"></div>
 </div>
-</div>
-</div>
-<!-- Co-Lead Researcher 2: ILAGAN, PAUL JUSTINE A. -->
-<div class="group relative rounded-xl bg-surface-container-low hover:bg-surface-container border border-surface-container-high/60 transition-all duration-300 p-space-lg shadow-xl overflow-hidden flex flex-col justify-between gap-space-lg hover:-translate-y-1">
-<div class="absolute top-0 right-0 w-44 h-44 bg-secondary-container/20 rounded-bl-[100px] pointer-events-none transition-all duration-500 group-hover:scale-110"></div>
-<div class="flex flex-col sm:flex-row items-start sm:items-center gap-space-md relative z-10">
-<!-- Monogram Avatar Ring with Hover Glow -->
-<div class="relative shrink-0">
-<div class="w-20 h-20 rounded-xl bg-surface-container-highest border border-secondary/30 flex items-center justify-center shadow-[0_0_20px_rgba(189,194,255,0.2)] group-hover:shadow-[0_0_30px_rgba(189,194,255,0.45)] transition-shadow duration-300">
-<span class="font-headline-md text-headline-md text-secondary font-bold tracking-tight">PI</span>
-</div>
-<div class="absolute -bottom-1 -right-1 w-6 h-6 rounded-full bg-secondary flex items-center justify-center shadow-md">
-<span class="material-symbols-outlined text-on-secondary text-[14px]" style="font-variation-settings: 'FILL' 1;">hub</span>
-</div>
-</div>
-<!-- Profile Info -->
-<div class="flex flex-col gap-1 min-w-0">
-<div class="flex items-center gap-2">
-<span class="px-2.5 py-0.5 rounded-full bg-secondary-container/50 text-secondary font-label-sm text-label-sm font-semibold tracking-wider uppercase">
-                  CO-LEADER
-                </span>
-<span class="font-label-sm text-label-sm text-outline">Co-Lead Auth • ID #02</span>
-</div>
-<h3 class="font-headline-md text-headline-md text-on-surface font-bold tracking-tight group-hover:text-secondary transition-colors truncate">
-                ILAGAN, PAUL JUSTINE A.
-              </h3>
-<p class="font-body-sm text-body-sm text-on-surface-variant">
-                Data Infrastructure, Methodology &amp; Technical Verification Protocols
-              </p>
-</div>
-</div>
-<!-- Clean Dashed Technical Repository Slot (Zero AI portrait placeholder) -->
-<div class="flex flex-col gap-space-xs pt-space-xs relative z-10">
-<div class="border border-dashed border-secondary/40 rounded-lg p-space-sm bg-surface-container-lowest/60 flex items-center justify-between font-label-sm text-label-sm">
-<div class="flex items-center gap-2 font-mono text-on-surface-variant truncate">
-<span class="material-symbols-outlined text-[16px] text-secondary">code_blocks</span>
-<span class="text-secondary font-semibold">PATH:</span>
-<span class="truncate">assets/images/team/ilagan-paul.jpg</span>
-</div>
-<span class="text-secondary font-mono text-xs px-2 py-0.5 rounded bg-secondary-container/30 shrink-0">ACTIVE</span>
-</div>
-<div class="w-full h-1.5 rounded-full bg-surface-container-highest overflow-hidden mt-1">
-<div class="h-full bg-gradient-to-r from-secondary to-primary w-[92%] rounded-full"></div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Contributing BS CpE Investigators Grid (9 Original Verbatim Members) -->
-<section class="content-visible flex flex-col gap-space-md">
-<div class="flex flex-wrap items-center justify-between gap-space-sm">
-<div class="flex items-center gap-space-xs">
-<span class="material-symbols-outlined text-tertiary text-[20px]">groups</span>
-<h2 class="font-headline-sm text-headline-sm text-on-surface">Contributing BS CpE Investigators</h2>
-</div>
-<div class="flex items-center gap-space-xs px-2.5 py-1 rounded-full bg-surface-container border border-surface-container-high/60 text-on-surface-variant font-label-sm text-label-sm">
-<span>BS CpE 1st Year</span>
-<span>•</span>
-<span class="text-tertiary font-semibold">9 Active Co-Investigators</span>
-</div>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-md">
-<!-- Member 1: ARCEGA, MA. SOFHIA A. -->
-<div class="group relative rounded-xl bg-surface-container-low hover:bg-surface-container border border-surface-container-high/60 transition-all duration-200 p-space-md shadow-md hover:shadow-xl flex flex-col justify-between gap-space-md hover:-translate-y-1">
-<div class="flex items-center gap-space-sm">
-<div class="w-12 h-12 rounded-lg bg-surface-container-high border border-primary/20 flex items-center justify-center shadow-[0_0_12px_rgba(56,189,248,0.15)] group-hover:shadow-[0_0_20px_rgba(56,189,248,0.4)] group-hover:bg-primary-container transition-all shrink-0">
-<span class="font-title-md text-title-md font-bold text-primary group-hover:text-on-primary-container">MS</span>
-</div>
-<div class="flex flex-col min-w-0">
-<span class="font-title-sm text-title-sm font-semibold text-on-surface group-hover:text-primary transition-colors truncate">
-              ARCEGA, MA. SOFHIA A.
-            </span>
-<div class="flex items-center gap-1.5">
-<span class="text-[10px] px-1.5 py-0.2 rounded bg-surface-container-highest text-tertiary font-semibold uppercase">MEMBER</span>
-<span class="font-label-sm text-label-sm text-outline truncate">BS CpE Investigator</span>
-</div>
-</div>
-</div>
-<!-- Technical Repository Slot -->
-<div class="p-2 rounded bg-surface-container-lowest/80 border border-dashed border-outline-variant/60 flex items-center justify-between">
-<span class="font-label-sm text-label-sm text-on-surface-variant font-mono truncate">assets/images/team/arcega-sofhia.jpg</span>
-<span class="material-symbols-outlined text-outline text-[16px] group-hover:text-primary transition-colors shrink-0 ml-1">memory</span>
-</div>
-</div>
-<!-- Member 2: BENDAÑA, JOYLENE B. -->
-<div class="group relative rounded-xl bg-surface-container-low hover:bg-surface-container border border-surface-container-high/60 transition-all duration-200 p-space-md shadow-md hover:shadow-xl flex flex-col justify-between gap-space-md hover:-translate-y-1">
-<div class="flex items-center gap-space-sm">
-<div class="w-12 h-12 rounded-lg bg-surface-container-high border border-primary/20 flex items-center justify-center shadow-[0_0_12px_rgba(56,189,248,0.15)] group-hover:shadow-[0_0_20px_rgba(56,189,248,0.4)] group-hover:bg-primary-container transition-all shrink-0">
-<span class="font-title-md text-title-md font-bold text-primary group-hover:text-on-primary-container">JB</span>
-</div>
-<div class="flex flex-col min-w-0">
-<span class="font-title-sm text-title-sm font-semibold text-on-surface group-hover:text-primary transition-colors truncate">
-              BENDAÑA, JOYLENE B.
-            </span>
-<div class="flex items-center gap-1.5">
-<span class="text-[10px] px-1.5 py-0.2 rounded bg-surface-container-highest text-tertiary font-semibold uppercase">MEMBER</span>
-<span class="font-label-sm text-label-sm text-outline truncate">BS CpE Investigator</span>
-</div>
-</div>
-</div>
-<!-- Technical Repository Slot -->
-<div class="p-2 rounded bg-surface-container-lowest/80 border border-dashed border-outline-variant/60 flex items-center justify-between">
-<span class="font-label-sm text-label-sm text-on-surface-variant font-mono truncate">assets/images/team/bendana-joylene.jpg</span>
-<span class="material-symbols-outlined text-outline text-[16px] group-hover:text-primary transition-colors shrink-0 ml-1">database</span>
-</div>
-</div>
-<!-- Member 3: BINABAN, BRYAN JUSTINE L. -->
-<div class="group relative rounded-xl bg-surface-container-low hover:bg-surface-container border border-surface-container-high/60 transition-all duration-200 p-space-md shadow-md hover:shadow-xl flex flex-col justify-between gap-space-md hover:-translate-y-1">
-<div class="flex items-center gap-space-sm">
-<div class="w-12 h-12 rounded-lg bg-surface-container-high border border-primary/20 flex items-center justify-center shadow-[0_0_12px_rgba(56,189,248,0.15)] group-hover:shadow-[0_0_20px_rgba(56,189,248,0.4)] group-hover:bg-primary-container transition-all shrink-0">
-<span class="font-title-md text-title-md font-bold text-primary group-hover:text-on-primary-container">BB</span>
-</div>
-<div class="flex flex-col min-w-0">
-<span class="font-title-sm text-title-sm font-semibold text-on-surface group-hover:text-primary transition-colors truncate">
-              BINABAN, BRYAN JUSTINE L.
-            </span>
-<div class="flex items-center gap-1.5">
-<span class="text-[10px] px-1.5 py-0.2 rounded bg-surface-container-highest text-tertiary font-semibold uppercase">MEMBER</span>
-<span class="font-label-sm text-label-sm text-outline truncate">BS CpE Investigator</span>
-</div>
-</div>
-</div>
-<!-- Technical Repository Slot -->
-<div class="p-2 rounded bg-surface-container-lowest/80 border border-dashed border-outline-variant/60 flex items-center justify-between">
-<span class="font-label-sm text-label-sm text-on-surface-variant font-mono truncate">assets/images/team/binaban-bryan.jpg</span>
-<span class="material-symbols-outlined text-outline text-[16px] group-hover:text-primary transition-colors shrink-0 ml-1">analytics</span>
-</div>
-</div>
-<!-- Member 4: BONCODIN, ZAMROHBERT R. -->
-<div class="group relative rounded-xl bg-surface-container-low hover:bg-surface-container border border-surface-container-high/60 transition-all duration-200 p-space-md shadow-md hover:shadow-xl flex flex-col justify-between gap-space-md hover:-translate-y-1">
-<div class="flex items-center gap-space-sm">
-<div class="w-12 h-12 rounded-lg bg-surface-container-high border border-tertiary/20 flex items-center justify-center shadow-[0_0_12px_rgba(78,230,170,0.15)] group-hover:shadow-[0_0_20px_rgba(78,230,170,0.4)] group-hover:bg-tertiary-container transition-all shrink-0">
-<span class="font-title-md text-title-md font-bold text-tertiary group-hover:text-on-tertiary-container">ZB</span>
-</div>
-<div class="flex flex-col min-w-0">
-<span class="font-title-sm text-title-sm font-semibold text-on-surface group-hover:text-tertiary transition-colors truncate">
-              BONCODIN, ZAMROHBERT R.
-            </span>
-<div class="flex items-center gap-1.5">
-<span class="text-[10px] px-1.5 py-0.2 rounded bg-surface-container-highest text-tertiary font-semibold uppercase">MEMBER</span>
-<span class="font-label-sm text-label-sm text-outline truncate">BS CpE Investigator</span>
-</div>
-</div>
-</div>
-<!-- Technical Repository Slot -->
-<div class="p-2 rounded bg-surface-container-lowest/80 border border-dashed border-outline-variant/60 flex items-center justify-between">
-<span class="font-label-sm text-label-sm text-on-surface-variant font-mono truncate">assets/images/team/boncodin-zamrohbert.jpg</span>
-<span class="material-symbols-outlined text-outline text-[16px] group-hover:text-tertiary transition-colors shrink-0 ml-1">lan</span>
-</div>
-</div>
-<!-- Member 5: DE SAGUN, JAN GABRIEL -->
-<div class="group relative rounded-xl bg-surface-container-low hover:bg-surface-container border border-surface-container-high/60 transition-all duration-200 p-space-md shadow-md hover:shadow-xl flex flex-col justify-between gap-space-md hover:-translate-y-1">
-<div class="flex items-center gap-space-sm">
-<div class="w-12 h-12 rounded-lg bg-surface-container-high border border-tertiary/20 flex items-center justify-center shadow-[0_0_12px_rgba(78,230,170,0.15)] group-hover:shadow-[0_0_20px_rgba(78,230,170,0.4)] group-hover:bg-tertiary-container transition-all shrink-0">
-<span class="font-title-md text-title-md font-bold text-tertiary group-hover:text-on-tertiary-container">JD</span>
-</div>
-<div class="flex flex-col min-w-0">
-<span class="font-title-sm text-title-sm font-semibold text-on-surface group-hover:text-tertiary transition-colors truncate">
-              DE SAGUN, JAN GABRIEL
-            </span>
-<div class="flex items-center gap-1.5">
-<span class="text-[10px] px-1.5 py-0.2 rounded bg-surface-container-highest text-tertiary font-semibold uppercase">MEMBER</span>
-<span class="font-label-sm text-label-sm text-outline truncate">BS CpE Investigator</span>
-</div>
-</div>
-</div>
-<!-- Technical Repository Slot -->
-<div class="p-2 rounded bg-surface-container-lowest/80 border border-dashed border-outline-variant/60 flex items-center justify-between">
-<span class="font-label-sm text-label-sm text-on-surface-variant font-mono truncate">assets/images/team/desagun-jan.jpg</span>
-<span class="material-symbols-outlined text-outline text-[16px] group-hover:text-tertiary transition-colors shrink-0 ml-1">terminal</span>
-</div>
-</div>
-<!-- Member 6: ESCALA, APRIL JOYCE A. -->
-<div class="group relative rounded-xl bg-surface-container-low hover:bg-surface-container border border-surface-container-high/60 transition-all duration-200 p-space-md shadow-md hover:shadow-xl flex flex-col justify-between gap-space-md hover:-translate-y-1">
-<div class="flex items-center gap-space-sm">
-<div class="w-12 h-12 rounded-lg bg-surface-container-high border border-tertiary/20 flex items-center justify-center shadow-[0_0_12px_rgba(78,230,170,0.15)] group-hover:shadow-[0_0_20px_rgba(78,230,170,0.4)] group-hover:bg-tertiary-container transition-all shrink-0">
-<span class="font-title-md text-title-md font-bold text-tertiary group-hover:text-on-tertiary-container">AE</span>
-</div>
-<div class="flex flex-col min-w-0">
-<span class="font-title-sm text-title-sm font-semibold text-on-surface group-hover:text-tertiary transition-colors truncate">
-              ESCALA, APRIL JOYCE A.
-            </span>
-<div class="flex items-center gap-1.5">
-<span class="text-[10px] px-1.5 py-0.2 rounded bg-surface-container-highest text-tertiary font-semibold uppercase">MEMBER</span>
-<span class="font-label-sm text-label-sm text-outline truncate">BS CpE Investigator</span>
-</div>
-</div>
-</div>
-<!-- Technical Repository Slot -->
-<div class="p-2 rounded bg-surface-container-lowest/80 border border-dashed border-outline-variant/60 flex items-center justify-between">
-<span class="font-label-sm text-label-sm text-on-surface-variant font-mono truncate">assets/images/team/escala-april.jpg</span>
-<span class="material-symbols-outlined text-outline text-[16px] group-hover:text-tertiary transition-colors shrink-0 ml-1">speed</span>
-</div>
-</div>
-<!-- Member 7: RAMOS, JUSTIN ROVIC A. -->
-<div class="group relative rounded-xl bg-surface-container-low hover:bg-surface-container border border-surface-container-high/60 transition-all duration-200 p-space-md shadow-md hover:shadow-xl flex flex-col justify-between gap-space-md hover:-translate-y-1">
-<div class="flex items-center gap-space-sm">
-<div class="w-12 h-12 rounded-lg bg-surface-container-high border border-secondary/20 flex items-center justify-center shadow-[0_0_12px_rgba(189,194,255,0.15)] group-hover:shadow-[0_0_20px_rgba(189,194,255,0.4)] group-hover:bg-secondary-container transition-all shrink-0">
-<span class="font-title-md text-title-md font-bold text-secondary group-hover:text-on-secondary-container">JR</span>
-</div>
-<div class="flex flex-col min-w-0">
-<span class="font-title-sm text-title-sm font-semibold text-on-surface group-hover:text-secondary transition-colors truncate">
-              RAMOS, JUSTIN ROVIC A.
-            </span>
-<div class="flex items-center gap-1.5">
-<span class="text-[10px] px-1.5 py-0.2 rounded bg-surface-container-highest text-tertiary font-semibold uppercase">MEMBER</span>
-<span class="font-label-sm text-label-sm text-outline truncate">BS CpE Investigator</span>
-</div>
-</div>
-</div>
-<!-- Technical Repository Slot -->
-<div class="p-2 rounded bg-surface-container-lowest/80 border border-dashed border-outline-variant/60 flex items-center justify-between">
-<span class="font-label-sm text-label-sm text-on-surface-variant font-mono truncate">assets/images/team/ramos-justin.jpg</span>
-<span class="material-symbols-outlined text-outline text-[16px] group-hover:text-secondary transition-colors shrink-0 ml-1">dns</span>
-</div>
-</div>
-<!-- Member 8: SERRANO, REX EMIL B. -->
-<div class="group relative rounded-xl bg-surface-container-low hover:bg-surface-container border border-surface-container-high/60 transition-all duration-200 p-space-md shadow-md hover:shadow-xl flex flex-col justify-between gap-space-md hover:-translate-y-1">
-<div class="flex items-center gap-space-sm">
-<div class="w-12 h-12 rounded-lg bg-surface-container-high border border-secondary/20 flex items-center justify-center shadow-[0_0_12px_rgba(189,194,255,0.15)] group-hover:shadow-[0_0_20px_rgba(189,194,255,0.4)] group-hover:bg-secondary-container transition-all shrink-0">
-<span class="font-title-md text-title-md font-bold text-secondary group-hover:text-on-secondary-container">RS</span>
-</div>
-<div class="flex flex-col min-w-0">
-<span class="font-title-sm text-title-sm font-semibold text-on-surface group-hover:text-secondary transition-colors truncate">
-              SERRANO, REX EMIL B.
-            </span>
-<div class="flex items-center gap-1.5">
-<span class="text-[10px] px-1.5 py-0.2 rounded bg-surface-container-highest text-tertiary font-semibold uppercase">MEMBER</span>
-<span class="font-label-sm text-label-sm text-outline truncate">BS CpE Investigator</span>
-</div>
-</div>
-</div>
-<!-- Technical Repository Slot -->
-<div class="p-2 rounded bg-surface-container-lowest/80 border border-dashed border-outline-variant/60 flex items-center justify-between">
-<span class="font-label-sm text-label-sm text-on-surface-variant font-mono truncate">assets/images/team/serrano-rex.jpg</span>
-<span class="material-symbols-outlined text-outline text-[16px] group-hover:text-secondary transition-colors shrink-0 ml-1">psychology</span>
-</div>
-</div>
-<!-- Member 9: TINAMISAN, ANGELICA MARIE V. -->
-<div class="group relative rounded-xl bg-surface-container-low hover:bg-surface-container border border-surface-container-high/60 transition-all duration-200 p-space-md shadow-md hover:shadow-xl flex flex-col justify-between gap-space-md hover:-translate-y-1">
-<div class="flex items-center gap-space-sm">
-<div class="w-12 h-12 rounded-lg bg-surface-container-high border border-secondary/20 flex items-center justify-center shadow-[0_0_12px_rgba(189,194,255,0.15)] group-hover:shadow-[0_0_20px_rgba(189,194,255,0.4)] group-hover:bg-secondary-container transition-all shrink-0">
-<span class="font-title-md text-title-md font-bold text-secondary group-hover:text-on-secondary-container">AT</span>
-</div>
-<div class="flex flex-col min-w-0">
-<span class="font-title-sm text-title-sm font-semibold text-on-surface group-hover:text-secondary transition-colors truncate">
-              TINAMISAN, ANGELICA MARIE V.
-            </span>
-<div class="flex items-center gap-1.5">
-<span class="text-[10px] px-1.5 py-0.2 rounded bg-surface-container-highest text-tertiary font-semibold uppercase">MEMBER</span>
-<span class="font-label-sm text-label-sm text-outline truncate">BS CpE Investigator</span>
-</div>
-</div>
-</div>
-<!-- Technical Repository Slot -->
-<div class="p-2 rounded bg-surface-container-lowest/80 border border-dashed border-outline-variant/60 flex items-center justify-between">
-<span class="font-label-sm text-label-sm text-on-surface-variant font-mono truncate">assets/images/team/tinamisan-angelica.jpg</span>
-<span class="material-symbols-outlined text-outline text-[16px] group-hover:text-secondary transition-colors shrink-0 ml-1">cloud_sync</span>
-</div>
-</div>
-</div>
-</section>
-<!-- Lab & Departmental Research Environment Feature -->
-<section class="content-visible grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center rounded-xl bg-surface-container border border-surface-container-high/60 p-space-lg shadow-xl">
-<div class="lg:col-span-7 flex flex-col gap-space-sm">
-<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-tertiary uppercase tracking-wider">
-<span class="material-symbols-outlined text-[16px]">domain</span>
-<span>BatStateU Alangilan • CEAFA Computing Lab</span>
-</div>
-<h3 class="font-headline-md text-headline-md text-on-surface font-bold">
-          Empirical Research Pipeline &amp; Collaborative Protocols
-        </h3>
-<p class="font-body-md text-body-md text-on-surface-variant">
-          This investigation was formulated under the GEd 104 module, synthesizing foundational engineering metrics, hardware telemetric tracking, and national infrastructure readiness frameworks. Authors collaboratively authored datasets, telemetry records, and verified policy frameworks.
-        </p>
-<div class="flex flex-wrap items-center gap-space-sm mt-space-xs">
-<span class="px-2.5 py-1 rounded bg-surface-container-highest font-label-sm text-label-sm text-on-surface-variant">
-            ISO 9001:2015 Institutional Protocol
-          </span>
-<span class="px-2.5 py-1 rounded bg-surface-container-highest font-label-sm text-label-sm text-primary">
-            CHED Center of Excellence (CpE)
-          </span>
-</div>
-</div>
-<!-- Department Verification Graphic -->
-<div class="lg:col-span-5 relative overflow-hidden rounded-xl bg-surface-container-lowest p-space-md flex flex-col gap-space-sm shadow-inner border border-surface-container-high/40">
-<div class="flex items-center justify-between">
-<span class="font-label-sm text-label-sm text-outline uppercase font-mono">AUTH_VERIFY_HASH</span>
-<span class="font-label-sm text-label-sm text-tertiary font-mono">200_OK</span>
-</div>
-<!-- Inline Telemetry SVG Vector Chart -->
-<div class="w-full h-24 flex items-center justify-center">
-<svg class="w-full h-full text-primary" fill="none" viewbox="0 0 300 80" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 60 C 40 60, 60 20, 100 25 C 140 30, 160 55, 200 40 C 240 25, 260 10, 300 15" fill="none" opacity="0.8" stroke="currentColor" stroke-linecap="round" stroke-width="2.5"></path>
-<path d="M0 60 C 40 60, 60 20, 100 25 C 140 30, 160 55, 200 40 C 240 25, 260 10, 300 15 L 300 80 L 0 80 Z" fill="url(#gradient-cyan)" opacity="0.15"></path>
-<circle cx="100" cy="25" fill="#38bdf8" r="4"></circle>
-<circle cx="200" cy="40" fill="#4ee6aa" r="4"></circle>
-<circle cx="300" cy="15" fill="#bdc2ff" r="4"></circle>
-<defs>
-<lineargradient id="gradient-cyan" x1="0%" x2="0%" y1="0%" y2="100%">
-<stop offset="0%" stop-color="#38bdf8"></stop>
-<stop offset="100%" stop-color="transparent"></stop>
-</lineargradient>
-</defs>
-</svg>
-</div>
-<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant pt-space-xs">
-<span>Peer Convergence: 99.4%</span>
-<span class="font-mono text-primary">SIG_OK: GEd104-CpE</span>
-</div>
-</div>
-</section>
-<!-- Sleek Technical Pagination Bar -->
-<nav aria-label="Portal Navigation" class="content-visible flex flex-col sm:flex-row items-center justify-between gap-space-md pt-space-lg">
-<a class="w-full sm:w-auto inline-flex items-center justify-center gap-space-sm px-space-lg py-space-sm rounded-lg bg-surface-container-high hover:bg-surface-bright text-on-surface hover:text-primary transition-all duration-200 shadow-md font-body-md text-body-md group" data-path="significance" href="significance.html">
-<span class="material-symbols-outlined text-[18px] text-outline group-hover:text-primary group-hover:-translate-x-1 transition-all">arrow_back</span>
-<span>← Back to Significance</span>
+<div class="flex flex-col sm:flex-row items-center justify-between gap-4 p-4 rounded-2xl bg-surface-container-low border border-outline-variant/30 shadow-sm">
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface font-title-sm text-title-sm transition-all border border-outline-variant/30 group" data-path="significance" href="significance.html">
+<span class="material-symbols-outlined text-[20px] transition-transform group-hover:-translate-x-1">arrow_back</span>
+<span>Back to Significance</span>
 </a>
-<div class="hidden md:flex items-center gap-2">
-<span class="w-2 h-2 rounded-full bg-outline"></span>
-<span class="w-2 h-2 rounded-full bg-outline"></span>
-<span class="w-2 h-2 rounded-full bg-outline"></span>
-<span class="w-6 h-2 rounded-full bg-primary"></span>
-<span class="w-2 h-2 rounded-full bg-outline"></span>
+<div class="flex items-center gap-2 text-on-surface-variant font-mono text-[12px]">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+<span>Academic Portfolio • Section 05 of 06</span>
 </div>
-<a class="w-full sm:w-auto inline-flex items-center justify-center gap-space-sm px-space-lg py-space-sm rounded-lg bg-primary-container hover:bg-surface-tint text-on-primary-container font-title-sm text-title-sm transition-all duration-200 shadow-[0_0_20px_rgba(56,189,248,0.25)] hover:shadow-[0_0_30px_rgba(56,189,248,0.45)] group" data-path="references" href="references.html">
-<span>Next: References →</span>
-<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-all">arrow_forward</span>
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-primary-container hover:brightness-110 text-on-primary-container font-title-sm text-title-sm font-semibold transition-all shadow-[0_0_20px_rgba(56,189,248,0.35)] group" data-path="references" href="references.html">
+<span>Next: References</span>
+<span class="material-symbols-outlined text-[20px] transition-transform group-hover:translate-x-1">arrow_forward</span>
 </a>
-</nav>
 </div>
-</div></main><footer class="w-full bg-surface-container-low mt-space-xl py-space-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] relative z-10 border-t border-surface-container-high/40"><div class="w-full px-gutter"><div class="grid grid-cols-1 md:grid-cols-12 gap-space-lg pb-space-lg"><div class="md:col-span-5 flex flex-col gap-space-sm"><div class="flex items-center gap-space-sm"><div class="flex items-center gap-space-xs"><img alt="TechTrack PH Logo" class="w-6 h-6 rounded object-contain inline-block" onerror="this.onerror=null; this.src='https://lh3.googleusercontent.com/aida-public/AB6AXuDxaV5ELLFulbT8GfaG807cFnOOP0TUwETeHyLaWt9n2uNwYnKDIrlmiBMqcr598uoF1yDv9M77Y9nlYnBnuo0hc8FTTB-hpK7uQWz04VMK8KEG8psnaDpoIzb1ZWLRg1UVFP2h5aPqUfi3DqslTgxptX15lFCGLWkfYpRaCnloHDwvs_OTG5y4OROt4B7Vc8jYkCvY-G5ljmuVxkY3KIk-d_5XPM9Z12jzktILcds';" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2AayN5mklVxezkY_3ydU6nY1ll2bXr6n7myM8WPJcTBbRjZVWGMsrS0rT6SUaBcDNdxWHtOmTerTdwKXgqXDl1pkNKBlZSDXh6SvPz2MF-dRz07FKkmXxoksF05cpbuZa9bFQdMceGpET-8JcRagiDqsecQwod9pd5ERdsMxaZ5aiaZ2GZvW7TKYnlRS80vib1WXBy-puy9OriFtSFCRlu3SRgFff3_qZ9KErsc4"/><span class="font-headline-sm text-headline-sm text-primary font-bold">TechTrack PH</span></div><span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm">GEd 104</span></div><p class="font-body-sm text-body-sm text-on-surface-variant max-w-md">Academic and institutional research initiative examining technological modernization, localized infrastructure metrics, and national development frameworks.</p><div class="flex items-center gap-space-xs font-label-md text-label-md text-tertiary"><span class="material-symbols-outlined text-[16px]">verified</span>Batangas State University - The National Engineering University</div></div><div class="md:col-span-4 flex flex-col gap-space-xs"><span class="font-title-sm text-title-sm text-on-surface uppercase tracking-wider">Institutional Affiliation</span><p class="font-body-sm text-body-sm text-on-surface-variant">College of Engineering, Architecture and Fine Arts (CEAFA)</p><p class="font-body-sm text-body-sm text-on-surface-variant">BatStateU Alangilan Campus</p><p class="font-body-sm text-body-sm text-on-surface-variant">Golden Country Homes, Alangilan, Batangas City, Philippines</p><div class="flex items-center gap-space-sm mt-space-xs"><span class="font-label-sm text-label-sm text-outline">Campus Code:</span><span class="font-label-sm text-label-sm text-primary">ALN-CEAFA</span></div></div><div class="md:col-span-3 flex flex-col gap-space-xs"><span class="font-title-sm text-title-sm text-on-surface uppercase tracking-wider">Portal Navigation</span><ul class="flex flex-col gap-1 font-body-sm text-body-sm text-on-surface-variant"><li class="hover:text-primary transition-colors"><a data-path="overview" href="index.html">Overview Workspace</a></li><li class="hover:text-primary transition-colors"><a data-path="introduction" href="introduction.html">Conceptual Framework</a></li><li class="hover:text-primary transition-colors"><a data-path="discussion" href="discussion.html">Analytical Discussion</a></li><li class="hover:text-primary transition-colors"><a data-path="significance" href="significance.html">National Significance</a></li><li class="hover:text-primary transition-colors"><a data-path="references" href="references.html">Scholarly Citations</a></li></ul></div></div><div class="pt-space-md flex flex-col sm:flex-row items-center justify-between gap-space-md font-body-sm text-body-sm text-outline"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[16px]">school</span><span>© 2025 BatStateU The NEU Alangilan • GEd 104 Research Group</span></div><div class="flex items-center gap-space-md font-label-sm text-label-sm"><span class="text-tertiary">CEAFA Scientific Repository</span><span>•</span><span>Open Scholarly Access</span></div></div></div></footer><script>
-// Dark/Light Mode Toggle Script
-(function() {
-  const toggleBtn = document.getElementById('theme-toggle-btn');
-  const toggleIcon = document.getElementById('theme-toggle-icon');
-  const root = document.documentElement;
-
-  function applyTheme(isDark) {
-    if (isDark) {
-      root.classList.add('dark');
-      if (toggleIcon) toggleIcon.textContent = 'light_mode';
-    } else {
-      root.classList.remove('dark');
-      if (toggleIcon) toggleIcon.textContent = 'dark_mode';
-    }
-  }
-
-  const savedTheme = localStorage.getItem('techtrack_theme') || localStorage.getItem('techtrack-theme');
-  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  const isInitialDark = savedTheme ? (savedTheme === 'dark') : (prefersDark !== false);
-
-  applyTheme(isInitialDark);
-
-  if (toggleBtn) {
-    toggleBtn.addEventListener('click', function(e) {
-      e.preventDefault();
-      const currentIsDark = root.classList.contains('dark');
-      const targetDark = !currentIsDark;
-      applyTheme(targetDark);
-      localStorage.setItem('techtrack_theme', targetDark ? 'dark' : 'light');
-      localStorage.setItem('techtrack-theme', targetDark ? 'dark' : 'light');
+</section>
+</div>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const navLinks = document.querySelectorAll('header nav a');
+    navLinks.forEach(link => {
+      if (link.getAttribute('data-path') === 'research-team' || link.getAttribute('href') === 'team.html') {
+        link.className = 'px-3.5 py-1.5 transition-all bg-primary-container text-on-primary-container font-semibold rounded-lg shadow-[0_0_12px_rgba(56,189,248,0.4)] flex items-center gap-1.5 font-title-sm text-title-sm';
+      }
     });
-  }
-})();
-</script></body></html>
+  });
+</script></main><footer class="relative z-10 w-full bg-surface-container-low mt-16 border-t border-surface-variant/40 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="max-w-7xl mx-auto px-6 lg:px-12 py-12 flex flex-col gap-8"><div class="flex flex-col md:flex-row md:items-start justify-between gap-6"><div class="space-y-3 max-w-xl"><div class="flex items-center gap-3"><img alt="Batangas State University CpE Logo" class="w-10 h-10 object-contain drop-shadow" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8I4Y4qA3HiYpx-eP2bNItynO3o-zxGMmZ10pnuXHJ4DyJ-FZH94xZvHh4ldZ5plNjawoUYgPG6F-1pMEGESBuGniDYeJ8it-fohcYd8ZYVxgoB6K7Z-XTzEcNANwzDZKQsXLOmN2V3W0w-hTf9wcfWo2tPWH9jYv4I-PVg9A9KeNv7L7FbM64AfZcT9inY_JTpl8ANjJOgohr27qhYzOS5e45SoVLX2lXr5oBX5ARuIJPC2R_o02S"/><div class="flex flex-col"><div class="flex items-center gap-2"><span class="font-headline-sm text-headline-sm font-bold text-on-surface">TechTrack PH</span><span class="font-mono text-label-sm px-2.5 py-0.5 rounded-full bg-primary-container/20 border border-primary/40 text-primary font-semibold">ALN-CEAFA</span></div><span class="font-label-sm text-label-sm text-on-surface-variant">CpE Academic Research Division</span></div></div><p class="font-body-sm text-body-sm text-on-surface-variant">College of Engineering, Architecture and Fine Arts (CEAFA), BatStateU Alangilan Campus, Golden Country Homes, Alangilan, Batangas City, Philippines. Bachelor of Science in Computer Engineering 1st Year - GEd 104.</p></div><div class="flex flex-col gap-2"><span class="font-title-sm text-title-sm text-on-surface font-semibold">Portal Navigation</span><div class="grid grid-cols-2 sm:grid-cols-3 gap-x-6 gap-y-2"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="overview" href="index.html">Overview</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="introduction" href="introduction.html">Introduction</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="discussion" href="discussion.html">Discussion</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="significance" href="significance.html">Significance</a><a class="font-body-sm text-body-sm text-primary font-semibold hover:text-primary transition-colors" data-path="research-team" href="team.html">Research Team</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="references" href="references.html">References</a></div></div></div><div class="pt-6 border-t border-surface-variant/30 flex flex-col sm:flex-row items-center justify-between gap-4"><p class="font-body-sm text-body-sm text-on-surface-variant">© 2025 BatStateU The NEU Alangilan • GEd 104 Research Group • CEAPA Scientific Repository • Open Scholarly Access.</p><div class="flex items-center gap-4 text-on-surface-variant"><span class="font-mono text-[11px]">Campus Code: ALN-CEAFA</span><span class="font-label-sm text-label-sm text-tertiary flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span>Verified Archive</span></div></div></div></footer></body></html>
