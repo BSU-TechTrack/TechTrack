@@ -1,26 +1,42 @@
 <!DOCTYPE html>
 
-<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>TechTrack PH | GEd 104 BSCpE Research Portal</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>TechTrack PH | GEd 104 BSCpE Research Portal</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}@keyframes blob-float{0%,100%{transform:translate(0px,0px) scale(1);}33%{transform:translate(30px,-50px) scale(1.08);}66%{transform:translate(-20px,20px) scale(0.95);}}@keyframes blob-float-reverse{0%,100%{transform:translate(0px,0px) scale(1);}33%{transform:translate(-35px,40px) scale(1.05);}66%{transform:translate(25px,-30px) scale(0.92);}}.animate-blob-1{animation:blob-float 18s ease-in-out infinite;}.animate-blob-2{animation:blob-float-reverse 22s ease-in-out infinite;}.animate-blob-3{animation:blob-float 26s ease-in-out infinite;}.bg-grid-cyber{background-size:36px 36px;background-image:linear-gradient(to right,rgba(255,255,255,0.03) 1px,transparent 1px),linear-gradient(to bottom,rgba(255,255,255,0.03) 1px,transparent 1px);}
-/* Scroll reveal styles */
-.scroll-reveal {
+
+/* Scroll Reveal Styling */
+.reveal-item {
   opacity: 0;
   transform: translateY(28px);
   transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
   will-change: opacity, transform;
 }
-.scroll-reveal.is-visible {
-  opacity: 1;
-  transform: translateY(0);
+.reveal-item.is-revealed {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+.reveal-item[data-delay="100"] {
+  transition-delay: 100ms;
+}
+.reveal-item[data-delay="150"] {
+  transition-delay: 150ms;
+}
+.reveal-item[data-delay="200"] {
+  transition-delay: 200ms;
+}
+.reveal-item[data-delay="250"] {
+  transition-delay: 250ms;
+}
+.reveal-item[data-delay="300"] {
+  transition-delay: 300ms;
 }
 @media (prefers-reduced-motion: reduce) {
-  .scroll-reveal {
+  .reveal-item {
     opacity: 1 !important;
     transform: none !important;
     transition: none !important;
   }
 }
-</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config = {
     darkMode: "class",
     theme: {
       extend: {
@@ -233,9 +249,9 @@
         }
       },
     },
-  };</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased relative min-h-screen selection:bg-primary selection:text-on-primary"><div class="fixed inset-0 pointer-events-none z-0 overflow-hidden"><div class="absolute -top-32 left-1/4 w-[500px] h-[500px] rounded-full bg-sky-600/15 blur-[120px] animate-blob-1"></div><div class="absolute top-1/3 -right-24 w-[450px] h-[450px] rounded-full bg-teal-600/15 blur-[130px] animate-blob-2"></div><div class="absolute -bottom-40 left-1/3 w-[550px] h-[550px] rounded-full bg-primary-container/10 blur-[140px] animate-blob-3"></div><div class="absolute inset-0 bg-grid-cyber opacity-75"></div></div><header class="fixed top-0 left-0 right-0 w-full z-50 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.12)]"><div class="h-20 w-full max-w-7xl mx-auto px-gutter flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md"><div class="relative flex items-center justify-center p-space-xs rounded-lg bg-surface-container/60 shadow-[0_0_16px_rgba(56,189,248,0.15)]"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/ALJJyrD70Mqaz-Z-5Wk9K6vnxSldkJtxg8ZVMvaGR7_QMK0sRd4tYIWdEPvvqgCRdMsHlx6OK2N-1-3_l2-ULfSW3iuz2mF2U4OQg4kh1Gl8ndZkU5XmEAMXOQyL8-Zx6PVj5BL8AkT6l1AidcjGD1N0Wgt3e0FuribDcZgUQ00IP_u-tla9EMQvAAyDS5_eHuxUhfjBUS9oNScPddH_a_-DapyhC3AhBGsdGlL82u5yHDdtIc5Ih1kVUydiJQ"/></div><div class="flex flex-col"><div class="flex items-center gap-space-sm"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">TechTrack PH</span><span class="px-space-sm py-0.5 rounded-full bg-primary-container/20 text-primary font-label-sm text-label-sm uppercase tracking-wider">GEd 104</span></div><span class="font-label-sm text-label-sm text-on-surface-variant">TNEU Alangilan • BSCpE Research</span></div></div><nav class="hidden xl:flex items-center gap-space-xs p-1 rounded-xl bg-surface-container-low/70 backdrop-blur-md" data-active-classes="bg-surface-container-highest text-primary font-title-sm"><a class="px-space-md py-space-xs rounded-lg font-title-sm text-title-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="overview" href="index.html">Overview</a><a class="px-space-md py-space-xs rounded-lg font-title-sm text-title-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="introduction" href="introduction.html">Introduction</a><a class="px-space-md py-space-xs rounded-lg font-title-sm text-title-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="discussion" href="discussion.html">Discussion</a><a aria-current="page" class="px-space-md py-space-xs rounded-lg transition-colors bg-surface-container-highest text-primary font-title-sm" data-path="significance" href="significance.html">Significance</a><a class="px-space-md py-space-xs rounded-lg font-title-sm text-title-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="research-team" href="team.html">Research Team</a><a class="px-space-md py-space-xs rounded-lg font-title-sm text-title-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="references" href="references.html">References</a></nav><div class="flex items-center gap-space-md"><div class="hidden sm:flex items-center gap-space-xs px-space-md py-1 rounded-full bg-tertiary-container/15 text-tertiary font-label-sm text-label-sm tracking-wider uppercase"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-tertiary"></span></span><span>NODE // 11</span></div><button aria-label="Toggle color mode" class="p-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors flex items-center justify-center" id="theme-toggle-btn" type="button"><span class="material-symbols-outlined text-title-md" id="theme-toggle-icon">light_mode</span></button></div></div></header><main class="relative z-10 w-full pt-20 bg-transparent min-h-[calc(100vh-20rem)]"><div class="flex flex-col w-full">
+  };</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased relative min-h-screen selection:bg-primary selection:text-on-primary"><div class="fixed inset-0 pointer-events-none z-0 overflow-hidden"><div class="absolute -top-32 left-1/4 w-[500px] h-[500px] rounded-full bg-sky-600/15 blur-[120px] animate-blob-1"></div><div class="absolute top-1/3 -right-24 w-[450px] h-[450px] rounded-full bg-teal-600/15 blur-[130px] animate-blob-2"></div><div class="absolute -bottom-40 left-1/3 w-[550px] h-[550px] rounded-full bg-primary-container/10 blur-[140px] animate-blob-3"></div><div class="absolute inset-0 bg-grid-cyber opacity-75" id="interactive-grid"></div></div><header class="fixed top-0 left-0 right-0 w-full z-50 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.12)]"><div class="h-20 w-full max-w-7xl mx-auto px-gutter flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md"><div class="relative flex items-center justify-center p-space-xs rounded-lg bg-surface-container/60 shadow-[0_0_16px_rgba(56,189,248,0.15)]"><img alt="Batangas State University CpE Emblem" class="w-8 h-8 rounded-full object-cover" onerror="this.onerror=null; this.src='https://lh3.googleusercontent.com/aida-public/AB6AXuDcgohrFTFS3LT2BduSSLWnYz_0ZcKO75GLNqh8Odfqfm14gyE8RJfM7P8p7w-EtnzpCKbWYf-1SCALFK5tVaG7cxoD2hRWHCb1k1gT9gAqPUDf68f_-Hum_HD4-X92bZpeMfQqX6uv-rEBP-BkT0jwww5bn7pGGvMj0FzpK_Gv_41OnUuNgp_zzIMHGV1th4aA2FohSncObJwBwf1Tho_ipMPeOpAZjkB95sHY5iXJxolk921iSgJq';" src="https://lh3.googleusercontent.com/aida-public/AB6AXuByyxdNsqJfM--SAfuxS7d2kgDdSExuMEVJ7RAB7vc_URUlUN4WiK2qds1lYU8jRhugh5FVqhBY_5mjIAaw8ZrqPaWt7-vEPVNjv1bscskn2fCFDVGLFOMcOihmMrZ0DaMDFuTjEB_M0REbD4ZFHShJ2MVr6AfKWYUmyM4vBmkPZCTTVwVTSCYkpyPCm6aANAJGtaodj6WWCKhwipw-gf1Ov2tvVIcCQSjycXk5yTA"/></div><div class="flex flex-col"><div class="flex items-center gap-space-sm"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">TechTrack PH</span><span class="px-space-sm py-0.5 rounded-full bg-primary-container/20 text-primary font-label-sm text-label-sm uppercase tracking-wider">GEd 104</span></div><span class="font-label-sm text-label-sm text-on-surface-variant">TNEU Alangilan • BSCpE Research</span></div></div><nav class="hidden xl:flex items-center gap-space-xs p-1 rounded-xl bg-surface-container-low/70 backdrop-blur-md" data-active-classes="bg-surface-container-highest text-primary font-title-sm"><a class="px-space-md py-space-xs rounded-lg font-title-sm text-title-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="overview" href="index.html">Overview</a><a class="px-space-md py-space-xs rounded-lg font-title-sm text-title-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="introduction" href="introduction.html">Introduction</a><a class="px-space-md py-space-xs rounded-lg font-title-sm text-title-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="discussion" href="discussion.html">Discussion</a><a aria-current="page" class="px-space-md py-space-xs rounded-lg transition-colors bg-surface-container-highest text-primary font-title-sm" data-path="significance" href="significance.html">Significance</a><a class="px-space-md py-space-xs rounded-lg font-title-sm text-title-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="research-team" href="team.html">Research Team</a><a class="px-space-md py-space-xs rounded-lg font-title-sm text-title-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="references" href="references.html">References</a></nav><div class="flex items-center gap-space-md"><div class="hidden sm:flex items-center gap-space-xs px-space-md py-1 rounded-full bg-tertiary-container/15 text-tertiary font-label-sm text-label-sm tracking-wider uppercase"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-tertiary"></span></span><span>NODE // 11</span></div><button aria-label="Toggle color mode" class="p-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors flex items-center justify-center" id="theme-toggle-btn" type="button"><span class="material-symbols-outlined text-title-md" id="theme-toggle-icon">light_mode</span></button></div></div></header><main class="relative z-10 w-full pt-20 bg-transparent min-h-[calc(100vh-20rem)]"><div class="flex flex-col w-full">
 <!-- SECTION HEADER & TELEMETRY STRIP -->
-<section class="w-full max-w-7xl mx-auto px-gutter pt-space-md pb-space-lg scroll-reveal" data-reveal="">
+<section class="w-full max-w-7xl mx-auto px-gutter pt-space-md pb-space-lg reveal-item">
 <!-- Breadcrumb Telemetry Bar -->
 <div class="flex flex-wrap items-center justify-between gap-space-sm mb-space-lg">
 <div class="flex items-center gap-space-sm">
@@ -307,7 +323,7 @@
 <!-- Grid Level 1: Vectors 01 & 02 -->
 <div class="grid grid-cols-1 md:grid-cols-2 gap-space-lg mb-space-lg">
 <!-- VECTOR 01: Students -->
-<div class="relative group p-space-lg rounded-xl bg-surface-container/80 shadow-md hover:shadow-xl hover:bg-surface-container-high transition-all duration-300 flex flex-col justify-between scroll-reveal" data-reveal="">
+<div class="reveal-item relative group p-space-lg rounded-xl bg-surface-container/80 shadow-md hover:shadow-xl hover:bg-surface-container-high transition-all duration-300 flex flex-col justify-between" data-delay="100">
 <div class="flex flex-col">
 <div class="flex items-center justify-between mb-space-md">
 <div class="flex items-center gap-space-sm">
@@ -339,7 +355,7 @@
 </div>
 </div>
 <!-- VECTOR 02: Teachers and Educators -->
-<div class="relative group p-space-lg rounded-xl bg-surface-container/80 shadow-md hover:shadow-xl hover:bg-surface-container-high transition-all duration-300 flex flex-col justify-between scroll-reveal" data-reveal="">
+<div class="reveal-item relative group p-space-lg rounded-xl bg-surface-container/80 shadow-md hover:shadow-xl hover:bg-surface-container-high transition-all duration-300 flex flex-col justify-between" data-delay="200">
 <div class="flex flex-col">
 <div class="flex items-center justify-between mb-space-md">
 <div class="flex items-center gap-space-sm">
@@ -372,7 +388,7 @@
 </div>
 </div>
 <!-- VECTOR 03: Campus Anchor (Full Width Hero Card with Imagery) -->
-<div class="relative w-full rounded-2xl bg-surface-container shadow-xl overflow-hidden mb-space-lg scroll-reveal" data-reveal="">
+<div class="reveal-item relative w-full rounded-2xl bg-surface-container shadow-xl overflow-hidden mb-space-lg" data-delay="150">
 <div class="grid grid-cols-1 lg:grid-cols-12 items-stretch">
 <div class="lg:col-span-8 p-space-lg lg:p-space-xl flex flex-col justify-between z-10">
 <div>
@@ -408,13 +424,50 @@
 </div>
 </div>
 </div>
-<div class="lg:col-span-4 relative min-h-[260px] lg:min-h-full bg-surface-container-low/70 p-space-md lg:p-space-lg flex flex-col justify-between overflow-hidden border-2 border-dashed border-outline-variant rounded-xl lg:rounded-none lg:rounded-r-2xl"><div class="flex items-center justify-between gap-space-sm"><div class="flex items-center gap-1.5 px-space-sm py-0.5 rounded bg-surface-container-high text-primary font-mono text-[11px]"><span class="material-symbols-outlined text-[15px]">image</span><span>ASSET_SLOT // CAMPUS</span></div><span class="px-space-sm py-0.5 rounded-full bg-surface-container-lowest text-tertiary font-mono text-[10px]">REPO_MAPPED</span></div><div class="my-space-lg flex flex-col items-center justify-center text-center p-space-md"><div class="p-space-md rounded-2xl bg-surface-container-high text-primary mb-space-sm shadow-sm"><span class="material-symbols-outlined text-[32px]">apartment</span></div><div class="font-mono text-label-sm text-on-surface font-semibold break-all">assets/images/campus-alangilan.jpg</div><p class="font-body-sm text-body-sm text-on-surface-variant mt-1 max-w-xs">BatStateU Alangilan Campus Facility &amp; Systems Infrastructure Repository Asset</p></div><div class="p-space-md rounded-xl bg-surface-container-lowest/90 backdrop-blur-md shadow-sm flex flex-col gap-1"><div class="flex items-center justify-between text-label-sm text-on-surface-variant"><span>Facility Metric</span><span class="text-tertiary font-mono">STATUS 98.4%</span></div><div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden"><div class="bg-primary h-full w-[88%] rounded-full"></div></div><div class="flex items-center justify-between text-[10px] text-on-surface-variant font-mono mt-0.5"><span>SYS_REF: ALANGILAN_LAB</span><span>OPTIMIZED</span></div></div></div>
+<div class="lg:col-span-4 relative min-h-[260px] lg:min-h-full bg-surface-container-low/70 flex flex-col justify-between overflow-hidden border-t lg:border-t-0 lg:border-l border-outline-variant/30 rounded-xl lg:rounded-none lg:rounded-r-2xl group/img">
+<!-- Campus Image Representation with Real Fallback -->
+<div class="absolute inset-0 z-0">
+<img alt="Batangas State University Alangilan Campus Facility" class="w-full h-full object-cover opacity-60 group-hover/img:scale-105 group-hover/img:opacity-75 transition-all duration-700 ease-out" onerror="this.onerror=null; this.parentElement.classList.add('bg-surface-container-high'); this.style.display='none'; document.getElementById('campus-img-fallback').classList.remove('hidden');" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjMYVC7l5w6KQG_Tx75nmLsl2SruEGwkzGkRKUBL489HHHmCJ5VOFuufiFwmyPn1gEIlgostS9CsnNcmmjPOb8C0u6dhYBGwYOx1_m61qZKGwNmfOT6wUep3mDnU384_tJWX9SaBnEEDrvapoZGTXhSVBkKgwIrq-Kfmvy9EQ9x0iUId-nsH7pMJM-8n6quewkMpAt_c838lcmXA-2na83-Z4WdQtozMZOgYHYais"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container/60 to-surface-container-lowest/40"></div>
+</div>
+<div class="relative z-10 p-space-md flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-1.5 px-space-sm py-0.5 rounded bg-surface-container-high/90 backdrop-blur-md text-primary font-mono text-[11px] border border-outline-variant/40">
+<span class="material-symbols-outlined text-[15px]">apartment</span>
+<span>CAMPUS // ALANGILAN</span>
+</div>
+<span class="px-space-sm py-0.5 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-tertiary font-mono text-[10px] border border-tertiary/20">LIVE_ASSET</span>
+</div>
+<div class="relative z-10 my-auto p-space-md flex flex-col items-center justify-center text-center">
+<div class="hidden flex-col items-center justify-center" id="campus-img-fallback">
+<div class="p-space-md rounded-2xl bg-surface-container-high/80 text-primary mb-space-sm shadow-md">
+<span class="material-symbols-outlined text-[36px]">apartment</span>
+</div>
+</div>
+<span class="px-space-sm py-1 rounded bg-surface-container-lowest/80 backdrop-blur-md font-mono text-label-sm text-primary font-semibold border border-primary/20">assets/images/campus-alangilan.jpg</span>
+<p class="font-body-sm text-body-sm text-on-surface mt-2 max-w-xs drop-shadow-sm font-medium">BatStateU Alangilan Campus Facility &amp; Systems Infrastructure Repository Asset</p>
+</div>
+<div class="relative z-10 p-space-md">
+<div class="p-space-md rounded-xl bg-surface-container-lowest/95 backdrop-blur-md shadow-md flex flex-col gap-1 border border-outline-variant/30">
+<div class="flex items-center justify-between text-label-sm text-on-surface">
+<span>Facility Metric</span>
+<span class="text-tertiary font-mono font-semibold">STATUS 98.4%</span>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[88%] rounded-full"></div>
+</div>
+<div class="flex items-center justify-between text-[10px] text-on-surface-variant font-mono mt-0.5">
+<span>SYS_REF: ALANGILAN_LAB</span>
+<span class="text-tertiary font-semibold">OPTIMIZED</span>
+</div>
+</div>
+</div>
+</div>
 </div>
 </div>
 <!-- Grid Level 2: Vectors 04 & 05 -->
 <div class="grid grid-cols-1 md:grid-cols-2 gap-space-lg mb-space-xl">
 <!-- VECTOR 04: Parents and Guardians -->
-<div class="relative group p-space-lg rounded-xl bg-surface-container/80 shadow-md hover:shadow-xl hover:bg-surface-container-high transition-all duration-300 flex flex-col justify-between scroll-reveal" data-reveal="">
+<div class="reveal-item relative group p-space-lg rounded-xl bg-surface-container/80 shadow-md hover:shadow-xl hover:bg-surface-container-high transition-all duration-300 flex flex-col justify-between" data-delay="100">
 <div class="flex flex-col">
 <div class="flex items-center justify-between mb-space-md">
 <div class="flex items-center gap-space-sm">
@@ -446,7 +499,7 @@
 </div>
 </div>
 <!-- VECTOR 05: Future Researchers -->
-<div class="relative group p-space-lg rounded-xl bg-surface-container/80 shadow-md hover:shadow-xl hover:bg-surface-container-high transition-all duration-300 flex flex-col justify-between scroll-reveal" data-reveal="">
+<div class="reveal-item relative group p-space-lg rounded-xl bg-surface-container/80 shadow-md hover:shadow-xl hover:bg-surface-container-high transition-all duration-300 flex flex-col justify-between" data-delay="200">
 <div class="flex flex-col">
 <div class="flex items-center justify-between mb-space-md">
 <div class="flex items-center gap-space-sm">
@@ -479,7 +532,7 @@
 </div>
 </div>
 <!-- SYNTHESIS BANNER -->
-<div class="w-full p-space-lg rounded-2xl bg-surface-container-high shadow-xl relative overflow-hidden mb-space-xl scroll-reveal" data-reveal="">
+<div class="reveal-item w-full p-space-lg rounded-2xl bg-surface-container-high shadow-xl relative overflow-hidden mb-space-xl" data-delay="150">
 <div class="flex flex-col md:flex-row items-center justify-between gap-space-lg relative z-10">
 <div class="flex items-center gap-space-md">
 <div class="p-space-md rounded-xl bg-primary-container text-on-primary-container flex items-center justify-center shrink-0">
@@ -520,7 +573,7 @@
 </div>
 </div>
 <!-- BOTTOM PAGINATION -->
-<div class="w-full flex items-center justify-between pt-space-md pb-space-lg scroll-reveal" data-reveal="">
+<div class="reveal-item w-full flex items-center justify-between pt-space-md pb-space-lg" data-delay="100">
 <a class="group flex items-center gap-space-sm px-space-md py-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors shadow-sm" href="discussion.html">
 <span class="material-symbols-outlined text-[18px] group-hover:-translate-x-1 transition-transform">arrow_back</span>
 <div class="flex flex-col text-left">
@@ -551,7 +604,38 @@
 <!-- Interactive Parallax Micro-script for depth card enhancement & Scroll-Triggered Reveal -->
 <script>
     document.addEventListener('DOMContentLoaded', function () {
-      // Parallax 3D Card Hover
+      // 1. Smooth Scroll Reveal using IntersectionObserver
+      const revealItems = document.querySelectorAll('.reveal-item');
+      const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      if (!prefersReduced && 'IntersectionObserver' in window) {
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-revealed');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, {
+          threshold: 0.1,
+          rootMargin: '0px 0px -50px 0px'
+        });
+
+        revealItems.forEach(item => {
+          // If element is already in viewport, reveal immediately
+          const rect = item.getBoundingClientRect();
+          if (rect.top < window.innerHeight && rect.bottom >= 0) {
+            item.classList.add('is-revealed');
+          } else {
+            revealObserver.observe(item);
+          }
+        });
+      } else {
+        // Fallback for no IntersectionObserver or prefers-reduced-motion
+        revealItems.forEach(item => item.classList.add('is-revealed'));
+      }
+
+      // 2. Parallax 3D Card Hover
       const cards = document.querySelectorAll('.group');
       cards.forEach(card => {
         card.addEventListener('mousemove', (e) => {
@@ -567,29 +651,16 @@
         });
       });
 
-      // IntersectionObserver Scroll-Triggered Reveal Animations
-      const revealElements = document.querySelectorAll('[data-reveal]');
-      const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-      if (!prefersReduced && 'IntersectionObserver' in window) {
-        const revealObserver = new IntersectionObserver((entries, observer) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('is-visible');
-              observer.unobserve(entry.target);
-            }
-          });
-        }, {
-          threshold: 0.12,
-          rootMargin: '0px 0px -40px 0px'
+      // 3. Ambient Interactive Parallax Background Grid
+      const grid = document.getElementById('interactive-grid');
+      if (grid) {
+        window.addEventListener('mousemove', (e) => {
+          const moveX = (e.clientX / window.innerWidth - 0.5) * 12;
+          const moveY = (e.clientY / window.innerHeight - 0.5) * 12;
+          grid.style.transform = `translate(${moveX}px, ${moveY}px)`;
         });
-
-        revealElements.forEach(el => revealObserver.observe(el));
-      } else {
-        // Fallback for no IntersectionObserver or prefers-reduced-motion
-        revealElements.forEach(el => el.classList.add('is-visible'));
       }
     });
   </script>
-</div></main><footer class="relative z-10 w-full bg-surface-container-lowest/90 backdrop-blur-xl mt-space-xl"><div class="max-w-7xl mx-auto px-gutter py-space-xl flex flex-col md:flex-row items-center justify-between gap-space-lg"><div class="flex items-center gap-space-md"><div class="p-space-xs rounded-full bg-surface-container-high"><img alt="BatStateU CpE Emblem" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/ALJJyrD70Mqaz-Z-5Wk9K6vnxSldkJtxg8ZVMvaGR7_QMK0sRd4tYIWdEPvvqgCRdMsHlx6OK2N-1-3_l2-ULfSW3iuz2mF2U4OQg4kh1Gl8ndZkU5XmEAMXOQyL8-Zx6PVj5BL8AkT6l1AidcjGD1N0Wgt3e0FuribDcZgUQ00IP_u-tla9EMQvAAyDS5_eHuxUhfjBUS9oNScPddH_a_-DapyhC3AhBGsdGlL82u5yHDdtIc5Ih1kVUydiJQ"/></div><div><div class="font-title-md text-title-md text-on-surface">TechTrack PH • GEd 104</div><p class="font-body-sm text-body-sm text-on-surface-variant">Batangas State University The National Engineering University • Alangilan Campus</p></div></div><nav class="flex flex-wrap items-center justify-center gap-space-md" data-active-classes="text-primary font-semibold"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="overview" href="index.html">Overview</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="introduction" href="introduction.html">Introduction</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="discussion" href="discussion.html">Discussion</a><a aria-current="page" class="transition-colors text-primary font-semibold" data-path="significance" href="significance.html">Significance</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="research-team" href="team.html">Research Team</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="references" href="references.html">References</a></nav><div class="flex flex-col items-center md:items-end gap-1"><div class="flex items-center gap-2 font-label-sm text-label-sm text-tertiary"><span class="inline-block w-1.5 h-1.5 rounded-full bg-tertiary"></span><span>TELEMETRY SYNCHRONIZED [NODE 11]</span></div><p class="font-body-sm text-body-sm text-on-surface-variant">© 2025 BatStateU The NEU Alangilan BSCpE. All rights reserved.</p></div></div></footer><script>(function(){const storageKey='techtrack_theme';const currentTheme=localStorage.getItem(storageKey);const htmlElement=document.documentElement;const icon=document.getElementById('theme-toggle-icon');function applyTheme(isDark){if(isDark){htmlElement.classList.add('dark');if(icon)icon.textContent='light_mode';}else{htmlElement.classList.remove('dark');if(icon)icon.textContent='dark_mode';}}if(currentTheme==='light'){applyTheme(false);}else{applyTheme(true);}const toggleBtn=document.getElementById('theme-toggle-btn');if(toggleBtn){toggleBtn.addEventListener('click',function(){const isNowDark=!htmlElement.classList.contains('dark');applyTheme(isNowDark);localStorage.setItem(storageKey,isNowDark?'dark':'light');});}})();</script>
+</div></main><footer class="relative z-10 w-full bg-surface-container-lowest/90 backdrop-blur-xl mt-space-xl"><div class="max-w-7xl mx-auto px-gutter py-space-xl flex flex-col md:flex-row items-center justify-between gap-space-lg"><div class="flex items-center gap-space-md"><div class="p-space-xs rounded-full bg-surface-container-high"><img alt="BatStateU CpE Emblem" class="w-8 h-8 rounded-full object-cover" onerror="this.onerror=null; this.src='https://lh3.googleusercontent.com/aida-public/AB6AXuDcgohrFTFS3LT2BduSSLWnYz_0ZcKO75GLNqh8Odfqfm14gyE8RJfM7P8p7w-EtnzpCKbWYf-1SCALFK5tVaG7cxoD2hRWHCb1k1gT9gAqPUDf68f_-Hum_HD4-X92bZpeMfQqX6uv-rEBP-BkT0jwww5bn7pGGvMj0FzpK_Gv_41OnUuNgp_zzIMHGV1th4aA2FohSncObJwBwf1Tho_ipMPeOpAZjkB95sHY5iXJxolk921iSgJq';" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQNBF8uYUl_7vD7ttscidV0FmoB5g2yLa6Iu6vr25W6EktrkjubwTj90M8Jm-wEczc13PA6FqSf2IOoAGQYI_8leECV-IE37Dubly_S69rcyzuWnjgbD4k67aInY_MPi1IYrU6mF7ErCP7TOmQ-QP8HAWrJ3BRSFg1IMu7LngJLumLJzxI38LWbHZ-_9kxl0QU_TY-7AvSmOuW_sHG4puZlG1LOUTRNNprpCHCskM"/></div><div><div class="font-title-md text-title-md text-on-surface">TechTrack PH • GEd 104</div><p class="font-body-sm text-body-sm text-on-surface-variant">Batangas State University The National Engineering University • Alangilan Campus</p></div></div><nav class="flex flex-wrap items-center justify-center gap-space-md" data-active-classes="text-primary font-semibold"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="overview" href="index.html">Overview</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="introduction" href="introduction.html">Introduction</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="discussion" href="discussion.html">Discussion</a><a aria-current="page" class="transition-colors text-primary font-semibold" data-path="significance" href="significance.html">Significance</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="research-team" href="team.html">Research Team</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="references" href="references.html">References</a></nav><div class="flex flex-col items-center md:items-end gap-1"><div class="flex items-center gap-2 font-label-sm text-label-sm text-tertiary"><span class="inline-block w-1.5 h-1.5 rounded-full bg-tertiary"></span><span>TELEMETRY SYNCHRONIZED [NODE 11]</span></div><p class="font-body-sm text-body-sm text-on-surface-variant">© 2025 BatStateU The NEU Alangilan BSCpE. All rights reserved.</p></div></div></footer><script>(function(){const storageKey='techtrack_theme';const currentTheme=localStorage.getItem(storageKey);const htmlElement=document.documentElement;const icon=document.getElementById('theme-toggle-icon');function applyTheme(isDark){if(isDark){htmlElement.classList.add('dark');if(icon)icon.textContent='light_mode';}else{htmlElement.classList.remove('dark');if(icon)icon.textContent='dark_mode';}}if(currentTheme==='light'){applyTheme(false);}else{applyTheme(true);}const toggleBtn=document.getElementById('theme-toggle-btn');if(toggleBtn){toggleBtn.addEventListener('click',function(){const isNowDark=!htmlElement.classList.contains('dark');applyTheme(isNowDark);localStorage.setItem(storageKey,isNowDark?'dark':'light');});}})();</script>
 </body></html>
