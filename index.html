@@ -1,5 +1,135 @@
-<!DOCTYPE html><html class="dark" lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><title>TechTrack PH | BatStateU - The NEU Alangilan</title><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}@keyframes pulse-blob{0%,100%{transform:scale(1) translate(0px, 0px);opacity:0.25;}50%{transform:scale(1.15) translate(20px, -20px);opacity:0.35;}}@keyframes pulse-blob-alt{0%,100%{transform:scale(1) translate(0px, 0px);opacity:0.2;}50%{transform:scale(1.2) translate(-25px, 25px);opacity:0.3;}}.blob-primary{animation:pulse-blob 12s ease-in-out infinite;}.blob-tertiary{animation:pulse-blob-alt 15s ease-in-out infinite;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>TechTrack PH | BatStateU - The NEU Alangilan</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+@layer base {
+  html, body { margin: 0; padding: 0; }
+  body { overscroll-behavior: none; }
+  main > :first-child { margin-top: 0 !important; }
+  main > :last-child { margin-bottom: 0 !important; }
+}
+::-webkit-scrollbar { display: none; }
+
+/* Light/Dark Mode Palette Transition */
+html {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+html.dark {
+  background-color: #041329;
+  color: #f1f5f9;
+}
+html:not(.dark) {
+  background-color: #f8f9ff;
+  color: #0f172a;
+}
+
+/* 1. BLOBS: Ambient Floating Gradient Blobs */
+@keyframes blobFloat1 {
+  0%, 100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(45px, -35px) scale(1.08);
+  }
+  66% {
+    transform: translate(-30px, 25px) scale(0.96);
+  }
+}
+
+@keyframes blobFloat2 {
+  0%, 100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(-40px, 35px) scale(1.06);
+  }
+  66% {
+    transform: translate(30px, -25px) scale(0.94);
+  }
+}
+
+@keyframes blobFloat3 {
+  0%, 100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(35px, 40px) scale(1.05);
+  }
+  66% {
+    transform: translate(-35px, -30px) scale(0.95);
+  }
+}
+
+.blob-container {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.custom-blob {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 9999px;
+  filter: blur(80px);
+  -webkit-filter: blur(80px);
+  pointer-events: none;
+  opacity: 0.65;
+  will-change: transform;
+}
+
+.blob-1 {
+  top: -80px;
+  left: -80px;
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.35) 0%, rgba(37, 99, 235, 0.15) 65%, transparent 100%);
+  animation: blobFloat1 18s ease-in-out infinite;
+}
+
+.blob-2 {
+  top: 28%;
+  right: -90px;
+  background: radial-gradient(circle, rgba(78, 230, 170, 0.3) 0%, rgba(14, 165, 233, 0.12) 65%, transparent 100%);
+  animation: blobFloat2 22s ease-in-out infinite;
+}
+
+.blob-3 {
+  bottom: 5%;
+  left: 20%;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.3) 0%, rgba(147, 51, 234, 0.15) 65%, transparent 100%);
+  animation: blobFloat3 20s ease-in-out infinite;
+}
+
+/* Light mode blob tuning */
+html:not(.dark) .blob-1 {
+  opacity: 0.35;
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.3) 0%, rgba(37, 99, 235, 0.1) 65%, transparent 100%);
+}
+html:not(.dark) .blob-2 {
+  opacity: 0.3;
+  background: radial-gradient(circle, rgba(34, 201, 144, 0.28) 0%, rgba(14, 165, 233, 0.08) 65%, transparent 100%);
+}
+html:not(.dark) .blob-3 {
+  opacity: 0.28;
+  background: radial-gradient(circle, rgba(129, 140, 248, 0.25) 0%, rgba(147, 51, 234, 0.08) 65%, transparent 100%);
+}
+
+/* NO HIDDEN ELEMENTS: 100% visible immediately, zero blank spaces or JS reveal dependency */
+.content-visible {
+  opacity: 1 !important;
+  transform: none !important;
+  visibility: visible !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .custom-blob {
+    animation: none !important;
+  }
+}
+</style>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config = {
   darkMode: "class",
   theme: {
     extend: {
@@ -101,338 +231,391 @@
       }
     }
   }
-}</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased relative min-h-screen selection:bg-primary selection:text-on-primary"><div class="fixed inset-0 pointer-events-none overflow-hidden -z-10"><div class="blob-primary absolute -top-40 -left-20 w-96 h-96 rounded-full bg-primary/20 blur-[128px]"></div><div class="blob-tertiary absolute top-1/4 right-0 w-[30rem] h-[30rem] rounded-full bg-tertiary/15 blur-[140px]"></div><div class="blob-primary absolute bottom-10 left-1/3 w-80 h-80 rounded-full bg-secondary-container/25 blur-[120px]"></div></div><header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.15)]"><div class="h-20 w-full px-gutter flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md"><a class="group flex items-center gap-space-sm" data-path="overview" href="index.html"><div class="flex items-center justify-center w-10 h-10 rounded-lg bg-surface-container-high shadow-[0_0_15px_rgba(56,189,248,0.35)]"><span class="text-primary font-headline-sm text-headline-sm">⚡</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary tracking-tight group-hover:text-primary-fixed transition-colors">TechTrack PH</span><span class="font-label-sm text-label-sm text-tertiary tracking-widest uppercase">GEd 104 Research Portal</span></div></a><div class="hidden xl:flex items-center gap-space-xs px-space-sm py-0.5 rounded-full bg-surface-container-highest"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span><span class="font-label-sm text-label-sm text-on-surface-variant font-semibold">TNEU ALANGILAN</span></div></div><nav class="hidden lg:flex items-center gap-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg"><a aria-current="page" class="px-space-md py-space-sm transition-all bg-primary-container text-on-primary-container font-semibold rounded-lg" data-path="overview" href="index.html">Overview</a><a class="px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="introduction" href="introduction.html">Introduction</a><a class="px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="discussion" href="discussion.html">Discussion</a><a class="px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="significance" href="significance.html">Significance</a><a class="px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="research-team" href="team.html">Research Team</a><a class="px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="references" href="references.html">References</a></nav><div class="flex items-center gap-space-sm"><button aria-label="Toggle theme" class="p-2 rounded-lg bg-surface-container-high text-on-surface-variant hover:bg-surface-bright hover:text-on-surface transition-colors" id="theme-toggle-btn" type="button"><span class="material-symbols-outlined text-[20px]" id="theme-toggle-icon">dark_mode</span></button><a aria-label="TechTrack PH Repository" class="p-2 rounded-lg bg-surface-container-high text-on-surface-variant hover:bg-surface-bright hover:text-on-surface transition-colors flex items-center justify-center" href="https://github.com" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-[20px]">code</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-surface relative"><div class="flex flex-col w-full">
-<!-- Subtle Spatial Glow Backdrop -->
-<div class="relative w-full px-gutter py-space-lg flex flex-col gap-space-xl overflow-hidden">
+}</script></head><body class="bg-slate-50 dark:bg-background font-body-md text-body-md text-slate-900 dark:text-on-surface antialiased relative min-h-screen selection:bg-primary selection:text-on-primary">
+<!-- Ambient Floating Gradient Blobs -->
+<div aria-hidden="true" class="blob-container">
+<div class="custom-blob blob-1"></div>
+<div class="custom-blob blob-2"></div>
+<div class="custom-blob blob-3"></div>
+</div>
+<!-- Fixed Academic Navigation Chrome -->
+<header class="fixed top-0 w-full z-50 bg-[#f8f9ff]/90 dark:bg-surface/90 backdrop-blur-xl border-b border-slate-200 dark:border-slate-800 shadow-[0_1px_8px_rgba(0,0,0,0.06)] dark:shadow-[0_1px_8px_rgba(0,0,0,0.25)]"><div class="h-20 w-full px-gutter flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md"><a class="group flex items-center gap-space-sm" data-path="overview" href="index.html"><img alt="Batangas State University CpE Logo" class="w-10 h-10 object-contain rounded-full shadow-sm shrink-0" onerror="this.onerror=null; this.src='https://lh3.googleusercontent.com/aida/ALJJyrArnDPkj_0L8qUNY7gb4AQnB-gduF1550n67Rqbwn7F_KoA60ZNjVvagQdox0E2MV60SoeV_arubR7Wi87XAEeplnrl45NoM2FHxP-2SYtd-0XomeuEe3shNUMgFYflcEAQpnKNn466WnzzqC2q8J-N1TH8QOeeJvQx56wVTnUd5PFYDuEMhUBExrp-9evPhXXWe0qnPoccEFXK-59JL_Cz5TTcP-RIQnGVJbjKaGs';" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFBcbIwzbegcpUM8lC9XdNqqNiMmDk-ApLoE4fsTP4wSY1SNlzuJAwTn7UWO1zicM7o3_DXQYi8rNN72jRg0SlDyobTHHXcwA-N-Z91RcbZPmNxkE8J41IqGipW2LR12jXzxxG8N-dxIcTqhv7MrCBrWcGa96nNnluaCtqRAMh7cWxXbSXdv9YNMxHY41Tmbn3yemQTkU4h_yFt3iGtlx-fSjOQy8KUgbU7PG0z18"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-sky-600 dark:text-primary tracking-tight group-hover:text-primary-container dark:group-hover:text-primary-fixed transition-colors font-bold">TechTrack PH</span><span class="font-label-sm text-label-sm text-emerald-600 dark:text-tertiary tracking-widest uppercase font-semibold">GEd 104 Research Portal</span></div></a><div class="hidden xl:flex items-center gap-space-xs px-space-sm py-0.5 rounded-full bg-slate-200/70 dark:bg-surface-container-highest"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500 dark:bg-tertiary"></span><span class="font-label-sm text-label-sm text-slate-700 dark:text-on-surface-variant font-semibold">TNEU ALANGILAN</span></div></div><nav class="hidden lg:flex items-center gap-space-xs"><a aria-current="page" class="px-space-md py-space-sm transition-all bg-sky-500 dark:bg-primary-container text-white dark:text-on-primary-container font-semibold rounded-lg shadow-sm" data-path="overview" href="index.html">Overview</a><a class="px-space-md py-space-sm rounded-lg font-body-md text-body-md text-slate-600 dark:text-on-surface-variant hover:bg-slate-200/60 dark:hover:bg-surface-container-high hover:text-slate-900 dark:hover:text-on-surface transition-all" data-path="introduction" href="introduction.html">Introduction</a><a class="px-space-md py-space-sm rounded-lg font-body-md text-body-md text-slate-600 dark:text-on-surface-variant hover:bg-slate-200/60 dark:hover:bg-surface-container-high hover:text-slate-900 dark:hover:text-on-surface transition-all" data-path="discussion" href="discussion.html">Discussion</a><a class="px-space-md py-space-sm rounded-lg font-body-md text-body-md text-slate-600 dark:text-on-surface-variant hover:bg-slate-200/60 dark:hover:bg-surface-container-high hover:text-slate-900 dark:hover:text-on-surface transition-all" data-path="significance" href="significance.html">Significance</a><a class="px-space-md py-space-sm rounded-lg font-body-md text-body-md text-slate-600 dark:text-on-surface-variant hover:bg-slate-200/60 dark:hover:bg-surface-container-high hover:text-slate-900 dark:hover:text-on-surface transition-all" data-path="research-team" href="team.html">Research Team</a><a class="px-space-md py-space-sm rounded-lg font-body-md text-body-md text-slate-600 dark:text-on-surface-variant hover:bg-slate-200/60 dark:hover:bg-surface-container-high hover:text-slate-900 dark:hover:text-on-surface transition-all" data-path="references" href="references.html">References</a></nav><div class="flex items-center gap-space-sm"><button aria-label="Toggle dark/light theme" class="p-2 rounded-lg bg-slate-200/80 dark:bg-surface-container-high text-slate-700 dark:text-on-surface-variant hover:bg-slate-300 dark:hover:bg-surface-bright hover:text-slate-900 dark:hover:text-on-surface transition-colors cursor-pointer border border-slate-300 dark:border-slate-700/60" id="theme-toggle-btn" type="button"><span class="material-symbols-outlined text-[20px]" id="theme-toggle-icon">light_mode</span></button><a aria-label="TechTrack PH Repository" class="p-2 rounded-lg bg-slate-200/80 dark:bg-surface-container-high text-slate-700 dark:text-on-surface-variant hover:bg-slate-300 dark:hover:bg-surface-bright hover:text-slate-900 dark:hover:text-on-surface transition-colors flex items-center justify-center border border-slate-300 dark:border-slate-700/60" href="https://github.com" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-[20px]">code</span></a><div class="w-8 h-8 rounded-full bg-sky-500 dark:bg-primary flex items-center justify-center text-white dark:text-on-primary"><span class="material-symbols-outlined text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-transparent relative z-10"><div class="flex flex-col w-full">
+<!-- Spatial Layout Wrapper (All elements guaranteed 100% visible immediately) -->
+<div class="content-visible relative w-full px-gutter py-space-lg flex flex-col gap-space-xl overflow-hidden">
 <!-- Top Metadata Breadcrumb & Live Academic Telemetry Bar -->
-<div class="w-full flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="content-visible w-full flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
 <div class="flex flex-wrap items-center gap-space-sm">
-<span class="px-3 py-1 rounded-full bg-secondary-container/60 text-secondary font-label-sm text-label-sm uppercase tracking-widest shadow-sm">
-          GEd 104 // BATANGAS STATE UNIVERSITY – ALANGILAN CAMPUS
+<span class="px-3 py-1 rounded-full bg-indigo-100 dark:bg-secondary-container/60 text-indigo-700 dark:text-secondary font-label-sm text-label-sm uppercase tracking-widest font-semibold border border-indigo-200 dark:border-indigo-800/40 shadow-sm">
+          GEd 104 // Batangas State University – Alangilan Campus
         </span>
-<span class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high/80 text-tertiary font-label-sm text-label-sm shadow-sm">
-<span class="w-2 h-2 rounded-full bg-tertiary animate-ping"></span>
+<span class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 dark:bg-surface-container-high/80 text-emerald-700 dark:text-tertiary font-label-sm text-label-sm border border-emerald-200 dark:border-emerald-800/40 shadow-sm">
+<span class="w-2 h-2 rounded-full bg-emerald-500 dark:bg-tertiary animate-ping"></span>
           Peer-Reviewed Scholarly Inquiry • AY 2024–2025
         </span>
 </div>
-<div class="flex items-center gap-space-md self-start lg:self-auto text-on-surface-variant font-label-sm text-label-sm">
-<span class="flex items-center gap-1 text-primary">
+<div class="flex items-center gap-space-md self-start lg:self-auto text-slate-600 dark:text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-1 text-sky-600 dark:text-primary font-medium">
 <span class="material-symbols-outlined text-[16px]">terminal</span>
           DOC_ID: CEAFA-CPE-2025-01
         </span>
-<span class="text-outline">/</span>
+<span class="text-slate-400 dark:text-outline">/</span>
 <span class="flex items-center gap-1">
 <span class="material-symbols-outlined text-[16px]">history_edu</span>
           Status: Published Open Access
         </span>
 </div>
 </div>
-<!-- Hero Asymmetric Bento Composition -->
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-stretch">
+<!-- Hero Bento Composition -->
+<div class="content-visible grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-stretch">
 <!-- Primary Core Bento: Main Statement, Title & Dual Realities (Spans 8 cols) -->
-<div class="lg:col-span-8 flex flex-col justify-between p-space-xl rounded-xl bg-surface-container/85 backdrop-blur-xl shadow-xl relative overflow-hidden group">
-<!-- Ambient radial glow behind focal title -->
+<div class="lg:col-span-8 flex flex-col justify-between p-space-xl rounded-xl bg-white/90 dark:bg-surface-container/85 border border-slate-200 dark:border-slate-800 backdrop-blur-xl shadow-xl relative overflow-hidden group">
 <div class="absolute -top-24 -right-24 w-96 h-96 bg-primary/10 rounded-full blur-3xl pointer-events-none group-hover:bg-primary/20 transition-all duration-700"></div>
 <div class="absolute -bottom-20 -left-20 w-80 h-80 bg-tertiary/10 rounded-full blur-3xl pointer-events-none"></div>
 <div class="flex flex-col gap-space-md relative z-10">
 <div class="flex items-center gap-space-sm">
-<span class="p-2 rounded-lg bg-surface-container-high text-primary shadow-sm flex items-center justify-center">
+<span class="p-2 rounded-lg bg-sky-100 dark:bg-surface-container-high text-sky-600 dark:text-primary shadow-sm flex items-center justify-center">
 <span class="material-symbols-outlined text-[20px]">psychology_alt</span>
 </span>
-<span class="font-label-sm text-label-sm text-surface-tint uppercase tracking-wider">
+<span class="font-label-sm text-label-sm text-sky-700 dark:text-surface-tint uppercase tracking-wider font-semibold">
               Undergraduate Engineering Thesis Synthesis
             </span>
 </div>
-<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight max-w-3xl">
+<h1 class="font-headline-xl text-headline-xl text-slate-900 dark:text-on-surface tracking-tight max-w-3xl font-extrabold leading-tight">
             Tool or Trap? The Impact of Technology Use on College Academic Performance
           </h1>
-<p class="font-title-md text-title-md text-primary max-w-2xl leading-relaxed">
+<p class="font-title-md text-title-md text-sky-700 dark:text-primary max-w-2xl leading-relaxed font-semibold">
             Contemporary Challenges in Filipino Higher Education: Investigating the Impact of Technology Use on Academic Performance among College Students
           </p>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl mt-space-xs">
+<p class="font-body-lg text-body-lg text-slate-700 dark:text-on-surface-variant max-w-3xl mt-space-xs">
             A literature-based investigation by first-year Bachelor of Science in Computer Engineering students at Batangas State University (TNEU) – Alangilan Campus, exploring how digital devices, screen-time habits, and educational technologies shape academic performance in a hybrid learning era.
           </p>
 </div>
-<!-- Micro Dual-Perspective Indicator Pill -->
+<!-- Dual-Perspective Indicator Pill -->
 <div class="mt-space-xl pt-space-lg grid grid-cols-1 sm:grid-cols-2 gap-space-md relative z-10">
-<div class="p-space-md rounded-lg bg-surface-container-high/60 backdrop-blur-md flex items-start gap-space-sm shadow-sm hover:bg-surface-container-high transition-colors">
-<span class="material-symbols-outlined text-tertiary text-[22px] mt-0.5">verified</span>
+<div class="p-space-md rounded-lg bg-slate-50/80 dark:bg-surface-container-high/60 border border-slate-200 dark:border-slate-700/60 backdrop-blur-md flex items-start gap-space-sm shadow-sm hover:border-emerald-300 dark:hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-emerald-600 dark:text-tertiary text-[22px] mt-0.5">verified</span>
 <div class="flex flex-col">
-<span class="font-title-sm text-title-sm text-tertiary">Technological Enabler</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant">Rapid algorithmic access, cloud git repositories, collaborative IDEs, and 24/7 modular resource indexing.</span>
+<span class="font-title-sm text-title-sm text-emerald-700 dark:text-tertiary font-semibold">Technological Enabler</span>
+<span class="font-body-sm text-body-sm text-slate-600 dark:text-on-surface-variant">Rapid algorithmic access, cloud git repositories, collaborative IDEs, and 24/7 modular resource indexing.</span>
 </div>
 </div>
-<div class="p-space-md rounded-lg bg-surface-container-high/60 backdrop-blur-md flex items-start gap-space-sm shadow-sm hover:bg-surface-container-high transition-colors">
-<span class="material-symbols-outlined text-error text-[22px] mt-0.5">warning</span>
+<div class="p-space-md rounded-lg bg-slate-50/80 dark:bg-surface-container-high/60 border border-slate-200 dark:border-slate-700/60 backdrop-blur-md flex items-start gap-space-sm shadow-sm hover:border-red-300 dark:hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-red-500 dark:text-error text-[22px] mt-0.5">warning</span>
 <div class="flex flex-col">
-<span class="font-title-sm text-title-sm text-error">Cognitive Hazard</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant">Continuous notification interruptions, fragmented task execution, shallow research passes, and sleep debt.</span>
+<span class="font-title-sm text-title-sm text-red-600 dark:text-error font-semibold">Cognitive Hazard</span>
+<span class="font-body-sm text-body-sm text-slate-600 dark:text-on-surface-variant">Continuous notification interruptions, fragmented task execution, shallow research passes, and sleep debt.</span>
 </div>
 </div>
 </div>
 </div>
-<!-- Secondary Info Stack Bento: Institutional Pedigree (Spans 4 cols) -->
+<!-- Secondary Info Stack Bento: Institutional Pedigree & Archival Image Slots (Spans 4 cols) -->
 <div class="lg:col-span-4 flex flex-col justify-between gap-space-md">
 <!-- Institutional Profile Card -->
-<div class="p-space-lg rounded-xl bg-surface-container/85 backdrop-blur-xl shadow-xl flex flex-col gap-space-md relative overflow-hidden flex-1 justify-between">
+<div class="p-space-lg rounded-xl bg-white/90 dark:bg-surface-container/85 border border-slate-200 dark:border-slate-800 backdrop-blur-xl shadow-xl flex flex-col gap-space-md relative overflow-hidden flex-1 justify-between">
 <div class="flex items-center justify-between">
-<div class="flex items-center gap-space-xs text-primary font-label-md text-label-md">
+<div class="flex items-center gap-space-xs text-sky-700 dark:text-primary font-label-md text-label-md font-semibold">
 <span class="material-symbols-outlined text-[18px]">account_balance</span>
               ACADEMIC GOVERNANCE
             </div>
-<span class="px-2 py-0.5 rounded-full bg-primary/10 text-primary font-label-sm text-label-sm">
+<span class="px-2 py-0.5 rounded-full bg-sky-100 dark:bg-primary/10 text-sky-700 dark:text-primary font-label-sm text-label-sm font-semibold border border-sky-200 dark:border-transparent">
               CEAFA-ALN
             </span>
 </div>
 <div class="flex flex-col gap-space-sm">
 <div>
-<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider block">Program / Level</span>
-<span class="font-title-md text-title-md text-on-surface font-semibold">BS CpE (1st Year) • GEd 104</span>
+<span class="font-label-sm text-label-sm text-slate-500 dark:text-outline uppercase tracking-wider block font-semibold">Institution</span>
+<span class="font-body-md text-body-md text-slate-900 dark:text-on-surface font-semibold">Batangas State University (The National Engineering University) – Alangilan Campus, Batangas City</span>
 </div>
 <div>
-<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider block">Faculty Host</span>
-<span class="font-body-md text-body-md text-on-surface-variant">College of Engineering, Architecture and Fine Arts (CEAFA), BatStateU The National Engineering University</span>
+<span class="font-label-sm text-label-sm text-slate-500 dark:text-outline uppercase tracking-wider block font-semibold">Program &amp; Course</span>
+<span class="font-title-md text-title-md text-slate-900 dark:text-on-surface font-semibold">Bachelor of Science in Computer Engineering (1st Year) | GEd 104</span>
 </div>
 <div>
-<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider block">Course Supervisor / Evaluator</span>
+<span class="font-label-sm text-label-sm text-slate-500 dark:text-outline uppercase tracking-wider block font-semibold">Faculty / Evaluator</span>
 <div class="flex items-center gap-2 mt-1">
-<span class="material-symbols-outlined text-primary text-[20px]">school</span>
-<span class="font-title-sm text-title-sm text-primary">Dr. Belen E. Bagui</span>
+<span class="material-symbols-outlined text-sky-600 dark:text-primary text-[20px]">school</span>
+<span class="font-title-sm text-title-sm text-sky-700 dark:text-primary font-semibold">Dr. Belen E. Bagui</span>
 </div>
-<span class="font-body-sm text-body-sm text-outline block pl-7">GEd 104 Course Instructor</span>
+<span class="font-body-sm text-body-sm text-slate-500 dark:text-outline block pl-7">GEd 104 Course Instructor</span>
 </div>
 </div>
-<!-- Quick Navigation Handle to Next Chapter -->
+<!-- Next Chapter Action Button with High Contrast -->
 <div class="pt-space-sm flex flex-col gap-space-xs">
-<a class="w-full py-2.5 px-space-md rounded-lg bg-primary-container text-on-primary-container font-headline-sm text-title-sm flex items-center justify-between group shadow-md hover:shadow-lg transition-all" href="introduction.html">
-<span>Next: Introduction</span>
-<span class="material-symbols-outlined transition-transform duration-300 group-hover:translate-x-1">arrow_forward</span>
+<a class="w-full py-3 px-space-md rounded-lg bg-sky-500 hover:bg-sky-600 active:bg-sky-700 dark:bg-primary-container dark:hover:bg-primary text-white dark:text-on-primary-container font-headline-sm text-title-md flex items-center justify-between group shadow-md hover:shadow-lg transition-all" href="introduction.html">
+<span class="font-bold tracking-tight">NEXT: Introduction ➜</span>
+<span class="material-symbols-outlined transition-transform duration-300 group-hover:translate-x-1.5">arrow_forward</span>
 </a>
 </div>
 </div>
-<!-- Archival Repository Blueprint Visual Slot -->
-<div class="p-space-md rounded-xl bg-surface-container-lowest/90 backdrop-blur-xl shadow-xl flex flex-col gap-space-xs relative group"><div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm"><span class="flex items-center gap-1.5 font-mono text-primary"><span class="material-symbols-outlined text-[16px]">folder_zip</span>📁 assets/images/overview-hero.jpg</span><span class="px-2 py-0.5 rounded bg-surface-bright font-mono text-tertiary text-[10px]">[2048x1152 RAW]</span></div><div class="w-full h-36 rounded-lg border-2 border-dashed border-outline-variant/60 bg-surface-container-high/40 flex flex-col items-center justify-center p-space-sm mt-2 text-center group-hover:border-primary/50 transition-colors"><div class="flex items-center justify-center w-10 h-10 rounded-full bg-surface-container-high text-primary mb-2 shadow-sm"><span class="material-symbols-outlined text-[20px]">inventory_2</span></div><span class="font-title-sm text-title-sm text-on-surface">Archived Academic Artifact Repository</span><span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Literature-Based Investigation Schematics &amp; Data Pipeline</span></div></div>
+<!-- Dedicated Image Placeholder 1: assets/images/overview-hero.jpg -->
+<div class="p-space-md rounded-xl bg-white/90 dark:bg-surface-container-lowest/90 border border-slate-200 dark:border-slate-800 backdrop-blur-xl shadow-xl flex flex-col gap-space-xs relative group">
+<div class="flex items-center justify-between text-slate-600 dark:text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-1.5 font-mono text-sky-700 dark:text-primary font-semibold">
+<span class="material-symbols-outlined text-[16px]">image</span> assets/images/overview-hero.jpg
+  </span>
+<span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-surface-bright font-mono text-emerald-600 dark:text-tertiary text-[10px] font-bold">[2048x1152 RAW]</span>
+</div>
+<div class="w-full h-24 rounded-lg border-2 border-dashed border-slate-300 dark:border-outline-variant/60 bg-slate-50 dark:bg-surface-container-high/40 flex flex-col items-center justify-center p-space-sm mt-1 text-center group-hover:border-sky-500 dark:group-hover:border-primary/50 transition-colors">
+<span class="font-title-sm text-title-sm text-slate-900 dark:text-on-surface font-semibold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sky-600 dark:text-primary text-[18px]">collections_bookmark</span> Overview Hero Visual Artifact
+  </span>
+<span class="font-body-sm text-body-sm text-slate-600 dark:text-on-surface-variant text-[11px] mt-0.5">Literature-Based Investigation Schematics &amp; Data Pipeline</span>
 </div>
 </div>
-<!-- Core Abstract Narrative Panel (Asymmetric 12-Column Glassmorphic Slab) -->
-<div class="w-full p-space-xl rounded-xl bg-surface-container/75 backdrop-blur-2xl shadow-xl flex flex-col lg:flex-row gap-space-xl items-start relative">
+</div>
+</div>
+<!-- Campus Alangilan Secondary Dedicated Image Repository Slot -->
+<div class="content-visible p-space-md rounded-xl bg-white/90 dark:bg-surface-container-lowest/90 border border-slate-200 dark:border-slate-800 backdrop-blur-xl shadow-md flex flex-col md:flex-row items-center justify-between gap-space-md group">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="w-12 h-12 rounded-lg bg-sky-100 dark:bg-surface-container-high flex items-center justify-center text-sky-600 dark:text-primary shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[24px]">location_city</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-sm text-title-sm text-slate-900 dark:text-on-surface font-semibold">Field Research Location Archive: Alangilan Campus</span>
+<span class="font-body-sm text-body-sm text-slate-600 dark:text-on-surface-variant">College of Engineering, Architecture and Fine Arts (CEAFA) Research Facility</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm px-space-md py-2 rounded-lg border-2 border-dashed border-slate-300 dark:border-outline-variant/60 bg-slate-50 dark:bg-surface-container-high/40 text-slate-700 dark:text-on-surface-variant font-mono text-label-sm text-label-sm shrink-0">
+<span class="material-symbols-outlined text-[16px] text-sky-600 dark:text-primary">folder_open</span>
+<span class="font-semibold text-sky-700 dark:text-primary">assets/images/campus-alangilan.jpg</span>
+<span class="ml-1 px-1.5 py-0.5 rounded bg-slate-200/80 dark:bg-surface-bright text-[10px] text-slate-600 dark:text-on-surface-variant">[1920x1080 HQ]</span>
+</div>
+</div>
+<!-- Core Verbatim Abstract Panel from DOCUMENT_55 -->
+<div class="content-visible w-full p-space-xl rounded-xl bg-white/90 dark:bg-surface-container/75 border border-slate-200 dark:border-slate-800 backdrop-blur-2xl shadow-xl flex flex-col lg:flex-row gap-space-xl items-start relative">
 <div class="lg:w-1/4 flex flex-col gap-space-xs">
-<div class="flex items-center gap-space-xs text-primary font-label-md text-label-md uppercase tracking-wider">
+<div class="flex items-center gap-space-xs text-sky-700 dark:text-primary font-label-md text-label-md uppercase tracking-wider font-semibold">
 <span class="material-symbols-outlined text-[18px]">auto_stories</span>
-          EXECUTIVE ABSTRACT
-        </div>
-<h2 class="font-headline-lg text-headline-lg text-on-surface">
-          The Bifurcated Learner
-        </h2>
-<p class="font-body-sm text-body-sm text-on-surface-variant">
-          Synthesized analytical abstract framing systemic tertiary behavioral patterns across public and private academic institutions.
-        </p>
-<div class="mt-space-md p-space-sm rounded-lg bg-surface-container-high/40 flex flex-col gap-1">
-<div class="flex justify-between items-center font-label-sm text-label-sm text-outline">
+        ABSTRACT
+      </div>
+<h2 class="font-headline-lg text-headline-lg text-slate-900 dark:text-on-surface font-bold">
+        The Impact of Technology Use
+      </h2>
+<p class="font-body-sm text-body-sm text-slate-600 dark:text-on-surface-variant">
+        Academic investigation overview focusing on collegiate engineering environments and digital habit dynamics.
+      </p>
+<div class="mt-space-md p-space-sm rounded-lg bg-slate-50 dark:bg-surface-container-high/40 border border-slate-200 dark:border-slate-700/60 flex flex-col gap-1">
+<div class="flex justify-between items-center font-label-sm text-label-sm text-slate-500 dark:text-outline">
 <span>Methodology</span>
-<span class="text-on-surface">Literature Synthesis</span>
+<span class="text-slate-900 dark:text-on-surface font-medium">Literature-Based Investigation</span>
 </div>
-<div class="flex justify-between items-center font-label-sm text-label-sm text-outline">
+<div class="flex justify-between items-center font-label-sm text-label-sm text-slate-500 dark:text-outline">
 <span>Sampling Frame</span>
-<span class="text-on-surface">PH &amp; OECD Cohorts</span>
+<span class="text-slate-900 dark:text-on-surface font-medium">BS CpE (1st Year)</span>
 </div>
-<div class="flex justify-between items-center font-label-sm text-label-sm text-outline">
-<span>Publication Tier</span>
-<span class="text-tertiary">Institutional Archive</span>
+<div class="flex justify-between items-center font-label-sm text-label-sm text-slate-500 dark:text-outline">
+<span>Location</span>
+<span class="text-emerald-600 dark:text-tertiary font-medium">BatStateU Alangilan</span>
 </div>
 </div>
 </div>
-<div class="lg:w-3/4 flex flex-col gap-space-md text-on-surface-variant font-body-lg text-body-lg leading-relaxed text-justify">
+<div class="lg:w-3/4 flex flex-col gap-space-md text-slate-700 dark:text-on-surface-variant font-body-lg text-body-lg leading-relaxed text-justify">
+<p class="p-space-lg rounded-xl bg-sky-50/60 dark:bg-surface-container-high/40 border-l-4 border-sky-500 dark:border-primary text-slate-900 dark:text-on-surface font-medium shadow-sm">
+        "The increasing use of technology in higher education has significantly influenced how students learn, communicate, and accomplish academic tasks. This study investigates the impact of technology use on the academic performance of first-year Computer Engineering students at Batangas State University – Alangilan Campus."
+      </p>
 <p>
-          The rapid shift toward digital education has transformed higher learning in the Philippines, positioning technology as both an essential academic enabler and a pervasive cognitive hazard. This comprehensive study examines how digital devices, screen-time volume, mobile notifications, and artificial intelligence interact with student academic performance in college environments.
-        </p>
+        The rapid shift toward digital education has transformed higher learning in the Philippines, positioning technology as both an essential academic enabler and a pervasive cognitive hazard. This comprehensive study examines how digital devices, screen-time volume, mobile notifications, and artificial intelligence interact with student academic performance in college environments.
+      </p>
 <p>
-          Synthesizing empirical findings from Philippine state universities, regional PSA data, and international OECD benchmarks, this paper maps the bifurcated realities of modern learners: while technology grants unhindered access to collaborative engineering repositories and autonomous research engines, unrestrained non-academic usage and multitasking inflict tangible cognitive penalties. By categorizing device consumption habits and contextualizing the socioeconomic digital divide, the study offers evidence-based strategies for tertiary students and academic institutions to maximize technical utilities while safeguarding academic focus and critical inquiry.
-        </p>
+        Synthesizing empirical findings from Philippine state universities, regional PSA data, and international OECD benchmarks, this paper maps the bifurcated realities of modern learners: while technology grants unhindered access to collaborative engineering repositories and autonomous research engines, unrestrained non-academic usage and multitasking inflict tangible cognitive penalties. By categorizing device consumption habits and contextualizing the socioeconomic digital divide, the study offers evidence-based strategies for tertiary students and academic institutions to maximize technical utilities while safeguarding academic focus and critical inquiry.
+      </p>
 </div>
 </div>
-<!-- Key Empirical Metrics Bento Grid (4 Interactive Metric Blocks with Animated Elements) -->
-<div class="flex flex-col gap-space-md">
-<div class="flex items-center justify-between">
+<!-- PHILIPPINE DIGITAL LANDSCAPE: KEY EMPIRICAL METRICS Grid -->
+<div class="content-visible flex flex-col gap-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs">
 <div class="flex items-center gap-space-sm">
-<span class="material-symbols-outlined text-primary text-[24px]">analytics</span>
-<h3 class="font-headline-md text-headline-md text-on-surface">
-            Key Empirical Metrics &amp; Benchmarks
-          </h3>
+<span class="material-symbols-outlined text-sky-600 dark:text-primary text-[26px]">analytics</span>
+<h3 class="font-headline-md text-headline-md text-slate-900 dark:text-on-surface font-bold tracking-tight">
+          PHILIPPINE DIGITAL LANDSCAPE: KEY EMPIRICAL METRICS
+        </h3>
 </div>
-<span class="font-label-sm text-label-sm text-on-surface-variant hidden sm:inline-block">
-          Multi-source validated data streams (PSA FLEMMS • OECD PISA)
-        </span>
+<span class="font-label-sm text-label-sm text-slate-600 dark:text-on-surface-variant font-medium">
+        Key findings from the Philippine Statistics Authority (PSA) and OECD PISA reports.
+      </span>
 </div>
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-lg">
-<!-- Metric 1: 78.2% Internet Penetration -->
-<div class="p-space-lg rounded-xl bg-surface-container/85 backdrop-blur-xl shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between gap-space-md group">
+<!-- Metric 1: PSA FLEMMS: 78.2% Internet Penetration -->
+<div class="p-space-lg rounded-xl bg-white/90 dark:bg-surface-container/85 border border-slate-200 dark:border-slate-800 backdrop-blur-xl shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between gap-space-md group">
 <div class="flex items-center justify-between">
-<span class="px-2.5 py-1 rounded-full bg-primary/10 text-primary font-label-sm text-label-sm flex items-center gap-1">
+<span class="px-2.5 py-1 rounded-full bg-sky-100 dark:bg-primary/10 text-sky-700 dark:text-primary font-label-sm text-label-sm font-semibold flex items-center gap-1 border border-sky-200 dark:border-transparent">
 <span class="material-symbols-outlined text-[14px]">cell_tower</span> PSA FLEMMS
-            </span>
-<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors text-[20px]">trending_up</span>
+        </span>
+<span class="material-symbols-outlined text-slate-400 dark:text-outline group-hover:text-sky-600 dark:group-hover:text-primary transition-colors text-[20px]">trending_up</span>
 </div>
 <div class="flex flex-col gap-space-xs">
 <div class="flex items-baseline gap-1">
-<span class="font-headline-xl text-headline-xl text-on-surface font-extrabold tracking-tight group-hover:text-primary transition-colors" data-counter="78.2">3.9</span>
-<span class="font-headline-md text-headline-md text-primary">%</span>
+<span class="font-headline-xl text-headline-xl text-slate-900 dark:text-on-surface font-extrabold tracking-tight group-hover:text-sky-600 dark:group-hover:text-primary transition-colors">78.2</span>
+<span class="font-headline-md text-headline-md text-sky-600 dark:text-primary font-bold">%</span>
 </div>
-<span class="font-title-sm text-title-sm text-on-surface">Internet Penetration</span>
-<p class="font-body-sm text-body-sm text-on-surface-variant">
-              PSA FLEMMS Survey benchmark among Filipino youth and university demographic cohorts.
-            </p>
+<span class="font-title-sm text-title-sm text-slate-900 dark:text-on-surface font-semibold">Internet Penetration</span>
+<p class="font-body-sm text-body-sm text-slate-600 dark:text-on-surface-variant">
+          PSA FLEMMS Survey benchmark among Filipino youth and university demographic cohorts.
+        </p>
 </div>
-<!-- Micro SVG Progress Ring / Indicator -->
-<div class="pt-space-xs flex items-center justify-between font-label-sm text-label-sm text-outline">
-<div class="w-full bg-surface-container-highest rounded-full h-1.5 overflow-hidden">
-<div class="bg-primary h-full rounded-full transition-all duration-1000" style="width: 78.2%;"></div>
+<div class="pt-space-xs flex items-center justify-between font-label-sm text-label-sm text-slate-500 dark:text-outline">
+<div class="w-full bg-slate-200 dark:bg-surface-container-highest rounded-full h-1.5 overflow-hidden">
+<div class="bg-sky-500 dark:bg-primary h-full rounded-full" style="width: 78.2%;"></div>
 </div>
-<span class="ml-3 font-mono text-primary">High Reach</span>
+<span class="ml-3 font-mono text-sky-600 dark:text-primary font-semibold">High Reach</span>
 </div>
 </div>
-<!-- Metric 2: 39% Classroom Distraction -->
-<div class="p-space-lg rounded-xl bg-surface-container/85 backdrop-blur-xl shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between gap-space-md group">
+<!-- Metric 2: OECD PISA: 39% Classroom Distraction Rate -->
+<div class="p-space-lg rounded-xl bg-white/90 dark:bg-surface-container/85 border border-slate-200 dark:border-slate-800 backdrop-blur-xl shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between gap-space-md group">
 <div class="flex items-center justify-between">
-<span class="px-2.5 py-1 rounded-full bg-error/10 text-error font-label-sm text-label-sm flex items-center gap-1">
+<span class="px-2.5 py-1 rounded-full bg-red-100 dark:bg-error/10 text-red-700 dark:text-error font-label-sm text-label-sm font-semibold flex items-center gap-1 border border-red-200 dark:border-transparent">
 <span class="material-symbols-outlined text-[14px]">notifications_active</span> OECD PISA
-            </span>
-<span class="material-symbols-outlined text-outline group-hover:text-error transition-colors text-[20px]">warning</span>
+        </span>
+<span class="material-symbols-outlined text-slate-400 dark:text-outline group-hover:text-red-500 dark:group-hover:text-error transition-colors text-[20px]">warning</span>
 </div>
 <div class="flex flex-col gap-space-xs">
 <div class="flex items-baseline gap-1">
-<span class="font-headline-xl text-headline-xl text-on-surface font-extrabold tracking-tight group-hover:text-error transition-colors" data-counter="39">2</span>
-<span class="font-headline-md text-headline-md text-error">%</span>
+<span class="font-headline-xl text-headline-xl text-slate-900 dark:text-on-surface font-extrabold tracking-tight group-hover:text-red-600 dark:group-hover:text-error transition-colors">39</span>
+<span class="font-headline-md text-headline-md text-red-600 dark:text-error font-bold">%</span>
 </div>
-<span class="font-title-sm text-title-sm text-on-surface">Classroom Distraction</span>
-<p class="font-body-sm text-body-sm text-on-surface-variant">
-              OECD PISA reported rate of learners admitting mobile diversion during direct classroom hours.
-            </p>
+<span class="font-title-sm text-title-sm text-slate-900 dark:text-on-surface font-semibold">Classroom Distraction Rate</span>
+<p class="font-body-sm text-body-sm text-slate-600 dark:text-on-surface-variant">
+          OECD PISA reported rate of learners admitting mobile diversion during direct classroom hours.
+        </p>
 </div>
-<div class="pt-space-xs flex items-center justify-between font-label-sm text-label-sm text-outline">
-<div class="w-full bg-surface-container-highest rounded-full h-1.5 overflow-hidden">
-<div class="bg-error h-full rounded-full transition-all duration-1000" style="width: 39%;"></div>
+<div class="pt-space-xs flex items-center justify-between font-label-sm text-label-sm text-slate-500 dark:text-outline">
+<div class="w-full bg-slate-200 dark:bg-surface-container-highest rounded-full h-1.5 overflow-hidden">
+<div class="bg-red-500 dark:bg-error h-full rounded-full" style="width: 39%;"></div>
 </div>
-<span class="ml-3 font-mono text-error">Cognitive Lag</span>
+<span class="ml-3 font-mono text-red-600 dark:text-error font-semibold">Cognitive Lag</span>
 </div>
 </div>
-<!-- Metric 3: -11pts Science Score Penalty -->
-<div class="p-space-lg rounded-xl bg-surface-container/85 backdrop-blur-xl shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between gap-space-md group">
+<!-- Metric 3: PISA Gap: -11 pts Science Score Penalty -->
+<div class="p-space-lg rounded-xl bg-white/90 dark:bg-surface-container/85 border border-slate-200 dark:border-slate-800 backdrop-blur-xl shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between gap-space-md group">
 <div class="flex items-center justify-between">
-<span class="px-2.5 py-1 rounded-full bg-secondary-container/60 text-secondary font-label-sm text-label-sm flex items-center gap-1">
-<span class="material-symbols-outlined text-[14px]">balance</span> Assessment Gap
-            </span>
-<span class="material-symbols-outlined text-outline group-hover:text-secondary transition-colors text-[20px]">trending_down</span>
+<span class="px-2.5 py-1 rounded-full bg-indigo-100 dark:bg-secondary-container/60 text-indigo-700 dark:text-secondary font-label-sm text-label-sm font-semibold flex items-center gap-1 border border-indigo-200 dark:border-transparent">
+<span class="material-symbols-outlined text-[14px]">balance</span> PISA Gap
+        </span>
+<span class="material-symbols-outlined text-slate-400 dark:text-outline group-hover:text-indigo-600 dark:group-hover:text-secondary transition-colors text-[20px]">trending_down</span>
 </div>
 <div class="flex flex-col gap-space-xs">
 <div class="flex items-baseline gap-1">
-<span class="font-headline-xl text-headline-xl text-on-surface font-extrabold tracking-tight group-hover:text-secondary transition-colors" data-counter="-11">-1</span>
-<span class="font-headline-md text-headline-md text-secondary">pts</span>
+<span class="font-headline-xl text-headline-xl text-slate-900 dark:text-on-surface font-extrabold tracking-tight group-hover:text-indigo-600 dark:group-hover:text-secondary transition-colors">-11</span>
+<span class="font-headline-md text-headline-md text-indigo-600 dark:text-secondary font-bold">pts</span>
 </div>
-<span class="font-title-sm text-title-sm text-on-surface">Science Score Penalty</span>
-<p class="font-body-sm text-body-sm text-on-surface-variant">
-              OECD PISA Assessment Gap observed among heavy off-task screen users versus structured peers.
-            </p>
+<span class="font-title-sm text-title-sm text-slate-900 dark:text-on-surface font-semibold">Science Score Penalty</span>
+<p class="font-body-sm text-body-sm text-slate-600 dark:text-on-surface-variant">
+          OECD PISA Assessment Gap observed among heavy off-task screen users versus structured peers.
+        </p>
 </div>
-<div class="pt-space-xs flex items-center justify-between font-label-sm text-label-sm text-outline">
-<div class="w-full bg-surface-container-highest rounded-full h-1.5 overflow-hidden">
-<div class="bg-secondary h-full rounded-full transition-all duration-1000" style="width: 58%;"></div>
+<div class="pt-space-xs flex items-center justify-between font-label-sm text-label-sm text-slate-500 dark:text-outline">
+<div class="w-full bg-slate-200 dark:bg-surface-container-highest rounded-full h-1.5 overflow-hidden">
+<div class="bg-indigo-500 dark:bg-secondary h-full rounded-full" style="width: 58%;"></div>
 </div>
-<span class="ml-3 font-mono text-secondary">Deficit</span>
+<span class="ml-3 font-mono text-indigo-600 dark:text-secondary font-semibold">Deficit</span>
 </div>
 </div>
-<!-- Metric 4: 55% Weekly AI Adoption -->
-<div class="p-space-lg rounded-xl bg-surface-container/85 backdrop-blur-xl shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between gap-space-md group">
+<!-- Metric 4: OECD GenAI Adoption: 55% Weekly AI Copilot / Chatbot Usage -->
+<div class="p-space-lg rounded-xl bg-white/90 dark:bg-surface-container/85 border border-slate-200 dark:border-slate-800 backdrop-blur-xl shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between gap-space-md group">
 <div class="flex items-center justify-between">
-<span class="px-2.5 py-1 rounded-full bg-tertiary/10 text-tertiary font-label-sm text-label-sm flex items-center gap-1">
-<span class="material-symbols-outlined text-[14px]">smart_toy</span> GenAI Routine
-            </span>
-<span class="material-symbols-outlined text-outline group-hover:text-tertiary transition-colors text-[20px]">bolt</span>
+<span class="px-2.5 py-1 rounded-full bg-emerald-100 dark:bg-tertiary/10 text-emerald-700 dark:text-tertiary font-label-sm text-label-sm font-semibold flex items-center gap-1 border border-emerald-200 dark:border-transparent">
+<span class="material-symbols-outlined text-[14px]">smart_toy</span> OECD GenAI Adoption
+        </span>
+<span class="material-symbols-outlined text-slate-400 dark:text-outline group-hover:text-emerald-600 dark:group-hover:text-tertiary transition-colors text-[20px]">bolt</span>
 </div>
 <div class="flex flex-col gap-space-xs">
 <div class="flex items-baseline gap-1">
-<span class="font-headline-xl text-headline-xl text-on-surface font-extrabold tracking-tight group-hover:text-tertiary transition-colors" data-counter="55">3</span>
-<span class="font-headline-md text-headline-md text-tertiary">%</span>
+<span class="font-headline-xl text-headline-xl text-slate-900 dark:text-on-surface font-extrabold tracking-tight group-hover:text-emerald-600 dark:group-hover:text-tertiary transition-colors">55</span>
+<span class="font-headline-md text-headline-md text-emerald-600 dark:text-tertiary font-bold">%</span>
 </div>
-<span class="font-title-sm text-title-sm text-on-surface">Weekly AI Adoption</span>
-<p class="font-body-sm text-body-sm text-on-surface-variant">
-              OECD empirical metric reflecting students deploying LLM assistance weekly for coursework.
-            </p>
+<span class="font-title-sm text-title-sm text-slate-900 dark:text-on-surface font-semibold">Weekly AI Copilot / Chatbot Usage</span>
+<p class="font-body-sm text-body-sm text-slate-600 dark:text-on-surface-variant">
+          OECD empirical metric reflecting students deploying LLM assistance weekly for coursework.
+        </p>
 </div>
-<div class="pt-space-xs flex items-center justify-between font-label-sm text-label-sm text-outline">
-<div class="w-full bg-surface-container-highest rounded-full h-1.5 overflow-hidden">
-<div class="bg-tertiary h-full rounded-full transition-all duration-1000" style="width: 55%;"></div>
+<div class="pt-space-xs flex items-center justify-between font-label-sm text-label-sm text-slate-500 dark:text-outline">
+<div class="w-full bg-slate-200 dark:bg-surface-container-highest rounded-full h-1.5 overflow-hidden">
+<div class="bg-emerald-500 dark:bg-tertiary h-full rounded-full" style="width: 55%;"></div>
 </div>
-<span class="ml-3 font-mono text-tertiary">Acceleration</span>
-</div>
-</div>
+<span class="ml-3 font-mono text-emerald-600 dark:text-tertiary font-semibold">Acceleration</span>
 </div>
 </div>
-<!-- Research Artifacts & Data Lineage Strip -->
-<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md pt-space-xs">
-<div class="p-space-md rounded-lg bg-surface-container-low/90 backdrop-blur-md flex items-center gap-space-md shadow-sm">
-<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center text-primary shrink-0">
+</div>
+</div>
+<!-- Research Lineage and Structural Direct Action Strip -->
+<div class="content-visible grid grid-cols-1 md:grid-cols-3 gap-space-md pt-space-xs">
+<div class="p-space-md rounded-lg bg-white/90 dark:bg-surface-container-low/90 border border-slate-200 dark:border-slate-800 backdrop-blur-md flex items-center gap-space-md shadow-sm">
+<div class="w-12 h-12 rounded-lg bg-sky-100 dark:bg-surface-container-high flex items-center justify-center text-sky-600 dark:text-primary shrink-0">
 <span class="material-symbols-outlined text-[24px]">architecture</span>
 </div>
 <div class="flex flex-col min-w-0">
-<span class="font-title-sm text-title-sm text-on-surface truncate">Engineering Paradigm</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Bridging algorithmic tools with cognitive balance</span>
+<span class="font-title-sm text-title-sm text-slate-900 dark:text-on-surface font-semibold truncate">Engineering Paradigm</span>
+<span class="font-body-sm text-body-sm text-slate-600 dark:text-on-surface-variant truncate">Bridging algorithmic tools with cognitive balance</span>
 </div>
 </div>
-<div class="p-space-md rounded-lg bg-surface-container-low/90 backdrop-blur-md flex items-center gap-space-md shadow-sm">
-<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center text-tertiary shrink-0">
+<div class="p-space-md rounded-lg bg-white/90 dark:bg-surface-container-low/90 border border-slate-200 dark:border-slate-800 backdrop-blur-md flex items-center gap-space-md shadow-sm">
+<div class="w-12 h-12 rounded-lg bg-emerald-100 dark:bg-surface-container-high flex items-center justify-center text-emerald-600 dark:text-tertiary shrink-0">
 <span class="material-symbols-outlined text-[24px]">dataset</span>
 </div>
 <div class="flex flex-col min-w-0">
-<span class="font-title-sm text-title-sm text-on-surface truncate">Open Scientific Datasets</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Institutional repositories, CHED, PSA, and OECD</span>
+<span class="font-title-sm text-title-sm text-slate-900 dark:text-on-surface font-semibold truncate">Open Scientific Datasets</span>
+<span class="font-body-sm text-body-sm text-slate-600 dark:text-on-surface-variant truncate">Institutional repositories, CHED, PSA, and OECD</span>
 </div>
 </div>
-<div class="p-space-md rounded-lg bg-surface-container-low/90 backdrop-blur-md flex items-center justify-between gap-space-md shadow-sm">
+<div class="p-space-md rounded-lg bg-white/90 dark:bg-surface-container-low/90 border border-slate-200 dark:border-slate-800 backdrop-blur-md flex items-center justify-between gap-space-md shadow-sm">
 <div class="flex items-center gap-space-md min-w-0">
-<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary shrink-0">
+<div class="w-12 h-12 rounded-lg bg-indigo-100 dark:bg-surface-container-high flex items-center justify-center text-indigo-600 dark:text-secondary shrink-0">
 <span class="material-symbols-outlined text-[24px]">menu_book</span>
 </div>
 <div class="flex flex-col min-w-0">
-<span class="font-title-sm text-title-sm text-on-surface truncate">Proceed to Chapter 1</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Conceptual &amp; Theoretical Framework</span>
+<span class="font-title-sm text-title-sm text-slate-900 dark:text-on-surface font-semibold truncate">Proceed to Chapter 1</span>
+<span class="font-body-sm text-body-sm text-slate-600 dark:text-on-surface-variant truncate">Conceptual &amp; Theoretical Framework</span>
 </div>
 </div>
-<a aria-label="Go to Introduction" class="p-2 rounded-lg bg-surface-bright text-on-surface hover:bg-primary-container hover:text-on-primary-container transition-colors shrink-0" href="introduction.html">
+<a aria-label="Go to Introduction" class="p-2.5 rounded-lg bg-sky-500 hover:bg-sky-600 text-white dark:bg-primary-container dark:hover:bg-primary dark:text-on-primary-container transition-colors shrink-0 flex items-center justify-center" href="introduction.html">
 <span class="material-symbols-outlined text-[20px]">chevron_right</span>
 </a>
 </div>
 </div>
 </div>
-<!-- Interactive Counter Script -->
+</div></main><footer class="w-full bg-[#f8f9ff] dark:bg-surface-container-low border-t border-slate-200 dark:border-slate-800 mt-space-xl py-space-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] relative z-10"><div class="w-full px-gutter"><div class="grid grid-cols-1 md:grid-cols-12 gap-space-lg pb-space-lg"><div class="md:col-span-5 flex flex-col gap-space-sm"><div class="flex items-center gap-space-sm"><span class="font-headline-sm text-headline-sm text-sky-600 dark:text-primary font-bold flex items-center gap-2"><img alt="TechTrack PH Logo" class="w-6 h-6 rounded object-contain inline-block" onerror="this.onerror=null; this.src='https://lh3.googleusercontent.com/aida-public/AB6AXuD5MGlaX2vkirkI7DsyEewK4iCD5mSB0wJiKBjuhJpJ1__nxYfwhwMDwvE9h37JvHoGCqZZZlz1UsF38dXiJ2kfnOrPKGkFTLJ0ZUaaAjrIQe7imnyOFmxEs1jsfn1Gr7RI1nKrwFkdZIMyAP1aRMjmK3Z0VxOkrYRBAu_kkpxl_bTScz0j6pM_gj-OaNkjRQvPtMxilTMGLshqMuIXnlsTwOvJ55Uh4iunR0a6QdI';" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzIF1yW9fie33-af0x0D68Aaa7vdKGXZkUedSQL88oiBrMLP1xWSjk_Dhh15hcECPKYDJbwLbkaT6qp8sJK_nZ0mqzSUGk0za_eVzAbEe0CQzXNwNQNrZ02ZufzdIqAXY1Q0oJ5PuyLSGiRqO6t0ZS9JNQ6s12V-dAX1z-SdA97IXwOzY6l6h4w_kmLUiquxhlxisqwVlHam8tMJVptRqRizI8KsBNY-RAMNvFuw8"/> TechTrack PH</span><span class="px-2 py-0.5 rounded-full bg-indigo-100 dark:bg-secondary-container text-indigo-700 dark:text-on-secondary-container font-label-sm text-label-sm font-semibold border border-indigo-200 dark:border-transparent">GEd 104</span></div><p class="font-body-sm text-body-sm text-slate-600 dark:text-on-surface-variant max-w-md">Academic and institutional research initiative examining technological modernization, localized infrastructure metrics, and national development frameworks.</p><div class="flex items-center gap-space-xs font-label-md text-label-md text-emerald-700 dark:text-tertiary font-semibold"><span class="material-symbols-outlined text-[16px]">verified</span>Batangas State University - The National Engineering University</div></div><div class="md:col-span-4 flex flex-col gap-space-xs"><span class="font-title-sm text-title-sm text-slate-900 dark:text-on-surface uppercase tracking-wider font-semibold">Institutional Affiliation</span><p class="font-body-sm text-body-sm text-slate-600 dark:text-on-surface-variant">College of Engineering, Architecture and Fine Arts (CEAFA)</p><p class="font-body-sm text-body-sm text-slate-600 dark:text-on-surface-variant">BatStateU Alangilan Campus</p><p class="font-body-sm text-body-sm text-slate-600 dark:text-on-surface-variant">Golden Country Homes, Alangilan, Batangas City, Philippines</p><div class="flex items-center gap-space-sm mt-space-xs"><span class="font-label-sm text-label-sm text-slate-500 dark:text-outline font-medium">Campus Code:</span><span class="font-label-sm text-label-sm text-sky-600 dark:text-primary font-bold">ALN-CEAFA</span></div></div><div class="md:col-span-3 flex flex-col gap-space-xs"><span class="font-title-sm text-title-sm text-slate-900 dark:text-on-surface uppercase tracking-wider font-semibold">Portal Navigation</span><ul class="flex flex-col gap-1 font-body-sm text-body-sm text-slate-600 dark:text-on-surface-variant"><li class="hover:text-sky-600 dark:hover:text-primary transition-colors"><a data-path="overview" href="index.html">Overview Workspace</a></li><li class="hover:text-sky-600 dark:hover:text-primary transition-colors"><a data-path="introduction" href="introduction.html">Conceptual Framework</a></li><li class="hover:text-sky-600 dark:hover:text-primary transition-colors"><a data-path="discussion" href="discussion.html">Analytical Discussion</a></li><li class="hover:text-sky-600 dark:hover:text-primary transition-colors"><a data-path="significance" href="significance.html">National Significance</a></li><li class="hover:text-sky-600 dark:hover:text-primary transition-colors"><a data-path="references" href="references.html">Scholarly Citations</a></li></ul></div></div><div class="pt-space-md flex flex-col sm:flex-row items-center justify-between gap-space-md font-body-sm text-body-sm text-slate-500 dark:text-outline border-t border-slate-200 dark:border-slate-800/80"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[16px]">school</span><span>© 2025 BatStateU The NEU Alangilan • GEd 104 Research Group</span></div><div class="flex items-center gap-space-md font-label-sm text-label-sm"><span class="text-emerald-700 dark:text-tertiary font-semibold">CEAFA Scientific Repository</span><span>•</span><span>Open Scholarly Access</span></div></div></div></footer>
 <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const counters = document.querySelectorAll('[data-counter]');
-      const speed = 40;
+// Persistent Theme Toggle (LocalStorage & Preference listener)
+(function(){
+  const toggleBtn = document.getElementById('theme-toggle-btn');
+  const toggleIcon = document.getElementById('theme-toggle-icon');
+  const html = document.documentElement;
+  
+  function applyTheme(isDark) {
+    if (isDark) {
+      html.classList.add('dark');
+      if (toggleIcon) toggleIcon.textContent = 'light_mode';
+    } else {
+      html.classList.remove('dark');
+      if (toggleIcon) toggleIcon.textContent = 'dark_mode';
+    }
+  }
 
-      counters.forEach(counter => {
-        const target = parseFloat(counter.getAttribute('data-counter'));
-        const isNegative = target < 0;
-        const absTarget = Math.abs(target);
-        const isDecimal = target % 1 !== 0;
-        let count = 0;
+  const savedTheme = localStorage.getItem('techtrack_theme') || localStorage.getItem('techtrack-theme');
+  const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const initialDark = savedTheme ? (savedTheme === 'dark') : (prefersDark !== undefined ? prefersDark : true);
 
-        const updateCount = () => {
-          const inc = absTarget / speed;
-          if (count < absTarget) {
-            count += inc;
-            const displayVal = (isNegative ? '-' : '') + (isDecimal ? count.toFixed(1) : Math.ceil(count));
-            counter.innerText = displayVal;
-            setTimeout(updateCount, 25);
-          } else {
-            counter.innerText = target;
-          }
-        };
+  applyTheme(initialDark);
 
-        updateCount();
-      });
+  if (toggleBtn) {
+    toggleBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      const isCurrentlyDark = html.classList.contains('dark');
+      const nextDark = !isCurrentlyDark;
+      applyTheme(nextDark);
+      const themeValue = nextDark ? 'dark' : 'light';
+      localStorage.setItem('techtrack_theme', themeValue);
+      localStorage.setItem('techtrack-theme', themeValue);
     });
-  </script>
-</div></main><footer class="w-full bg-surface-container-low mt-space-xl py-space-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="w-full px-gutter"><div class="grid grid-cols-1 md:grid-cols-12 gap-space-lg pb-space-lg"><div class="md:col-span-5 flex flex-col gap-space-sm"><div class="flex items-center gap-space-sm"><span class="font-headline-sm text-headline-sm text-primary font-bold">⚡ TechTrack PH</span><span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm">GEd 104</span></div><p class="font-body-sm text-body-sm text-on-surface-variant max-w-md">Academic and institutional research initiative examining technological modernization, localized infrastructure metrics, and national development frameworks.</p><div class="flex items-center gap-space-xs font-label-md text-label-md text-tertiary"><span class="material-symbols-outlined text-[16px]">verified</span>Batangas State University - The National Engineering University</div></div><div class="md:col-span-4 flex flex-col gap-space-xs"><span class="font-title-sm text-title-sm text-on-surface uppercase tracking-wider">Institutional Affiliation</span><p class="font-body-sm text-body-sm text-on-surface-variant">College of Engineering, Architecture and Fine Arts (CEAFA)</p><p class="font-body-sm text-body-sm text-on-surface-variant">BatStateU Alangilan Campus</p><p class="font-body-sm text-body-sm text-on-surface-variant">Golden Country Homes, Alangilan, Batangas City, Philippines</p><div class="flex items-center gap-space-sm mt-space-xs"><span class="font-label-sm text-label-sm text-outline">Campus Code:</span><span class="font-label-sm text-label-sm text-primary">ALN-CEAFA</span></div></div><div class="md:col-span-3 flex flex-col gap-space-xs"><span class="font-title-sm text-title-sm text-on-surface uppercase tracking-wider">Portal Navigation</span><ul class="flex flex-col gap-1 font-body-sm text-body-sm text-on-surface-variant"><li class="hover:text-primary transition-colors"><a data-path="overview" href="index.html">Overview Workspace</a></li><li class="hover:text-primary transition-colors"><a data-path="introduction" href="introduction.html">Conceptual Framework</a></li><li class="hover:text-primary transition-colors"><a data-path="discussion" href="discussion.html">Analytical Discussion</a></li><li class="hover:text-primary transition-colors"><a data-path="significance" href="significance.html">National Significance</a></li><li class="hover:text-primary transition-colors"><a data-path="references" href="references.html">Scholarly Citations</a></li></ul></div></div><div class="pt-space-md flex flex-col sm:flex-row items-center justify-between gap-space-md font-body-sm text-body-sm text-outline"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[16px]">school</span><span>© 2025 BatStateU The NEU Alangilan • GEd 104 Research Group</span></div><div class="flex items-center gap-space-md font-label-sm text-label-sm"><span class="text-tertiary">CEAFA Scientific Repository</span><span>•</span><span>Open Scholarly Access</span></div></div></div></footer><script>(function(){const toggleBtn=document.getElementById('theme-toggle-btn');const toggleIcon=document.getElementById('theme-toggle-icon');const html=document.documentElement;function updateThemeUI(isDark){if(isDark){html.classList.add('dark');toggleIcon.textContent='light_mode';}else{html.classList.remove('dark');toggleIcon.textContent='dark_mode';}}const savedTheme=localStorage.getItem('techtrack-theme');const prefersDark=window.matchMedia('(prefers-color-scheme: dark)').matches;const initialDark=savedTheme?savedTheme==='dark':prefersDark;updateThemeUI(initialDark);if(toggleBtn){toggleBtn.addEventListener('click',function(){const isCurrentlyDark=html.classList.contains('dark');const nextDark=!isCurrentlyDark;updateThemeUI(nextDark);localStorage.setItem('techtrack-theme',nextDark?'dark':'light');});}})();</script>
+  }
 
+  if (window.matchMedia) {
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+      if (!localStorage.getItem('techtrack_theme') && !localStorage.getItem('techtrack-theme')) {
+        applyTheme(e.matches);
+      }
+    });
+  }
+})();
+</script>
 </body></html>
