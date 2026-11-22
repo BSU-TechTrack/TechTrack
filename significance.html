@@ -1,529 +1,551 @@
-<!DOCTYPE html>
-
-<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>TechTrack PH | GEd 104 Academic Research Portal</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;family=Plus+Jakarta+Sans:wght@100..900&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}
-@keyframes float-blob-1{0%,100%{transform:translate(0px,0px) scale(1);}50%{transform:translate(45px,-35px) scale(1.12);}}
-@keyframes float-blob-2{0%,100%{transform:translate(0px,0px) scale(1);}50%{transform:translate(-50px,35px) scale(0.92);}}
-@keyframes float-blob-3{0%,100%{transform:translate(0px,0px) scale(1);}50%{transform:translate(35px,45px) scale(1.08);}}
-@keyframes radar-scan{0%{transform:rotate(0deg);}100%{transform:rotate(360deg);}}
-@keyframes pulse-slow{0%,100%{opacity:0.4;}50%{opacity:0.8;}}
-.ambient-blob-1{animation:float-blob-1 16s ease-in-out infinite;}
-.ambient-blob-2{animation:float-blob-2 20s ease-in-out infinite;}
-.ambient-blob-3{animation:float-blob-3 24s ease-in-out infinite;}
-.radar-line{animation:radar-scan 6s linear infinite;transform-origin:center;}
-.grid-tech-pattern{background-size:24px 24px;background-image:linear-gradient(to right,rgba(56,189,248,0.06) 1px,transparent 1px),linear-gradient(to bottom,rgba(56,189,248,0.06) 1px,transparent 1px);}
-.reveal-init{opacity:1;transform:translateY(0);transition:opacity 0.65s cubic-bezier(0.16,1,0.3,1),transform 0.65s cubic-bezier(0.16,1,0.3,1);}
-.reveal-hidden{opacity:0;transform:translateY(24px);}
-.interactive-card{transition:all 0.3s cubic-bezier(0.16,1,0.3,1);}
-.interactive-card:hover{transform:translateY(-6px);box-shadow:0 20px 35px -10px rgba(56,189,248,0.22);}
-</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"primary-fixed-dim":"#7bd0ff","surface":"#041329","surface-dim":"#041329","inverse-on-surface":"#233148","surface-variant":"#27354c","error-container":"#93000a","inverse-primary":"#00668a","on-tertiary":"#003825","error":"#ffb4ab","primary-container":"#38bdf8","surface-container-high":"#1c2a41","surface-container-highest":"#27354c","on-tertiary-fixed-variant":"#005137","surface-tint":"#7bd0ff","tertiary-container":"#22c990","secondary-container":"#2f3aa3","surface-container-lowest":"#010e24","primary-fixed":"#c4e7ff","on-error":"#690005","outline-variant":"#3e484f","secondary-fixed":"#e0e0ff","tertiary-fixed":"#68fcbf","outline":"#87929a","surface-container-low":"#0d1c32","on-background":"#d6e3ff","on-primary":"#00354a","on-error-container":"#ffdad6","inverse-surface":"#d6e3ff","tertiary":"#4ee6aa","tertiary-fixed-dim":"#45dfa4","primary":"#8ed5ff","secondary":"#bdc2ff","on-surface-variant":"#bdc8d1","background":"#041329","on-secondary-fixed":"#000767","on-tertiary-fixed":"#002114","surface-container":"#112036","on-primary-container":"#004965","on-primary-fixed":"#001e2c","on-primary-fixed-variant":"#004c69","on-surface":"#d6e3ff","on-secondary":"#131e8c","secondary-fixed-dim":"#bdc2ff","on-secondary-fixed-variant":"#2f3aa3","on-secondary-container":"#a8afff","on-tertiary-container":"#004e35","surface-bright":"#2c3951"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"space-lg":"1.5rem","space-xl":"2.5rem","gutter-mobile":"1rem","space-sm":"0.5rem",gutter:"1.5rem",margin:"2rem","space-md":"1rem","margin-mobile":"1rem","space-xs":"0.25rem"},fontFamily:{"body-lg":["Inter"],"headline-sm":["Plus Jakarta Sans"],"title-md":["Inter"],"body-sm":["Inter"],"title-sm":["Inter"],"headline-xl":["Plus Jakarta Sans"],"body-md":["Inter"],"label-sm":["Inter"],"headline-lg-mobile":["Plus Jakarta Sans"],"label-md":["Inter"],"headline-lg":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"headline-xl-mobile":["Plus Jakarta Sans"],"mono":["JetBrains Mono","monospace"]},fontSize:{"body-lg":["16px",{lineHeight:"26px",fontWeight:"400"}],"headline-sm":["20px",{lineHeight:"28px",fontWeight:"600"}],"title-md":["16px",{lineHeight:"24px",fontWeight:"600"}],"body-sm":["12px",{lineHeight:"18px",fontWeight:"400"}],"title-sm":["14px",{lineHeight:"20px",fontWeight:"600"}],"headline-xl":["40px",{lineHeight:"48px",letterSpacing:"-0.02em",fontWeight:"700"}],"body-md":["14px",{lineHeight:"22px",fontWeight:"400"}],"label-sm":["11px",{lineHeight:"14px",letterSpacing:"0.03em",fontWeight:"600"}],"headline-lg-mobile":["24px",{lineHeight:"32px",letterSpacing:"-0.01em",fontWeight:"600"}],"label-md":["12px",{lineHeight:"16px",letterSpacing:"0.02em",fontWeight:"600"}],"headline-lg":["32px",{lineHeight:"40px",letterSpacing:"-0.015em",fontWeight:"600"}],"headline-md":["24px",{lineHeight:"32px",letterSpacing:"-0.01em",fontWeight:"600"}],"headline-xl-mobile":["30px",{lineHeight:"38px",letterSpacing:"-0.02em",fontWeight:"700"}]}}}};</script><script>function initTheme(){const stored=localStorage.getItem('techtrack_theme');const sysDark=window.matchMedia('(prefers-color-scheme: dark)').matches;if(stored==='dark'||(!stored&&sysDark)){document.documentElement.classList.add('dark');localStorage.setItem('techtrack_theme','dark');}else if(stored==='light'){document.documentElement.classList.remove('dark');localStorage.setItem('techtrack_theme','light');}else{document.documentElement.classList.add('dark');localStorage.setItem('techtrack_theme','dark');}}initTheme();function toggleTheme(){const isDark=document.documentElement.classList.toggle('dark');const theme=isDark?'dark':'light';localStorage.setItem('techtrack_theme',theme);const icon=document.getElementById('theme-toggle-icon');if(icon){icon.textContent=isDark?'light_mode':'dark_mode';}const label=document.getElementById('theme-toggle-label');if(label){label.textContent=isDark?'Dark Mode':'Light Mode';}}window.addEventListener('DOMContentLoaded',()=>{const isDark=document.documentElement.classList.contains('dark');const icon=document.getElementById('theme-toggle-icon');if(icon){icon.textContent=isDark?'light_mode':'dark_mode';}const label=document.getElementById('theme-toggle-label');if(label){label.textContent=isDark?'Dark Mode':'Light Mode';}setupScrollReveals();});function setupScrollReveals(){const revealElements=document.querySelectorAll('.scroll-reveal');if('IntersectionObserver' in window){const observer=new IntersectionObserver((entries)=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.remove('reveal-hidden');observer.unobserve(entry.target);}});},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});revealElements.forEach(el=>{el.classList.add('reveal-hidden');observer.observe(el);});}else{revealElements.forEach(el=>el.classList.remove('reveal-hidden'));}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased min-h-screen relative selection:bg-primary-container selection:text-on-primary-container transition-colors duration-300 dark:bg-[#041329] light:bg-[#f1f5f9]"><div aria-hidden="true" class="ambient-blob-bg fixed inset-0 pointer-events-none overflow-hidden z-0"><div class="ambient-blob-1 absolute -top-24 -left-24 w-[550px] h-[550px] rounded-full bg-gradient-to-br from-primary/25 via-primary-container/15 to-transparent blur-[90px] dark:opacity-70 opacity-40"></div><div class="ambient-blob-2 absolute top-1/3 -right-24 w-[600px] h-[600px] rounded-full bg-gradient-to-bl from-secondary-container/30 via-primary/10 to-transparent blur-[100px] dark:opacity-70 opacity-30"></div><div class="ambient-blob-3 absolute -bottom-32 left-1/4 w-[650px] h-[650px] rounded-full bg-gradient-to-tr from-tertiary/15 via-secondary-container/20 to-transparent blur-[110px] dark:opacity-60 opacity-35"></div></div><header class="fixed top-0 w-full z-50 bg-surface/85 dark:bg-[#041329]/85 backdrop-blur-md border-b border-surface-container-high/60 shadow-[0_4px_20px_rgba(0,0,0,0.15)]"><div class="h-20 max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between gap-4"><div class="flex items-center gap-3"><a class="flex items-center gap-3 group" href="index.html"><img alt="Batangas State University CpE Logo" class="w-10 h-10 object-contain drop-shadow transition-transform group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8I4Y4qA3HiYpx-eP2bNItynO3o-zxGMmZ10pnuXHJ4DyJ-FZH94xZvHh4ldZ5plNjawoUYgPG6F-1pMEGESBuGniDYeJ8it-fohcYd8ZYVxgoB6K7Z-XTzEcNANwzDZKQsXLOmN2V3W0w-hTf9wcfWo2tPWH9jYv4I-PVg9A9KeNv7L7FbM64AfZcT9inY_JTpl8ANjJOgohr27qhYzOS5e45SoVLX2lXr5oBX5ARuIJPC2R_o02S"/><div class="flex flex-col"><div class="flex items-center gap-2"><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface font-bold">TechTrack PH</span><span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">GEd 104</span></div><span class="font-label-sm text-label-sm text-on-surface-variant font-mono text-[10px]">TNEU Alangilan • BSCpE Research</span></div></a></div><nav class="hidden xl:flex items-center gap-1.5 p-1 rounded-xl bg-surface-container-low border border-outline-variant/30" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg shadow-sm"><a class="px-3.5 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all font-title-sm text-title-sm" data-path="overview" href="index.html">Overview</a><a class="px-3.5 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all font-title-sm text-title-sm" data-path="introduction" href="introduction.html">Introduction</a><a class="px-3.5 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all font-title-sm text-title-sm" data-path="discussion" href="discussion.html">Discussion</a><a aria-current="page" class="px-3.5 py-1.5 transition-all bg-primary-container text-on-primary-container font-semibold rounded-lg shadow-sm" data-path="significance" href="significance.html">Significance</a><a class="px-3.5 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all font-title-sm text-title-sm" data-path="research-team" href="team.html">Research Team</a><a class="px-3.5 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all font-title-sm text-title-sm" data-path="references" href="references.html">References</a></nav><div class="flex items-center gap-2.5"><button aria-label="Toggle color theme" class="px-3 h-9 rounded-lg flex items-center gap-1.5 bg-surface-container hover:bg-surface-container-high border border-outline-variant/40 hover:border-primary/40 transition-all text-on-surface-variant hover:text-on-surface cursor-pointer" onclick="toggleTheme()" title="Switch Light / Dark Theme" type="button"><span class="material-symbols-outlined text-[20px] text-primary transition-transform duration-300" id="theme-toggle-icon">dark_mode</span><span class="hidden md:inline font-mono text-[11px] font-semibold tracking-wide" id="theme-toggle-label">Dark Mode</span></button><a aria-label="External Research Repository" class="w-9 h-9 rounded-lg flex items-center justify-center bg-surface-container hover:bg-surface-container-high border border-outline-variant/40 hover:border-primary/40 transition-all text-on-surface-variant hover:text-on-surface" href="https://github.com" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-[20px]">deployed_code</span></a><div class="w-9 h-9 rounded-full bg-gradient-to-br from-primary to-primary-container flex items-center justify-center shadow-md shadow-primary/20"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="relative z-10 w-full pt-20 bg-transparent min-h-[calc(100vh-20rem)]"><div class="flex flex-col w-full">
-<div class="relative w-full overflow-hidden px-6 lg:px-12 py-10 max-w-7xl mx-auto">
-<!-- Top Meta Context Bar -->
-<div class="flex flex-wrap items-center justify-between gap-4 mb-8">
-<div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-surface-container-high/80 border border-primary/20 backdrop-blur-md shadow-sm">
-<span class="w-2.5 h-2.5 rounded-full bg-tertiary animate-pulse shadow-[0_0_8px_#4ee6aa]"></span>
-<span class="font-mono text-[11px] text-primary tracking-wider uppercase font-semibold">GED 104 • MILESTONE IV EMPIRICAL VECTOR</span>
+<!DOCTYPE html><html class="dark" lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><title>TechTrack PH | GEd 104 BSCpE Research Portal</title><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}@keyframes blob-float{0%,100%{transform:translate(0px,0px) scale(1);}33%{transform:translate(30px,-50px) scale(1.08);}66%{transform:translate(-20px,20px) scale(0.95);}}@keyframes blob-float-reverse{0%,100%{transform:translate(0px,0px) scale(1);}33%{transform:translate(-35px,40px) scale(1.05);}66%{transform:translate(25px,-30px) scale(0.92);}}.animate-blob-1{animation:blob-float 18s ease-in-out infinite;}.animate-blob-2{animation:blob-float-reverse 22s ease-in-out infinite;}.animate-blob-3{animation:blob-float 26s ease-in-out infinite;}.bg-grid-cyber{background-size:36px 36px;background-image:linear-gradient(to right,rgba(255,255,255,0.03) 1px,transparent 1px),linear-gradient(to bottom,rgba(255,255,255,0.03) 1px,transparent 1px);}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "on-error": "#690005",
+          "inverse-primary": "#00668a",
+          "outline": "#87929a",
+          "tertiary-container": "#22c990",
+          "tertiary": "#4ee6aa",
+          "surface-container-highest": "#27354c",
+          "inverse-on-surface": "#233148",
+          "on-tertiary-container": "#004e35",
+          "primary-fixed": "#c4e7ff",
+          "on-secondary-fixed-variant": "#2f3aa3",
+          "tertiary-fixed-dim": "#45dfa4",
+          "outline-variant": "#3e484f",
+          "on-tertiary": "#003825",
+          "surface-container-low": "#0d1c32",
+          "on-secondary-fixed": "#000767",
+          "error": "#ffb4ab",
+          "surface-bright": "#2c3951",
+          "on-primary-fixed-variant": "#004c69",
+          "surface-dim": "#041329",
+          "on-error-container": "#ffdad6",
+          "on-surface-variant": "#bdc8d1",
+          "on-surface": "#d6e3ff",
+          "error-container": "#93000a",
+          "surface-tint": "#7bd0ff",
+          "on-secondary-container": "#a8afff",
+          "surface-container-lowest": "#010e24",
+          "background": "#041329",
+          "inverse-surface": "#d6e3ff",
+          "surface-container": "#112036",
+          "on-primary-fixed": "#001e2c",
+          "on-tertiary-fixed-variant": "#005137",
+          "on-tertiary-fixed": "#002114",
+          "secondary-fixed-dim": "#bdc2ff",
+          "secondary-fixed": "#e0e0ff",
+          "on-primary": "#00354a",
+          "primary-container": "#38bdf8",
+          "secondary": "#bdc2ff",
+          "surface-variant": "#27354c",
+          "primary-fixed-dim": "#7bd0ff",
+          "on-background": "#d6e3ff",
+          "on-primary-container": "#004965",
+          "primary": "#8ed5ff",
+          "on-secondary": "#131e8c",
+          "secondary-container": "#2f3aa3",
+          "surface": "#041329",
+          "tertiary-fixed": "#68fcbf",
+          "surface-container-high": "#1c2a41"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "gutter-mobile": "1rem",
+          "space-xs": "0.25rem",
+          "space-lg": "1.5rem",
+          "gutter": "1.5rem",
+          "margin": "2rem",
+          "space-md": "1rem",
+          "space-xl": "2.5rem",
+          "space-sm": "0.5rem",
+          "margin-mobile": "1rem"
+        },
+        "fontFamily": {
+          "headline-sm": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-md": [
+            "Plus Jakarta Sans"
+          ],
+          "body-sm": [
+            "Inter"
+          ],
+          "headline-lg": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-lg-mobile": [
+            "Plus Jakarta Sans"
+          ],
+          "label-md": [
+            "Inter"
+          ],
+          "body-md": [
+            "Inter"
+          ],
+          "title-md": [
+            "Inter"
+          ],
+          "headline-xl": [
+            "Plus Jakarta Sans"
+          ],
+          "label-sm": [
+            "Inter"
+          ],
+          "title-sm": [
+            "Inter"
+          ],
+          "headline-xl-mobile": [
+            "Plus Jakarta Sans"
+          ],
+          "body-lg": [
+            "Inter"
+          ]
+        },
+        "fontSize": {
+          "headline-sm": [
+            "20px",
+            {
+              "lineHeight": "28px",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-md": [
+            "24px",
+            {
+              "lineHeight": "32px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-sm": [
+            "12px",
+            {
+              "lineHeight": "18px",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-lg": [
+            "32px",
+            {
+              "lineHeight": "40px",
+              "letterSpacing": "-0.015em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-lg-mobile": [
+            "24px",
+            {
+              "lineHeight": "32px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "label-md": [
+            "12px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0.02em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-md": [
+            "14px",
+            {
+              "lineHeight": "22px",
+              "fontWeight": "400"
+            }
+          ],
+          "title-md": [
+            "16px",
+            {
+              "lineHeight": "24px",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-xl": [
+            "40px",
+            {
+              "lineHeight": "48px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "700"
+            }
+          ],
+          "label-sm": [
+            "11px",
+            {
+              "lineHeight": "14px",
+              "letterSpacing": "0.03em",
+              "fontWeight": "600"
+            }
+          ],
+          "title-sm": [
+            "14px",
+            {
+              "lineHeight": "20px",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-xl-mobile": [
+            "30px",
+            {
+              "lineHeight": "38px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "700"
+            }
+          ],
+          "body-lg": [
+            "16px",
+            {
+              "lineHeight": "26px",
+              "fontWeight": "400"
+            }
+          ]
+        }
+      },
+    },
+  };</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased relative min-h-screen selection:bg-primary selection:text-on-primary"><div class="fixed inset-0 pointer-events-none z-0 overflow-hidden"><div class="absolute -top-32 left-1/4 w-[500px] h-[500px] rounded-full bg-sky-600/15 blur-[120px] animate-blob-1"></div><div class="absolute top-1/3 -right-24 w-[450px] h-[450px] rounded-full bg-teal-600/15 blur-[130px] animate-blob-2"></div><div class="absolute -bottom-40 left-1/3 w-[550px] h-[550px] rounded-full bg-primary-container/10 blur-[140px] animate-blob-3"></div><div class="absolute inset-0 bg-grid-cyber opacity-75"></div></div><header class="fixed top-0 left-0 right-0 w-full z-50 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.12)]"><div class="h-20 w-full max-w-7xl mx-auto px-gutter flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md"><div class="relative flex items-center justify-center p-space-xs rounded-lg bg-surface-container/60 shadow-[0_0_16px_rgba(56,189,248,0.15)]"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/ALJJyrD70Mqaz-Z-5Wk9K6vnxSldkJtxg8ZVMvaGR7_QMK0sRd4tYIWdEPvvqgCRdMsHlx6OK2N-1-3_l2-ULfSW3iuz2mF2U4OQg4kh1Gl8ndZkU5XmEAMXOQyL8-Zx6PVj5BL8AkT6l1AidcjGD1N0Wgt3e0FuribDcZgUQ00IP_u-tla9EMQvAAyDS5_eHuxUhfjBUS9oNScPddH_a_-DapyhC3AhBGsdGlL82u5yHDdtIc5Ih1kVUydiJQ"></div><div class="flex flex-col"><div class="flex items-center gap-space-sm"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">TechTrack PH</span><span class="px-space-sm py-0.5 rounded-full bg-primary-container/20 text-primary font-label-sm text-label-sm uppercase tracking-wider">GEd 104</span></div><span class="font-label-sm text-label-sm text-on-surface-variant">TNEU Alangilan • BSCpE Research</span></div></div><nav class="hidden xl:flex items-center gap-space-xs p-1 rounded-xl bg-surface-container-low/70 backdrop-blur-md" data-active-classes="bg-surface-container-highest text-primary font-title-sm"><a class="px-space-md py-space-xs rounded-lg font-title-sm text-title-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="overview" href="index.html">Overview</a><a class="px-space-md py-space-xs rounded-lg font-title-sm text-title-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="introduction" href="introduction.html">Introduction</a><a class="px-space-md py-space-xs rounded-lg font-title-sm text-title-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="discussion" href="discussion.html">Discussion</a><a aria-current="page" class="px-space-md py-space-xs rounded-lg transition-colors bg-surface-container-highest text-primary font-title-sm" data-path="significance" href="significance.html">Significance</a><a class="px-space-md py-space-xs rounded-lg font-title-sm text-title-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="research-team" href="team.html">Research Team</a><a class="px-space-md py-space-xs rounded-lg font-title-sm text-title-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="references" href="references.html">References</a></nav><div class="flex items-center gap-space-md"><div class="hidden sm:flex items-center gap-space-xs px-space-md py-1 rounded-full bg-tertiary-container/15 text-tertiary font-label-sm text-label-sm tracking-wider uppercase"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-tertiary"></span></span><span>NODE // 11</span></div><button aria-label="Toggle color mode" class="p-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors flex items-center justify-center" id="theme-toggle-btn" type="button"><span class="material-symbols-outlined text-title-md" id="theme-toggle-icon">light_mode</span></button></div></div></header><main class="relative z-10 w-full pt-20 bg-transparent min-h-[calc(100vh-20rem)]"><div class="flex flex-col w-full">
+<!-- SECTION HEADER & TELEMETRY STRIP -->
+<section class="w-full max-w-7xl mx-auto px-gutter pt-space-md pb-space-lg">
+<!-- Breadcrumb Telemetry Bar -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm mb-space-lg">
+<div class="flex items-center gap-space-sm">
+<span class="px-space-sm py-0.5 rounded-full bg-primary-container/20 text-primary font-label-sm text-label-sm uppercase tracking-wider">
+          SECTION 04 // IMPACT MATRIX
+        </span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">•</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant tracking-wider uppercase">GEd 104</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">•</span>
+<span class="font-label-sm text-label-sm text-tertiary tracking-wider uppercase font-semibold">BSCpE COHORT</span>
 </div>
-<div class="flex items-center gap-2">
-<span class="px-3 py-1 rounded-full bg-surface-container-highest border border-outline-variant/40 text-on-surface-variant font-label-sm text-label-sm">5 Key Stakeholders</span>
-<span class="px-3 py-1 rounded-full bg-secondary-container/80 border border-secondary/30 text-on-secondary-container font-label-sm text-label-sm font-semibold">BS CpE 1st Year Cohort</span>
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-1.5 px-space-md py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm shadow-sm">
+<span class="material-symbols-outlined text-[15px] text-tertiary">hub</span>
+<span>5 PRIMARY BENEFICIARIES</span>
+<span class="text-outline hidden sm:inline">(FACULTY • LGU • STUDENTS • HOME)</span>
+</div>
+<div class="flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-surface-container-lowest text-primary font-label-sm text-label-sm shadow-sm">
+<span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+<span class="font-mono tracking-tight text-[10px]">3D PARALLAX ACTIVE</span>
 </div>
 </div>
-<!-- Editorial Header Section -->
-<div class="relative z-10 mb-12">
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-<div class="lg:col-span-8 space-y-4">
-<div class="flex items-center gap-3">
-<span class="font-mono text-[12px] text-tertiary uppercase tracking-widest font-semibold flex items-center gap-1.5"><span class="material-symbols-outlined text-[15px]">insights</span> Empirical Beneficiary Assessment</span>
-<span class="w-16 h-px bg-gradient-to-r from-tertiary/60 to-transparent"></span>
 </div>
-<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight font-extrabold">Significance</h1>
-<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed max-w-3xl">
-<strong class="text-primary font-semibold">SIGNIFICANCE OF THE ASSIGNED TOPIC:</strong> This study aims to understand how technology use affects the academic performance of first-year Computer Engineering students at Batangas State University – Alangilan Campus. The findings may provide valuable insights into the benefits and challenges of technology in education and may benefit the following individuals and groups:
-          </p>
+<!-- Editorial Typography Block & Abstract Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-start">
+<div class="lg:col-span-5 flex flex-col justify-start">
+<span class="font-label-md text-label-md uppercase tracking-[0.2em] text-primary mb-space-xs">
+          SIGNIFICANCE OF THE ASSIGNED TOPIC
+        </span>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight font-extrabold">
+          SIGNIFICANCE
+        </h1>
+<div class="mt-space-md p-space-md rounded-xl bg-surface-container-low shadow-sm flex items-center gap-space-md">
+<div class="flex -space-x-2 overflow-hidden">
+<span class="inline-block h-8 w-8 rounded-full ring-2 ring-surface-container-lowest bg-surface-container-high flex items-center justify-center text-primary text-[11px] font-bold">01</span>
+<span class="inline-block h-8 w-8 rounded-full ring-2 ring-surface-container-lowest bg-surface-container-high flex items-center justify-center text-tertiary text-[11px] font-bold">02</span>
+<span class="inline-block h-8 w-8 rounded-full ring-2 ring-surface-container-lowest bg-surface-container-high flex items-center justify-center text-secondary text-[11px] font-bold">03</span>
+<span class="inline-block h-8 w-8 rounded-full ring-2 ring-surface-container-lowest bg-surface-container-high flex items-center justify-center text-primary text-[11px] font-bold">04</span>
+<span class="inline-block h-8 w-8 rounded-full ring-2 ring-surface-container-lowest bg-surface-container-highest flex items-center justify-center text-on-surface-variant text-[11px] font-bold">+1</span>
 </div>
-<!-- Telemetry Live Digest Card -->
-<div class="lg:col-span-4 p-5 rounded-2xl bg-surface-container-low border border-outline-variant/40 shadow-xl relative overflow-hidden backdrop-blur-sm group hover:border-primary/40 transition-all scroll-reveal reveal-init">
-<div class="absolute -right-10 -bottom-10 w-28 h-28 bg-primary/10 rounded-full blur-xl pointer-events-none"></div>
-<div class="flex items-center justify-between pb-3 border-b border-surface-container-high/80">
-<div class="flex items-center gap-2">
-<span class="material-symbols-outlined text-primary text-[20px]">hub</span>
-<span class="font-title-sm text-title-sm text-on-surface font-bold">Target Impact Matrix</span>
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-on-surface">Integrated Value Map</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Multi-tier educational stakeholder matrix</span>
 </div>
-<span class="px-2.5 py-0.5 rounded-full bg-tertiary-container/30 border border-tertiary/40 text-tertiary font-mono text-[11px] font-semibold flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-ping"></span>Validated</span>
 </div>
-<div class="space-y-4 pt-3.5">
+</div>
+<div class="lg:col-span-7 p-space-lg rounded-xl bg-surface-container/70 shadow-md backdrop-blur-md flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs text-primary font-label-sm text-label-sm tracking-wider uppercase">
+<span class="material-symbols-outlined text-[16px]">info</span>
+<span>Abstract Impact Statement</span>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface leading-relaxed">
+          This study aims to understand how technology use affects the academic performance of first-year Computer Engineering students at Batangas State University – Alangilan Campus. The findings may provide valuable insights into the benefits and challenges of technology in education and may benefit the following individuals and groups:
+        </p>
+<div class="flex items-center justify-between pt-space-xs mt-space-xs">
+<div class="font-label-sm text-label-sm text-on-surface-variant font-mono">
+            SYS_REF: GED104_SIG_ALANGILAN_2025
+          </div>
+<div class="flex items-center gap-1 font-label-sm text-label-sm text-tertiary">
+<span class="inline-block w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+<span>COHORT VERIFIED</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- STAKEHOLDER IMPACT VECTOR WORKSPACE -->
+<section class="w-full max-w-7xl mx-auto px-gutter py-space-md">
+<!-- Grid Level 1: Vectors 01 & 02 -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-lg mb-space-lg">
+<!-- VECTOR 01: Students -->
+<div class="relative group p-space-lg rounded-xl bg-surface-container/80 shadow-md hover:shadow-xl hover:bg-surface-container-high transition-all duration-300 flex flex-col justify-between">
+<div class="flex flex-col">
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="px-space-sm py-0.5 rounded bg-primary-container/20 text-primary font-mono text-label-sm font-semibold">
+                VECTOR // 01
+              </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant tracking-wider uppercase">Target Cohort</span>
+</div>
+<span class="px-space-sm py-0.5 rounded-full bg-surface-container-lowest text-on-surface-variant font-mono text-[10px]">
+              NODE_BSCpE_1A
+            </span>
+</div>
+<div class="flex items-start gap-space-md mb-space-sm">
+<div class="p-space-sm rounded-lg bg-primary/10 text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[26px]">school</span>
+</div>
 <div>
-<div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant mb-1.5 font-mono">
-<span class="text-on-surface">Cognitive Integration</span>
-<span class="text-primary font-semibold">88% High Priority</span>
-</div>
-<div class="w-full h-2 rounded-full bg-surface-container-highest overflow-hidden p-0.5 border border-outline-variant/30">
-<div class="h-full bg-gradient-to-r from-primary to-primary-container rounded-full shadow-[0_0_8px_rgba(56,189,248,0.5)] transition-all duration-1000" style="width: 88%"></div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Students</h2>
+<span class="font-label-sm text-label-sm text-tertiary">First-Year Computer Engineering</span>
 </div>
 </div>
-<div>
-<div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant mb-1.5 font-mono">
-<span class="text-on-surface">Institutional Transfer</span>
-<span class="text-tertiary font-semibold">74% Phase IV Active</span>
-</div>
-<div class="w-full h-2 rounded-full bg-surface-container-highest overflow-hidden p-0.5 border border-outline-variant/30">
-<div class="h-full bg-gradient-to-r from-primary-container to-tertiary rounded-full shadow-[0_0_8px_rgba(78,230,170,0.5)] transition-all duration-1000" style="width: 74%"></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<!-- Filter Control Pill Bar -->
-<div class="flex items-center justify-between flex-wrap gap-4 mb-10 pb-4 border-b border-surface-container-high/60">
-<div class="flex items-center gap-2.5 overflow-x-auto py-1" id="filter-container">
-<button class="filter-pill px-4 py-2 rounded-xl font-title-sm text-title-sm transition-all duration-200 bg-primary-container text-on-primary-container font-semibold shadow-md shadow-primary/20 flex items-center gap-2 border border-primary/30" id="btn-all" onclick="filterStakeholders('all')" type="button">
-<span class="material-symbols-outlined text-[18px]">select_all</span>
-<span>All Stakeholders (5)</span>
-</button>
-<button class="filter-pill px-4 py-2 rounded-xl font-title-sm text-title-sm transition-all duration-200 bg-surface-container-low text-on-surface-variant hover:text-on-surface hover:bg-surface-container hover:border-primary/40 border border-outline-variant/40 flex items-center gap-2" id="btn-core" onclick="filterStakeholders('core')" type="button">
-<span class="material-symbols-outlined text-[18px]">school</span>
-<span>Academic Core</span>
-</button>
-<button class="filter-pill px-4 py-2 rounded-xl font-title-sm text-title-sm transition-all duration-200 bg-surface-container-low text-on-surface-variant hover:text-on-surface hover:bg-surface-container hover:border-primary/40 border border-outline-variant/40 flex items-center gap-2" id="btn-community" onclick="filterStakeholders('community')" type="button">
-<span class="material-symbols-outlined text-[18px]">family_restroom</span>
-<span>Campus &amp; Family</span>
-</button>
-<button class="filter-pill px-4 py-2 rounded-xl font-title-sm text-title-sm transition-all duration-200 bg-surface-container-low text-on-surface-variant hover:text-on-surface hover:bg-surface-container hover:border-primary/40 border border-outline-variant/40 flex items-center gap-2" id="btn-research" onclick="filterStakeholders('research')" type="button">
-<span class="material-symbols-outlined text-[18px]">biotech</span>
-<span>Future Research</span>
-</button>
-</div>
-<div class="flex items-center gap-2 text-on-surface-variant font-mono text-[11px] px-3 py-1.5 rounded-lg bg-surface-container-low border border-outline-variant/40">
-<span class="material-symbols-outlined text-[16px] text-tertiary">verified</span>
-<span>DOC_62_SEC4 • ARCHIVAL RECORD</span>
-</div>
-</div>
-<!-- Bento Grid Container for 5 Stakeholder Profiles -->
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6 mb-16" id="stakeholder-grid">
-<!-- 01 Students (Academic Core) -->
-<div class="stakeholder-card interactive-card scroll-reveal reveal-init lg:col-span-6 p-7 rounded-2xl bg-surface-container-low border border-outline-variant/40 hover:border-primary shadow-lg hover:shadow-2xl flex flex-col justify-between group relative overflow-hidden" data-category="core">
-<div class="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-2xl pointer-events-none group-hover:bg-primary/20 transition-all"></div>
-<div>
-<div class="flex items-start justify-between mb-4">
-<div class="flex items-center gap-3">
-<span class="w-12 h-12 rounded-xl bg-surface-container-high border border-primary/30 flex items-center justify-center font-headline-sm text-headline-sm text-primary font-bold shadow-inner group-hover:scale-105 transition-transform">01</span>
-<div>
-<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold group-hover:text-primary transition-colors">Students</h2>
-<span class="font-mono text-[11px] text-tertiary tracking-wide uppercase font-semibold flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Direct Academic Beneficiaries</span>
-</div>
-</div>
-<span class="p-2.5 rounded-xl bg-surface-container border border-outline-variant/40 text-primary-fixed-dim group-hover:border-primary/40 group-hover:text-primary transition-all">
-<span class="material-symbols-outlined text-[24px]">person_celebrate</span>
-</span>
-</div>
-<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-6 group-hover:text-on-surface/90 transition-colors">
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-space-md">
             This study may benefit first-year Computer Engineering students by helping them understand how their use of technology affects their academic performance. It may encourage them to develop responsible and effective technology habits, such as using digital tools for research, studying, communication, and completing academic tasks. Furthermore, it may help them recognize potential distractions, including excessive social media use and non-academic activities, that could negatively affect their learning and productivity.
           </p>
 </div>
-<div class="pt-4 flex flex-wrap gap-2 border-t border-surface-container-high/60">
-<span class="px-2.5 py-1 rounded-md bg-surface-container border border-outline-variant/30 text-on-surface font-label-sm text-label-sm">Responsible Technology Habits</span>
-<span class="px-2.5 py-1 rounded-md bg-surface-container border border-outline-variant/30 text-on-surface font-label-sm text-label-sm">Distraction Awareness</span>
-<span class="px-2.5 py-1 rounded-md bg-primary-container/20 border border-primary/30 text-primary-fixed-dim font-label-sm text-label-sm font-semibold">Academic Productivity</span>
+<div class="p-space-sm rounded-lg bg-surface-container-lowest/80 flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Core Outcome</span>
+<span class="font-title-sm text-title-sm text-primary font-semibold">Habitual Self-Regulation</span>
 </div>
 </div>
-<!-- 02 Teachers and Educators (Academic Core) -->
-<div class="stakeholder-card interactive-card scroll-reveal reveal-init lg:col-span-6 p-7 rounded-2xl bg-surface-container-low border border-outline-variant/40 hover:border-primary-container shadow-lg hover:shadow-2xl flex flex-col justify-between group relative overflow-hidden" data-category="core">
-<div class="absolute top-0 right-0 w-32 h-32 bg-primary-container/10 rounded-full blur-2xl pointer-events-none group-hover:bg-primary-container/20 transition-all"></div>
+<!-- VECTOR 02: Teachers and Educators -->
+<div class="relative group p-space-lg rounded-xl bg-surface-container/80 shadow-md hover:shadow-xl hover:bg-surface-container-high transition-all duration-300 flex flex-col justify-between">
+<div class="flex flex-col">
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="px-space-sm py-0.5 rounded bg-tertiary-container/20 text-tertiary font-mono text-label-sm font-semibold">
+                VECTOR // 02
+              </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant tracking-wider uppercase">Pedagogy</span>
+</div>
+<span class="px-space-sm py-0.5 rounded-full bg-surface-container-lowest text-on-surface-variant font-mono text-[10px]">
+              INSTR_STRAT
+            </span>
+</div>
+<div class="flex items-start gap-space-md mb-space-sm">
+<div class="p-space-sm rounded-lg bg-tertiary-container/15 text-tertiary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[26px]">psychology</span>
+</div>
 <div>
-<div class="flex items-start justify-between mb-4">
-<div class="flex items-center gap-3">
-<span class="w-12 h-12 rounded-xl bg-surface-container-high border border-primary-container/30 flex items-center justify-center font-headline-sm text-headline-sm text-primary-container font-bold shadow-inner group-hover:scale-105 transition-transform">02</span>
-<div>
-<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold group-hover:text-primary-container transition-colors">Teachers and Educators</h2>
-<span class="font-mono text-[11px] text-secondary-fixed-dim tracking-wide uppercase font-semibold flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-secondary-fixed-dim"></span> Instructional Guidance Core</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Teachers and Educators</h2>
+<span class="font-label-sm text-label-sm text-primary">Academic Instruction &amp; Curricula</span>
 </div>
 </div>
-<span class="p-2.5 rounded-xl bg-surface-container border border-outline-variant/40 text-primary-container group-hover:border-primary-container/40 transition-all">
-<span class="material-symbols-outlined text-[24px]">co_present</span>
-</span>
-</div>
-<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-6 group-hover:text-on-surface/90 transition-colors">
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-space-md">
             The findings of this study may help teachers and educators understand how technology influences students' learning habits, classroom participation, and academic performance. Through the results, they may identify effective ways to integrate digital tools and educational platforms into their teaching strategies. It may also help them develop appropriate approaches to guide students in using technology productively while minimizing its possible negative effects on learning.
           </p>
 </div>
-<div class="pt-4 flex flex-wrap gap-2 border-t border-surface-container-high/60">
-<span class="px-2.5 py-1 rounded-md bg-surface-container border border-outline-variant/30 text-on-surface font-label-sm text-label-sm">Instructional Integration</span>
-<span class="px-2.5 py-1 rounded-md bg-surface-container border border-outline-variant/30 text-on-surface font-label-sm text-label-sm">Productive Pedagogy</span>
-<span class="px-2.5 py-1 rounded-md bg-secondary-container/40 border border-secondary-container text-secondary-fixed font-label-sm text-label-sm font-semibold">Classroom Participation</span>
+<div class="p-space-sm rounded-lg bg-surface-container-lowest/80 flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Core Outcome</span>
+<span class="font-title-sm text-title-sm text-tertiary font-semibold">Digital Tool Optimization</span>
 </div>
 </div>
-<!-- 03 Batangas State University – Alangilan Campus (Campus & Family) -->
-<div class="stakeholder-card interactive-card scroll-reveal reveal-init lg:col-span-7 p-7 rounded-2xl bg-surface-container-low border border-outline-variant/40 hover:border-tertiary shadow-lg hover:shadow-2xl flex flex-col justify-between group relative overflow-hidden" data-category="community">
-<div class="absolute top-0 right-0 w-32 h-32 bg-tertiary/10 rounded-full blur-2xl pointer-events-none group-hover:bg-tertiary/20 transition-all"></div>
+</div>
+<!-- VECTOR 03: Campus Anchor (Full Width Hero Card with Imagery) -->
+<div class="relative w-full rounded-2xl bg-surface-container shadow-xl overflow-hidden mb-space-lg">
+<div class="grid grid-cols-1 lg:grid-cols-12 items-stretch">
+<div class="lg:col-span-8 p-space-lg lg:p-space-xl flex flex-col justify-between z-10">
 <div>
-<div class="flex items-start justify-between mb-4">
-<div class="flex items-center gap-3">
-<span class="w-12 h-12 rounded-xl bg-surface-container-high border border-tertiary/30 flex items-center justify-center font-headline-sm text-headline-sm text-tertiary font-bold shadow-inner group-hover:scale-105 transition-transform">03</span>
+<div class="flex flex-wrap items-center gap-space-sm mb-space-md">
+<span class="px-space-sm py-0.5 rounded bg-secondary-container/30 text-secondary font-mono text-label-sm font-semibold">
+                VECTOR // 03
+              </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant tracking-wider uppercase">Campus Anchor</span>
+<span class="px-space-sm py-0.5 rounded-full bg-surface-container-high text-tertiary font-label-sm text-label-sm">
+                The National Engineering University
+              </span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight mb-space-xs">
+              Batangas State University – Alangilan Campus
+            </h2>
+<div class="font-mono text-label-sm text-primary mb-space-md">
+              CAMPUS_CODE_ALANGILAN // APPLIED SYSTEMS &amp; HARDWARE INFRASTRUCTURE
+            </div>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed mb-space-lg">
+              This study may provide the university with valuable information regarding the role of technology in the academic experiences of first-year Computer Engineering students. The findings may serve as a basis for improving educational strategies, strengthening digital learning resources, and developing programs that promote responsible and effective technology use. Additionally, it may help the institution identify areas where improvements in technological facilities and academic support are needed.
+            </p>
+</div>
+<div class="flex flex-wrap items-center justify-between gap-space-md p-space-md rounded-xl bg-surface-container-lowest/90">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Institutional Core Outcome</span>
+<span class="font-title-md text-title-md text-primary font-semibold">
+                Infrastructure &amp; Institutional Resource Allocation
+              </span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-tertiary">domain_verification</span>
+<span>ALANGILAN ACCREDITED AUDIT READY</span>
+</div>
+</div>
+</div>
+<div class="lg:col-span-4 relative min-h-[260px] lg:min-h-full bg-surface-container-low/70 p-space-md lg:p-space-lg flex flex-col justify-between overflow-hidden border-2 border-dashed border-outline-variant rounded-xl lg:rounded-none lg:rounded-r-2xl"><div class="flex items-center justify-between gap-space-sm"><div class="flex items-center gap-1.5 px-space-sm py-0.5 rounded bg-surface-container-high text-primary font-mono text-[11px]"><span class="material-symbols-outlined text-[15px]">image</span><span>ASSET_SLOT // CAMPUS</span></div><span class="px-space-sm py-0.5 rounded-full bg-surface-container-lowest text-tertiary font-mono text-[10px]">REPO_MAPPED</span></div><div class="my-space-lg flex flex-col items-center justify-center text-center p-space-md"><div class="p-space-md rounded-2xl bg-surface-container-high text-primary mb-space-sm shadow-sm"><span class="material-symbols-outlined text-[32px]">apartment</span></div><div class="font-mono text-label-sm text-on-surface font-semibold break-all">assets/images/campus-alangilan.jpg</div><p class="font-body-sm text-body-sm text-on-surface-variant mt-1 max-w-xs">BatStateU Alangilan Campus Facility &amp; Systems Infrastructure Repository Asset</p></div><div class="p-space-md rounded-xl bg-surface-container-lowest/90 backdrop-blur-md shadow-sm flex flex-col gap-1"><div class="flex items-center justify-between text-label-sm text-on-surface-variant"><span>Facility Metric</span><span class="text-tertiary font-mono">STATUS 98.4%</span></div><div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden"><div class="bg-primary h-full w-[88%] rounded-full"></div></div><div class="flex items-center justify-between text-[10px] text-on-surface-variant font-mono mt-0.5"><span>SYS_REF: ALANGILAN_LAB</span><span>OPTIMIZED</span></div></div></div>
+</div>
+</div>
+<!-- Grid Level 2: Vectors 04 & 05 -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-lg mb-space-xl">
+<!-- VECTOR 04: Parents and Guardians -->
+<div class="relative group p-space-lg rounded-xl bg-surface-container/80 shadow-md hover:shadow-xl hover:bg-surface-container-high transition-all duration-300 flex flex-col justify-between">
+<div class="flex flex-col">
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="px-space-sm py-0.5 rounded bg-primary-container/20 text-primary font-mono text-label-sm font-semibold">
+                VECTOR // 04
+              </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant tracking-wider uppercase">Domestic Support</span>
+</div>
+<span class="px-space-sm py-0.5 rounded-full bg-surface-container-lowest text-on-surface-variant font-mono text-[10px]">
+              DOM_VECTOR
+            </span>
+</div>
+<div class="flex items-start gap-space-md mb-space-sm">
+<div class="p-space-sm rounded-lg bg-primary/10 text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[26px]">family_restroom</span>
+</div>
 <div>
-<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold group-hover:text-tertiary transition-colors">Batangas State University – Alangilan Campus</h2>
-<span class="font-mono text-[11px] text-primary tracking-wide uppercase font-semibold flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Institutional Infrastructure &amp; Policy</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Parents and Guardians</h2>
+<span class="font-label-sm text-label-sm text-secondary">Household Learning Environments</span>
 </div>
 </div>
-<span class="p-2.5 rounded-xl bg-surface-container border border-outline-variant/40 text-tertiary group-hover:border-tertiary/40 transition-all">
-<span class="material-symbols-outlined text-[24px]">corporate_fare</span>
-</span>
-</div>
-<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-6 group-hover:text-on-surface/90 transition-colors">
-            This study may provide the university with valuable information regarding the role of technology in the academic experiences of first-year Computer Engineering students. The findings may serve as a basis for improving educational strategies, strengthening digital learning resources, and developing programs that promote responsible and effective technology use. Additionally, it may help the institution identify areas where improvements in technological facilities and academic support are needed.
-          </p>
-</div>
-<div class="pt-4 flex flex-wrap gap-2 border-t border-surface-container-high/60">
-<span class="px-2.5 py-1 rounded-md bg-surface-container border border-outline-variant/30 text-on-surface font-label-sm text-label-sm">Digital Resources Base</span>
-<span class="px-2.5 py-1 rounded-md bg-surface-container border border-outline-variant/30 text-on-surface font-label-sm text-label-sm">Campus Academic Support</span>
-<span class="px-2.5 py-1 rounded-md bg-tertiary-container/30 border border-tertiary/30 text-tertiary-fixed font-label-sm text-label-sm font-semibold">Facility Optimization</span>
-</div>
-</div>
-<!-- 04 Parents and Guardians (Campus & Family) -->
-<div class="stakeholder-card interactive-card scroll-reveal reveal-init lg:col-span-5 p-7 rounded-2xl bg-surface-container-low border border-outline-variant/40 hover:border-secondary shadow-lg hover:shadow-2xl flex flex-col justify-between group relative overflow-hidden" data-category="community">
-<div class="absolute top-0 right-0 w-32 h-32 bg-secondary-container/20 rounded-full blur-2xl pointer-events-none group-hover:bg-secondary-container/30 transition-all"></div>
-<div>
-<div class="flex items-start justify-between mb-4">
-<div class="flex items-center gap-3">
-<span class="w-12 h-12 rounded-xl bg-surface-container-high border border-secondary/30 flex items-center justify-center font-headline-sm text-headline-sm text-secondary-fixed font-bold shadow-inner group-hover:scale-105 transition-transform">04</span>
-<div>
-<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold group-hover:text-secondary transition-colors">Parents and Guardians</h2>
-<span class="font-mono text-[11px] text-on-surface-variant tracking-wide uppercase font-semibold flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Domestic Environment Support</span>
-</div>
-</div>
-<span class="p-2.5 rounded-xl bg-surface-container border border-outline-variant/40 text-secondary group-hover:border-secondary/40 transition-all">
-<span class="material-symbols-outlined text-[24px]">family_home</span>
-</span>
-</div>
-<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-6 group-hover:text-on-surface/90 transition-colors">
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-space-md">
             This study may help parents and guardians become more aware of how technology affects students' academic performance. By understanding its positive and negative influences, they may provide better guidance and support in developing healthy technology habits at home. It may also encourage them to create an environment that promotes academic responsibility, proper time management, and balanced technology use.
           </p>
 </div>
-<div class="pt-4 flex flex-wrap gap-2 border-t border-surface-container-high/60">
-<span class="px-2.5 py-1 rounded-md bg-surface-container border border-outline-variant/30 text-on-surface font-label-sm text-label-sm">Home Guidance Support</span>
-<span class="px-2.5 py-1 rounded-md bg-surface-container border border-outline-variant/30 text-on-surface font-label-sm text-label-sm">Balanced Technology Use</span>
-<span class="px-2.5 py-1 rounded-md bg-secondary-container/30 border border-secondary/30 text-secondary-fixed font-label-sm text-label-sm font-semibold">Time Management</span>
+<div class="p-space-sm rounded-lg bg-surface-container-lowest/80 flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Core Outcome</span>
+<span class="font-title-sm text-title-sm text-primary font-semibold">Home Mentorship &amp; Time Governance</span>
 </div>
 </div>
-<!-- 05 Future Researchers (HIGH CONTRAST & DYNAMIC STYLING) -->
-<div class="stakeholder-card interactive-card scroll-reveal reveal-init lg:col-span-12 p-8 lg:p-10 rounded-2xl bg-surface-container dark:bg-surface-container light:bg-[#0c1f3d] border-2 border-primary/50 hover:border-primary shadow-2xl relative overflow-hidden group" data-category="research">
-<!-- Visual Ambient Backdrop Glow -->
-<div class="absolute -right-20 -bottom-20 w-96 h-96 rounded-full bg-primary-container/20 blur-3xl pointer-events-none group-hover:bg-primary-container/30 transition-all"></div>
-<div class="absolute left-1/3 -top-24 w-80 h-80 rounded-full bg-tertiary-container/15 blur-3xl pointer-events-none"></div>
-<div class="relative z-10 flex flex-col lg:flex-row items-start justify-between gap-8">
-<div class="max-w-3xl space-y-4">
-<div class="flex items-center gap-3">
-<span class="w-14 h-14 rounded-2xl bg-primary text-on-primary flex items-center justify-center font-headline-md text-headline-md font-extrabold shadow-lg shadow-primary/30 group-hover:scale-105 transition-transform">05</span>
-<div>
-<div class="flex flex-wrap items-center gap-2.5">
-<h2 class="font-headline-md text-headline-md font-bold text-white tracking-tight drop-shadow-sm">Future Researchers</h2>
-<span class="px-2.5 py-0.5 rounded-full bg-primary text-on-primary font-mono text-[11px] font-bold uppercase shadow-sm">High Contrast Scientific Baseline</span>
-</div>
-<span class="font-mono text-[11px] text-tertiary tracking-wider uppercase font-semibold flex items-center gap-1.5 pt-1"><span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span> Cross-Institutional Scientific Baseline</span>
-</div>
-</div>
-<!-- Ultra High Contrast Body Text for readability in both light and dark themes -->
-<p class="font-body-lg text-body-lg text-white/95 font-medium leading-relaxed pt-2">
-              This study may serve as a reference for future researchers who wish to explore the relationship between technology use and academic performance among college students. It may provide relevant information and insights that can support further studies involving other academic programs, year levels, or educational institutions. Moreover, it may encourage additional research on the challenges and opportunities brought by technological advancements in Philippine higher education.
-            </p>
-<div class="pt-3 flex flex-wrap gap-2.5">
-<span class="px-3 py-1 rounded-lg bg-surface-container-high/90 border border-outline-variant/60 text-primary-fixed font-mono text-[12px] font-semibold">Scholarly Benchmark</span>
-<span class="px-3 py-1 rounded-lg bg-surface-container-high/90 border border-outline-variant/60 text-primary-fixed font-mono text-[12px] font-semibold">Higher Ed Longitudinal Data</span>
-<span class="px-3 py-1 rounded-lg bg-surface-container-high/90 border border-outline-variant/60 text-primary-fixed font-mono text-[12px] font-semibold">Cross-Cohort Replicability</span>
-</div>
-</div>
-<!-- Dual Portal Direct Action Handlers -->
-<div class="w-full lg:w-auto shrink-0 flex flex-col sm:flex-row lg:flex-col gap-3 min-w-[240px]">
-<a class="px-5 py-3.5 rounded-xl bg-primary hover:bg-primary-container text-on-primary font-title-sm text-title-sm font-bold text-center shadow-lg shadow-primary/25 hover:shadow-primary/40 transition-all flex items-center justify-center gap-2 group/btn" href="references.html">
-<span class="material-symbols-outlined text-[20px] group-hover/btn:rotate-6 transition-transform">auto_stories</span>
-<span>View References</span>
-</a>
-<a class="px-5 py-3.5 rounded-xl bg-surface-container-high/90 hover:bg-surface-bright text-on-surface border border-outline-variant/50 hover:border-primary/50 font-title-sm text-title-sm font-semibold text-center transition-all flex items-center justify-center gap-2 group/btn" href="team.html">
-<span class="material-symbols-outlined text-[20px] group-hover/btn:scale-110 transition-transform">group</span>
-<span>Meet Research Team</span>
-</a>
-</div>
-</div>
-</div>
-</div>
-<!-- Sleek High-Tech Blueprint Repository Card (NO AI IMAGES) -->
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-16 items-stretch scroll-reveal reveal-init">
-<!-- Architectural Vector Wireframe / Blueprint Blueprint Slot -->
-<div class="lg:col-span-7 rounded-2xl border-2 border-dashed border-primary/40 bg-surface-container-lowest/80 p-6 md:p-8 flex flex-col justify-between relative overflow-hidden group hover:border-primary transition-all interactive-card">
-<!-- High-Tech Blueprint Background Grid & Radial Glow -->
-<div class="absolute inset-0 grid-tech-pattern opacity-40 pointer-events-none"></div>
-<div class="absolute -top-16 -left-16 w-48 h-48 bg-primary/10 rounded-full blur-2xl pointer-events-none"></div>
-<div class="relative z-10 flex items-center justify-between gap-4 mb-4">
-<div class="flex items-center gap-2">
-<span class="w-2.5 h-2.5 rounded-full bg-primary animate-ping"></span>
-<span class="font-mono text-xs text-primary font-semibold tracking-wider uppercase">ARCHITECTURAL SCHEMATIC • CAD VECTOR</span>
-</div>
-<span class="px-2.5 py-1 rounded-md bg-surface-container-high border border-outline-variant/40 font-mono text-[11px] text-tertiary">13.7852° N, 121.0744° E</span>
-</div>
-<!-- Vector Architectural Wireframe Illustration of CEAFA Complex -->
-<div class="relative z-10 my-4 flex items-center justify-center py-4">
-<svg class="w-full max-h-56 stroke-primary/70 fill-none transition-all group-hover:stroke-primary" viewbox="0 0 600 240" xmlns="http://www.w3.org/2000/svg">
-<!-- Horizon & Grid Floor -->
-<line stroke-dasharray="4 4" stroke-opacity="0.3" x1="20" x2="580" y1="200" y2="200"></line>
-<line stroke-dasharray="3 3" stroke-opacity="0.2" x1="40" x2="560" y1="215" y2="215"></line>
-<!-- Main Engineering Building Tower (CEAFA) -->
-<rect height="130" rx="3" stroke-width="2" width="180" x="210" y="70"></rect>
-<!-- Tower Structural Ribbon & Windows Matrix -->
-<line stroke-width="1.5" x1="210" x2="390" y1="95" y2="95"></line>
-<line stroke-width="1.5" x1="210" x2="390" y1="120" y2="120"></line>
-<line stroke-width="1.5" x1="210" x2="390" y1="145" y2="145"></line>
-<line stroke-width="1.5" x1="210" x2="390" y1="170" y2="170"></line>
-<!-- Window Vertical Mullions -->
-<line stroke-dasharray="2 2" stroke-width="1" x1="240" x2="240" y1="70" y2="200"></line>
-<line stroke-dasharray="2 2" stroke-width="1" x1="270" x2="270" y1="70" y2="200"></line>
-<line stroke-dasharray="2 2" stroke-width="1" x1="300" x2="300" y1="70" y2="200"></line>
-<line stroke-dasharray="2 2" stroke-width="1" x1="330" x2="330" y1="70" y2="200"></line>
-<line stroke-dasharray="2 2" stroke-width="1" x1="360" x2="360" y1="70" y2="200"></line>
-<!-- West Wing Laboratory Complex -->
-<polygon points="70,120 210,120 210,200 70,200" stroke-width="1.8"></polygon>
-<line stroke-width="1" x1="70" x2="210" y1="150" y2="150"></line>
-<line stroke-dasharray="3 3" stroke-width="1" x1="105" x2="105" y1="120" y2="200"></line>
-<line stroke-dasharray="3 3" stroke-width="1" x1="140" x2="140" y1="120" y2="200"></line>
-<line stroke-dasharray="3 3" stroke-width="1" x1="175" x2="175" y1="120" y2="200"></line>
-<!-- East Wing Computing Centre -->
-<polygon points="390,105 530,105 530,200 390,200" stroke-width="1.8"></polygon>
-<line stroke-width="1" x1="390" x2="530" y1="135" y2="135"></line>
-<line stroke-width="1" x1="390" x2="530" y1="165" y2="165"></line>
-<line stroke-dasharray="3 3" stroke-width="1" x1="425" x2="425" y1="105" y2="200"></line>
-<line stroke-dasharray="3 3" stroke-width="1" x1="460" x2="460" y1="105" y2="200"></line>
-<line stroke-dasharray="3 3" stroke-width="1" x1="495" x2="495" y1="105" y2="200"></line>
-<!-- Rooftop Telecommunications Antenna & Sensor Array -->
-<line stroke-width="2" x1="300" x2="300" y1="70" y2="25"></line>
-<circle cx="300" cy="25" fill="#38bdf8" r="3"></circle>
-<path d="M 285 40 Q 300 25 315 40" stroke-width="1.2"></path>
-<path d="M 275 50 Q 300 20 325 50" stroke-width="1"></path>
-<!-- Technical Coordinate Caliper Marks -->
-<path d="M 50 180 L 50 200 L 70 200" stroke="#4ee6aa" stroke-width="1.5"></path>
-<path d="M 550 180 L 550 200 L 530 200" stroke="#4ee6aa" stroke-width="1.5"></path>
-<path d="M 210 50 L 210 70 L 230 70" stroke="#38bdf8" stroke-width="1.5"></path>
-<!-- Radar Scanner Effect in SVG -->
-<g class="radar-line" transform="translate(300, 135)">
-<line stroke="#4ee6aa" stroke-opacity="0.6" stroke-width="1.5" x1="0" x2="160" y1="0" y2="0"></line>
-<circle cx="0" cy="0" fill="#38bdf8" fill-opacity="0.2" r="160" stroke="#38bdf8" stroke-dasharray="4 4" stroke-opacity="0.3"></circle>
-</g>
-</svg>
-</div>
-<!-- Footer Info Bar in Blueprint -->
-<div class="relative z-10 flex flex-wrap items-center justify-between gap-3 pt-3 border-t border-outline-variant/30">
-<div class="flex items-center gap-2">
-<span class="material-symbols-outlined text-primary text-[20px]">domain</span>
-<span class="font-title-sm text-title-sm text-on-surface font-semibold">BatStateU Alangilan Campus • CEAFA Complex</span>
-</div>
-<span class="font-mono text-[11px] text-on-surface-variant">Elev: 22m • Lat/Long 13.7852° N, 121.0744° E</span>
-</div>
-</div>
-<!-- Sleek Repository Action / Slot Card -->
-<div class="lg:col-span-5 p-7 rounded-2xl bg-surface-container-low border border-outline-variant/40 flex flex-col justify-between h-full space-y-6 hover:border-primary/40 transition-all interactive-card">
-<div class="space-y-4">
-<div class="flex items-center justify-between">
-<span class="font-mono text-[11px] px-3 py-1 rounded-md bg-primary-container/20 border border-primary/30 text-primary-fixed-dim font-bold tracking-wide">REPOSITORY SLOT</span>
-<span class="font-mono text-[11px] text-tertiary">ALN-2025-IMG04</span>
-</div>
-<div>
-<label class="block font-label-sm text-label-sm text-on-surface-variant font-mono mb-1">TARGET ASSET PATHWAY [1920x1080 HQ]:</label>
-<div class="p-3.5 rounded-xl bg-surface-container-lowest border border-outline-variant/40 font-mono text-[13px] text-primary flex items-center justify-between group/code">
-<span class="truncate">assets/images/campus-alangilan.jpg</span>
-<button class="text-on-surface-variant hover:text-primary transition-colors text-xs font-mono shrink-0 ml-2" onclick="navigator.clipboard.writeText('assets/images/campus-alangilan.jpg')" title="Copy path" type="button">
-<span class="material-symbols-outlined text-[16px]">content_copy</span>
-</button>
-</div>
-</div>
-<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
-            BatStateU Alangilan Campus Field Research Repository Slot — High-fidelity photographic asset referencing the College of Engineering, Architecture and Fine Arts (CEAFA) complex.
-          </p>
-<!-- File Upload Prompt Action Box -->
-<div class="p-4 rounded-xl border border-dashed border-primary/50 bg-primary/5 flex items-center gap-4 hover:bg-primary/10 transition-colors cursor-pointer group">
-<div class="w-10 h-10 rounded-lg bg-surface-container border border-primary/40 flex items-center justify-center text-primary shrink-0 group-hover:scale-105 transition-transform">
-<span class="material-symbols-outlined text-[22px]">cloud_upload</span>
-</div>
+<!-- VECTOR 05: Future Researchers -->
+<div class="relative group p-space-lg rounded-xl bg-surface-container/80 shadow-md hover:shadow-xl hover:bg-surface-container-high transition-all duration-300 flex flex-col justify-between">
 <div class="flex flex-col">
-<span class="font-title-sm text-title-sm text-on-surface font-semibold group-hover:text-primary transition-colors">Awaiting Verified Asset Deployment</span>
-<span class="font-mono text-[11px] text-on-surface-variant">Drag or link custom 1920×1080 high-res photography</span>
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="px-space-sm py-0.5 rounded bg-tertiary-container/20 text-tertiary font-mono text-label-sm font-semibold">
+                VECTOR // 05
+              </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant tracking-wider uppercase">Discovery Expansion</span>
 </div>
+<span class="px-space-sm py-0.5 rounded-full bg-surface-container-lowest text-on-surface-variant font-mono text-[10px]">
+              CIT_ARCHIVE_PH
+            </span>
 </div>
+<div class="flex items-start gap-space-md mb-space-sm">
+<div class="p-space-sm rounded-lg bg-tertiary-container/15 text-tertiary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[26px]">travel_explore</span>
 </div>
-<div class="pt-4 border-t border-surface-container-high/60 flex items-center justify-between text-on-surface-variant font-mono text-[11px]">
-<div class="flex items-center gap-1.5 text-tertiary font-semibold">
-<span class="material-symbols-outlined text-[16px]">verified</span>
-<span>Target Specs: 1920×1080 • WEBP / JPG</span>
-</div>
-<span class="text-on-surface-variant">Color Space: sRGB</span>
-</div>
-</div>
-</div>
-<!-- Quantitative Research Impact Metrics Section with Animated SVG Circular Gauges -->
-<div class="mb-16">
-<div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
 <div>
-<span class="font-mono text-[11px] text-primary uppercase tracking-widest font-semibold flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span> Empirical Metric Synthesizer</span>
-<h2 class="font-headline-lg text-headline-lg text-on-surface font-extrabold tracking-tight">Quantitative Research Impact</h2>
-</div>
-<p class="font-body-sm text-body-sm text-on-surface-variant max-w-md">
-          Cross-tabulated projections reflecting pilot survey responses and institutional strategic utility across BatStateU Alangilan academic departments.
-        </p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-<!-- Metric Card 1: 84% Metacognition with SVG Circular Gauge -->
-<div class="interactive-card scroll-reveal reveal-init p-6 rounded-2xl bg-surface-container-low border border-outline-variant/40 shadow-lg hover:shadow-2xl hover:border-primary flex flex-col justify-between group relative overflow-hidden">
-<div class="flex items-center justify-between mb-4">
-<span class="font-mono text-[11px] px-2.5 py-0.5 rounded-full bg-primary/20 text-primary font-bold border border-primary/30">Surge Indicator</span>
-<span class="material-symbols-outlined text-primary text-[24px]">psychology</span>
-</div>
-<div class="flex items-center justify-between my-2">
-<div>
-<div class="flex items-baseline gap-1.5 mb-1">
-<span class="font-headline-xl text-headline-xl text-on-surface font-extrabold group-hover:text-primary transition-colors">84%</span>
-<span class="font-title-sm text-title-sm text-tertiary font-bold">▲ +12%</span>
-</div>
-<h3 class="font-title-md text-title-md text-on-surface font-bold">Student Metacognition</h3>
-</div>
-<!-- Animated Circular Progress Gauge -->
-<div class="relative w-16 h-16 shrink-0 group-hover:scale-110 transition-transform">
-<svg class="w-16 h-16 transform -rotate-90" viewbox="0 0 36 36">
-<path class="text-surface-container-highest stroke-current" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke-width="3.5"></path>
-<path class="text-primary stroke-current transition-all duration-700 group-hover:stroke-primary-container" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke-dasharray="84, 100" stroke-linecap="round" stroke-width="3.5"></path>
-</svg>
-<div class="absolute inset-0 flex items-center justify-center font-mono text-[11px] font-bold text-primary">84%</div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Future Researchers</h2>
+<span class="font-label-sm text-label-sm text-tertiary">Longitudinal &amp; Inter-Institutional</span>
 </div>
 </div>
-<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed my-2">
-            Self-reported awareness surge in post-test evaluations among first-year Computer Engineering respondents regarding distracted screen time.
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-space-md">
+            This study may serve as a reference for future researchers who wish to explore the relationship between technology use and academic performance among college students. It may provide relevant information and insights that can support further studies involving other academic programs, year levels, or educational institutions. Moreover, it may encourage additional research on the challenges and opportunities brought by technological advancements in Philippine higher education.
           </p>
-<!-- Interactive Telemetry Bar -->
-<div class="w-full mt-4">
-<div class="flex justify-between font-mono text-[10px] text-on-surface-variant mb-1">
-<span>Telemetry Track</span>
-<span class="text-primary font-bold">N=142 BS CpE</span>
 </div>
-<div class="w-full h-2 rounded-full bg-surface-container-highest p-0.5 border border-outline-variant/30 overflow-hidden">
-<div class="h-full bg-gradient-to-r from-primary to-primary-container rounded-full shadow-[0_0_8px_#38bdf8]" style="width: 84%"></div>
+<div class="p-space-sm rounded-lg bg-surface-container-lowest/80 flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Core Outcome</span>
+<span class="font-title-sm text-title-sm text-tertiary font-semibold">Longitudinal Reference &amp; Replication</span>
 </div>
 </div>
 </div>
-<!-- Metric Card 2: 92% Institutional Relevance with SVG Circular Gauge -->
-<div class="interactive-card scroll-reveal reveal-init p-6 rounded-2xl bg-surface-container-low border border-outline-variant/40 shadow-lg hover:shadow-2xl hover:border-tertiary flex flex-col justify-between group relative overflow-hidden">
-<div class="flex items-center justify-between mb-4">
-<span class="font-mono text-[11px] px-2.5 py-0.5 rounded-full bg-tertiary/20 text-tertiary font-bold border border-tertiary/30">Strategic Utility</span>
-<span class="material-symbols-outlined text-tertiary text-[24px]">account_tree</span>
+<!-- SYNTHESIS BANNER -->
+<div class="w-full p-space-lg rounded-2xl bg-surface-container-high shadow-xl relative overflow-hidden mb-space-xl">
+<div class="flex flex-col md:flex-row items-center justify-between gap-space-lg relative z-10">
+<div class="flex items-center gap-space-md">
+<div class="p-space-md rounded-xl bg-primary-container text-on-primary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[32px]">schema</span>
 </div>
-<div class="flex items-center justify-between my-2">
 <div>
-<div class="flex items-baseline gap-1.5 mb-1">
-<span class="font-headline-xl text-headline-xl text-on-surface font-extrabold group-hover:text-tertiary transition-colors">92%</span>
-<span class="font-title-sm text-title-sm text-primary font-bold">● High</span>
+<div class="flex items-center gap-space-xs font-mono text-label-sm text-primary tracking-wider uppercase">
+<span>ALANGILAN SYNTHESIS v1.0</span>
+<span>•</span>
+<span class="text-tertiary">ECOSYSTEM INTEGRATION</span>
 </div>
-<h3 class="font-title-md text-title-md text-on-surface font-bold">Institutional Relevance</h3>
-</div>
-<!-- Animated Circular Progress Gauge -->
-<div class="relative w-16 h-16 shrink-0 group-hover:scale-110 transition-transform">
-<svg class="w-16 h-16 transform -rotate-90" viewbox="0 0 36 36">
-<path class="text-surface-container-highest stroke-current" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke-width="3.5"></path>
-<path class="text-tertiary stroke-current transition-all duration-700 group-hover:stroke-tertiary-fixed" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke-dasharray="92, 100" stroke-linecap="round" stroke-width="3.5"></path>
-</svg>
-<div class="absolute inset-0 flex items-center justify-center font-mono text-[11px] font-bold text-tertiary">92%</div>
+<h3 class="font-title-md text-title-md text-on-surface font-semibold mt-1">
+              Comprehensive Educational Ecosystem Value
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1 max-w-3xl leading-relaxed">
+              By connecting individual learner psychology with institutional and familial reinforcement, the study crafts an actionable feedback blueprint for Philippine engineering pedagogy.
+            </p>
 </div>
 </div>
-<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed my-2">
-            Direct correlation to university lab infrastructure planning, equipment allocation, and IT campus-wide connectivity blueprints.
-          </p>
-<!-- Interactive Telemetry Bar -->
-<div class="w-full mt-4">
-<div class="flex justify-between font-mono text-[10px] text-on-surface-variant mb-1">
-<span>Strategic Index</span>
-<span class="text-tertiary font-bold">CEAFA Blueprint</span>
-</div>
-<div class="w-full h-2 rounded-full bg-surface-container-highest p-0.5 border border-outline-variant/30 overflow-hidden">
-<div class="h-full bg-gradient-to-r from-tertiary-container to-tertiary rounded-full shadow-[0_0_8px_#4ee6aa]" style="width: 92%"></div>
-</div>
-</div>
-</div>
-<!-- Metric Card 3: 76% Syllabi Recalibration with SVG Circular Gauge -->
-<div class="interactive-card scroll-reveal reveal-init p-6 rounded-2xl bg-surface-container-low border border-outline-variant/40 shadow-lg hover:shadow-2xl hover:border-secondary flex flex-col justify-between group relative overflow-hidden">
-<div class="flex items-center justify-between mb-4">
-<span class="font-mono text-[11px] px-2.5 py-0.5 rounded-full bg-secondary-container/40 text-secondary-fixed font-bold border border-secondary/30">Faculty Index</span>
-<span class="material-symbols-outlined text-secondary text-[24px]">menu_book</span>
-</div>
-<div class="flex items-center justify-between my-2">
-<div>
-<div class="flex items-baseline gap-1.5 mb-1">
-<span class="font-headline-xl text-headline-xl text-on-surface font-extrabold group-hover:text-secondary-fixed transition-colors">76%</span>
-<span class="font-title-sm text-title-sm text-secondary-fixed font-bold">▲ Confirmed</span>
-</div>
-<h3 class="font-title-md text-title-md text-on-surface font-bold">Syllabi Recalibration</h3>
-</div>
-<!-- Animated Circular Progress Gauge -->
-<div class="relative w-16 h-16 shrink-0 group-hover:scale-110 transition-transform">
-<svg class="w-16 h-16 transform -rotate-90" viewbox="0 0 36 36">
-<path class="text-surface-container-highest stroke-current" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke-width="3.5"></path>
-<path class="text-secondary stroke-current transition-all duration-700 group-hover:stroke-primary" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke-dasharray="76, 100" stroke-linecap="round" stroke-width="3.5"></path>
-</svg>
-<div class="absolute inset-0 flex items-center justify-center font-mono text-[11px] font-bold text-secondary">76%</div>
-</div>
-</div>
-<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed my-2">
-            Faculty endorsement for hybrid device protocol guides and balanced digital classroom workflow integration across engineering coursework.
-          </p>
-<!-- Interactive Telemetry Bar -->
-<div class="w-full mt-4">
-<div class="flex justify-between font-mono text-[10px] text-on-surface-variant mb-1">
-<span>Faculty Endorsement</span>
-<span class="text-secondary font-bold">Peer Reviewed</span>
-</div>
-<div class="w-full h-2 rounded-full bg-surface-container-highest p-0.5 border border-outline-variant/30 overflow-hidden">
-<div class="h-full bg-gradient-to-r from-secondary-container to-secondary rounded-full shadow-[0_0_8px_#bdc2ff]" style="width: 76%"></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<!-- Sequential Pagination Bar -->
-<div class="pt-8 pb-4 flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-surface-container-high/60">
-<a class="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-surface-container hover:bg-surface-container-high border border-outline-variant/40 hover:border-primary/40 text-on-surface transition-all flex items-center justify-center gap-3 font-title-sm text-title-sm font-semibold group" href="discussion.html">
-<span class="material-symbols-outlined text-[20px] transition-transform group-hover:-translate-x-1 text-primary">arrow_back</span>
-<span>← Back to Discussion</span>
+<div class="flex items-center gap-space-sm shrink-0">
+<a class="px-space-md py-space-xs rounded-lg bg-surface-container text-on-surface font-title-sm text-title-sm hover:bg-surface-container-highest transition-colors flex items-center gap-1 shadow-sm" href="discussion.html">
+<span class="material-symbols-outlined text-[16px]">menu_book</span>
+<span>Review Findings</span>
 </a>
-<div class="flex items-center gap-2.5 text-on-surface-variant font-mono text-[12px]">
-<span class="w-2.5 h-2.5 rounded-full bg-primary animate-pulse"></span>
-<span>Section 04 of 06 • Significance Assessment</span>
-</div>
-<a class="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-primary hover:bg-primary-container text-on-primary hover:opacity-95 transition-all flex items-center justify-center gap-3 font-title-sm text-title-sm font-bold shadow-lg shadow-primary/20 group" href="team.html">
-<span>Next: Research Team →</span>
-<span class="material-symbols-outlined text-[20px] transition-transform group-hover:translate-x-1">arrow_forward</span>
+<a class="px-space-md py-space-xs rounded-lg bg-primary text-on-primary font-title-sm text-title-sm hover:opacity-90 transition-opacity flex items-center gap-1 shadow-sm" href="team.html">
+<span>Inspect Team</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
 </a>
 </div>
 </div>
+<!-- Subtle background graphic lines -->
+<div class="absolute -right-8 -bottom-8 opacity-10 pointer-events-none">
+<svg fill="none" height="240" viewBox="0 0 200 200" width="240" xmlns="http://www.w3.org/2000/svg">
+<circle class="text-primary" cx="100" cy="100" r="80" stroke="currentColor" stroke-dasharray="8 8" stroke-width="2"></circle>
+<circle class="text-tertiary" cx="100" cy="100" r="50" stroke="currentColor" stroke-width="3"></circle>
+<path class="text-primary" d="M100 20 L100 180 M20 100 L180 100" stroke="currentColor" stroke-width="1.5"></path>
+</svg>
 </div>
+</div>
+<!-- BOTTOM PAGINATION -->
+<div class="w-full flex items-center justify-between pt-space-md pb-space-lg">
+<a class="group flex items-center gap-space-sm px-space-md py-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors shadow-sm" href="discussion.html">
+<span class="material-symbols-outlined text-[18px] group-hover:-translate-x-1 transition-transform">arrow_back</span>
+<div class="flex flex-col text-left">
+<span class="font-label-sm text-[10px] text-on-surface-variant uppercase">Previous</span>
+<span class="font-title-sm text-title-sm font-semibold">&lt; Back: Discussion</span>
+</div>
+</a>
+<div class="hidden sm:flex flex-col items-center">
+<span class="font-mono text-label-sm text-primary tracking-widest uppercase">STEP 04 OF 06</span>
+<div class="flex items-center gap-1.5 mt-1">
+<span class="w-2 h-2 rounded-full bg-surface-container-highest"></span>
+<span class="w-2 h-2 rounded-full bg-surface-container-highest"></span>
+<span class="w-2 h-2 rounded-full bg-surface-container-highest"></span>
+<span class="w-5 h-2 rounded-full bg-primary"></span>
+<span class="w-2 h-2 rounded-full bg-surface-container-highest"></span>
+<span class="w-2 h-2 rounded-full bg-surface-container-highest"></span>
+</div>
+</div>
+<a class="group flex items-center gap-space-sm px-space-md py-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors shadow-sm" href="team.html">
+<div class="flex flex-col text-right">
+<span class="font-label-sm text-[10px] text-on-surface-variant uppercase">Next Chapter</span>
+<span class="font-title-sm text-title-sm font-semibold">Next: Research Team &gt;</span>
+</div>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform text-primary">arrow_forward</span>
+</a>
+</div>
+</section>
+<!-- Interactive Parallax Micro-script for depth card enhancement -->
 <script>
-  function filterStakeholders(category) {
-    const cards = document.querySelectorAll('.stakeholder-card');
-    const buttons = document.querySelectorAll('.filter-pill');
-    
-    // Update button states
-    buttons.forEach(btn => {
-      btn.classList.remove('bg-primary-container', 'text-on-primary-container', 'shadow-md', 'border-primary/30');
-      btn.classList.add('bg-surface-container-low', 'text-on-surface-variant', 'border-outline-variant/40');
+    document.addEventListener('DOMContentLoaded', function () {
+      const cards = document.querySelectorAll('.group');
+      cards.forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+          const rect = card.getBoundingClientRect();
+          const x = e.clientX - rect.left - rect.width / 2;
+          const y = e.clientY - rect.top - rect.height / 2;
+          const rotX = (y / (rect.height / 2)) * -4;
+          const rotY = (x / (rect.width / 2)) * 4;
+          card.style.transform = `perspective(1000px) rotateX(${rotX}deg) rotateY(${rotY}deg) translateY(-2px)`;
+        });
+        card.addEventListener('mouseleave', () => {
+          card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0px)';
+        });
+      });
     });
+  </script>
+</div></main><footer class="relative z-10 w-full bg-surface-container-lowest/90 backdrop-blur-xl mt-space-xl"><div class="max-w-7xl mx-auto px-gutter py-space-xl flex flex-col md:flex-row items-center justify-between gap-space-lg"><div class="flex items-center gap-space-md"><div class="p-space-xs rounded-full bg-surface-container-high"><img alt="BatStateU CpE Emblem" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/ALJJyrD70Mqaz-Z-5Wk9K6vnxSldkJtxg8ZVMvaGR7_QMK0sRd4tYIWdEPvvqgCRdMsHlx6OK2N-1-3_l2-ULfSW3iuz2mF2U4OQg4kh1Gl8ndZkU5XmEAMXOQyL8-Zx6PVj5BL8AkT6l1AidcjGD1N0Wgt3e0FuribDcZgUQ00IP_u-tla9EMQvAAyDS5_eHuxUhfjBUS9oNScPddH_a_-DapyhC3AhBGsdGlL82u5yHDdtIc5Ih1kVUydiJQ"></div><div><div class="font-title-md text-title-md text-on-surface">TechTrack PH • GEd 104</div><p class="font-body-sm text-body-sm text-on-surface-variant">Batangas State University The National Engineering University • Alangilan Campus</p></div></div><nav class="flex flex-wrap items-center justify-center gap-space-md" data-active-classes="text-primary font-semibold"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="overview" href="index.html">Overview</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="introduction" href="introduction.html">Introduction</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="discussion" href="discussion.html">Discussion</a><a aria-current="page" class="transition-colors text-primary font-semibold" data-path="significance" href="significance.html">Significance</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="research-team" href="team.html">Research Team</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="references" href="references.html">References</a></nav><div class="flex flex-col items-center md:items-end gap-1"><div class="flex items-center gap-2 font-label-sm text-label-sm text-tertiary"><span class="inline-block w-1.5 h-1.5 rounded-full bg-tertiary"></span><span>TELEMETRY SYNCHRONIZED [NODE 11]</span></div><p class="font-body-sm text-body-sm text-on-surface-variant">© 2025 BatStateU The NEU Alangilan BSCpE. All rights reserved.</p></div></div></footer><script>(function(){const storageKey='techtrack_theme';const currentTheme=localStorage.getItem(storageKey);const htmlElement=document.documentElement;const icon=document.getElementById('theme-toggle-icon');function applyTheme(isDark){if(isDark){htmlElement.classList.add('dark');if(icon)icon.textContent='light_mode';}else{htmlElement.classList.remove('dark');if(icon)icon.textContent='dark_mode';}}if(currentTheme==='light'){applyTheme(false);}else{applyTheme(true);}const toggleBtn=document.getElementById('theme-toggle-btn');if(toggleBtn){toggleBtn.addEventListener('click',function(){const isNowDark=!htmlElement.classList.contains('dark');applyTheme(isNowDark);localStorage.setItem(storageKey,isNowDark?'dark':'light');});}})();</script>
 
-    const activeBtn = document.getElementById('btn-' + category);
-    if (activeBtn) {
-      activeBtn.classList.remove('bg-surface-container-low', 'text-on-surface-variant', 'border-outline-variant/40');
-      activeBtn.classList.add('bg-primary-container', 'text-on-primary-container', 'shadow-md', 'border-primary/30');
-    }
-
-    // Filter card visibility
-    cards.forEach(card => {
-      if (category === 'all' || card.getAttribute('data-category') === category) {
-        card.style.display = 'flex';
-      } else {
-        card.style.display = 'none';
-      }
-    });
-  }
-</script></main><footer class="relative z-10 w-full bg-surface-container-low mt-16 border-t border-surface-container-high/60 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="max-w-7xl mx-auto px-6 lg:px-12 py-12 flex flex-col gap-8"><div class="flex flex-col md:flex-row md:items-start justify-between gap-6"><div class="space-y-3 max-w-xl"><div class="flex items-center gap-3"><img alt="Batangas State University CpE Logo" class="w-10 h-10 object-contain drop-shadow" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8I4Y4qA3HiYpx-eP2bNItynO3o-zxGMmZ10pnuXHJ4DyJ-FZH94xZvHh4ldZ5plNjawoUYgPG6F-1pMEGESBuGniDYeJ8it-fohcYd8ZYVxgoB6K7Z-XTzEcNANwzDZKQsXLOmN2V3W0w-hTf9wcfWo2tPWH9jYv4I-PVg9A9KeNv7L7FbM64AfZcT9inY_JTpl8ANjJOgohr27qhYzOS5e45SoVLX2lXr5oBX5ARuIJPC2R_o02S"/><div class="flex flex-col"><div class="flex items-center gap-2"><span class="font-headline-sm text-headline-sm font-bold text-on-surface">TechTrack PH</span><span class="font-mono text-[11px] px-2 py-0.5 rounded-full bg-primary-container text-on-primary-container font-semibold">ALN-CEAFA</span></div><span class="font-label-sm text-label-sm text-on-surface-variant font-mono text-[11px]">TNEU Alangilan • Digital Synergy Research</span></div></div><p class="font-body-sm text-body-sm text-on-surface-variant">College of Engineering, Architecture and Fine Arts (CEAFA), BatStateU Alangilan Campus, Golden Country Homes, Alangilan, Batangas City, Philippines. Bachelor of Science in Computer Engineering 1st Year - GEd 104.</p></div><div class="flex flex-col gap-2"><span class="font-title-sm text-title-sm text-on-surface font-semibold">Portal Navigation</span><div class="grid grid-cols-2 sm:grid-cols-3 gap-x-6 gap-y-2"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="overview" href="index.html">Overview</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="introduction" href="introduction.html">Introduction</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="discussion" href="discussion.html">Discussion</a><a class="font-body-sm text-body-sm text-primary font-semibold transition-colors" data-path="significance" href="significance.html">Significance</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="research-team" href="team.html">Research Team</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="references" href="references.html">References</a></div></div></div><div class="pt-6 border-t border-surface-container-high/40 flex flex-col sm:flex-row items-center justify-between gap-4"><p class="font-body-sm text-body-sm text-on-surface-variant">© 2025 BatStateU The NEU Alangilan • GEd 104 Research Group • CEAPA Scientific Repository • Open Scholarly Access.</p><div class="flex items-center gap-4 text-on-surface-variant"><span class="font-mono text-[11px]">Campus Code: ALN-CEAFA</span><span class="font-mono text-[11px] text-tertiary flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>Verified Archive</span></div></div></div></footer></body></html>
+</body></html>
