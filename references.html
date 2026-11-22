@@ -1,7 +1,26 @@
 <!DOCTYPE html>
 
 <html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>TechTrack PH | GEd 104 BSCpE Research Portal</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}@keyframes blob-float{0%,100%{transform:translate(0px,0px) scale(1);}33%{transform:translate(30px,-50px) scale(1.08);}66%{transform:translate(-20px,20px) scale(0.95);}}@keyframes blob-float-reverse{0%,100%{transform:translate(0px,0px) scale(1);}33%{transform:translate(-35px,40px) scale(1.05);}66%{transform:translate(25px,-30px) scale(0.92);}}.animate-blob-1{animation:blob-float 18s ease-in-out infinite;}.animate-blob-2{animation:blob-float-reverse 22s ease-in-out infinite;}.animate-blob-3{animation:blob-float 26s ease-in-out infinite;}.bg-grid-cyber{background-size:36px 36px;background-image:linear-gradient(to right,rgba(255,255,255,0.03) 1px,transparent 1px),linear-gradient(to bottom,rgba(255,255,255,0.03) 1px,transparent 1px);}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}@keyframes blob-float{0%,100%{transform:translate(0px,0px) scale(1);}33%{transform:translate(30px,-50px) scale(1.08);}66%{transform:translate(-20px,20px) scale(0.95);}}@keyframes blob-float-reverse{0%,100%{transform:translate(0px,0px) scale(1);}33%{transform:translate(-35px,40px) scale(1.05);}66%{transform:translate(25px,-30px) scale(0.92);}}.animate-blob-1{animation:blob-float 18s ease-in-out infinite;}.animate-blob-2{animation:blob-float-reverse 22s ease-in-out infinite;}.animate-blob-3{animation:blob-float 26s ease-in-out infinite;}.bg-grid-cyber{background-size:36px 36px;background-image:linear-gradient(to right,rgba(255,255,255,0.03) 1px,transparent 1px),linear-gradient(to bottom,rgba(255,255,255,0.03) 1px,transparent 1px);}
+/* Scroll reveal styles */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.55s cubic-bezier(0.16, 1, 0.3, 1), transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+.scroll-reveal.is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (prefers-reduced-motion: reduce) {
+  .scroll-reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
     darkMode: "class",
     theme: {
       extend: {
@@ -258,7 +277,7 @@
 </div>
 <!-- Stat Metrics Bento Panel -->
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md mb-space-xl">
-<div class="flex flex-col p-space-lg rounded-xl bg-surface-container/70 backdrop-blur-xl shadow-md relative overflow-hidden group">
+<div class="scroll-reveal flex flex-col p-space-lg rounded-xl bg-surface-container/70 backdrop-blur-xl shadow-md relative overflow-hidden group">
 <div class="absolute -right-6 -bottom-6 w-24 h-24 rounded-full bg-primary/10 blur-xl group-hover:scale-150 transition-transform duration-500"></div>
 <div class="flex items-center justify-between text-on-surface-variant font-label-md text-label-md uppercase tracking-wider mb-space-xs">
 <span>Total Entries</span>
@@ -270,7 +289,7 @@
 <span>Indexed &amp; Verified</span>
 </div>
 </div>
-<div class="flex flex-col p-space-lg rounded-xl bg-surface-container/70 backdrop-blur-xl shadow-md relative overflow-hidden group">
+<div class="scroll-reveal flex flex-col p-space-lg rounded-xl bg-surface-container/70 backdrop-blur-xl shadow-md relative overflow-hidden group">
 <div class="absolute -right-6 -bottom-6 w-24 h-24 rounded-full bg-secondary/10 blur-xl group-hover:scale-150 transition-transform duration-500"></div>
 <div class="flex items-center justify-between text-on-surface-variant font-label-md text-label-md uppercase tracking-wider mb-space-xs">
 <span>Journals &amp; Books</span>
@@ -281,7 +300,7 @@
 <span>Peer-reviewed scientific journals &amp; published volumes</span>
 </div>
 </div>
-<div class="flex flex-col p-space-lg rounded-xl bg-surface-container/70 backdrop-blur-xl shadow-md relative overflow-hidden group">
+<div class="scroll-reveal flex flex-col p-space-lg rounded-xl bg-surface-container/70 backdrop-blur-xl shadow-md relative overflow-hidden group">
 <div class="absolute -right-6 -bottom-6 w-24 h-24 rounded-full bg-tertiary/10 blur-xl group-hover:scale-150 transition-transform duration-500"></div>
 <div class="flex items-center justify-between text-on-surface-variant font-label-md text-label-md uppercase tracking-wider mb-space-xs">
 <span>Institutions &amp; Surveys</span>
@@ -292,7 +311,7 @@
 <span>PSA, UNESCO, OECD &amp; field case studies</span>
 </div>
 </div>
-<div class="flex flex-col p-space-lg rounded-xl bg-surface-container/70 backdrop-blur-xl shadow-md relative overflow-hidden group">
+<div class="scroll-reveal flex flex-col p-space-lg rounded-xl bg-surface-container/70 backdrop-blur-xl shadow-md relative overflow-hidden group">
 <div class="absolute -right-6 -bottom-6 w-24 h-24 rounded-full bg-primary-container/10 blur-xl group-hover:scale-150 transition-transform duration-500"></div>
 <div class="flex items-center justify-between text-on-surface-variant font-label-md text-label-md uppercase tracking-wider mb-space-xs">
 <span>Digital Access Link Rate</span>
@@ -325,7 +344,7 @@
 <!-- Citations List Registry -->
 <div class="flex flex-col gap-space-md" id="citations-container">
 <!-- 01 -->
-<article class="citation-card flex flex-col md:flex-row items-start justify-between gap-space-md p-space-lg rounded-2xl bg-surface-container/70 backdrop-blur-xl hover:bg-surface-container-high/90 shadow-md transition-all duration-200 group" data-category="institutional" data-index="1">
+<article class="scroll-reveal citation-card flex flex-col md:flex-row items-start justify-between gap-space-md p-space-lg rounded-2xl bg-surface-container/70 backdrop-blur-xl hover:bg-surface-container-high/90 shadow-md transition-all duration-200 group" data-category="institutional" data-index="1">
 <div class="flex items-start gap-space-md min-w-0">
 <span class="px-space-sm py-1 rounded-lg bg-surface-container-highest text-primary font-mono font-label-md text-label-md shrink-0">#01</span>
 <div class="flex flex-col gap-space-xs min-w-0">
@@ -348,7 +367,7 @@
 </button>
 </article>
 <!-- 02 -->
-<article class="citation-card flex flex-col md:flex-row items-start justify-between gap-space-md p-space-lg rounded-2xl bg-surface-container/70 backdrop-blur-xl hover:bg-surface-container-high/90 shadow-md transition-all duration-200 group" data-category="journal" data-index="2">
+<article class="scroll-reveal citation-card flex flex-col md:flex-row items-start justify-between gap-space-md p-space-lg rounded-2xl bg-surface-container/70 backdrop-blur-xl hover:bg-surface-container-high/90 shadow-md transition-all duration-200 group" data-category="journal" data-index="2">
 <div class="flex items-start gap-space-md min-w-0">
 <span class="px-space-sm py-1 rounded-lg bg-surface-container-highest text-primary font-mono font-label-md text-label-md shrink-0">#02</span>
 <div class="flex flex-col gap-space-xs min-w-0">
@@ -371,7 +390,7 @@
 </button>
 </article>
 <!-- 03 -->
-<article class="citation-card flex flex-col md:flex-row items-start justify-between gap-space-md p-space-lg rounded-2xl bg-surface-container/70 backdrop-blur-xl hover:bg-surface-container-high/90 shadow-md transition-all duration-200 group" data-category="journal" data-index="3">
+<article class="scroll-reveal citation-card flex flex-col md:flex-row items-start justify-between gap-space-md p-space-lg rounded-2xl bg-surface-container/70 backdrop-blur-xl hover:bg-surface-container-high/90 shadow-md transition-all duration-200 group" data-category="journal" data-index="3">
 <div class="flex items-start gap-space-md min-w-0">
 <span class="px-space-sm py-1 rounded-lg bg-surface-container-highest text-primary font-mono font-label-md text-label-md shrink-0">#03</span>
 <div class="flex flex-col gap-space-xs min-w-0">
@@ -394,7 +413,7 @@
 </button>
 </article>
 <!-- 04 -->
-<article class="citation-card flex flex-col md:flex-row items-start justify-between gap-space-md p-space-lg rounded-2xl bg-surface-container/70 backdrop-blur-xl hover:bg-surface-container-high/90 shadow-md transition-all duration-200 group" data-category="institutional" data-index="4">
+<article class="scroll-reveal citation-card flex flex-col md:flex-row items-start justify-between gap-space-md p-space-lg rounded-2xl bg-surface-container/70 backdrop-blur-xl hover:bg-surface-container-high/90 shadow-md transition-all duration-200 group" data-category="institutional" data-index="4">
 <div class="flex items-start gap-space-md min-w-0">
 <span class="px-space-sm py-1 rounded-lg bg-surface-container-highest text-primary font-mono font-label-md text-label-md shrink-0">#04</span>
 <div class="flex flex-col gap-space-xs min-w-0">
@@ -417,7 +436,7 @@
 </button>
 </article>
 <!-- 05 -->
-<article class="citation-card flex flex-col md:flex-row items-start justify-between gap-space-md p-space-lg rounded-2xl bg-surface-container/70 backdrop-blur-xl hover:bg-surface-container-high/90 shadow-md transition-all duration-200 group" data-category="journal" data-index="5">
+<article class="scroll-reveal citation-card flex flex-col md:flex-row items-start justify-between gap-space-md p-space-lg rounded-2xl bg-surface-container/70 backdrop-blur-xl hover:bg-surface-container-high/90 shadow-md transition-all duration-200 group" data-category="journal" data-index="5">
 <div class="flex items-start gap-space-md min-w-0">
 <span class="px-space-sm py-1 rounded-lg bg-surface-container-highest text-primary font-mono font-label-md text-label-md shrink-0">#05</span>
 <div class="flex flex-col gap-space-xs min-w-0">
@@ -440,7 +459,7 @@
 </button>
 </article>
 <!-- 06 -->
-<article class="citation-card flex flex-col md:flex-row items-start justify-between gap-space-md p-space-lg rounded-2xl bg-surface-container/70 backdrop-blur-xl hover:bg-surface-container-high/90 shadow-md transition-all duration-200 group" data-category="institutional" data-index="6">
+<article class="scroll-reveal citation-card flex flex-col md:flex-row items-start justify-between gap-space-md p-space-lg rounded-2xl bg-surface-container/70 backdrop-blur-xl hover:bg-surface-container-high/90 shadow-md transition-all duration-200 group" data-category="institutional" data-index="6">
 <div class="flex items-start gap-space-md min-w-0">
 <span class="px-space-sm py-1 rounded-lg bg-surface-container-highest text-primary font-mono font-label-md text-label-md shrink-0">#06</span>
 <div class="flex flex-col gap-space-xs min-w-0">
@@ -463,7 +482,7 @@
 </button>
 </article>
 <!-- 07 -->
-<article class="citation-card flex flex-col md:flex-row items-start justify-between gap-space-md p-space-lg rounded-2xl bg-surface-container/70 backdrop-blur-xl hover:bg-surface-container-high/90 shadow-md transition-all duration-200 group" data-category="journal" data-index="7">
+<article class="scroll-reveal citation-card flex flex-col md:flex-row items-start justify-between gap-space-md p-space-lg rounded-2xl bg-surface-container/70 backdrop-blur-xl hover:bg-surface-container-high/90 shadow-md transition-all duration-200 group" data-category="journal" data-index="7">
 <div class="flex items-start gap-space-md min-w-0">
 <span class="px-space-sm py-1 rounded-lg bg-surface-container-highest text-primary font-mono font-label-md text-label-md shrink-0">#07</span>
 <div class="flex flex-col gap-space-xs min-w-0">
@@ -486,7 +505,7 @@
 </button>
 </article>
 <!-- 08 -->
-<article class="citation-card flex flex-col md:flex-row items-start justify-between gap-space-md p-space-lg rounded-2xl bg-surface-container/70 backdrop-blur-xl hover:bg-surface-container-high/90 shadow-md transition-all duration-200 group" data-category="institutional" data-index="8">
+<article class="scroll-reveal citation-card flex flex-col md:flex-row items-start justify-between gap-space-md p-space-lg rounded-2xl bg-surface-container/70 backdrop-blur-xl hover:bg-surface-container-high/90 shadow-md transition-all duration-200 group" data-category="institutional" data-index="8">
 <div class="flex items-start gap-space-md min-w-0">
 <span class="px-space-sm py-1 rounded-lg bg-surface-container-highest text-primary font-mono font-label-md text-label-md shrink-0">#08</span>
 <div class="flex flex-col gap-space-xs min-w-0">
@@ -509,7 +528,7 @@
 </button>
 </article>
 <!-- 09 -->
-<article class="citation-card flex flex-col md:flex-row items-start justify-between gap-space-md p-space-lg rounded-2xl bg-surface-container/70 backdrop-blur-xl hover:bg-surface-container-high/90 shadow-md transition-all duration-200 group" data-category="journal" data-index="9">
+<article class="scroll-reveal citation-card flex flex-col md:flex-row items-start justify-between gap-space-md p-space-lg rounded-2xl bg-surface-container/70 backdrop-blur-xl hover:bg-surface-container-high/90 shadow-md transition-all duration-200 group" data-category="journal" data-index="9">
 <div class="flex items-start gap-space-md min-w-0">
 <span class="px-space-sm py-1 rounded-lg bg-surface-container-highest text-primary font-mono font-label-md text-label-md shrink-0">#09</span>
 <div class="flex flex-col gap-space-xs min-w-0">
@@ -532,7 +551,7 @@
 </button>
 </article>
 <!-- 10 -->
-<article class="citation-card flex flex-col md:flex-row items-start justify-between gap-space-md p-space-lg rounded-2xl bg-surface-container/70 backdrop-blur-xl hover:bg-surface-container-high/90 shadow-md transition-all duration-200 group" data-category="journal" data-index="10">
+<article class="scroll-reveal citation-card flex flex-col md:flex-row items-start justify-between gap-space-md p-space-lg rounded-2xl bg-surface-container/70 backdrop-blur-xl hover:bg-surface-container-high/90 shadow-md transition-all duration-200 group" data-category="journal" data-index="10">
 <div class="flex items-start gap-space-md min-w-0">
 <span class="px-space-sm py-1 rounded-lg bg-surface-container-highest text-primary font-mono font-label-md text-label-md shrink-0">#10</span>
 <div class="flex flex-col gap-space-xs min-w-0">
@@ -555,7 +574,7 @@
 </button>
 </article>
 <!-- 11 -->
-<article class="citation-card flex flex-col md:flex-row items-start justify-between gap-space-md p-space-lg rounded-2xl bg-surface-container/70 backdrop-blur-xl hover:bg-surface-container-high/90 shadow-md transition-all duration-200 group" data-category="institutional" data-index="11">
+<article class="scroll-reveal citation-card flex flex-col md:flex-row items-start justify-between gap-space-md p-space-lg rounded-2xl bg-surface-container/70 backdrop-blur-xl hover:bg-surface-container-high/90 shadow-md transition-all duration-200 group" data-category="institutional" data-index="11">
 <div class="flex items-start gap-space-md min-w-0">
 <span class="px-space-sm py-1 rounded-lg bg-surface-container-highest text-primary font-mono font-label-md text-label-md shrink-0">#11</span>
 <div class="flex flex-col gap-space-xs min-w-0">
@@ -578,7 +597,7 @@
 </button>
 </article>
 <!-- 12 -->
-<article class="citation-card flex flex-col md:flex-row items-start justify-between gap-space-md p-space-lg rounded-2xl bg-surface-container/70 backdrop-blur-xl hover:bg-surface-container-high/90 shadow-md transition-all duration-200 group" data-category="institutional" data-index="12">
+<article class="scroll-reveal citation-card flex flex-col md:flex-row items-start justify-between gap-space-md p-space-lg rounded-2xl bg-surface-container/70 backdrop-blur-xl hover:bg-surface-container-high/90 shadow-md transition-all duration-200 group" data-category="institutional" data-index="12">
 <div class="flex items-start gap-space-md min-w-0">
 <span class="px-space-sm py-1 rounded-lg bg-surface-container-highest text-primary font-mono font-label-md text-label-md shrink-0">#12</span>
 <div class="flex flex-col gap-space-xs min-w-0">
@@ -601,7 +620,7 @@
 </button>
 </article>
 <!-- 13 -->
-<article class="citation-card flex flex-col md:flex-row items-start justify-between gap-space-md p-space-lg rounded-2xl bg-surface-container/70 backdrop-blur-xl hover:bg-surface-container-high/90 shadow-md transition-all duration-200 group" data-category="journal" data-index="13">
+<article class="scroll-reveal citation-card flex flex-col md:flex-row items-start justify-between gap-space-md p-space-lg rounded-2xl bg-surface-container/70 backdrop-blur-xl hover:bg-surface-container-high/90 shadow-md transition-all duration-200 group" data-category="journal" data-index="13">
 <div class="flex items-start gap-space-md min-w-0">
 <span class="px-space-sm py-1 rounded-lg bg-surface-container-highest text-primary font-mono font-label-md text-label-md shrink-0">#13</span>
 <div class="flex flex-col gap-space-xs min-w-0">
@@ -624,7 +643,7 @@
 </button>
 </article>
 <!-- 14 -->
-<article class="citation-card flex flex-col md:flex-row items-start justify-between gap-space-md p-space-lg rounded-2xl bg-surface-container/70 backdrop-blur-xl hover:bg-surface-container-high/90 shadow-md transition-all duration-200 group" data-category="institutional" data-index="14">
+<article class="scroll-reveal citation-card flex flex-col md:flex-row items-start justify-between gap-space-md p-space-lg rounded-2xl bg-surface-container/70 backdrop-blur-xl hover:bg-surface-container-high/90 shadow-md transition-all duration-200 group" data-category="institutional" data-index="14">
 <div class="flex items-start gap-space-md min-w-0">
 <span class="px-space-sm py-1 rounded-lg bg-surface-container-highest text-primary font-mono font-label-md text-label-md shrink-0">#14</span>
 <div class="flex flex-col gap-space-xs min-w-0">
@@ -647,7 +666,7 @@
 </button>
 </article>
 <!-- 15 -->
-<article class="citation-card flex flex-col md:flex-row items-start justify-between gap-space-md p-space-lg rounded-2xl bg-surface-container/70 backdrop-blur-xl hover:bg-surface-container-high/90 shadow-md transition-all duration-200 group" data-category="institutional" data-index="15">
+<article class="scroll-reveal citation-card flex flex-col md:flex-row items-start justify-between gap-space-md p-space-lg rounded-2xl bg-surface-container/70 backdrop-blur-xl hover:bg-surface-container-high/90 shadow-md transition-all duration-200 group" data-category="institutional" data-index="15">
 <div class="flex items-start gap-space-md min-w-0">
 <span class="px-space-sm py-1 rounded-lg bg-surface-container-highest text-primary font-mono font-label-md text-label-md shrink-0">#15</span>
 <div class="flex flex-col gap-space-xs min-w-0">
@@ -670,7 +689,7 @@
 </button>
 </article>
 <!-- 16 -->
-<article class="citation-card flex flex-col md:flex-row items-start justify-between gap-space-md p-space-lg rounded-2xl bg-surface-container/70 backdrop-blur-xl hover:bg-surface-container-high/90 shadow-md transition-all duration-200 group" data-category="institutional" data-index="16">
+<article class="scroll-reveal citation-card flex flex-col md:flex-row items-start justify-between gap-space-md p-space-lg rounded-2xl bg-surface-container/70 backdrop-blur-xl hover:bg-surface-container-high/90 shadow-md transition-all duration-200 group" data-category="institutional" data-index="16">
 <div class="flex items-start gap-space-md min-w-0">
 <span class="px-space-sm py-1 rounded-lg bg-surface-container-highest text-primary font-mono font-label-md text-label-md shrink-0">#16</span>
 <div class="flex flex-col gap-space-xs min-w-0">
@@ -693,7 +712,7 @@
 </button>
 </article>
 <!-- 17 -->
-<article class="citation-card flex flex-col md:flex-row items-start justify-between gap-space-md p-space-lg rounded-2xl bg-surface-container/70 backdrop-blur-xl hover:bg-surface-container-high/90 shadow-md transition-all duration-200 group" data-category="institutional" data-index="17">
+<article class="scroll-reveal citation-card flex flex-col md:flex-row items-start justify-between gap-space-md p-space-lg rounded-2xl bg-surface-container/70 backdrop-blur-xl hover:bg-surface-container-high/90 shadow-md transition-all duration-200 group" data-category="institutional" data-index="17">
 <div class="flex items-start gap-space-md min-w-0">
 <span class="px-space-sm py-1 rounded-lg bg-surface-container-highest text-primary font-mono font-label-md text-label-md shrink-0">#17</span>
 <div class="flex flex-col gap-space-xs min-w-0">
@@ -716,7 +735,7 @@
 </button>
 </article>
 <!-- 18 -->
-<article class="citation-card flex flex-col md:flex-row items-start justify-between gap-space-md p-space-lg rounded-2xl bg-surface-container/70 backdrop-blur-xl hover:bg-surface-container-high/90 shadow-md transition-all duration-200 group" data-category="journal" data-index="18">
+<article class="scroll-reveal citation-card flex flex-col md:flex-row items-start justify-between gap-space-md p-space-lg rounded-2xl bg-surface-container/70 backdrop-blur-xl hover:bg-surface-container-high/90 shadow-md transition-all duration-200 group" data-category="journal" data-index="18">
 <div class="flex items-start gap-space-md min-w-0">
 <span class="px-space-sm py-1 rounded-lg bg-surface-container-highest text-primary font-mono font-label-md text-label-md shrink-0">#18</span>
 <div class="flex flex-col gap-space-xs min-w-0">
@@ -739,7 +758,7 @@
 </button>
 </article>
 <!-- 19 -->
-<article class="citation-card flex flex-col md:flex-row items-start justify-between gap-space-md p-space-lg rounded-2xl bg-surface-container/70 backdrop-blur-xl hover:bg-surface-container-high/90 shadow-md transition-all duration-200 group" data-category="institutional" data-index="19">
+<article class="scroll-reveal citation-card flex flex-col md:flex-row items-start justify-between gap-space-md p-space-lg rounded-2xl bg-surface-container/70 backdrop-blur-xl hover:bg-surface-container-high/90 shadow-md transition-all duration-200 group" data-category="institutional" data-index="19">
 <div class="flex items-start gap-space-md min-w-0">
 <span class="px-space-sm py-1 rounded-lg bg-surface-container-highest text-primary font-mono font-label-md text-label-md shrink-0">#19</span>
 <div class="flex flex-col gap-space-xs min-w-0">
@@ -762,7 +781,7 @@
 </button>
 </article>
 <!-- 20 -->
-<article class="citation-card flex flex-col md:flex-row items-start justify-between gap-space-md p-space-lg rounded-2xl bg-surface-container/70 backdrop-blur-xl hover:bg-surface-container-high/90 shadow-md transition-all duration-200 group" data-category="institutional" data-index="20">
+<article class="scroll-reveal citation-card flex flex-col md:flex-row items-start justify-between gap-space-md p-space-lg rounded-2xl bg-surface-container/70 backdrop-blur-xl hover:bg-surface-container-high/90 shadow-md transition-all duration-200 group" data-category="institutional" data-index="20">
 <div class="flex items-start gap-space-md min-w-0">
 <span class="px-space-sm py-1 rounded-lg bg-surface-container-highest text-primary font-mono font-label-md text-label-md shrink-0">#20</span>
 <div class="flex flex-col gap-space-xs min-w-0">
@@ -785,7 +804,7 @@
 </button>
 </article>
 <!-- 21 -->
-<article class="citation-card flex flex-col md:flex-row items-start justify-between gap-space-md p-space-lg rounded-2xl bg-surface-container/70 backdrop-blur-xl hover:bg-surface-container-high/90 shadow-md transition-all duration-200 group" data-category="institutional" data-index="21">
+<article class="scroll-reveal citation-card flex flex-col md:flex-row items-start justify-between gap-space-md p-space-lg rounded-2xl bg-surface-container/70 backdrop-blur-xl hover:bg-surface-container-high/90 shadow-md transition-all duration-200 group" data-category="institutional" data-index="21">
 <div class="flex items-start gap-space-md min-w-0">
 <span class="px-space-sm py-1 rounded-lg bg-surface-container-highest text-primary font-mono font-label-md text-label-md shrink-0">#21</span>
 <div class="flex flex-col gap-space-xs min-w-0">
@@ -808,7 +827,7 @@
 </button>
 </article>
 <!-- 22 -->
-<article class="citation-card flex flex-col md:flex-row items-start justify-between gap-space-md p-space-lg rounded-2xl bg-surface-container/70 backdrop-blur-xl hover:bg-surface-container-high/90 shadow-md transition-all duration-200 group" data-category="institutional" data-index="22">
+<article class="scroll-reveal citation-card flex flex-col md:flex-row items-start justify-between gap-space-md p-space-lg rounded-2xl bg-surface-container/70 backdrop-blur-xl hover:bg-surface-container-high/90 shadow-md transition-all duration-200 group" data-category="institutional" data-index="22">
 <div class="flex items-start gap-space-md min-w-0">
 <span class="px-space-sm py-1 rounded-lg bg-surface-container-highest text-primary font-mono font-label-md text-label-md shrink-0">#22</span>
 <div class="flex flex-col gap-space-xs min-w-0">
@@ -831,7 +850,7 @@
 </button>
 </article>
 <!-- 23 -->
-<article class="citation-card flex flex-col md:flex-row items-start justify-between gap-space-md p-space-lg rounded-2xl bg-surface-container/70 backdrop-blur-xl hover:bg-surface-container-high/90 shadow-md transition-all duration-200 group" data-category="institutional" data-index="23">
+<article class="scroll-reveal citation-card flex flex-col md:flex-row items-start justify-between gap-space-md p-space-lg rounded-2xl bg-surface-container/70 backdrop-blur-xl hover:bg-surface-container-high/90 shadow-md transition-all duration-200 group" data-category="institutional" data-index="23">
 <div class="flex items-start gap-space-md min-w-0">
 <span class="px-space-sm py-1 rounded-lg bg-surface-container-highest text-primary font-mono font-label-md text-label-md shrink-0">#23</span>
 <div class="flex flex-col gap-space-xs min-w-0">
@@ -854,7 +873,7 @@
 </button>
 </article>
 <!-- 24 -->
-<article class="citation-card flex flex-col md:flex-row items-start justify-between gap-space-md p-space-lg rounded-2xl bg-surface-container/70 backdrop-blur-xl hover:bg-surface-container-high/90 shadow-md transition-all duration-200 group" data-category="institutional" data-index="24">
+<article class="scroll-reveal citation-card flex flex-col md:flex-row items-start justify-between gap-space-md p-space-lg rounded-2xl bg-surface-container/70 backdrop-blur-xl hover:bg-surface-container-high/90 shadow-md transition-all duration-200 group" data-category="institutional" data-index="24">
 <div class="flex items-start gap-space-md min-w-0">
 <span class="px-space-sm py-1 rounded-lg bg-surface-container-highest text-primary font-mono font-label-md text-label-md shrink-0">#24</span>
 <div class="flex flex-col gap-space-xs min-w-0">
@@ -877,7 +896,7 @@
 </button>
 </article>
 <!-- 25 -->
-<article class="citation-card flex flex-col md:flex-row items-start justify-between gap-space-md p-space-lg rounded-2xl bg-surface-container/70 backdrop-blur-xl hover:bg-surface-container-high/90 shadow-md transition-all duration-200 group" data-category="journal" data-index="25">
+<article class="scroll-reveal citation-card flex flex-col md:flex-row items-start justify-between gap-space-md p-space-lg rounded-2xl bg-surface-container/70 backdrop-blur-xl hover:bg-surface-container-high/90 shadow-md transition-all duration-200 group" data-category="journal" data-index="25">
 <div class="flex items-start gap-space-md min-w-0">
 <span class="px-space-sm py-1 rounded-lg bg-surface-container-highest text-primary font-mono font-label-md text-label-md shrink-0">#25</span>
 <div class="flex flex-col gap-space-xs min-w-0">
@@ -900,7 +919,7 @@
 </button>
 </article>
 <!-- 26 -->
-<article class="citation-card flex flex-col md:flex-row items-start justify-between gap-space-md p-space-lg rounded-2xl bg-surface-container/70 backdrop-blur-xl hover:bg-surface-container-high/90 shadow-md transition-all duration-200 group" data-category="institutional" data-index="26">
+<article class="scroll-reveal citation-card flex flex-col md:flex-row items-start justify-between gap-space-md p-space-lg rounded-2xl bg-surface-container/70 backdrop-blur-xl hover:bg-surface-container-high/90 shadow-md transition-all duration-200 group" data-category="institutional" data-index="26">
 <div class="flex items-start gap-space-md min-w-0">
 <span class="px-space-sm py-1 rounded-lg bg-surface-container-highest text-primary font-mono font-label-md text-label-md shrink-0">#26</span>
 <div class="flex flex-col gap-space-xs min-w-0">
@@ -923,7 +942,7 @@
 </button>
 </article>
 <!-- 27 -->
-<article class="citation-card flex flex-col md:flex-row items-start justify-between gap-space-md p-space-lg rounded-2xl bg-surface-container/70 backdrop-blur-xl hover:bg-surface-container-high/90 shadow-md transition-all duration-200 group" data-category="journal" data-index="27">
+<article class="scroll-reveal citation-card flex flex-col md:flex-row items-start justify-between gap-space-md p-space-lg rounded-2xl bg-surface-container/70 backdrop-blur-xl hover:bg-surface-container-high/90 shadow-md transition-all duration-200 group" data-category="journal" data-index="27">
 <div class="flex items-start gap-space-md min-w-0">
 <span class="px-space-sm py-1 rounded-lg bg-surface-container-highest text-primary font-mono font-label-md text-label-md shrink-0">#27</span>
 <div class="flex flex-col gap-space-xs min-w-0">
@@ -946,7 +965,7 @@
 </button>
 </article>
 <!-- 28 -->
-<article class="citation-card flex flex-col md:flex-row items-start justify-between gap-space-md p-space-lg rounded-2xl bg-surface-container/70 backdrop-blur-xl hover:bg-surface-container-high/90 shadow-md transition-all duration-200 group" data-category="institutional" data-index="28">
+<article class="scroll-reveal citation-card flex flex-col md:flex-row items-start justify-between gap-space-md p-space-lg rounded-2xl bg-surface-container/70 backdrop-blur-xl hover:bg-surface-container-high/90 shadow-md transition-all duration-200 group" data-category="institutional" data-index="28">
 <div class="flex items-start gap-space-md min-w-0">
 <span class="px-space-sm py-1 rounded-lg bg-surface-container-highest text-primary font-mono font-label-md text-label-md shrink-0">#28</span>
 <div class="flex flex-col gap-space-xs min-w-0">
@@ -969,7 +988,7 @@
 </button>
 </article>
 <!-- 29 -->
-<article class="citation-card flex flex-col md:flex-row items-start justify-between gap-space-md p-space-lg rounded-2xl bg-surface-container/70 backdrop-blur-xl hover:bg-surface-container-high/90 shadow-md transition-all duration-200 group" data-category="institutional" data-index="29">
+<article class="scroll-reveal citation-card flex flex-col md:flex-row items-start justify-between gap-space-md p-space-lg rounded-2xl bg-surface-container/70 backdrop-blur-xl hover:bg-surface-container-high/90 shadow-md transition-all duration-200 group" data-category="institutional" data-index="29">
 <div class="flex items-start gap-space-md min-w-0">
 <span class="px-space-sm py-1 rounded-lg bg-surface-container-highest text-primary font-mono font-label-md text-label-md shrink-0">#29</span>
 <div class="flex flex-col gap-space-xs min-w-0">
@@ -992,7 +1011,7 @@
 </button>
 </article>
 <!-- 30 -->
-<article class="citation-card flex flex-col md:flex-row items-start justify-between gap-space-md p-space-lg rounded-2xl bg-surface-container/70 backdrop-blur-xl hover:bg-surface-container-high/90 shadow-md transition-all duration-200 group" data-category="journal" data-index="30">
+<article class="scroll-reveal citation-card flex flex-col md:flex-row items-start justify-between gap-space-md p-space-lg rounded-2xl bg-surface-container/70 backdrop-blur-xl hover:bg-surface-container-high/90 shadow-md transition-all duration-200 group" data-category="journal" data-index="30">
 <div class="flex items-start gap-space-md min-w-0">
 <span class="px-space-sm py-1 rounded-lg bg-surface-container-highest text-primary font-mono font-label-md text-label-md shrink-0">#30</span>
 <div class="flex flex-col gap-space-xs min-w-0">
@@ -1048,6 +1067,29 @@
       let currentCategory = 'all';
       let currentQuery = '';
 
+      // IntersectionObserver for scroll-triggered reveal animations
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const revealElements = document.querySelectorAll('.scroll-reveal');
+
+      if (!prefersReducedMotion && 'IntersectionObserver' in window) {
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-revealed');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, {
+          threshold: 0.1,
+          rootMargin: '0px 0px -40px 0px'
+        });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+      } else {
+        // Fallback for no IntersectionObserver support or reduced motion preference
+        revealElements.forEach(el => el.classList.add('is-revealed'));
+      }
+
       function showToast(message) {
         toastText.textContent = message;
         toast.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-3');
@@ -1068,6 +1110,8 @@
 
           if (matchesCat && matchesQuery) {
             card.classList.remove('hidden');
+            // Ensure filtered visible elements are displayed nicely
+            card.classList.add('is-revealed');
             visibleCount++;
           } else {
             card.classList.add('hidden');
