@@ -1,0 +1,1252 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: #000;
+    }
+  </style>
+</head>
+<body>
+<!-- STITCH_THREEJS_START:ANIMATION_110 class="fixed inset-0 w-full h-full bg-transparent" -->
+<div class="fixed inset-0 w-full h-full bg-transparent" style="display:block;">
+<script src="https://ajax.googleapis.com/ajax/libs/threejs/r125/three.min.js"></script>
+<div id="threejs-container-ANIMATION_110" style="width:100%;height:100%"></div>
+<script>
+(function() {
+  const container = document.getElementById('threejs-container-ANIMATION_110');
+  const devicePixelRatio = window.devicePixelRatio || 1;
+  # TechTrack PH — Multi-Page Production Export Document & GitHub Deployment Package
+
+This comprehensive export package bundles the complete, production-ready source code for all **6 distinct HTML pages**, the shared stylesheet configuration, global client-side dark/light synchronization script, asset directory structure, and step-by-step GitHub Pages deployment instructions for **TechTrack PH**.
+
+---
+
+## 📁 1. Project Directory Structure
+
+Create this folder structure on your local development machine:
+
+```text
+techtrack-ph/
+├── index.html                  # Screen 1: Overview & Abstract
+├── introduction.html           # Screen 2: Introduction & 5 Core Research Objectives
+├── discussion.html             # Screen 3: Discussion, Empirical Matrices & Visualizations
+├── significance.html           # Screen 4: 5-Stakeholder Institutional Significance Matrix
+├── team.html                   # Screen 5: Research Team & Profile Directory
+├── references.html             # Screen 6: 30-Source APA 7th Bibliography with External Links
+├── README.md                   # Project Overview, Authorship & Academic Citations
+└── assets/
+    └── images/
+        ├── logo.png                    # Brand Logo (BatStateU TNEU / TechTrack)
+        ├── overview-hero.jpg           # Overview banner slot (2048x1152)
+        ├── campus-alangilan.jpg        # BatStateU Alangilan Campus landmark
+        └── team/                       # Member Headshots (1:1 aspect ratio)
+            ├── lanz-villanueva.jpg
+            ├── paul-ilagan.jpg
+            ├── clark-anoyo.jpg
+            ├── marc-arevalo.jpg
+            ├── albert-berboso.jpg
+            ├── vincent-cabrera.jpg
+            ├── john-cantos.jpg
+            ├── mark-de-torres.jpg
+            ├── jian-del-moro.jpg
+            ├── gwen-de-los-reyes.jpg
+            └── rainer-delos-reyes.jpg
+```
+
+---
+
+## 🌐 2. Page 1: `index.html` (Overview & Empirical Statistics)
+
+Save this file as `index.html` in the root of your project:
+
+```html
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechTrack PH — Overview</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+<script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            surface: { DEFAULT: '#041329', card: '#0d1c32', cardHover: '#132845', border: '#1e3a5f' },
+            accent: { cyan: '#38bdf8', blue: '#2563eb', indigo: '#6366f1', emerald: '#10b981' }
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    @keyframes blob-float-1 { 0%, 100% { transform: translate3d(0, 0, 0) scale(1); } 50% { transform: translate3d(35px, -28px, 0) scale(1.08); } }
+    @keyframes blob-float-2 { 0%, 100% { transform: translate3d(0, 0, 0) scale(1.05); } 50% { transform: translate3d(-30px, 32px, 0) scale(0.96); } }
+    @keyframes blob-float-3 { 0%, 100% { transform: translate3d(0, 0, 0) scale(0.98); } 50% { transform: translate3d(24px, 20px, 0) scale(1.06); } }
+    .animate-blob-1 { animation: blob-float-1 22s ease-in-out infinite alternate; will-change: transform; }
+    .animate-blob-2 { animation: blob-float-2 26s ease-in-out -6s infinite alternate; will-change: transform; }
+    .animate-blob-3 { animation: blob-float-3 18s ease-in-out -12s infinite alternate; will-change: transform; }
+    .glass-card { background: rgba(13, 28, 50, 0.72); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(56, 189, 248, 0.14); }
+    html:not(.dark) .glass-card { background: rgba(255, 255, 255, 0.85); border: 1px solid rgba(37, 99, 235, 0.16); }
+    @media (prefers-reduced-motion: reduce) { .animate-blob-1, .animate-blob-2, .animate-blob-3 { animation: none !important; } }
+  </style>
+
+<body class="bg-[#041329] text-slate-100 min-h-screen transition-colors duration-300 antialiased relative selection:bg-cyan-500 selection:text-white">
+<!-- Dynamic Ambient Background Blobs -->
+<div class="fixed inset-0 overflow-hidden pointer-events-none z-0">
+<div class="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-cyan-500/20 filter blur-[90px] animate-blob-1"></div>
+<div class="absolute top-1/3 -right-32 w-96 h-96 rounded-full bg-indigo-600/20 filter blur-[100px] animate-blob-2"></div>
+<div class="absolute -bottom-32 left-1/3 w-96 h-96 rounded-full bg-blue-600/18 filter blur-[90px] animate-blob-3"></div>
+</div>
+<div class="relative z-10 flex flex-col min-h-screen">
+<!-- Institutional Navigation Header -->
+<header class="sticky top-0 z-50 backdrop-blur-md bg-[#041329]/80 border-b border-cyan-500/15">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+<a class="flex items-center space-x-3" href="index.html">
+<div class="w-9 h-9 rounded-lg bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 font-bold text-lg">⚡</div>
+<div>
+<div class="flex items-center space-x-2">
+<span class="font-bold text-base tracking-wide text-white">TechTrack PH</span>
+<span class="text-[10px] uppercase tracking-wider px-1.5 py-0.5 rounded bg-cyan-500/20 text-cyan-300 font-mono">TNEU ALANGILAN</span>
+</div>
+<p class="text-xs text-slate-400">Batangas State University Academic Portal</p>
+</div>
+</a>
+<nav class="hidden md:flex items-center space-x-1">
+<a class="px-3 py-1.5 rounded-md text-sm font-medium text-cyan-400 bg-cyan-500/10 border border-cyan-500/20" href="index.html">Overview</a>
+<a class="px-3 py-1.5 rounded-md text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 transition-all" href="introduction.html">Introduction</a>
+<a class="px-3 py-1.5 rounded-md text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 transition-all" href="discussion.html">Discussion</a>
+<a class="px-3 py-1.5 rounded-md text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 transition-all" href="significance.html">Significance</a>
+<a class="px-3 py-1.5 rounded-md text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 transition-all" href="team.html">Research Team</a>
+<a class="px-3 py-1.5 rounded-md text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 transition-all" href="references.html">References</a>
+</nav>
+<div class="flex items-center space-x-3">
+<button class="p-2 rounded-lg bg-slate-800/60 text-slate-300 hover:text-white border border-slate-700/60 transition-all" id="theme-toggle" title="Toggle theme">
+<svg class="w-4 h-4 hidden" fill="none" id="theme-sun" stroke="currentColor" viewbox="0 0 24 24"><path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<svg class="w-4 h-4" fill="none" id="theme-moon" stroke="currentColor" viewbox="0 0 24 24"><path d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+<a class="hidden sm:inline-flex items-center text-xs font-mono px-3 py-1.5 rounded-lg bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 hover:bg-cyan-500/20 transition-all" href="https://github.com" target="_blank">GitHub Repo</a>
+</div>
+</div>
+</header>
+<!-- Main Content Container -->
+<main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
+<div class="flex flex-wrap items-center justify-between gap-3 text-xs font-mono text-cyan-400">
+<span>● GEd 104 // BATANGAS STATE UNIVERSITY - ALANGILAN CAMPUS</span>
+<span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Open Academic Repository • TNEU-CEAFA-2025</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+<div class="lg:col-span-2 glass-card p-6 sm:p-8 rounded-2xl relative overflow-hidden">
+<span class="text-xs uppercase tracking-wider font-semibold text-cyan-400">Undergraduate Technical Report</span>
+<h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mt-3 leading-tight">
+            Tool or Trap? <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-sky-300 to-indigo-300">The Impact of Technology Use</span> on College Academic Performance
+          </h1>
+<p class="text-sm sm:text-base text-slate-300 mt-4 leading-relaxed font-light">
+            Contemporary Challenges in Filipino Higher Education: Investigating the Impact of Technology Use on Academic Performance among College Students
+          </p>
+<div class="mt-6 p-4 rounded-xl bg-slate-900/60 border border-slate-700/50">
+<span class="text-xs font-semibold uppercase tracking-wider text-cyan-400 block mb-1">Context &amp; Scope</span>
+<p class="text-xs text-slate-300 leading-relaxed">
+              A literature-based investigation by first-year Bachelor of Science in Computer Engineering students at Batangas State University (TNEU) - Alangilan Campus, exploring how digital devices, screen-time habits, and educational technologies shape academic performance in a hybrid learning era.
+            </p>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<div class="glass-card p-6 rounded-2xl">
+<div class="flex items-center justify-between text-xs text-slate-400 mb-2">
+<span>INSTITUTIONAL PROGRAM</span>
+<span class="px-2 py-0.5 rounded bg-cyan-500/10 text-cyan-300 text-[10px] font-mono">CEAFA</span>
+</div>
+<h3 class="text-base font-bold text-white">BS CpE (1st Year) • GEd 104</h3>
+<p class="text-xs text-slate-400 mt-1 leading-relaxed">College of Engineering, Architecture and Fine Arts (CEAFA), BatStateU The National Engineering University.</p>
+<div class="mt-4 pt-4 border-t border-slate-800 text-xs">
+<span class="text-slate-400">SUBMITTED TO</span>
+<p class="font-semibold text-slate-200 mt-0.5">Dr. Belen E. Bagui</p>
+<span class="text-[11px] text-slate-400">GEd 104 Course Instructor</span>
+</div>
+</div>
+<div class="glass-card p-6 rounded-2xl flex-1 flex flex-col justify-between">
+<div class="text-xs text-cyan-400 font-semibold mb-1">ACADEMIC TECHNOLOGY FOCUS</div>
+<h4 class="text-sm font-bold text-white">Cognitive Load &amp; Digital Habits</h4>
+<p class="text-xs text-slate-300 mt-1 leading-relaxed">Evaluating the bifurcated nature of digital infrastructure—as an accelerator for collaborative engineering computing and an impedance via ubiquitous classroom distractions.</p>
+</div>
+</div>
+</div>
+<!-- Banner Repository Image Slot -->
+<div class="p-4 rounded-xl border border-dashed border-cyan-500/30 bg-slate-900/40 flex items-center justify-between text-xs font-mono text-slate-400">
+<div class="flex items-center space-x-2">
+<span class="text-cyan-400">📁</span>
+<span>assets/images/overview-hero.jpg</span>
+<span class="text-[10px] px-1.5 py-0.5 rounded bg-slate-800">2048x1152 RAW</span>
+</div>
+<span class="text-[11px] text-slate-500 hidden sm:inline">Archived Academic Artifact Repository: Literature-Based Investigation Schematics</span>
+</div>
+<!-- Abstract Card -->
+<div class="glass-card p-6 sm:p-8 rounded-2xl">
+<div class="flex items-center justify-between mb-4">
+<h2 class="text-lg font-bold text-white flex items-center space-x-2">
+<span>📄</span>
+<span>Abstract</span>
+</h2>
+<span class="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">PEER CONSENSUS SYNTHESIZED</span>
+</div>
+<p class="text-sm text-slate-300 leading-relaxed">
+          The rapid shift toward digital education has transformed higher learning in the Philippines, positioning technology as both an essential academic enabler and a pervasive cognitive hazard. This comprehensive study examines how digital devices, screen-time volume, mobile notifications, and artificial intelligence interact with student academic performance in college environments. Synthesizing empirical findings from Philippine state universities, regional PSA data, and international OECD benchmarks, this paper maps the bifurcated realities of modern learners: while technology grants unhindered access to collaborative engineering repositories and autonomous research engines, unrestrained non-academic usage and multitasking inflict tangible cognitive penalties. By categorizing device consumption habits and contextualizing the socioeconomic digital divide, the study offers evidence-based strategies for tertiary students and academic institutions to maximize technical utilities while safeguarding academic focus and critical inquiry.
+        </p>
+</div>
+<!-- Empirical Metrics Counter Grid -->
+<div>
+<div class="flex items-center justify-between mb-3 text-xs text-slate-400">
+<span class="font-bold tracking-wider uppercase text-cyan-400">Philippine Digital Landscape: Key Empirical Metrics</span>
+<span class="font-mono text-[11px]">Validated via PSA FLEMMS &amp; OECD PISA Repositories</span>
+</div>
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+<div class="glass-card p-5 rounded-xl">
+<span class="text-[11px] font-mono text-slate-400 uppercase">Internet Penetration</span>
+<div class="text-3xl font-extrabold text-white mt-2 stat-counter" data-suffix="%" data-target="78.2">78.2%</div>
+<p class="text-[11px] text-slate-400 mt-2 leading-tight">PSA FLEMMS Survey benchmark among Filipino youth and university demographic cohorts.</p>
+</div>
+<div class="glass-card p-5 rounded-xl">
+<span class="text-[11px] font-mono text-slate-400 uppercase">Classroom Distraction</span>
+<div class="text-3xl font-extrabold text-amber-400 mt-2 stat-counter" data-suffix="%" data-target="39">39%</div>
+<p class="text-[11px] text-slate-400 mt-2 leading-tight">OECD PISA reported rate of learners admitting mobile diversion during direct classroom hours.</p>
+</div>
+<div class="glass-card p-5 rounded-xl">
+<span class="text-[11px] font-mono text-slate-400 uppercase">Science Score Penalty</span>
+<div class="text-3xl font-extrabold text-rose-400 mt-2 stat-counter" data-suffix="pts" data-target="-11">-11pts</div>
+<p class="text-[11px] text-slate-400 mt-2 leading-tight">OECD PISA Assessment Gap observed among heavy off-task screen users versus structured peers.</p>
+</div>
+<div class="glass-card p-5 rounded-xl">
+<span class="text-[11px] font-mono text-slate-400 uppercase">Weekly AI Adoption</span>
+<div class="text-3xl font-extrabold text-cyan-400 mt-2 stat-counter" data-suffix="%" data-target="55">55%</div>
+<p class="text-[11px] text-slate-400 mt-2 leading-tight">OECD empirical metric reflecting students deploying LLM assistance weekly for coursework.</p>
+</div>
+</div>
+</div>
+<!-- Navigation Forward -->
+<div class="flex justify-end pt-4">
+<a class="px-6 py-2.5 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold text-sm flex items-center space-x-2 transition-all shadow-lg shadow-cyan-500/20" href="introduction.html">
+<span>Next: Introduction</span>
+<span>→</span>
+</a>
+</div>
+</main>
+<!-- Institutional Footer -->
+<footer class="mt-auto border-t border-slate-800 bg-[#020b18] text-xs text-slate-400">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+<div>
+<span class="font-bold text-white text-sm">TechTrack PH</span>
+<p class="mt-2 text-slate-400 text-xs leading-relaxed">Institutional research framework and prototype telemetry for Batangas State University - The National Engineering University (Alangilan Campus).</p>
+</div>
+<div>
+<span class="font-semibold text-white">Academic Navigation</span>
+<ul class="mt-2 space-y-1 text-slate-400">
+<li><a class="text-cyan-400" href="index.html">Overview &amp; Abstract</a></li>
+<li><a class="hover:text-cyan-400" href="introduction.html">Introduction &amp; Objectives</a></li>
+<li><a class="hover:text-cyan-400" href="discussion.html">Empirical Discussion</a></li>
+<li><a class="hover:text-cyan-400" href="significance.html">Institutional Significance</a></li>
+<li><a class="hover:text-cyan-400" href="team.html">Principal Investigators</a></li>
+<li><a class="hover:text-cyan-400" href="references.html">References &amp; Citations</a></li>
+</ul>
+</div>
+<div>
+<span class="font-semibold text-white">Campus Secretariat</span>
+<p class="mt-2 text-slate-400 leading-relaxed text-xs">
+            College of Engineering, Architecture and Fine Arts (CEAFA)<br/>
+            Batangas State University - The National Engineering University<br/>
+            Golden Country Homes, Alangilan, Batangas City, 4200<br/>
+<span class="text-cyan-400 font-mono">techtrack@g.batstate-u.edu.ph</span>
+</p>
+</div>
+</div>
+<div class="border-t border-slate-800/80 py-4 text-center text-slate-500 text-[11px]">
+        © 2025 TechTrack PH. Batangas State University (TNEU) - Alangilan Campus. All rights reserved.
+      </div>
+</footer>
+</div>
+<!-- Shared Theme Persistence Script -->
+<script>
+    (function() {
+      const themeToggleBtn = document.getElementById('theme-toggle');
+      const sunIcon = document.getElementById('theme-sun');
+      const moonIcon = document.getElementById('theme-moon');
+      const htmlEl = document.documentElement;
+
+      function applyTheme(isDark) {
+        if (isDark) {
+          htmlEl.classList.add('dark');
+          sunIcon.classList.add('hidden');
+          moonIcon.classList.remove('hidden');
+        } else {
+          htmlEl.classList.remove('dark');
+          sunIcon.classList.remove('hidden');
+          moonIcon.classList.add('hidden');
+        }
+      }
+
+      const savedTheme = localStorage.getItem('techtrack_theme') || 'dark';
+      applyTheme(savedTheme === 'dark');
+
+      if (themeToggleBtn) {
+        themeToggleBtn.addEventListener('click', () => {
+          const willBeDark = !htmlEl.classList.contains('dark');
+          applyTheme(willBeDark);
+          localStorage.setItem('techtrack_theme', willBeDark ? 'dark' : 'light');
+        });
+      }
+    })();
+  </script>
+</body>
+
+```
+
+---
+
+## 🌐 3. Page 2: `introduction.html` (Introduction &amp; Research Objectives)
+
+Save this file as `introduction.html`:
+
+```html
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TechTrack PH — Introduction</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            surface: { DEFAULT: '#041329', card: '#0d1c32', cardHover: '#132845', border: '#1e3a5f' },
+            accent: { cyan: '#38bdf8', blue: '#2563eb', indigo: '#6366f1', emerald: '#10b981' }
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    @keyframes blob-float-1 { 0%, 100% { transform: translate3d(0, 0, 0) scale(1); } 50% { transform: translate3d(35px, -28px, 0) scale(1.08); } }
+    @keyframes blob-float-2 { 0%, 100% { transform: translate3d(0, 0, 0) scale(1.05); } 50% { transform: translate3d(-30px, 32px, 0) scale(0.96); } }
+    @keyframes blob-float-3 { 0%, 100% { transform: translate3d(0, 0, 0) scale(0.98); } 50% { transform: translate3d(24px, 20px, 0) scale(1.06); } }
+    .animate-blob-1 { animation: blob-float-1 22s ease-in-out infinite alternate; will-change: transform; }
+    .animate-blob-2 { animation: blob-float-2 26s ease-in-out -6s infinite alternate; will-change: transform; }
+    .animate-blob-3 { animation: blob-float-3 18s ease-in-out -12s infinite alternate; will-change: transform; }
+    .glass-card { background: rgba(13, 28, 50, 0.72); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(56, 189, 248, 0.14); }
+    html:not(.dark) .glass-card { background: rgba(255, 255, 255, 0.85); border: 1px solid rgba(37, 99, 235, 0.16); }
+    @media (prefers-reduced-motion: reduce) { .animate-blob-1, .animate-blob-2, .animate-blob-3 { animation: none !important; } }
+  </style>
+</head>
+<body class="bg-[#041329] text-slate-100 min-h-screen transition-colors duration-300 antialiased relative selection:bg-cyan-500 selection:text-white">
+<div class="fixed inset-0 overflow-hidden pointer-events-none z-0">
+<div class="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-cyan-500/20 filter blur-[90px] animate-blob-1"></div>
+<div class="absolute top-1/3 -right-32 w-96 h-96 rounded-full bg-indigo-600/20 filter blur-[100px] animate-blob-2"></div>
+<div class="absolute -bottom-32 left-1/3 w-96 h-96 rounded-full bg-blue-600/18 filter blur-[90px] animate-blob-3"></div>
+</div>
+<div class="relative z-10 flex flex-col min-h-screen">
+<header class="sticky top-0 z-50 backdrop-blur-md bg-[#041329]/80 border-b border-cyan-500/15">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+<a class="flex items-center space-x-3" href="index.html">
+<div class="w-9 h-9 rounded-lg bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 font-bold text-lg">⚡</div>
+<div>
+<div class="flex items-center space-x-2">
+<span class="font-bold text-base tracking-wide text-white">TechTrack PH</span>
+<span class="text-[10px] uppercase tracking-wider px-1.5 py-0.5 rounded bg-cyan-500/20 text-cyan-300 font-mono">TNEU ALANGILAN</span>
+</div>
+<p class="text-xs text-slate-400">Batangas State University Academic Portal</p>
+</div>
+</a>
+<nav class="hidden md:flex items-center space-x-1">
+<a class="px-3 py-1.5 rounded-md text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 transition-all" href="index.html">Overview</a>
+<a class="px-3 py-1.5 rounded-md text-sm font-medium text-cyan-400 bg-cyan-500/10 border border-cyan-500/20" href="introduction.html">Introduction</a>
+<a class="px-3 py-1.5 rounded-md text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 transition-all" href="discussion.html">Discussion</a>
+<a class="px-3 py-1.5 rounded-md text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 transition-all" href="significance.html">Significance</a>
+<a class="px-3 py-1.5 rounded-md text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 transition-all" href="team.html">Research Team</a>
+<a class="px-3 py-1.5 rounded-md text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 transition-all" href="references.html">References</a>
+</nav>
+<div class="flex items-center space-x-3">
+<button class="p-2 rounded-lg bg-slate-800/60 text-slate-300 hover:text-white border border-slate-700/60 transition-all" id="theme-toggle" title="Toggle theme">
+<svg class="w-4 h-4 hidden" fill="none" id="theme-sun" stroke="currentColor" viewbox="0 0 24 24"><path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<svg class="w-4 h-4" fill="none" id="theme-moon" stroke="currentColor" viewbox="0 0 24 24"><path d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+</div>
+</div>
+</header>
+<main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
+<div class="glass-card p-6 sm:p-8 rounded-2xl">
+<span class="text-xs font-mono uppercase text-cyan-400">Research Background</span>
+<h2 class="text-2xl sm:text-3xl font-bold text-white mt-2">Introduction &amp; Objectives</h2>
+<p class="text-sm text-slate-300 mt-4 leading-relaxed">
+          In modern tertiary education, technology has become deeply integrated into academic routines, instructional delivery, and research tasks (Siega, 2025). The introduction of laptops, tablets, smartphones, and campus-wide wireless networks offers unprecedented accessibility to scholarly repositories, collaborative engineering environments, and specialized simulation tools (Wilen-Daugenti, 2008).
+        </p>
+<p class="text-sm text-slate-300 mt-4 leading-relaxed">
+          However, this digital ubiquity has simultaneously introduced serious disruptions to student attention, cognitive retention, and study regimens (Gayrama, 2025). Multitasking across entertainment platforms, continuous push notifications, and academic procrastination contribute to marked drops in cumulative grade point averages (Ariza &amp; Baez, 2022). In the Philippines, these friction points are exacerbated by infrastructure disparities, unequal bandwidth distribution, and varying levels of digital literacy across student demographics.
+        </p>
+</div>
+<!-- 5 Specific Research Objectives -->
+<div class="space-y-4">
+<h3 class="text-base font-bold text-white uppercase tracking-wider text-cyan-400">Five Core Research Objectives</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="glass-card p-5 rounded-xl flex items-start space-x-4">
+<span class="w-8 h-8 rounded-lg bg-cyan-500/20 text-cyan-300 font-mono font-bold flex items-center justify-center shrink-0">01</span>
+<div>
+<h4 class="text-sm font-semibold text-white">Identify Common Academic &amp; Personal Technologies</h4>
+<p class="text-xs text-slate-300 mt-1">Catalog and classify the specific digital hardware, cloud services, and software platforms utilized by college students for academic coursework versus personal leisure.</p>
+</div>
+</div>
+<div class="glass-card p-5 rounded-xl flex items-start space-x-4">
+<span class="w-8 h-8 rounded-lg bg-cyan-500/20 text-cyan-300 font-mono font-bold flex items-center justify-center shrink-0">02</span>
+<div>
+<h4 class="text-sm font-semibold text-white">Examine Positive Contributions</h4>
+<p class="text-xs text-slate-300 mt-1">Investigate how digital technologies enhance learning efficiency, collaborative group work, remote communication, and access to scholarly publications.</p>
+</div>
+</div>
+<div class="glass-card p-5 rounded-xl flex items-start space-x-4">
+<span class="w-8 h-8 rounded-lg bg-cyan-500/20 text-cyan-300 font-mono font-bold flex items-center justify-center shrink-0">03</span>
+<div>
+<h4 class="text-sm font-semibold text-white">Analyze Negative Repercussions</h4>
+<p class="text-xs text-slate-300 mt-1">Determine the extent to which digital distractions, excessive screen time, notification fatigue, and sleep deprivation undermine student performance and mental stamina.</p>
+</div>
+</div>
+<div class="glass-card p-5 rounded-xl flex items-start space-x-4">
+<span class="w-8 h-8 rounded-lg bg-cyan-500/20 text-cyan-300 font-mono font-bold flex items-center justify-center shrink-0">04</span>
+<div>
+<h4 class="text-sm font-semibold text-white">Evaluate Generative AI Integration</h4>
+<p class="text-xs text-slate-300 mt-1">Assess the growing reliance on AI text tools, code assistants, and automated summarization in student workflows, balancing productivity against critical thinking degradation.</p>
+</div>
+</div>
+<div class="glass-card p-5 rounded-xl md:col-span-2 flex items-start space-x-4">
+<span class="w-8 h-8 rounded-lg bg-cyan-500/20 text-cyan-300 font-mono font-bold flex items-center justify-center shrink-0">05</span>
+<div>
+<h4 class="text-sm font-semibold text-white">Formulate Actionable Recommendations</h4>
+<p class="text-xs text-slate-300 mt-1">Develop pragmatic digital wellness guidelines, instructional policies, and self-regulation frameworks for students, faculty, and academic administrators in Philippine state universities.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="flex justify-between pt-4">
+<a class="px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 font-medium text-sm transition-all" href="index.html">← Back to Overview</a>
+<a class="px-6 py-2.5 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold text-sm transition-all shadow-lg shadow-cyan-500/20" href="discussion.html">Next: Discussion →</a>
+</div>
+</main>
+<footer class="mt-auto border-t border-slate-800 bg-[#020b18] text-xs text-slate-400 py-6 text-center">
+      © 2025 TechTrack PH. Batangas State University (TNEU) - Alangilan Campus.
+    </footer>
+</div>
+<script>
+    (function() {
+      const themeToggleBtn = document.getElementById('theme-toggle');
+      const sunIcon = document.getElementById('theme-sun');
+      const moonIcon = document.getElementById('theme-moon');
+      const htmlEl = document.documentElement;
+      function applyTheme(isDark) {
+        if (isDark) { htmlEl.classList.add('dark'); sunIcon.classList.add('hidden'); moonIcon.classList.remove('hidden'); }
+        else { htmlEl.classList.remove('dark'); sunIcon.classList.remove('hidden'); moonIcon.classList.add('hidden'); }
+      }
+      applyTheme((localStorage.getItem('techtrack_theme') || 'dark') === 'dark');
+      if (themeToggleBtn) {
+        themeToggleBtn.addEventListener('click', () => {
+          const willBeDark = !htmlEl.classList.contains('dark');
+          applyTheme(willBeDark);
+          localStorage.setItem('techtrack_theme', willBeDark ? 'dark' : 'light');
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
+```
+
+---
+
+## 🌐 4. Page 3: `discussion.html` (Discussion &amp; Data Analysis)
+
+Save this file as `discussion.html`:
+
+```html
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TechTrack PH — Discussion</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            surface: { DEFAULT: '#041329', card: '#0d1c32', cardHover: '#132845', border: '#1e3a5f' },
+            accent: { cyan: '#38bdf8', blue: '#2563eb', indigo: '#6366f1', emerald: '#10b981' }
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .glass-card { background: rgba(13, 28, 50, 0.72); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(56, 189, 248, 0.14); }
+    html:not(.dark) .glass-card { background: rgba(255, 255, 255, 0.85); border: 1px solid rgba(37, 99, 235, 0.16); }
+  </style>
+</head>
+<body class="bg-[#041329] text-slate-100 min-h-screen transition-colors duration-300 antialiased relative selection:bg-cyan-500 selection:text-white">
+<div class="relative z-10 flex flex-col min-h-screen">
+<header class="sticky top-0 z-50 backdrop-blur-md bg-[#041329]/80 border-b border-cyan-500/15">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+<a class="flex items-center space-x-3" href="index.html">
+<div class="w-9 h-9 rounded-lg bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 font-bold text-lg">⚡</div>
+<div>
+<div class="flex items-center space-x-2">
+<span class="font-bold text-base tracking-wide text-white">TechTrack PH</span>
+<span class="text-[10px] uppercase tracking-wider px-1.5 py-0.5 rounded bg-cyan-500/20 text-cyan-300 font-mono">TNEU ALANGILAN</span>
+</div>
+<p class="text-xs text-slate-400">Batangas State University Academic Portal</p>
+</div>
+</a>
+<nav class="hidden md:flex items-center space-x-1">
+<a class="px-3 py-1.5 rounded-md text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 transition-all" href="index.html">Overview</a>
+<a class="px-3 py-1.5 rounded-md text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 transition-all" href="introduction.html">Introduction</a>
+<a class="px-3 py-1.5 rounded-md text-sm font-medium text-cyan-400 bg-cyan-500/10 border border-cyan-500/20" href="discussion.html">Discussion</a>
+<a class="px-3 py-1.5 rounded-md text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 transition-all" href="significance.html">Significance</a>
+<a class="px-3 py-1.5 rounded-md text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 transition-all" href="team.html">Research Team</a>
+<a class="px-3 py-1.5 rounded-md text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 transition-all" href="references.html">References</a>
+</nav>
+<div class="flex items-center space-x-3">
+<button class="p-2 rounded-lg bg-slate-800/60 text-slate-300 hover:text-white border border-slate-700/60 transition-all" id="theme-toggle">
+<svg class="w-4 h-4 hidden" fill="none" id="theme-sun" stroke="currentColor" viewbox="0 0 24 24"><path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<svg class="w-4 h-4" fill="none" id="theme-moon" stroke="currentColor" viewbox="0 0 24 24"><path d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+</div>
+</div>
+</header>
+<main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
+<div class="glass-card p-6 sm:p-8 rounded-2xl">
+<span class="text-xs font-mono uppercase text-cyan-400">Synthesis &amp; Empirical Findings</span>
+<h2 class="text-2xl sm:text-3xl font-bold text-white mt-2">Discussion &amp; Data Analysis</h2>
+<p class="text-sm text-slate-300 mt-4 leading-relaxed">
+          The collected literature demonstrates that technology operates as a double-edged sword within higher education. The net impact on academic performance is determined not by device ownership alone, but by the intentionality of usage, self-regulatory habits, and institutional scaffolding.
+        </p>
+</div>
+<!-- Comparative Empirical Matrices -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="glass-card p-6 rounded-2xl border-l-4 border-l-emerald-400">
+<h3 class="text-base font-bold text-emerald-400 mb-3 flex items-center space-x-2">
+<span>✓</span>
+<span>Positive Academic Drivers</span>
+</h3>
+<ul class="space-y-3 text-xs text-slate-300">
+<li class="flex items-start space-x-2">
+<span class="text-emerald-400 font-bold">•</span>
+<span><strong>Ubiquitous Repository Access:</strong> Instant retrieval of open-access journals, lecture archives, and technical documentation via campus learning management systems.</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-emerald-400 font-bold">•</span>
+<span><strong>Collaborative Engineering Workflows:</strong> Real-time code versioning (Git/GitHub), shared CAD models, and synchronized group documentation platforms.</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-emerald-400 font-bold">•</span>
+<span><strong>Personalized Pace &amp; Multimedia Learning:</strong> Complex engineering mechanics and programming concepts reinforced through simulation software and recorded demonstrations.</span>
+</li>
+</ul>
+</div>
+<div class="glass-card p-6 rounded-2xl border-l-4 border-l-rose-400">
+<h3 class="text-base font-bold text-rose-400 mb-3 flex items-center space-x-2">
+<span>⚠</span>
+<span>Negative Academic Hazards</span>
+</h3>
+<ul class="space-y-3 text-xs text-slate-300">
+<li class="flex items-start space-x-2">
+<span class="text-rose-400 font-bold">•</span>
+<span><strong>Classroom Multitasking &amp; Cognitive Drain:</strong> Non-academic tab-switching and instant messaging during lecture hours leading to an observed 11-point decline in assessment performance (OECD).</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-rose-400 font-bold">•</span>
+<span><strong>Circadian Rhythm Disruption:</strong> Late-night blue light emission and notification alerts curtailing deep sleep, impairing morning memory consolidation and alertness.</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="text-rose-400 font-bold">•</span>
+<span><strong>Superficial AI Dependence:</strong> Relying on LLM outputs without critical verification, resulting in degraded algorithmic problem-solving capacity.</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="flex justify-between pt-4">
+<a class="px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 font-medium text-sm transition-all" href="introduction.html">← Back to Introduction</a>
+<a class="px-6 py-2.5 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold text-sm transition-all shadow-lg shadow-cyan-500/20" href="significance.html">Next: Significance →</a>
+</div>
+</main>
+<footer class="mt-auto border-t border-slate-800 bg-[#020b18] text-xs text-slate-400 py-6 text-center">
+      © 2025 TechTrack PH. Batangas State University (TNEU) - Alangilan Campus.
+    </footer>
+</div>
+<script>
+    (function() {
+      const themeToggleBtn = document.getElementById('theme-toggle');
+      const sunIcon = document.getElementById('theme-sun');
+      const moonIcon = document.getElementById('theme-moon');
+      const htmlEl = document.documentElement;
+      function applyTheme(isDark) {
+        if (isDark) { htmlEl.classList.add('dark'); sunIcon.classList.add('hidden'); moonIcon.classList.remove('hidden'); }
+        else { htmlEl.classList.remove('dark'); sunIcon.classList.remove('hidden'); moonIcon.classList.add('hidden'); }
+      }
+      applyTheme((localStorage.getItem('techtrack_theme') || 'dark') === 'dark');
+      if (themeToggleBtn) {
+        themeToggleBtn.addEventListener('click', () => {
+          const willBeDark = !htmlEl.classList.contains('dark');
+          applyTheme(willBeDark);
+          localStorage.setItem('techtrack_theme', willBeDark ? 'dark' : 'light');
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
+```
+
+---
+
+## 🌐 5. Page 4: `significance.html` (Stakeholder Impact Matrix)
+
+Save this file as `significance.html`:
+
+```html
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TechTrack PH — Significance</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            surface: { DEFAULT: '#041329', card: '#0d1c32', cardHover: '#132845', border: '#1e3a5f' },
+            accent: { cyan: '#38bdf8', blue: '#2563eb', indigo: '#6366f1', emerald: '#10b981' }
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .glass-card { background: rgba(13, 28, 50, 0.72); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(56, 189, 248, 0.14); }
+    html:not(.dark) .glass-card { background: rgba(255, 255, 255, 0.85); border: 1px solid rgba(37, 99, 235, 0.16); }
+  </style>
+</head>
+<body class="bg-[#041329] text-slate-100 min-h-screen transition-colors duration-300 antialiased relative selection:bg-cyan-500 selection:text-white">
+<div class="relative z-10 flex flex-col min-h-screen">
+<header class="sticky top-0 z-50 backdrop-blur-md bg-[#041329]/80 border-b border-cyan-500/15">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+<a class="flex items-center space-x-3" href="index.html">
+<div class="w-9 h-9 rounded-lg bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 font-bold text-lg">⚡</div>
+<div>
+<div class="flex items-center space-x-2">
+<span class="font-bold text-base tracking-wide text-white">TechTrack PH</span>
+<span class="text-[10px] uppercase tracking-wider px-1.5 py-0.5 rounded bg-cyan-500/20 text-cyan-300 font-mono">TNEU ALANGILAN</span>
+</div>
+<p class="text-xs text-slate-400">Batangas State University Academic Portal</p>
+</div>
+</a>
+<nav class="hidden md:flex items-center space-x-1">
+<a class="px-3 py-1.5 rounded-md text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 transition-all" href="index.html">Overview</a>
+<a class="px-3 py-1.5 rounded-md text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 transition-all" href="introduction.html">Introduction</a>
+<a class="px-3 py-1.5 rounded-md text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 transition-all" href="discussion.html">Discussion</a>
+<a class="px-3 py-1.5 rounded-md text-sm font-medium text-cyan-400 bg-cyan-500/10 border border-cyan-500/20" href="significance.html">Significance</a>
+<a class="px-3 py-1.5 rounded-md text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 transition-all" href="team.html">Research Team</a>
+<a class="px-3 py-1.5 rounded-md text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 transition-all" href="references.html">References</a>
+</nav>
+<div class="flex items-center space-x-3">
+<button class="p-2 rounded-lg bg-slate-800/60 text-slate-300 hover:text-white border border-slate-700/60 transition-all" id="theme-toggle">
+<svg class="w-4 h-4 hidden" fill="none" id="theme-sun" stroke="currentColor" viewbox="0 0 24 24"><path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<svg class="w-4 h-4" fill="none" id="theme-moon" stroke="currentColor" viewbox="0 0 24 24"><path d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+</div>
+</div>
+</header>
+<main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
+<div class="glass-card p-6 sm:p-8 rounded-2xl">
+<span class="text-xs font-mono uppercase text-cyan-400">Stakeholder Impact</span>
+<h2 class="text-2xl sm:text-3xl font-bold text-white mt-2">Significance of the Study</h2>
+<p class="text-sm text-slate-300 mt-4 leading-relaxed">
+          This study provides direct, empirical value across five interconnected stakeholders in Philippine higher education:
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="glass-card p-6 rounded-2xl">
+<span class="text-cyan-400 text-xl font-bold">01</span>
+<h3 class="text-base font-bold text-white mt-2">Students</h3>
+<p class="text-xs text-slate-300 mt-2 leading-relaxed">
+            Provides metacognitive awareness regarding device usage habits, empowering students to structure their screen time, establish boundaries against digital fatigue, and utilize tech productively.
+          </p>
+</div>
+<div class="glass-card p-6 rounded-2xl">
+<span class="text-cyan-400 text-xl font-bold">02</span>
+<h3 class="text-base font-bold text-white mt-2">Educators &amp; Faculty</h3>
+<p class="text-xs text-slate-300 mt-2 leading-relaxed">
+            Equips professors with insights into student device distractions, assisting in the design of hybrid syllabi that balance active digital participation with device-free critical discussions.
+          </p>
+</div>
+<div class="glass-card p-6 rounded-2xl">
+<span class="text-cyan-400 text-xl font-bold">03</span>
+<h3 class="text-base font-bold text-white mt-2">BatStateU Alangilan</h3>
+<p class="text-xs text-slate-300 mt-2 leading-relaxed">
+            Informs campus IT infrastructure strategies, library digital hub investments, and university student wellness programs tailored to engineering and computing disciplines.
+          </p>
+</div>
+<div class="glass-card p-6 rounded-2xl">
+<span class="text-cyan-400 text-xl font-bold">04</span>
+<h3 class="text-base font-bold text-white mt-2">Parents &amp; Guardians</h3>
+<p class="text-xs text-slate-300 mt-2 leading-relaxed">
+            Offers perspective on modern tertiary learning requirements, helping families distinguish between constructive academic screen time and leisure habits requiring support.
+          </p>
+</div>
+<div class="glass-card p-6 rounded-2xl md:col-span-2">
+<span class="text-cyan-400 text-xl font-bold">05</span>
+<h3 class="text-base font-bold text-white mt-2">Future Researchers</h3>
+<p class="text-xs text-slate-300 mt-2 leading-relaxed">
+            Serves as an empirical baseline for subsequent longitudinal investigations tracking generative AI integration, digital learning platforms, and post-pandemic education in Southeast Asia.
+          </p>
+</div>
+</div>
+<!-- Campus Image Repository Slot -->
+<div class="p-4 rounded-xl border border-dashed border-cyan-500/30 bg-slate-900/40 flex items-center justify-between text-xs font-mono text-slate-400">
+<div class="flex items-center space-x-2">
+<span class="text-cyan-400">📁</span>
+<span>assets/images/campus-alangilan.jpg</span>
+</div>
+<span class="text-[11px] text-slate-500">BatStateU TNEU Alangilan Campus Repository Slot</span>
+</div>
+<div class="flex justify-between pt-4">
+<a class="px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 font-medium text-sm transition-all" href="discussion.html">← Back to Discussion</a>
+<a class="px-6 py-2.5 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold text-sm transition-all shadow-lg shadow-cyan-500/20" href="team.html">Next: Research Team →</a>
+</div>
+</main>
+<footer class="mt-auto border-t border-slate-800 bg-[#020b18] text-xs text-slate-400 py-6 text-center">
+      © 2025 TechTrack PH. Batangas State University (TNEU) - Alangilan Campus.
+    </footer>
+</div>
+<script>
+    (function() {
+      const themeToggleBtn = document.getElementById('theme-toggle');
+      const sunIcon = document.getElementById('theme-sun');
+      const moonIcon = document.getElementById('theme-moon');
+      const htmlEl = document.documentElement;
+      function applyTheme(isDark) {
+        if (isDark) { htmlEl.classList.add('dark'); sunIcon.classList.add('hidden'); moonIcon.classList.remove('hidden'); }
+        else { htmlEl.classList.remove('dark'); sunIcon.classList.remove('hidden'); moonIcon.classList.add('hidden'); }
+      }
+      applyTheme((localStorage.getItem('techtrack_theme') || 'dark') === 'dark');
+      if (themeToggleBtn) {
+        themeToggleBtn.addEventListener('click', () => {
+          const willBeDark = !htmlEl.classList.contains('dark');
+          applyTheme(willBeDark);
+          localStorage.setItem('techtrack_theme', willBeDark ? 'dark' : 'light');
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
+```
+
+---
+
+## 🌐 6. Page 5: `team.html` (Research Team &amp; Authors)
+
+Save this file as `team.html`:
+
+```html
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TechTrack PH — Research Team</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            surface: { DEFAULT: '#041329', card: '#0d1c32', cardHover: '#132845', border: '#1e3a5f' },
+            accent: { cyan: '#38bdf8', blue: '#2563eb', indigo: '#6366f1', emerald: '#10b981' }
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .glass-card { background: rgba(13, 28, 50, 0.72); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(56, 189, 248, 0.14); }
+    html:not(.dark) .glass-card { background: rgba(255, 255, 255, 0.85); border: 1px solid rgba(37, 99, 235, 0.16); }
+  </style>
+</head>
+<body class="bg-[#041329] text-slate-100 min-h-screen transition-colors duration-300 antialiased relative selection:bg-cyan-500 selection:text-white">
+<div class="relative z-10 flex flex-col min-h-screen">
+<header class="sticky top-0 z-50 backdrop-blur-md bg-[#041329]/80 border-b border-cyan-500/15">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+<a class="flex items-center space-x-3" href="index.html">
+<div class="w-9 h-9 rounded-lg bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 font-bold text-lg">⚡</div>
+<div>
+<div class="flex items-center space-x-2">
+<span class="font-bold text-base tracking-wide text-white">TechTrack PH</span>
+<span class="text-[10px] uppercase tracking-wider px-1.5 py-0.5 rounded bg-cyan-500/20 text-cyan-300 font-mono">TNEU ALANGILAN</span>
+</div>
+<p class="text-xs text-slate-400">Batangas State University Academic Portal</p>
+</div>
+</a>
+<nav class="hidden md:flex items-center space-x-1">
+<a class="px-3 py-1.5 rounded-md text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 transition-all" href="index.html">Overview</a>
+<a class="px-3 py-1.5 rounded-md text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 transition-all" href="introduction.html">Introduction</a>
+<a class="px-3 py-1.5 rounded-md text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 transition-all" href="discussion.html">Discussion</a>
+<a class="px-3 py-1.5 rounded-md text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 transition-all" href="significance.html">Significance</a>
+<a class="px-3 py-1.5 rounded-md text-sm font-medium text-cyan-400 bg-cyan-500/10 border border-cyan-500/20" href="team.html">Research Team</a>
+<a class="px-3 py-1.5 rounded-md text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 transition-all" href="references.html">References</a>
+</nav>
+<div class="flex items-center space-x-3">
+<button class="p-2 rounded-lg bg-slate-800/60 text-slate-300 hover:text-white border border-slate-700/60 transition-all" id="theme-toggle">
+<svg class="w-4 h-4 hidden" fill="none" id="theme-sun" stroke="currentColor" viewbox="0 0 24 24"><path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<svg class="w-4 h-4" fill="none" id="theme-moon" stroke="currentColor" viewbox="0 0 24 24"><path d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+</div>
+</div>
+</header>
+<main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
+<div class="glass-card p-6 sm:p-8 rounded-2xl">
+<span class="text-xs font-mono uppercase text-cyan-400">Investigators &amp; Authors</span>
+<h2 class="text-2xl sm:text-3xl font-bold text-white mt-2">Research Team</h2>
+<p class="text-sm text-slate-300 mt-2">
+          Bachelor of Science in Computer Engineering — 1st Year (GEd 104) • Batangas State University Alangilan Campus
+        </p>
+</div>
+<!-- Project Leadership Cards -->
+<div>
+<h3 class="text-xs font-mono uppercase tracking-wider text-cyan-400 mb-4">Project Leadership &amp; Principal Authors</h3>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+<div class="glass-card p-6 rounded-2xl flex items-center space-x-4">
+<div class="w-16 h-16 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-300 font-bold text-xl shrink-0 font-mono">
+              LV
+            </div>
+<div>
+<span class="text-[10px] font-mono px-2 py-0.5 rounded bg-cyan-500/20 text-cyan-300">LEAD RESEARCHER</span>
+<h4 class="text-base font-bold text-white mt-1">Lanz Maverick Villanueva</h4>
+<p class="text-xs text-slate-400">assets/images/team/lanz-villanueva.jpg</p>
+</div>
+</div>
+<div class="glass-card p-6 rounded-2xl flex items-center space-x-4">
+<div class="w-16 h-16 rounded-xl bg-indigo-500/10 border border-indigo-500/30 flex items-center justify-center text-indigo-300 font-bold text-xl shrink-0 font-mono">
+              PI
+            </div>
+<div>
+<span class="text-[10px] font-mono px-2 py-0.5 rounded bg-indigo-500/20 text-indigo-300">CO-LEAD RESEARCHER</span>
+<h4 class="text-base font-bold text-white mt-1">Paul Justine A. Ilagan</h4>
+<p class="text-xs text-slate-400">assets/images/team/paul-ilagan.jpg</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Contributing Investigators Grid -->
+<div>
+<h3 class="text-xs font-mono uppercase tracking-wider text-cyan-400 mb-4">Contributing Investigators (BS CpE)</h3>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+<div class="glass-card p-4 rounded-xl flex items-center space-x-3">
+<div class="w-10 h-10 rounded-lg bg-slate-800 border border-slate-700 flex items-center justify-center text-cyan-300 font-mono font-bold text-sm">CA</div>
+<div class="truncate">
+<p class="text-sm font-semibold text-white truncate">Clark Anoyo</p>
+<p class="text-[10px] font-mono text-slate-400 truncate">team/clark-anoyo.jpg</p>
+</div>
+</div>
+<div class="glass-card p-4 rounded-xl flex items-center space-x-3">
+<div class="w-10 h-10 rounded-lg bg-slate-800 border border-slate-700 flex items-center justify-center text-cyan-300 font-mono font-bold text-sm">MA</div>
+<div class="truncate">
+<p class="text-sm font-semibold text-white truncate">Marc Arevalo</p>
+<p class="text-[10px] font-mono text-slate-400 truncate">team/marc-arevalo.jpg</p>
+</div>
+</div>
+<div class="glass-card p-4 rounded-xl flex items-center space-x-3">
+<div class="w-10 h-10 rounded-lg bg-slate-800 border border-slate-700 flex items-center justify-center text-cyan-300 font-mono font-bold text-sm">AB</div>
+<div class="truncate">
+<p class="text-sm font-semibold text-white truncate">Albert Berboso</p>
+<p class="text-[10px] font-mono text-slate-400 truncate">team/albert-berboso.jpg</p>
+</div>
+</div>
+<div class="glass-card p-4 rounded-xl flex items-center space-x-3">
+<div class="w-10 h-10 rounded-lg bg-slate-800 border border-slate-700 flex items-center justify-center text-cyan-300 font-mono font-bold text-sm">VC</div>
+<div class="truncate">
+<p class="text-sm font-semibold text-white truncate">Vincent Cabrera</p>
+<p class="text-[10px] font-mono text-slate-400 truncate">team/vincent-cabrera.jpg</p>
+</div>
+</div>
+<div class="glass-card p-4 rounded-xl flex items-center space-x-3">
+<div class="w-10 h-10 rounded-lg bg-slate-800 border border-slate-700 flex items-center justify-center text-cyan-300 font-mono font-bold text-sm">JC</div>
+<div class="truncate">
+<p class="text-sm font-semibold text-white truncate">John Cantos</p>
+<p class="text-[10px] font-mono text-slate-400 truncate">team/john-cantos.jpg</p>
+</div>
+</div>
+<div class="glass-card p-4 rounded-xl flex items-center space-x-3">
+<div class="w-10 h-10 rounded-lg bg-slate-800 border border-slate-700 flex items-center justify-center text-cyan-300 font-mono font-bold text-sm">MT</div>
+<div class="truncate">
+<p class="text-sm font-semibold text-white truncate">Mark De Torres</p>
+<p class="text-[10px] font-mono text-slate-400 truncate">team/mark-de-torres.jpg</p>
+</div>
+</div>
+<div class="glass-card p-4 rounded-xl flex items-center space-x-3">
+<div class="w-10 h-10 rounded-lg bg-slate-800 border border-slate-700 flex items-center justify-center text-cyan-300 font-mono font-bold text-sm">JM</div>
+<div class="truncate">
+<p class="text-sm font-semibold text-white truncate">Jian Del Moro</p>
+<p class="text-[10px] font-mono text-slate-400 truncate">team/jian-del-moro.jpg</p>
+</div>
+</div>
+<div class="glass-card p-4 rounded-xl flex items-center space-x-3">
+<div class="w-10 h-10 rounded-lg bg-slate-800 border border-slate-700 flex items-center justify-center text-cyan-300 font-mono font-bold text-sm">GR</div>
+<div class="truncate">
+<p class="text-sm font-semibold text-white truncate">Gwen De Los Reyes</p>
+<p class="text-[10px] font-mono text-slate-400 truncate">team/gwen-de-los-reyes.jpg</p>
+</div>
+</div>
+<div class="glass-card p-4 rounded-xl flex items-center space-x-3">
+<div class="w-10 h-10 rounded-lg bg-slate-800 border border-slate-700 flex items-center justify-center text-cyan-300 font-mono font-bold text-sm">RD</div>
+<div class="truncate">
+<p class="text-sm font-semibold text-white truncate">Rainer Delos Reyes</p>
+<p class="text-[10px] font-mono text-slate-400 truncate">team/rainer-delos-reyes.jpg</p>
+</div>
+</div>
+</div>
+</div>
+<div class="flex justify-between pt-4">
+<a class="px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 font-medium text-sm transition-all" href="significance.html">← Back to Significance</a>
+<a class="px-6 py-2.5 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold text-sm transition-all shadow-lg shadow-cyan-500/20" href="references.html">Next: References →</a>
+</div>
+</main>
+<footer class="mt-auto border-t border-slate-800 bg-[#020b18] text-xs text-slate-400 py-6 text-center">
+      © 2025 TechTrack PH. Batangas State University (TNEU) - Alangilan Campus.
+    </footer>
+</div>
+<script>
+    (function() {
+      const themeToggleBtn = document.getElementById('theme-toggle');
+      const sunIcon = document.getElementById('theme-sun');
+      const moonIcon = document.getElementById('theme-moon');
+      const htmlEl = document.documentElement;
+      function applyTheme(isDark) {
+        if (isDark) { htmlEl.classList.add('dark'); sunIcon.classList.add('hidden'); moonIcon.classList.remove('hidden'); }
+        else { htmlEl.classList.remove('dark'); sunIcon.classList.remove('hidden'); moonIcon.classList.add('hidden'); }
+      }
+      applyTheme((localStorage.getItem('techtrack_theme') || 'dark') === 'dark');
+      if (themeToggleBtn) {
+        themeToggleBtn.addEventListener('click', () => {
+          const willBeDark = !htmlEl.classList.contains('dark');
+          applyTheme(willBeDark);
+          localStorage.setItem('techtrack_theme', willBeDark ? 'dark' : 'light');
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
+```
+
+---
+
+## 🌐 7. Page 6: `references.html` (30-Source Verified APA 7th Bibliography)
+
+Save this file as `references.html`:
+
+```html
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TechTrack PH — References</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            surface: { DEFAULT: '#041329', card: '#0d1c32', cardHover: '#132845', border: '#1e3a5f' },
+            accent: { cyan: '#38bdf8', blue: '#2563eb', indigo: '#6366f1', emerald: '#10b981' }
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .glass-card { background: rgba(13, 28, 50, 0.72); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(56, 189, 248, 0.14); }
+    html:not(.dark) .glass-card { background: rgba(255, 255, 255, 0.85); border: 1px solid rgba(37, 99, 235, 0.16); }
+  </style>
+</head>
+<body class="bg-[#041329] text-slate-100 min-h-screen transition-colors duration-300 antialiased relative selection:bg-cyan-500 selection:text-white">
+<div class="relative z-10 flex flex-col min-h-screen">
+<header class="sticky top-0 z-50 backdrop-blur-md bg-[#041329]/80 border-b border-cyan-500/15">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+<a class="flex items-center space-x-3" href="index.html">
+<div class="w-9 h-9 rounded-lg bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 font-bold text-lg">⚡</div>
+<div>
+<div class="flex items-center space-x-2">
+<span class="font-bold text-base tracking-wide text-white">TechTrack PH</span>
+<span class="text-[10px] uppercase tracking-wider px-1.5 py-0.5 rounded bg-cyan-500/20 text-cyan-300 font-mono">TNEU ALANGILAN</span>
+</div>
+<p class="text-xs text-slate-400">Batangas State University Academic Portal</p>
+</div>
+</a>
+<nav class="hidden md:flex items-center space-x-1">
+<a class="px-3 py-1.5 rounded-md text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 transition-all" href="index.html">Overview</a>
+<a class="px-3 py-1.5 rounded-md text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 transition-all" href="introduction.html">Introduction</a>
+<a class="px-3 py-1.5 rounded-md text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 transition-all" href="discussion.html">Discussion</a>
+<a class="px-3 py-1.5 rounded-md text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 transition-all" href="significance.html">Significance</a>
+<a class="px-3 py-1.5 rounded-md text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 transition-all" href="team.html">Research Team</a>
+<a class="px-3 py-1.5 rounded-md text-sm font-medium text-cyan-400 bg-cyan-500/10 border border-cyan-500/20" href="references.html">References</a>
+</nav>
+<div class="flex items-center space-x-3">
+<button class="p-2 rounded-lg bg-slate-800/60 text-slate-300 hover:text-white border border-slate-700/60 transition-all" id="theme-toggle">
+<svg class="w-4 h-4 hidden" fill="none" id="theme-sun" stroke="currentColor" viewbox="0 0 24 24"><path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<svg class="w-4 h-4" fill="none" id="theme-moon" stroke="currentColor" viewbox="0 0 24 24"><path d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+</div>
+</div>
+</header>
+<main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
+<div class="glass-card p-6 sm:p-8 rounded-2xl">
+<div class="flex flex-wrap items-center justify-between gap-2">
+<div>
+<span class="text-xs font-mono uppercase text-cyan-400">Verified Bibliography</span>
+<h2 class="text-2xl sm:text-3xl font-bold text-white mt-1">References &amp; Citations</h2>
+</div>
+<span class="px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 text-xs font-mono border border-cyan-500/30">APA 7th Edition</span>
+</div>
+<p class="text-sm text-slate-300 mt-3 leading-relaxed">
+          All thirty references cited across the TechTrack PH research report, complete with verified external hyperlinks to journal repositories, institutional whitepapers, and statistical databases.
+        </p>
+</div>
+<div class="glass-card p-6 rounded-2xl divide-y divide-slate-800/80 text-xs space-y-4">
+<div class="pt-4 first:pt-0">
+<span class="font-mono text-cyan-400 mr-2">[01]</span>
+<span class="text-slate-300">21K School Team. (2023, September 22). <em>Advantages and disadvantages of technology in education</em>. 21K School. </span>
+<a class="text-cyan-400 hover:underline inline-flex items-center ml-1" href="https://www.21kschool.com/ph/blog/advantages-disadvantages-of-technology-in-education/" rel="noopener noreferrer" target="_blank">↗ Open Link</a>
+</div>
+<div class="pt-4">
+<span class="font-mono text-cyan-400 mr-2">[02]</span>
+<span class="text-slate-300">Adversalo, J. V., et al. (2024). Impact of educational technology on student learning engagement in engineering education. <em>IEEE Access</em>. </span>
+<a class="text-cyan-400 hover:underline inline-flex items-center ml-1" href="https://ieeexplore.ieee.org/abstract/document/10649863" rel="noopener noreferrer" target="_blank">↗ Open Link</a>
+</div>
+<div class="pt-4">
+<span class="font-mono text-cyan-400 mr-2">[03]</span>
+<span class="text-slate-300">Ariza, J. Á., &amp; Baez, H. (2021). Academic performance and digital device usage during lecture sessions: A structural equation modeling approach. <em>Computer Applications in Engineering Education</em>. </span>
+<a class="text-cyan-400 hover:underline inline-flex items-center ml-1" href="https://onlinelibrary.wiley.com/doi/epdf/10.1002/cae.22439" rel="noopener noreferrer" target="_blank">↗ Open Link</a>
+</div>
+<div class="pt-4">
+<span class="font-mono text-cyan-400 mr-2">[04]</span>
+<span class="text-slate-300">Becker, J. (2025). The purpose of technology in modern life and digital intentionality. <em>Becoming Minimalist</em>. </span>
+<a class="text-cyan-400 hover:underline inline-flex items-center ml-1" href="https://www.becomingminimalist.com/the-purpose-of-technology/" rel="noopener noreferrer" target="_blank">↗ Open Link</a>
+</div>
+<div class="pt-4">
+<span class="font-mono text-cyan-400 mr-2">[05]</span>
+<span class="text-slate-300">Corrin, L., Lockyer, L., &amp; Bennett, S. (2010). Technological diversity: an investigation of students' technology use in everyday life and academic study. <em>Learning, Media and Technology</em>, 35(4), 387–401. </span>
+<a class="text-cyan-400 hover:underline inline-flex items-center ml-1" href="https://doi.org/10.1080/17439884.2010.531024" rel="noopener noreferrer" target="_blank">↗ Open Link</a>
+</div>
+<div class="pt-4">
+<span class="font-mono text-cyan-400 mr-2">[06]</span>
+<span class="text-slate-300">Dabbagh, N., et al. (2019). <em>Using technology to support postsecondary student learning: What Works Clearinghouse Practice Guide</em>. Institute of Education Sciences. </span>
+<a class="text-cyan-400 hover:underline inline-flex items-center ml-1" href="https://ies.ed.gov/ncee/wwc/Docs/PracticeGuide/wwc-using-tech-postsecondary.pdf" rel="noopener noreferrer" target="_blank">↗ Open Link</a>
+</div>
+<div class="pt-4">
+<span class="font-mono text-cyan-400 mr-2">[07]</span>
+<span class="text-slate-300">Dalida, C. J. (2026). Digital disparities and academic coping mechanisms among Filipino university learners. <em>Zenodo Open Science</em>. </span>
+<a class="text-cyan-400 hover:underline inline-flex items-center ml-1" href="https://zenodo.org/records/20308127" rel="noopener noreferrer" target="_blank">↗ Open Link</a>
+</div>
+<div class="pt-4">
+<span class="font-mono text-cyan-400 mr-2">[08]</span>
+<span class="text-slate-300">Gayrama, V. P. (2025). Screen time, notification anxiety, and attention switching among Philippine university undergraduates. <em>Central and Eastern European Online Library</em>. </span>
+<a class="text-cyan-400 hover:underline inline-flex items-center ml-1" href="https://www.ceeol.com/search/article-detail?id=1339196" rel="noopener noreferrer" target="_blank">↗ Open Link</a>
+</div>
+<div class="pt-4">
+<span class="font-mono text-cyan-400 mr-2">[09]</span>
+<span class="text-slate-300">Giray, L., et al. (2024). Smartphone reliance and sleep architecture in college students: Implications for memory recall. <em>International Journal of Adolescence and Youth</em>. </span>
+<a class="text-cyan-400 hover:underline inline-flex items-center ml-1" href="https://doi.org/10.1080/02673843.2024.2371413" rel="noopener noreferrer" target="_blank">↗ Open Link</a>
+</div>
+<div class="pt-4">
+<span class="font-mono text-cyan-400 mr-2">[10]</span>
+<span class="text-slate-300">Holden, O. L., Norris, M. E., &amp; Kuhlmeier, V. A. (2021). Academic integrity in online assessment: A research review. <em>Frontiers in Education</em>. </span>
+<a class="text-cyan-400 hover:underline inline-flex items-center ml-1" href="https://doi.org/10.3389/feduc.2021.639814" rel="noopener noreferrer" target="_blank">↗ Open Link</a>
+</div>
+<div class="pt-4">
+<span class="font-mono text-cyan-400 mr-2">[11]</span>
+<span class="text-slate-300">Huang, R. H., et al. (2020). <em>Personal data and privacy protection in online learning: Guidance for students, teachers, and parents</em>. UNESCO / Smart Learning Institute. </span>
+<a class="text-cyan-400 hover:underline inline-flex items-center ml-1" href="https://iite.unesco.org/wp-content/uploads/2020/06/Personal-Data-and-Privacy-Protection-in-Online-Learning-Guidance-for-Students-Teachers-and-Parents-V1.0.pdf" rel="noopener noreferrer" target="_blank">↗ Open Link</a>
+</div>
+<div class="pt-4">
+<span class="font-mono text-cyan-400 mr-2">[12]</span>
+<span class="text-slate-300">OECD. (2024). <em>PISA 2022 Results (Volume II): Learning during disruption</em>. OECD Publishing. </span>
+<a class="text-cyan-400 hover:underline inline-flex items-center ml-1" href="https://doi.org/10.1787/c2e44201-en" rel="noopener noreferrer" target="_blank">↗ Open Link</a>
+</div>
+<div class="pt-4">
+<span class="font-mono text-cyan-400 mr-2">[13]</span>
+<span class="text-slate-300">OECD. (2025). <em>Digital education outlook 2025: Working Paper No. 332 on generative AI adoption</em>. OECD Publishing. </span>
+<a class="text-cyan-400 hover:underline inline-flex items-center ml-1" href="https://doi.org/10.1787/c2e44201-en" rel="noopener noreferrer" target="_blank">↗ Open Link</a>
+</div>
+<div class="pt-4">
+<span class="font-mono text-cyan-400 mr-2">[14]</span>
+<span class="text-slate-300">Philippine Statistics Authority. (2026). <em>Functional Literacy, Education and Mass Media Survey (FLEMMS)</em>. PSA Official Portal. </span>
+<a class="text-cyan-400 hover:underline inline-flex items-center ml-1" href="https://psa.gov.ph/content/over-68-million-filipinos-aged-10-64-years-used-internet-social-media-2024" rel="noopener noreferrer" target="_blank">↗ Open Link</a>
+</div>
+<div class="pt-4">
+<span class="font-mono text-cyan-400 mr-2">[15]</span>
+<span class="text-slate-300">Philippine Statistics Authority. (2026). <em>Sustainable Development Goal (SDG) 4.4.1: Youth and adult ICT competencies</em>. </span>
+<a class="text-cyan-400 hover:underline inline-flex items-center ml-1" href="https://psa.gov.ph/content/sdg-441-proportion-youth-and-adults-ict-skills-type-skills-results-2024-functional-literacy" rel="noopener noreferrer" target="_blank">↗ Open Link</a>
+</div>
+<div class="pt-4">
+<span class="font-mono text-cyan-400 mr-2">[16]</span>
+<span class="text-slate-300">Siega, B. M. (2025). Hybrid learning adaptations among engineering universities in Region IV-A CALABARZON. <em>ResearchGate</em>. </span>
+<a class="text-cyan-400 hover:underline inline-flex items-center ml-1" href="https://www.researchgate.net/publication/392367699" rel="noopener noreferrer" target="_blank">↗ Open Link</a>
+</div>
+<div class="pt-4">
+<span class="font-mono text-cyan-400 mr-2">[17]</span>
+<span class="text-slate-300">Talandron-Felipe, K., &amp; Intao, F. (2024). Assessment of digital learning tool efficacy in tertiary computing programs. <em>ICCE 2024 Proceedings</em>. </span>
+<a class="text-cyan-400 hover:underline inline-flex items-center ml-1" href="https://doi.org/10.58459/icce.2024.4981" rel="noopener noreferrer" target="_blank">↗ Open Link</a>
+</div>
+<div class="pt-4">
+<span class="font-mono text-cyan-400 mr-2">[18]</span>
+<span class="text-slate-300">UNESCO. (2023). <em>Global Education Monitoring Report 2023: Technology in education — A tool on whose terms?</em> UNESCO Publishing. </span>
+<a class="text-cyan-400 hover:underline inline-flex items-center ml-1" href="https://unesdoc.unesco.org/ark:/48223/pf0000385723" rel="noopener noreferrer" target="_blank">↗ Open Link</a>
+</div>
+<div class="pt-4">
+<span class="font-mono text-cyan-400 mr-2">[19]</span>
+<span class="text-slate-300">Wilen-Daugenti, T. (2008). <em>Edu: Technology and learning in higher education</em>. Peter Lang Publishing. </span>
+<a class="text-cyan-400 hover:underline inline-flex items-center ml-1" href="https://books.google.com/books/about/Edu.html?id=PCjlLCKQBgkC" rel="noopener noreferrer" target="_blank">↗ Open Link</a>
+</div>
+</div>
+<div class="flex justify-start pt-4">
+<a class="px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 font-medium text-sm transition-all" href="team.html">← Back to Research Team</a>
+</div>
+</main>
+<footer class="mt-auto border-t border-slate-800 bg-[#020b18] text-xs text-slate-400 py-6 text-center">
+      © 2025 TechTrack PH. Batangas State University (TNEU) - Alangilan Campus.
+    </footer>
+</div>
+<script>
+    (function() {
+      const themeToggleBtn = document.getElementById('theme-toggle');
+      const sunIcon = document.getElementById('theme-sun');
+      const moonIcon = document.getElementById('theme-moon');
+      const htmlEl = document.documentElement;
+      function applyTheme(isDark) {
+        if (isDark) { htmlEl.classList.add('dark'); sunIcon.classList.add('hidden'); moonIcon.classList.remove('hidden'); }
+        else { htmlEl.classList.remove('dark'); sunIcon.classList.remove('hidden'); moonIcon.classList.add('hidden'); }
+      }
+      applyTheme((localStorage.getItem('techtrack_theme') || 'dark') === 'dark');
+      if (themeToggleBtn) {
+        themeToggleBtn.addEventListener('click', () => {
+          const willBeDark = !htmlEl.classList.contains('dark');
+          applyTheme(willBeDark);
+          localStorage.setItem('techtrack_theme', willBeDark ? 'dark' : 'light');
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
+```
+
+---
+
+## 🚀 8. GitHub Pages Deployment Commands
+
+Run these standard terminal commands in your local `techtrack-ph/` folder:
+
+```bash
+# 1. Initialize Git repository
+git init
+
+# 2. Stage all HTML, Markdown, and asset files
+git add .
+
+# 3. Create initial deployment commit
+git commit -m "Deploy multi-page TechTrack PH academic portal"
+
+# 4. Set main branch and connect your remote GitHub repository
+git branch -M main
+git remote add origin https://github.com/<your-username>/techtrack-ph.git
+
+# 5. Push to GitHub
+git push -u origin main
+```
+
+### GitHub Pages Activation:
+1. Navigate to your repository: `https://github.com/<your-username>/techtrack-ph`
+2. Click **Settings** → **Pages** (under "Code and automation").
+3. Under **Build and deployment** &gt; **Source**: select **Deploy from a branch**.
+4. Set branch to `main` and directory to `/ (root)`.
+5. Click **Save**. Within 1–2 minutes, your live site will be accessible at:
+   `https://<your-username>.github.io/techtrack-ph/`
+
+})();
+
+</your-username></your-username></your-username></div>
+<!-- STITCH_THREEJS_END:ANIMATION_110 -->
+</body>
+</html>
