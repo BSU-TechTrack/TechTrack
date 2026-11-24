@@ -36,6 +36,43 @@
     transition: none !important;
   }
 }
+
+/* Page entrance and scroll-reveal motion */
+@keyframes techtrack-header-enter {
+  from { opacity: 0; transform: translateY(-14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes techtrack-content-enter {
+  from { opacity: 0; transform: translateY(26px) scale(0.985); filter: blur(5px); }
+  to { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); }
+}
+.motion-ready header {
+  animation: techtrack-header-enter 650ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.motion-ready main > .motion-reveal {
+  opacity: 0;
+  transform: translateY(26px) scale(0.985);
+  filter: blur(5px);
+  transition: opacity 750ms cubic-bezier(0.16, 1, 0.3, 1),
+              transform 750ms cubic-bezier(0.16, 1, 0.3, 1),
+              filter 750ms cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: var(--motion-delay, 0ms);
+  will-change: opacity, transform, filter;
+}
+.motion-ready main > .motion-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  filter: blur(0);
+}
+@media (prefers-reduced-motion: reduce) {
+  .motion-ready header { animation: none !important; }
+  .motion-ready main > .motion-reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+    transition: none !important;
+  }
+}
 </style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config = {
     darkMode: "class",
     theme: {
@@ -663,4 +700,41 @@
     });
   </script>
 </div></main><footer class="relative z-10 w-full bg-surface-container-lowest/90 backdrop-blur-xl mt-space-xl"><div class="max-w-7xl mx-auto px-gutter py-space-xl flex flex-col md:flex-row items-center justify-between gap-space-lg"><div class="flex items-center gap-space-md"><div class="p-space-xs rounded-full bg-surface-container-high"><img alt="BatStateU CpE Emblem" class="w-8 h-8 rounded-full object-cover" onerror="this.onerror=null; this.src='https://lh3.googleusercontent.com/aida-public/AB6AXuDcgohrFTFS3LT2BduSSLWnYz_0ZcKO75GLNqh8Odfqfm14gyE8RJfM7P8p7w-EtnzpCKbWYf-1SCALFK5tVaG7cxoD2hRWHCb1k1gT9gAqPUDf68f_-Hum_HD4-X92bZpeMfQqX6uv-rEBP-BkT0jwww5bn7pGGvMj0FzpK_Gv_41OnUuNgp_zzIMHGV1th4aA2FohSncObJwBwf1Tho_ipMPeOpAZjkB95sHY5iXJxolk921iSgJq';" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQNBF8uYUl_7vD7ttscidV0FmoB5g2yLa6Iu6vr25W6EktrkjubwTj90M8Jm-wEczc13PA6FqSf2IOoAGQYI_8leECV-IE37Dubly_S69rcyzuWnjgbD4k67aInY_MPi1IYrU6mF7ErCP7TOmQ-QP8HAWrJ3BRSFg1IMu7LngJLumLJzxI38LWbHZ-_9kxl0QU_TY-7AvSmOuW_sHG4puZlG1LOUTRNNprpCHCskM"/></div><div><div class="font-title-md text-title-md text-on-surface">TechTrack PH • GEd 104</div><p class="font-body-sm text-body-sm text-on-surface-variant">Batangas State University The National Engineering University • Alangilan Campus</p></div></div><nav class="flex flex-wrap items-center justify-center gap-space-md" data-active-classes="text-primary font-semibold"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="overview" href="index.html">Overview</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="introduction" href="introduction.html">Introduction</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="discussion" href="discussion.html">Discussion</a><a aria-current="page" class="transition-colors text-primary font-semibold" data-path="significance" href="significance.html">Significance</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="research-team" href="team.html">Research Team</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="references" href="references.html">References</a></nav><div class="flex flex-col items-center md:items-end gap-1"><div class="flex items-center gap-2 font-label-sm text-label-sm text-tertiary"><span class="inline-block w-1.5 h-1.5 rounded-full bg-tertiary"></span><span>TELEMETRY SYNCHRONIZED [NODE 11]</span></div><p class="font-body-sm text-body-sm text-on-surface-variant">© 2025 BatStateU The NEU Alangilan BSCpE. All rights reserved.</p></div></div></footer><script>(function(){const storageKey='techtrack_theme';const currentTheme=localStorage.getItem(storageKey);const htmlElement=document.documentElement;const icon=document.getElementById('theme-toggle-icon');function applyTheme(isDark){if(isDark){htmlElement.classList.add('dark');if(icon)icon.textContent='light_mode';}else{htmlElement.classList.remove('dark');if(icon)icon.textContent='dark_mode';}}if(currentTheme==='light'){applyTheme(false);}else{applyTheme(true);}const toggleBtn=document.getElementById('theme-toggle-btn');if(toggleBtn){toggleBtn.addEventListener('click',function(){const isNowDark=!htmlElement.classList.contains('dark');applyTheme(isNowDark);localStorage.setItem(storageKey,isNowDark?'dark':'light');});}})();</script>
+
+<script>
+(() => {
+  const main = document.querySelector('main');
+  if (!main) return;
+  const items = Array.from(main.children);
+  if (!items.length) return;
+
+  items.forEach((item, index) => {
+    item.classList.add('motion-reveal');
+    item.style.setProperty('--motion-delay', Math.min(index * 90, 450) + 'ms');
+  });
+  document.body.classList.add('motion-ready');
+
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    items.forEach(item => item.classList.add('is-visible'));
+    return;
+  }
+
+  if (!('IntersectionObserver' in window)) {
+    items.forEach(item => item.classList.add('is-visible'));
+    return;
+  }
+
+  const observer = new IntersectionObserver((entries, currentObserver) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        currentObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -35px 0px' });
+
+  items.forEach(item => observer.observe(item));
+})();
+</script>
+
 </body></html>
